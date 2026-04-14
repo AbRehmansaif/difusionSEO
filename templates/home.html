@@ -9,18 +9,18 @@
 <div class="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-primary-container/20 rounded-full blur-[120px] animate-pulse"></div>
 <div class="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-secondary-container/15 rounded-full blur-[100px]"></div>
 <div class="max-w-7xl mx-auto px-8 w-full relative z-10 grid md:grid-cols-2 gap-12 items-center">
-<div class="text-left">
-<h1 class="text-[3.5rem] md:text-[5rem] leading-[1.05] font-black tracking-tighter text-on-surface mb-6">
+<div class="text-left" data-aos="fade-right" data-aos-duration="1000">
+<h1 class="text-[3.5rem] md:text-[5rem] leading-[1.05] font-black tracking-tighter text-on-surface mb-6 animate__animated animate__fadeInLeft">
                     Digital Growth &amp; <br/><span class="text-secondary">Software</span> Solutions
                 </h1>
-<p class="text-xl font-medium text-on-surface-variant mb-10 max-w-xl">
+<p class="text-xl font-medium text-on-surface-variant mb-10 max-w-xl animate__animated animate__fadeInLeft animate__delay-1s">
                     SEO • AI Systems • Web Development • Automation
                 </p>
-<div class="flex flex-wrap gap-4 mb-16">
-<button onclick="window.location.href='{% url 'contact' %}'" class="neon-gradient text-on-primary px-8 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_30px_rgba(162,231,255,0.4)] transition-all">
+<div class="flex flex-wrap gap-4 mb-16 animate__animated animate__fadeInUp animate__delay-1s">
+<button onclick="window.location.href='{% url 'contact' %}'" class="neon-gradient text-on-primary px-8 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_30px_rgba(162,231,255,0.4)] transition-all hover-lift shimmer">
                         Get a Free Quote
                     </button>
-<button onclick="window.location.href='{% url 'services' %}'" class="px-8 py-4 rounded-full font-bold text-lg border border-outline-variant/30 hover:border-primary transition-all">
+<button onclick="window.location.href='{% url 'services' %}'" class="px-8 py-4 rounded-full font-bold text-lg border border-outline-variant/30 hover:border-primary transition-all hover-lift">
                         View Our Services
                     </button>
 </div>
@@ -40,11 +40,11 @@
 </div>
 </div>
 </div>
-<div class="hidden md:block relative">
-<div class="glass-card p-4 rounded-[2rem] transform rotate-3 hover:rotate-0 transition-transform duration-700">
+<div class="hidden md:block relative" data-aos="fade-left" data-aos-duration="1200">
+<div class="glass-card p-4 rounded-[2rem] transform rotate-3 hover:rotate-0 transition-transform duration-700 hover-lift">
 <img alt="Digital Analytics Dashboard" class="rounded-[1.5rem] w-full shadow-2xl" data-alt="Modern dark dashboard interface with glowing purple and blue data visualization charts on a high-end glass texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC73zVOFe4aMF9AJWt7VsV9LE-5qMVqUFDJWfby0SpNh7P3D2k21kpr9R_e_wIbdrWoqJCcEYfDQum-dpK_hy_d2QodyuZ3ywaqYqJI50tKWZVJNImC84DrKYymMcOa1UMNG3FjFRtKGW1PudJYYOwKRzNE7iOQmm3obgYMhL4ZUWrwcs2qOUpUsTMlEUyxcrhPGSWjmH8cGWnJ10EG5CWK8uyERpc7j1zRcdbYHZjiWdANLZBn5hLk7SutWjHYZB9HZ0PWQ-dioAI"/>
 </div>
-<div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-2xl shadow-2xl animate-bounce">
+<div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-2xl shadow-2xl animate__animated animate__bounceIn animate__delay-2s float-animation">
 <div class="flex items-center gap-4">
 <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
 <span class="material-symbols-outlined text-white">trending_up</span>
@@ -67,31 +67,31 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-6 md:grid-rows-2 gap-4">
 <!-- SEO -->
-<div class="md:col-span-3 glass-card p-10 rounded-[1.5rem] hover:border-primary/50 group transition-all">
+<div class="md:col-span-3 glass-card p-10 rounded-[1.5rem] hover:border-primary/50 group transition-all hover-lift" data-aos="fade-up" data-aos-delay="100">
 <span class="material-symbols-outlined text-5xl text-primary mb-6 group-hover:scale-110 transition-transform block">query_stats</span>
 <h3 class="text-2xl font-bold mb-3">SEO Strategy</h3>
 <p class="text-on-surface-variant">Dominating search results through advanced semantic analysis and technical optimization.</p>
 </div>
 <!-- Local SEO -->
-<div class="md:col-span-3 glass-card p-10 rounded-[1.5rem] hover:border-secondary/50 group transition-all">
+<div class="md:col-span-3 glass-card p-10 rounded-[1.5rem] hover:border-secondary/50 group transition-all hover-lift" data-aos="fade-up" data-aos-delay="200">
 <span class="material-symbols-outlined text-5xl text-secondary mb-6 group-hover:scale-110 transition-transform block">location_on</span>
 <h3 class="text-2xl font-bold mb-3">Local SEO</h3>
 <p class="text-on-surface-variant">Hyper-targeted local visibility ensuring you are the #1 choice in your geographic area.</p>
 </div>
 <!-- Full Stack -->
-<div class="md:col-span-2 glass-card p-10 rounded-[1.5rem] hover:border-tertiary/50 group transition-all">
+<div class="md:col-span-2 glass-card p-10 rounded-[1.5rem] hover:border-tertiary/50 group transition-all hover-lift" data-aos="fade-up" data-aos-delay="300">
 <span class="material-symbols-outlined text-5xl text-tertiary mb-6 group-hover:scale-110 transition-transform block">terminal</span>
 <h3 class="text-xl font-bold mb-3">Full Stack Dev</h3>
 <p class="text-on-surface-variant text-sm">Scalable, secure web architecture built with modern frameworks.</p>
 </div>
 <!-- AI & Automation -->
-<div class="md:col-span-2 glass-card p-10 rounded-[1.5rem] hover:border-primary/50 group transition-all">
+<div class="md:col-span-2 glass-card p-10 rounded-[1.5rem] hover:border-primary/50 group transition-all hover-lift" data-aos="fade-up" data-aos-delay="400">
 <span class="material-symbols-outlined text-5xl text-primary mb-6 group-hover:scale-110 transition-transform block">neurology</span>
 <h3 class="text-xl font-bold mb-3">AI &amp; Automation</h3>
 <p class="text-on-surface-variant text-sm">LLM integration and workflow automation to eliminate repetitive tasks.</p>
 </div>
 <!-- App Security -->
-<div class="md:col-span-2 glass-card p-10 rounded-[1.5rem] hover:border-secondary/50 group transition-all">
+<div class="md:col-span-2 glass-card p-10 rounded-[1.5rem] hover:border-secondary/50 group transition-all hover-lift" data-aos="fade-up" data-aos-delay="500">
 <span class="material-symbols-outlined text-5xl text-secondary mb-6 group-hover:scale-110 transition-transform block">shield_lock</span>
 <h3 class="text-xl font-bold mb-3">App Security</h3>
 <p class="text-on-surface-variant text-sm">Enterprise-grade security audits and penetration testing protocols.</p>
@@ -115,28 +115,28 @@
 </div>
 </div>
 <div class="md:w-1/2 space-y-6">
-<div class="flex items-start gap-6 group">
+<div class="flex items-start gap-6 group" data-aos="fade-left" data-aos-delay="100">
 <span class="text-4xl font-black text-outline-variant group-hover:text-primary transition-colors">01</span>
 <div>
 <h4 class="text-xl font-bold mb-2">Experienced Team</h4>
 <p class="text-on-surface-variant">Senior engineers and SEO specialists with over 10+ years of domain experience.</p>
 </div>
 </div>
-<div class="flex items-start gap-6 group">
+<div class="flex items-start gap-6 group" data-aos="fade-left" data-aos-delay="200">
 <span class="text-4xl font-black text-outline-variant group-hover:text-secondary transition-colors">02</span>
 <div>
 <h4 class="text-xl font-bold mb-2">Data-Driven Approach</h4>
 <p class="text-on-surface-variant">We don't guess. Every decision is backed by comprehensive analytical tracking.</p>
 </div>
 </div>
-<div class="flex items-start gap-6 group">
+<div class="flex items-start gap-6 group" data-aos="fade-left" data-aos-delay="300">
 <span class="text-4xl font-black text-outline-variant group-hover:text-tertiary transition-colors">03</span>
 <div>
 <h4 class="text-xl font-bold mb-2">Agile Methodology</h4>
 <p class="text-on-surface-variant">Rapid deployment cycles ensuring your project is always evolving and ahead.</p>
 </div>
 </div>
-<div class="flex items-start gap-6 group">
+<div class="flex items-start gap-6 group" data-aos="fade-left" data-aos-delay="400">
 <span class="text-4xl font-black text-outline-variant group-hover:text-primary transition-colors">04</span>
 <div>
 <h4 class="text-xl font-bold mb-2">24/7 Monitoring</h4>
@@ -156,40 +156,40 @@
 <!-- Dotted Line Background (Desktop) -->
 <div class="hidden md:block absolute top-12 left-0 w-full h-[2px] border-t-2 border-dashed border-outline-variant/30 z-0"></div>
 <!-- Step 1 -->
-<div class="relative z-10 text-center md:w-1/5">
-<div class="w-24 h-24 rounded-full bg-surface-container-high border-2 border-primary flex items-center justify-center mx-auto mb-6 hover:shadow-[0_0_20px_rgba(204,190,255,0.4)] transition-all">
+<div class="relative z-10 text-center md:w-1/5" data-aos="zoom-in" data-aos-delay="100">
+<div class="w-24 h-24 rounded-full bg-surface-container-high border-2 border-primary flex items-center justify-center mx-auto mb-6 hover:shadow-[0_0_20px_rgba(204,190,255,0.4)] transition-all hover-lift">
 <span class="material-symbols-outlined text-primary text-3xl">analytics</span>
 </div>
 <h4 class="text-lg font-bold mb-2">Analysis</h4>
 <p class="text-sm text-on-surface-variant px-4">Deep dive into market gaps and audit.</p>
 </div>
 <!-- Step 2 -->
-<div class="relative z-10 text-center md:w-1/5">
-<div class="w-24 h-24 rounded-full bg-surface-container-high border-2 border-secondary flex items-center justify-center mx-auto mb-6 hover:shadow-[0_0_20px_rgba(162,231,255,0.4)] transition-all">
+<div class="relative z-10 text-center md:w-1/5" data-aos="zoom-in" data-aos-delay="200">
+<div class="w-24 h-24 rounded-full bg-surface-container-high border-2 border-secondary flex items-center justify-center mx-auto mb-6 hover:shadow-[0_0_20px_rgba(162,231,255,0.4)] transition-all hover-lift">
 <span class="material-symbols-outlined text-secondary text-3xl">architecture</span>
 </div>
 <h4 class="text-lg font-bold mb-2">Strategy</h4>
 <p class="text-sm text-on-surface-variant px-4">Blueprinting your growth architecture.</p>
 </div>
 <!-- Step 3 -->
-<div class="relative z-10 text-center md:w-1/5">
-<div class="w-24 h-24 rounded-full bg-surface-container-high border-2 border-tertiary flex items-center justify-center mx-auto mb-6 hover:shadow-[0_0_20px_rgba(223,183,255,0.4)] transition-all">
+<div class="relative z-10 text-center md:w-1/5" data-aos="zoom-in" data-aos-delay="300">
+<div class="w-24 h-24 rounded-full bg-surface-container-high border-2 border-tertiary flex items-center justify-center mx-auto mb-6 hover:shadow-[0_0_20px_rgba(223,183,255,0.4)] transition-all hover-lift">
 <span class="material-symbols-outlined text-tertiary text-3xl">code_blocks</span>
 </div>
 <h4 class="text-lg font-bold mb-2">Development</h4>
 <p class="text-sm text-on-surface-variant px-4">Clean, efficient code implementation.</p>
 </div>
 <!-- Step 4 -->
-<div class="relative z-10 text-center md:w-1/5">
-<div class="w-24 h-24 rounded-full bg-surface-container-high border-2 border-primary flex items-center justify-center mx-auto mb-6 hover:shadow-[0_0_20px_rgba(204,190,255,0.4)] transition-all">
+<div class="relative z-10 text-center md:w-1/5" data-aos="zoom-in" data-aos-delay="400">
+<div class="w-24 h-24 rounded-full bg-surface-container-high border-2 border-primary flex items-center justify-center mx-auto mb-6 hover:shadow-[0_0_20px_rgba(204,190,255,0.4)] transition-all hover-lift">
 <span class="material-symbols-outlined text-primary text-3xl">fact_check</span>
 </div>
 <h4 class="text-lg font-bold mb-2">QA</h4>
 <p class="text-sm text-on-surface-variant px-4">Rigorous testing across all environments.</p>
 </div>
 <!-- Step 5 -->
-<div class="relative z-10 text-center md:w-1/5">
-<div class="w-24 h-24 rounded-full bg-secondary-container flex items-center justify-center mx-auto mb-6 shadow-xl">
+<div class="relative z-10 text-center md:w-1/5" data-aos="zoom-in" data-aos-delay="500">
+<div class="w-24 h-24 rounded-full bg-secondary-container flex items-center justify-center mx-auto mb-6 shadow-xl hover-lift shimmer">
 <span class="material-symbols-outlined text-white text-3xl">rocket</span>
 </div>
 <h4 class="text-lg font-bold mb-2">Deployment</h4>
