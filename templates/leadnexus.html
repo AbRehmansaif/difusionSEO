@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+
+{% block title %}LeadNexus | Ultimate B2B Lead Generation & Outreach Engine{% endblock %}
+
+{% block content %}
+<main class="pt-24 overflow-hidden">
+    <!-- Hero Section -->
+    <section class="relative min-h-[80vh] flex items-center justify-center px-8 text-center pt-24 overflow-hidden">
+        <div class="absolute top-[10%] left-[-10%] w-[600px] h-[600px] bg-primary-container/20 rounded-full blur-[140px] animate-pulse"></div>
+        <div class="absolute bottom-[20%] right-[-5%] w-[400px] h-[400px] bg-secondary-container/15 rounded-full blur-[100px]"></div>
+        
+        <div class="max-w-4xl relative z-10" data-aos="fade-up">
+            <span class="label-md uppercase tracking-[0.3em] text-secondary font-bold mb-6 block animate__animated animate__fadeInDown">Sales Intelligence Platform</span>
+            <h1 class="text-6xl md:text-[6rem] font-black tracking-tighter leading-[0.9] text-on-surface mb-8">
+                LeadNexus <br/><span class="text-transparent bg-clip-text neon-gradient">Outreach Engine</span>
+            </h1>
+            <p class="text-xl text-on-surface-variant mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+                Find verified leads, automate cold email campaigns with SMTP rotation, and close more deals, faster. LeadNexus replaces your entire sales stack.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="https://getleadnexus.com/register/" target="_blank" class="px-10 py-5 rounded-full bg-gradient-to-r from-primary to-secondary text-on-primary font-bold text-xl hover:scale-105 transition-transform duration-300 hover-lift shimmer flex items-center justify-center gap-3">
+                    Start Free Trial <span class="material-symbols-outlined">rocket_launch</span>
+                </a>
+                <a href="#demo" class="px-10 py-5 rounded-full border border-outline-variant text-on-surface font-bold text-xl hover:bg-surface-container transition-all duration-300 hover-lift">
+                    Watch Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section id="demo" class="py-24 px-8 relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-black tracking-tight mb-4">See LeadNexus in Action</h2>
+                <p class="text-on-surface-variant">Watch how we collapse a complex sales workflow into a high-velocity engine.</p>
+            </div>
+            <div class="glass-panel p-4 rounded-[2.5rem] shadow-2xl relative z-10" data-aos="zoom-in">
+                <div class="aspect-video w-full rounded-[1.5rem] overflow-hidden">
+                    <iframe id="nexusVideo" class="w-full h-full" src="https://www.youtube.com/embed/yvCGO7-N53Y?si=1DsIcTADGT-x67JQ&enablejsapi=1" title="LeadNexus Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Capabilities -->
+    <section id="features" class="py-32 px-8 bg-surface-container-lowest relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24" data-aos="fade-up">
+                <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-4">Everything You Need to Dominate</h2>
+                <p class="text-on-surface-variant max-w-xl mx-auto">Replacing five tools: lead finder, email verifier, performance engine, deliverability manager, and tracker.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Web Extraction -->
+                <div class="glass-card p-10 rounded-[2rem] hover-lift group" data-aos="fade-up" data-aos-delay="100">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-6">search_insights</span>
+                    <h3 class="text-2xl font-bold mb-4">Web & Keyword Leads</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Our multi-threaded crawler extracts verified corporate emails and phone numbers from target keywords or domains at scale.</p>
+                </div>
+
+                <!-- SMTP Rotation -->
+                <div class="glass-card p-10 rounded-[2rem] hover-lift group" data-aos="fade-up" data-aos-delay="200">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-6">dynamic_form</span>
+                    <h3 class="text-2xl font-bold mb-4">SMTP Rotation</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Manage unlimited SMTP accounts with automatic load balancing. Maintain inbox placement and protect your sender reputation.</p>
+                </div>
+
+                <!-- AI Personalization -->
+                <div class="glass-card p-10 rounded-[2rem] hover-lift group" data-aos="fade-up" data-aos-delay="300">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">neurology</span>
+                    <h3 class="text-2xl font-bold mb-4">AI Personalization</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Automate personalized sequences with AI-generated openers and merge fields for maximum reply rates.</p>
+                </div>
+
+                <!-- Verification -->
+                <div class="glass-card p-10 rounded-[2rem] hover-lift group" data-aos="fade-up" data-aos-delay="400">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-6">verified_user</span>
+                    <h3 class="text-2xl font-bold mb-4">Verification Engine</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Verify every address before sending. Reduce bounces and ensure your outreach reaches real, active inboxes.</p>
+                </div>
+
+                <!-- Reply Detection -->
+                <div class="glass-card p-10 rounded-[2rem] hover-lift group" data-aos="fade-up" data-aos-delay="500">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-6">insights</span>
+                    <h3 class="text-2xl font-bold mb-4">Intelligent Reply Detection</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Automatically categorize every incoming response. Separate positive signals from OOO replies instantly.</p>
+                </div>
+
+                <!-- Analytics -->
+                <div class="glass-card p-10 rounded-[2rem] hover-lift group" data-aos="fade-up" data-aos-delay="600">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">monitoring</span>
+                    <h3 class="text-2xl font-bold mb-4">Advanced Analytics</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Real-time visibility into link clicks, open rates, and conversion metrics to optimize your strategy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4-Step Process -->
+    <section class="py-32 px-8 bg-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">The LeadNexus Workflow</h2>
+                <p class="text-on-surface-variant">Four simple steps to dominate your market.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-6xl font-black text-outline-variant/20 mb-4">01</div>
+                    <h4 class="font-bold mb-2">Define</h4>
+                    <p class="text-sm text-on-surface-variant">Focus the engine with keywords or titles.</p>
+                </div>
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-6xl font-black text-outline-variant/20 mb-4">02</div>
+                    <h4 class="font-bold mb-2">Extract</h4>
+                    <p class="text-sm text-on-surface-variant">Surf verified emails and profiles automatically.</p>
+                </div>
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-6xl font-black text-outline-variant/20 mb-4">03</div>
+                    <h4 class="font-bold mb-2">Build</h4>
+                    <p class="text-sm text-on-surface-variant">Configure sequences and SMTP rotation.</p>
+                </div>
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-6xl font-black text-outline-variant/20 mb-4">04</div>
+                    <h4 class="font-bold mb-2">Scale</h4>
+                    <p class="text-sm text-on-surface-variant">Monitor, optimize, and close more deals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-32 px-8 bg-surface-container-low" id="pricing">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-6xl font-black mb-4">Choose Your Velocity</h2>
+                <p class="text-on-surface-variant font-medium">No hidden fees. Scale as you grow.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Free -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col items-center hover-lift" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">For Testing</div>
+                    <div class="text-4xl font-black mb-8">$0</div>
+                    <ul class="space-y-4 text-sm text-on-surface-variant mb-12 flex-1">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> 100 Scrape Jobs</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> 500 Outreach / mo</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> 1 SMTP Account</li>
+                    </ul>
+                    <a href="https://getleadnexus.com/register/" class="w-full py-4 rounded-xl border border-outline-variant text-center font-bold hover:bg-surface-container transition-all">Get Started</a>
+                </div>
+                <!-- Basic -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col items-center border-t-4 border-primary hover-lift" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-sm font-bold text-primary uppercase tracking-widest mb-4">Growing Teams</div>
+                    <div class="text-4xl font-black mb-8">$49</div>
+                    <ul class="space-y-4 text-sm text-on-surface-variant mb-12 flex-1">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> 15,000 Outreach</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> 25 SMTP Accounts</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> Pro Finder Access</li>
+                    </ul>
+                    <a href="https://getleadnexus.com/register/" class="w-full py-4 rounded-xl bg-primary text-on-primary text-center font-bold hover-lift">Initiate Growth</a>
+                </div>
+                <!-- Standard -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col items-center border-t-4 border-secondary hover-lift" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Active Scaling</div>
+                    <div class="text-4xl font-black mb-8">$99</div>
+                    <ul class="space-y-4 text-sm text-on-surface-variant mb-12 flex-1">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> 30,000 Outreach</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> 100 SMTP Accounts</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> 17,500 Client Data</li>
+                    </ul>
+                    <a href="https://getleadnexus.com/register/" class="w-full py-4 rounded-xl bg-secondary text-on-secondary text-center font-bold hover-lift">Scale Velocity</a>
+                </div>
+                <!-- Diamond -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col items-center border-t-4 border-tertiary hover-lift" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-sm font-bold text-tertiary uppercase tracking-widest mb-4">Enterprise</div>
+                    <div class="text-4xl font-black mb-8">$199</div>
+                    <ul class="space-y-4 text-sm text-on-surface-variant mb-12 flex-1">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> 100,000 Outreach</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> 150 SMTP Accounts</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> 50,000 Client Data</li>
+                    </ul>
+                    <a href="https://getleadnexus.com/register/" class="w-full py-4 rounded-xl bg-on-surface text-surface text-center font-bold hover-lift">Expert Execution</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing CTA -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-4xl mx-auto glass-card p-20 rounded-[3rem] text-center relative overflow-hidden shimmer" data-aos="fade-up">
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 tracking-tight">Ready to Fill Your Pipeline?</h2>
+                <p class="text-on-surface-variant text-xl mb-12">Join 2,000+ B2B teams using LeadNexus to find verified leads and scale revenue.</p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="https://getleadnexus.com/register/" target="_blank" class="px-10 py-5 rounded-full bg-gradient-to-r from-primary to-secondary text-on-primary font-bold text-lg hover-lift shimmer">
+                        Start Free Trial Now
+                    </a>
+                </div>
+            </div>
+            <div class="absolute inset-0 opacity-10 bg-gradient-to-tr from-primary via-transparent to-secondary"></div>
+        </div>
+    </section>
+</main>
+
+<script>
+    // YouTube Autoplay on Scroll logic
+    const videoIframe = document.getElementById('nexusVideo');
+    let videoStarted = false;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !videoStarted) {
+                // To comply with browser policies, autoplay must be muted
+                const currentSrc = videoIframe.src;
+                videoIframe.src = currentSrc + "&autoplay=1&mute=1";
+                videoStarted = true;
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% of the video is visible
+
+    observer.observe(videoIframe);
+</script>
+{% endblock %}

@@ -12,3 +12,6 @@ def services(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def leadnexus(request):
+    return render(request, 'leadnexus.html')
