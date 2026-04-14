@@ -20,9 +20,8 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <!-- Left: Contact Form -->
         <section class="glass-panel rounded-xl p-8 md:p-12 shadow-2xl" data-aos="fade-right" data-aos-duration="1000">
-            <form class="space-y-6" method="POST" id="contactForm">
+            <form class="space-y-6" method="POST" id="contactForm" novalidate>
                 {% csrf_token %}
-                <!-- Honeypot field for security against bots -->
                 <div class="hidden">
                     <input name="bot_check" type="text" tabindex="-1" autocomplete="off"/>
                 </div>
@@ -30,22 +29,24 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="space-y-2 group">
                         <label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant ml-1" for="name">Full Name *</label>
-                        <input id="name" name="name" required minlength="3" maxlength="50" class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none" placeholder="John Doe" type="text"/>
+                        <input id="name" name="name" required minlength="3" maxlength="50" class="w-full bg-surface-container-lowest border border-transparent rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none" placeholder="John Doe" type="text"/>
+                        <span id="nameError" class="text-[10px] text-error uppercase font-bold tracking-wider ml-1 hidden">Please enter your full name (min 3 chars)</span>
                     </div>
                     <div class="space-y-2">
                         <label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant ml-1" for="email">Work Email *</label>
-                        <input id="email" name="email" required class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none" placeholder="john@company.com" type="email"/>
+                        <input id="email" name="email" required class="w-full bg-surface-container-lowest border border-transparent rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none" placeholder="john@company.com" type="email"/>
+                        <span id="emailError" class="text-[10px] text-error uppercase font-bold tracking-wider ml-1 hidden">Please enter a valid work email</span>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="space-y-2">
                         <label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant ml-1" for="phone">WhatsApp / Phone</label>
-                        <input id="phone" name="phone" maxlength="20" class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none" placeholder="+1 234 567 890" type="tel"/>
+                        <input id="phone" name="phone" maxlength="20" class="w-full bg-surface-container-lowest border border-transparent rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none" placeholder="+1 234 567 890" type="tel"/>
                     </div>
                     <div class="space-y-2">
                         <label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant ml-1" for="service">Service Required *</label>
-                        <select id="service" name="service" required class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none appearance-none">
+                        <select id="service" name="service" required class="w-full bg-surface-container-lowest border border-transparent rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none appearance-none">
                             <option value="" disabled selected>Select a Service</option>
                             <option value="seo-audit">SEO Audit</option>
                             <option value="content-strategy">Content Strategy</option>
@@ -53,14 +54,18 @@
                             <option value="full-stack">Full Stack Development</option>
                             <option value="ai-integration">AI & Automation</option>
                         </select>
+                        <span id="serviceError" class="text-[10px] text-error uppercase font-bold tracking-wider ml-1 hidden">Please select a service</span>
                     </div>
                 </div>
 
                 <div class="space-y-2 relative">
                     <label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant ml-1" for="message">Message *</label>
-                    <textarea id="message" name="message" required minlength="20" maxlength="1000" class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none resize-none" placeholder="Tell us about your project goals..." rows="5"></textarea>
-                    <div class="absolute bottom-4 right-4 text-[10px] uppercase font-bold tracking-widest text-on-surface-variant/40">
-                        <span id="charCount">0</span>/1000
+                    <textarea id="message" name="message" required minlength="20" maxlength="1000" class="w-full bg-surface-container-lowest border border-transparent rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none resize-none" placeholder="Tell us about your project goals..." rows="5"></textarea>
+                    <div class="flex justify-between items-center px-1">
+                        <span id="messageError" class="text-[10px] text-error uppercase font-bold tracking-wider hidden">Message is too short (min 20 chars)</span>
+                        <div class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant/40 ml-auto">
+                            <span id="charCount">0</span>/1000
+                        </div>
                     </div>
                 </div>
 
@@ -74,40 +79,40 @@
         <!-- Right: Contact Info & Map -->
         <section class="space-y-12" data-aos="fade-left" data-aos-duration="1000">
             <div class="space-y-8">
-                <div class="flex items-start gap-6 group hover-lift">
+                <a href="mailto:hello@difusionseo.com" class="flex items-start gap-6 group hover-lift transition-all" target="_blank" rel="noopener noreferrer">
                     <div class="w-14 h-14 rounded-xl glass-panel flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
                         <span class="material-symbols-outlined text-3xl animate__animated animate__pulse animate__infinite">mail</span>
                     </div>
                     <div>
-                        <h3 class="text-on-surface font-bold text-xl mb-1">Email Us</h3>
+                        <h3 class="text-on-surface font-bold text-xl mb-1 mt-1">Email Us</h3>
                         <p class="text-on-surface-variant">hello@difusionseo.com</p>
-                        <p class="text-on-surface-variant text-sm mt-1">Response within 24 hours</p>
+                        <p class="text-secondary text-xs mt-2 font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Send Email <span class="material-symbols-outlined text-xs align-middle">open_in_new</span></p>
                     </div>
-                </div>
-                <!-- ... other contact items ... -->
-                <div class="flex items-start gap-6 group hover-lift">
+                </a>
+
+                <a href="https://wa.me/15550007369" class="flex items-start gap-6 group hover-lift transition-all" target="_blank" rel="noopener noreferrer">
                     <div class="w-14 h-14 rounded-xl glass-panel flex items-center justify-center text-secondary group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-all">
                         <span class="material-symbols-outlined text-3xl animate__animated animate__pulse animate__infinite animate__delay-1s">chat</span>
                     </div>
                     <div>
-                        <h3 class="text-on-surface font-bold text-xl mb-1">WhatsApp</h3>
+                        <h3 class="text-on-surface font-bold text-xl mb-1 mt-1">WhatsApp</h3>
                         <p class="text-on-surface-variant">+1 (555) 000-SEO-9</p>
-                        <p class="text-on-surface-variant text-sm mt-1">Mon - Fri, 9am - 6pm EST</p>
+                        <p class="text-secondary text-xs mt-2 font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Chat Now <span class="material-symbols-outlined text-xs align-middle">open_in_new</span></p>
                     </div>
-                </div>
-                <div class="flex items-start gap-6 group hover-lift">
+                </a>
+
+                <a href="https://linkedin.com/company/difusionseo" class="flex items-start gap-6 group hover-lift transition-all" target="_blank" rel="noopener noreferrer">
                     <div class="w-14 h-14 rounded-xl glass-panel flex items-center justify-center text-tertiary group-hover:bg-tertiary-container group-hover:text-on-tertiary-container transition-all">
                         <span class="material-symbols-outlined text-3xl animate__animated animate__pulse animate__infinite animate__delay-2s">share</span>
                     </div>
                     <div>
-                        <h3 class="text-on-surface font-bold text-xl mb-1">LinkedIn</h3>
+                        <h3 class="text-on-surface font-bold text-xl mb-1 mt-1">LinkedIn</h3>
                         <p class="text-on-surface-variant">linkedin.com/company/difusionseo</p>
-                        <p class="text-on-surface-variant text-sm mt-1">Follow for SEO insights</p>
+                        <p class="text-secondary text-xs mt-2 font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Visit Profile <span class="material-symbols-outlined text-xs align-middle">open_in_new</span></p>
                     </div>
-                </div>
+                </a>
             </div>
 
-            <!-- Google Maps Placeholder -->
             <div class="relative w-full h-[300px] rounded-xl overflow-hidden glass-panel">
                 <img class="w-full h-full object-cover grayscale brightness-50 opacity-70" alt="Map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFs7rgYh5uJKH65rKcTD-H1zE3Gh7qKaN4Opa6fqdCK3BHFLAtBvbh66gXirEqTHeAbpQh9S0w0fLyxZGlg_Ff6SlVvTtddyEofsLX_YRRhLpw45I56UmfKyEaDTUNvq_vQNzz0_ssc96NbjpS_giY2EXVQWagovwoffriWYj-FZCwocVPuowSQE6_5HfuA01jWRUMykZ4CqUctqfNkQCS2Oz7EQN2EpUqh8U3Ie0_JW3iKfAsRsJuhg3uVILnY11JOSMsOoS6AzM"/>
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-surface-container-lowest/40 backdrop-blur-sm">
@@ -123,47 +128,64 @@
 </main>
 
 <script>
-    // Real-time character counter for Message field
+    const form = document.getElementById('contactForm');
     const messageArea = document.getElementById('message');
     const charDisplay = document.getElementById('charCount');
-    
-    if (messageArea && charDisplay) {
-        messageArea.addEventListener('input', () => {
-            const count = messageArea.value.length;
-            charDisplay.textContent = count;
-            
-            // Visual warning if approaching limit
-            const limit = 1000;
-            if (count > limit * 0.9) {
-                charDisplay.classList.add('text-error');
-                charDisplay.classList.remove('text-on-surface-variant/40');
-            } else {
-                charDisplay.classList.remove('text-error');
-                charDisplay.classList.add('text-on-surface-variant/40');
-            }
-        });
-    }
 
-    // Form Submission Security & Validation
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', (e) => {
+    // Live character counter
+    messageArea.addEventListener('input', () => {
+        const count = messageArea.value.length;
+        charDisplay.textContent = count;
+        if (count > 900) charDisplay.classList.replace('text-on-surface-variant/40', 'text-error');
+        else charDisplay.classList.replace('text-error', 'text-on-surface-variant/40');
+    });
+
+    // Custom Validation Function
+    const validateField = (id, condition) => {
+        const field = document.getElementById(id);
+        const error = document.getElementById(id + 'Error');
+        if (!condition) {
+            field.classList.remove('border-transparent');
+            field.classList.add('border-error', 'animate__animated', 'animate__shakeX');
+            error.classList.remove('hidden');
+            setTimeout(() => field.classList.remove('animate__animated', 'animate__shakeX'), 500);
+            return false;
+        } else {
+            field.classList.add('border-transparent');
+            field.classList.remove('border-error');
+            error.classList.add('hidden');
+            return true;
+        }
+    };
+
+    form.addEventListener('submit', (e) => {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        let isValid = true;
+        isValid &= validateField('name', document.getElementById('name').value.length >= 3);
+        isValid &= validateField('email', emailPattern.test(document.getElementById('email').value));
+        isValid &= validateField('service', document.getElementById('service').value !== "");
+        isValid &= validateField('message', document.getElementById('message').value.length >= 20);
+
+        if (!isValid) {
+            e.preventDefault();
+        } else {
             // Honeypot check
-            const botField = document.querySelector('input[name="bot_check"]');
-            if (botField && botField.value !== "") {
+            if (document.querySelector('input[name="bot_check"]').value !== "") {
                 e.preventDefault();
-                console.warn("Bot activity detected.");
-                return;
             }
+        }
+    });
 
-            // Additional JS validation if needed
-            const emailField = document.getElementById('email');
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(emailField.value)) {
-                e.preventDefault();
-                alert("Please enter a valid work email address.");
-            }
+    // Clear error on input
+    ['name', 'email', 'service', 'message'].forEach(id => {
+        document.getElementById(id).addEventListener('input', () => {
+            const field = document.getElementById(id);
+            const error = document.getElementById(id + 'Error');
+            field.classList.add('border-transparent');
+            field.classList.remove('border-error');
+            if(error) error.classList.add('hidden');
         });
-    }
+    });
 </script>
 {% endblock %}
