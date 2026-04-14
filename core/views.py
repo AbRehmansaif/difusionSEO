@@ -15,3 +15,9 @@ def contact(request):
 
 def leadnexus(request):
     return render(request, 'leadnexus.html')
+
+def privacy(request):
+    return render(request, 'privacy.html')
+
+def terms(request):
+    return render(request, 'terms.html')
