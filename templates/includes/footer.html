@@ -1,0 +1,52 @@
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-24 px-8 border-t border-outline-variant/10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+        <div class="space-y-6">
+            <a href="{% url 'home' %}" class="text-3xl font-black tracking-tighter text-primary">DifusionSEO</a>
+            <p class="text-on-surface-variant leading-relaxed">
+                Engineering digital dominance through technical precision and strategic marketing.
+            </p>
+            <div class="flex gap-4">
+                <a class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:text-secondary transition-all" href="#">
+                    <span class="material-symbols-outlined text-sm">share</span>
+                </a>
+                <a class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:text-secondary transition-all" href="#">
+                    <span class="material-symbols-outlined text-sm">alternate_email</span>
+                </a>
+            </div>
+        </div>
+        <div>
+            <h5 class="text-sm font-black uppercase tracking-widest text-on-surface mb-8">Solutions</h5>
+            <ul class="space-y-4">
+                <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'services' %}">SEO Audit</a></li>
+                <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'services' %}">Content Strategy</a></li>
+                <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'services' %}">Full Stack Development</a></li>
+                <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'services' %}">AI Integration</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="text-sm font-black uppercase tracking-widest text-on-surface mb-8">Company</h5>
+            <ul class="space-y-4">
+                <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'about' %}">About Us</a></li>
+                <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="text-sm font-black uppercase tracking-widest text-on-surface mb-8">Newsletter</h5>
+            <p class="text-on-surface-variant text-sm mb-6">Stay ahead of the algorithm. No spam, just technical insights.</p>
+            <div class="flex">
+                <input class="w-full bg-surface-container border-0 rounded-l-xl px-4 py-3 focus:ring-1 focus:ring-secondary text-sm" placeholder="Email Address" type="email"/>
+                <button class="bg-secondary text-on-secondary px-6 rounded-r-xl">
+                    <span class="material-symbols-outlined">send</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-on-surface-variant uppercase tracking-widest">
+        <p>© 2024 DifusionSEO. All rights reserved.</p>
+        <div class="flex gap-8">
+            <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+            <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+        </div>
+    </div>
+</footer>

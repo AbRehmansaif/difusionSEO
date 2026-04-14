@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>{% block title %}DifusionSEO | Digital Growth & Software Solutions{% endblock %}</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#dfb7ff",
+                        "on-primary": "#340098",
+                        "surface-container-highest": "#353534",
+                        "background": "#131313",
+                        "outline": "#938ea1",
+                        "error-container": "#93000a",
+                        "primary-container": "#673de6",
+                        "primary-fixed": "#e7deff",
+                        "primary-fixed-dim": "#ccbeff",
+                        "secondary-container": "#00d2fd",
+                        "tertiary-container": "#9000eb",
+                        "surface-tint": "#ccbeff",
+                        "on-tertiary": "#4b007e",
+                        "on-tertiary-container": "#eed3ff",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-fixed": "#1e0060",
+                        "tertiary-fixed": "#f1daff",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-fixed": "#001f27",
+                        "tertiary": "#dfb7ff",
+                        "secondary": "#a2e7ff",
+                        "surface-bright": "#3a3939",
+                        "primary": "#ccbeff",
+                        "on-secondary-fixed-variant": "#004e5f",
+                        "on-secondary": "#003642",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary-fixed": "#2d004f",
+                        "surface-dim": "#131313",
+                        "secondary-fixed-dim": "#3cd7ff",
+                        "surface-variant": "#353534",
+                        "inverse-primary": "#6439e3",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#6b00b0",
+                        "on-primary-container": "#e1d7ff",
+                        "surface-container": "#201f1f",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#484455",
+                        "on-surface-variant": "#cac3d8",
+                        "on-primary-fixed-variant": "#4c10cc",
+                        "surface-container-low": "#1c1b1b",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#b4ebff",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-container": "#005669"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card, .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(72, 68, 85, 0.2);
+        }
+        .neon-gradient {
+            background: linear-gradient(135deg, #CCBEFF 0%, #A2E7FF 100%);
+        }
+        .noise-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.05;
+        }
+        .grid-pattern {
+            background-image: radial-gradient(rgba(72, 68, 85, 0.15) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .pulse-orb, .seo-pulse-orb, .seo-pulse {
+            filter: blur(100px);
+            opacity: 0.15;
+            z-index: -1;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .neon-glow:focus-within {
+            box-shadow: 0 0 15px rgba(162, 231, 255, 0.3);
+            border-color: #a2e7ff;
+        }
+    </style>
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-surface text-on-surface overflow-x-hidden selection:bg-primary-container selection:text-white">
+    <!-- Grid and Noise Base Layers -->
+    <div class="fixed inset-0 grid-pattern pointer-events-none z-0"></div>
+    <div class="fixed inset-0 noise-texture pointer-events-none z-0"></div>
+
+    {% include 'includes/navbar.html' %}
+
+    {% block content %}{% endblock %}
+
+    {% include 'includes/footer.html' %}
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

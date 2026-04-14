@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+
+# Media & Static files (optional)
+media/
+staticfiles/
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Testing
+.pytest_cache/
+
+# Migrations (optional: keep if needed)
+# */migrations/*
+# !*/migrations/__init__.py
+
+# Logs
+logs/
+*.log
+
+# Celery
+celerybeat-schedule
+
+# Docker
+*.env
+*.pid
+
+# Node (if frontend included)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build files
+dist/
+build/
+
+# Static collected files
+/staticfiles/
+
+# Backup files
+*.bak
+*.swp

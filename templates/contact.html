@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us | DifusionSEO{% endblock %}
+
+{% block content %}
+<!-- Hero Content & Pulse Orbs -->
+<main class="relative pt-32 pb-24 px-8 z-10 max-w-7xl mx-auto">
+<div class="seo-pulse top-[-100px] left-[-200px]"></div>
+<div class="seo-pulse bottom-[100px] right-[-200px] opacity-40"></div>
+<header class="mb-20">
+<p class="label-md uppercase tracking-[0.05em] text-secondary font-bold mb-4">Get in touch</p>
+<h1 class="text-5xl md:text-7xl font-black tracking-tight leading-none text-on-surface mb-6 max-w-3xl">
+                Ready to dominate <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">search results?</span>
+</h1>
+</header>
+<!-- Split Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<!-- Left: Contact Form -->
+<section class="glass-panel rounded-xl p-8 md:p-12 shadow-2xl">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2 group">
+<label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant ml-1">Full Name</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant ml-1">Work Email</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant ml-1">WhatsApp / Phone</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none" placeholder="+1 234 567 890" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant ml-1">Service Required</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none appearance-none">
+<option>SEO Audit</option>
+<option>Content Strategy</option>
+<option>Technical SEO</option>
+<option>Link Building</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant ml-1">Message</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-4 text-on-surface focus:ring-1 focus:ring-secondary neon-glow transition-all outline-none resize-none" placeholder="Tell us about your project goals..." rows="5"></textarea>
+</div>
+<button class="w-full bg-gradient-to-br from-primary to-secondary text-on-primary font-black py-5 rounded-xl text-lg hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                        Send Message
+                        <span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</form>
+</section>
+<!-- Right: Contact Info & Map -->
+<section class="space-y-12">
+<div class="space-y-8">
+<div class="flex items-start gap-6 group">
+<div class="w-14 h-14 rounded-xl glass-panel flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined text-3xl" data-icon="mail">mail</span>
+</div>
+<div>
+<h3 class="text-on-surface font-bold text-xl mb-1">Email Us</h3>
+<p class="text-on-surface-variant">hello@difusionseo.com</p>
+<p class="text-on-surface-variant text-sm mt-1">Response within 24 hours</p>
+</div>
+</div>
+<div class="flex items-start gap-6 group">
+<div class="w-14 h-14 rounded-xl glass-panel flex items-center justify-center text-secondary group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-all">
+<span class="material-symbols-outlined text-3xl" data-icon="chat">chat</span>
+</div>
+<div>
+<h3 class="text-on-surface font-bold text-xl mb-1">WhatsApp</h3>
+<p class="text-on-surface-variant">+1 (555) 000-SEO-9</p>
+<p class="text-on-surface-variant text-sm mt-1">Mon - Fri, 9am - 6pm EST</p>
+</div>
+</div>
+<div class="flex items-start gap-6 group">
+<div class="w-14 h-14 rounded-xl glass-panel flex items-center justify-center text-tertiary group-hover:bg-tertiary-container group-hover:text-on-tertiary-container transition-all">
+<span class="material-symbols-outlined text-3xl" data-icon="share">share</span>
+</div>
+<div>
+<h3 class="text-on-surface font-bold text-xl mb-1">LinkedIn</h3>
+<p class="text-on-surface-variant">linkedin.com/company/difusionseo</p>
+<p class="text-on-surface-variant text-sm mt-1">Follow for SEO insights</p>
+</div>
+</div>
+</div>
+<!-- Google Maps Placeholder -->
+<div class="relative w-full h-[300px] rounded-xl overflow-hidden glass-panel">
+<img class="w-full h-full object-cover grayscale brightness-50 opacity-70" data-alt="dark stylized digital map interface with glowing purple and blue location markers and clean minimalist UI" data-location="New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFs7rgYh5uJKH65rKcTD-H1zE3Gh7qKaN4Opa6fqdCK3BHFLAtBvbh66gXirEqTHeAbpQh9S0w0fLyxZGlg_Ff6SlVvTtddyEofsLX_YRRhLpw45I56UmfKyEaDTUNvq_vQNzz0_ssc96NbjpS_giY2EXVQWagovwoffriWYj-FZCwocVPuowSQE6_5HfuA01jWRUMykZ4CqUctqfNkQCS2Oz7EQN2EpUqh8U3Ie0_JW3iKfAsRsJuhg3uVILnY11JOSMsOoS6AzM"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-surface-container-lowest/40 backdrop-blur-sm">
+<div class="bg-primary/20 p-4 rounded-full mb-4 animate-pulse">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="location_on" data-weight="fill" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<h4 class="text-on-surface font-bold text-lg">Global Headquarters</h4>
+<p class="text-on-surface-variant text-sm max-w-[200px]">7th Avenue, Chelsea, New York, NY 10001</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+{% endblock %}
