@@ -18,11 +18,36 @@
         <div data-aos="fade-up" data-aos-delay="200">
             <h5 class="text-sm font-black uppercase tracking-widest text-on-surface mb-8">Solutions</h5>
             <ul class="space-y-4">
-                <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'services' %}">SEO Audit</a></li>
-                <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'services' %}">Content Strategy</a></li>
-                <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'services' %}">Full Stack Development</a></li>
-                <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'services' %}">AI Integration</a></li>
-                <li><a class="text-on-surface-variant hover:text-white transition-all font-bold text-secondary" href="{% url 'leadnexus' %}">LeadNexus Tool</a></li>
+                <li>
+                    <a class="text-on-surface-variant hover:text-white transition-all flex items-center gap-3 group" href="{% url 'services' %}#seo-strategy">
+                        <span class="material-symbols-outlined text-[1.2rem] opacity-50 group-hover:opacity-100 transition-opacity">query_stats</span>
+                        SEO Strategy
+                    </a>
+                </li>
+                <li>
+                    <a class="text-on-surface-variant hover:text-white transition-all flex items-center gap-3 group" href="{% url 'services' %}#local-seo">
+                        <span class="material-symbols-outlined text-[1.2rem] opacity-50 group-hover:opacity-100 transition-opacity">location_on</span>
+                        Hyper-Local SEO
+                    </a>
+                </li>
+                <li>
+                    <a class="text-on-surface-variant hover:text-white transition-all flex items-center gap-3 group" href="{% url 'services' %}#full-stack">
+                        <span class="material-symbols-outlined text-[1.2rem] opacity-50 group-hover:opacity-100 transition-opacity">code_blocks</span>
+                        Platform Engineering
+                    </a>
+                </li>
+                <li>
+                    <a class="text-on-surface-variant hover:text-white transition-all flex items-center gap-3 group" href="{% url 'services' %}#ai-automation">
+                        <span class="material-symbols-outlined text-[1.2rem] opacity-50 group-hover:opacity-100 transition-opacity">psychology</span>
+                        AI & Automation
+                    </a>
+                </li>
+                <li>
+                    <a class="text-secondary hover:text-white transition-all flex items-center gap-3 group font-bold tracking-tight" href="{% url 'leadnexus' %}">
+                        <span class="material-symbols-outlined text-[1.2rem] animate-pulse">rocket_launch</span>
+                        LeadNexus Tool
+                    </a>
+                </li>
             </ul>
         </div>
         <div data-aos="fade-up" data-aos-delay="300">
