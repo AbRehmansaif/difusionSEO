@@ -170,6 +170,31 @@
         const heroGlow = document.getElementById('hero-glow');
         if (heroGlow) heroGlow.style.opacity = '0';
     });
+
+    // Sticky Scroll Progress
+    window.addEventListener('scroll', () => {
+        const section = document.querySelector('section.py-32.bg-surface');
+        const progressLine = document.getElementById('sticky-progress');
+        if (section && progressLine) {
+            const rect = section.getBoundingClientRect();
+            const winHeight = window.innerHeight;
+            const progress = Math.max(0, Math.min(100, ((-rect.top) / (rect.height - winHeight)) * 100));
+            progressLine.style.height = `${progress}%`;
+        }
+    });
+
+    // Magnetic Cards
+    document.querySelectorAll('.glass-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            card.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `translate(0, 0)`;
+        });
+    });
 </script>
 <div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-2xl shadow-2xl animate__animated animate__bounceIn animate__delay-2s float-animation">
 <div class="flex items-center gap-4">
@@ -231,48 +256,68 @@
 <!-- Why Choose Us -->
 <section class="py-32 px-8 bg-surface relative overflow-hidden">
 <div class="absolute inset-0 bg-gradient-to-br from-primary-container/5 via-transparent to-secondary-container/5"></div>
-<div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row gap-20 items-center">
-<div class="md:w-1/2">
-<h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-tight">
-                    We Build <span class="text-primary">Engines</span>, <br/>Not Just Websites.
-                </h2>
-<p class="text-lg text-on-surface-variant mb-12 leading-relaxed">
-                    At DifusionSEO, we reject generic solutions. Our team blends technical engineering with creative marketing to deliver platforms that generate revenue automatically.
-                </p>
-<div class="p-8 border-l-4 border-primary bg-surface-container-low rounded-r-2xl">
-<p class="text-2xl font-bold italic text-on-surface">"The most effective digital strategy is one that becomes invisible as it scales."</p>
-</div>
-</div>
-<div class="md:w-1/2 space-y-6">
-<div class="flex items-start gap-6 group" data-aos="fade-left" data-aos-delay="100">
-<span class="text-4xl font-black text-outline-variant group-hover:text-primary transition-colors">01</span>
-<div>
-<h4 class="text-xl font-bold mb-2">Experienced Team</h4>
-<p class="text-on-surface-variant">Senior engineers and SEO specialists with over 10+ years of domain experience.</p>
-</div>
-</div>
-<div class="flex items-start gap-6 group" data-aos="fade-left" data-aos-delay="200">
-<span class="text-4xl font-black text-outline-variant group-hover:text-secondary transition-colors">02</span>
-<div>
-<h4 class="text-xl font-bold mb-2">Data-Driven Approach</h4>
-<p class="text-on-surface-variant">We don't guess. Every decision is backed by comprehensive analytical tracking.</p>
-</div>
-</div>
-<div class="flex items-start gap-6 group" data-aos="fade-left" data-aos-delay="300">
-<span class="text-4xl font-black text-outline-variant group-hover:text-tertiary transition-colors">03</span>
-<div>
-<h4 class="text-xl font-bold mb-2">Agile Methodology</h4>
-<p class="text-on-surface-variant">Rapid deployment cycles ensuring your project is always evolving and ahead.</p>
-</div>
-</div>
-<div class="flex items-start gap-6 group" data-aos="fade-left" data-aos-delay="400">
-<span class="text-4xl font-black text-outline-variant group-hover:text-primary transition-colors">04</span>
-<div>
-<h4 class="text-xl font-bold mb-2">24/7 Monitoring</h4>
-<p class="text-on-surface-variant">Your systems are watched by our automated security and uptime monitors.</p>
-</div>
-</div>
-</div>
+<div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row gap-20 items-start">
+    <!-- Fixed Left Column -->
+    <div class="md:w-1/2 md:sticky md:top-32 h-fit pr-12">
+        <div class="relative pl-8 border-l-2 border-outline-variant/20">
+            <!-- Active Progress Line -->
+            <div id="sticky-progress" class="absolute left-[-2px] top-0 w-[2px] bg-gradient-to-b from-primary to-secondary transition-all duration-300 origin-top h-0"></div>
+            
+            <span class="label-md uppercase tracking-[0.2em] text-primary font-bold mb-4 block">Why DifusionSEO?</span>
+            <h2 class="text-4xl md:text-7xl font-black tracking-tighter mb-8 leading-[0.9]">
+                We Build <span class="text-primary">Engines</span>, <br/>Not Just Websites.
+            </h2>
+            <p class="text-xl text-on-surface-variant mb-12 leading-relaxed max-w-md">
+                At DifusionSEO, we reject generic solutions. Our team blends technical engineering with creative marketing to deliver platforms that generate revenue automatically.
+            </p>
+            <div class="p-8 border-l-4 border-primary bg-surface-container-low/50 rounded-r-2xl backdrop-blur-sm">
+                <p class="text-2xl font-bold italic text-on-surface">"The most effective digital strategy is one that becomes invisible as it scales."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sliding Right Column -->
+    <div class="md:w-1/2 space-y-12 pb-32">
+        <div class="glass-card p-10 rounded-[2rem] flex flex-col gap-6 group hover:translate-x-4 transition-all duration-500 border-none shadow-xl bg-surface-container-low/30" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center gap-6">
+                <span class="text-6xl font-black text-primary/20 group-hover:text-primary transition-colors duration-500">01</span>
+                <h4 class="text-3xl font-black mb-0">Experienced Team</h4>
+            </div>
+            <p class="text-lg text-on-surface-variant leading-relaxed">Senior engineers and SEO specialists with over 10+ years of domain experience across multiple industries.</p>
+        </div>
+
+        <div class="glass-card p-10 rounded-[2rem] flex flex-col gap-6 group hover:translate-x-4 transition-all duration-500 border-none shadow-xl bg-surface-container-low/30" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center gap-6">
+                <span class="text-6xl font-black text-secondary/20 group-hover:text-secondary transition-colors duration-500">02</span>
+                <h4 class="text-3xl font-black mb-0">Data-Driven Approach</h4>
+            </div>
+            <p class="text-lg text-on-surface-variant leading-relaxed">We don't guess. Every decision is backed by comprehensive analytical tracking and A/B testing protocols.</p>
+        </div>
+
+        <div class="glass-card p-10 rounded-[2rem] flex flex-col gap-6 group hover:translate-x-4 transition-all duration-500 border-none shadow-xl bg-surface-container-low/30" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex items-center gap-6">
+                <span class="text-6xl font-black text-tertiary/20 group-hover:text-tertiary transition-colors duration-500">03</span>
+                <h4 class="text-3xl font-black mb-0">Agile Methodology</h4>
+            </div>
+            <p class="text-lg text-on-surface-variant leading-relaxed">Rapid deployment cycles ensuring your project is always evolving and staying ahead of market competition.</p>
+        </div>
+
+        <div class="glass-card p-10 rounded-[2rem] flex flex-col gap-6 group hover:translate-x-4 transition-all duration-500 border-none shadow-xl bg-surface-container-low/30" data-aos="fade-up" data-aos-delay="400">
+            <div class="flex items-center gap-6">
+                <span class="text-6xl font-black text-primary/20 group-hover:text-primary transition-colors duration-500">04</span>
+                <h4 class="text-3xl font-black mb-0">24/7 Monitoring</h4>
+            </div>
+            <p class="text-lg text-on-surface-variant leading-relaxed">Your systems are watched by our automated security and uptime monitors, ensuring 99.9% availability.</p>
+        </div>
+
+        <div class="glass-card p-10 rounded-[2rem] flex flex-col gap-6 group hover:translate-x-4 transition-all duration-500 border-none shadow-xl bg-surface-container-low/30" data-aos="fade-up" data-aos-delay="500">
+            <div class="flex items-center gap-6">
+                <span class="text-6xl font-black text-secondary/20 group-hover:text-secondary transition-colors duration-500">05</span>
+                <h4 class="text-3xl font-black mb-0">Custom Solutions</h4>
+            </div>
+            <p class="text-lg text-on-surface-variant leading-relaxed">No templates. We build bespoke architectures tailored to your specific business logic and scaling needs.</p>
+        </div>
+    </div>
 </div>
 </section>
 <!-- Process -->
