@@ -1,17 +1,75 @@
-<!-- Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl transition-all duration-500 px-8 py-6">
+<nav class="fixed top-0 w-full z-[60] bg-transparent backdrop-blur-xl transition-all duration-500 px-6 lg:px-8 py-4 lg:py-6" id="main-nav">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <a href="{% url 'home' %}" class="text-2xl font-black tracking-tighter text-primary">DifusionSEO</a>
-        <div class="hidden md:flex items-center gap-10">
+        <!-- Logo -->
+        <a href="{% url 'home' %}" class="text-xl lg:text-2xl font-black tracking-tighter text-primary relative">DifusionSEO</a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-8 xl:gap-10">
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'services' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'services' %}">Services</a>
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'about' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'about' %}">About</a>
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'contact' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'contact' %}">Contact</a>
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">LeadNexus</a>
         </div>
-        <button onclick="window.location.href='{% url 'contact' %}'" class="bg-primary text-on-primary font-['Inter'] font-bold text-sm tracking-wide px-6 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(204,190,255,0.3)] transition-all active:scale-95">
+        
+        <!-- Desktop CTA -->
+        <button onclick="window.location.href='{% url 'contact' %}'" class="hidden lg:block bg-primary text-on-primary font-['Inter'] font-bold text-sm tracking-wide px-6 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(204,190,255,0.3)] transition-all active:scale-95">
             Get a Quote
         </button>
+
+        <!-- Mobile/Tablet Hamburger Toggle -->
+        <button id="mobile-menu-btn" class="lg:hidden relative p-2 text-on-surface focus:outline-none">
+            <span class="material-symbols-outlined text-3xl transition-transform duration-300" id="hamburger-icon">menu</span>
+        </button>
     </div>
+
     <!-- Scroll Progress Indicator -->
     <div class="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-primary via-secondary to-tertiary w-0 transition-none ease-out" id="scroll-progress"></div>
 </nav>
+
+<!-- Mobile Menu Overlay (Moved outside nav to prevent backdrop-blur from creating a containing block) -->
+<div id="mobile-menu" class="fixed inset-0 bg-surface/98 backdrop-blur-2xl z-[50] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="flex flex-col items-center gap-8 text-center w-full px-8 mt-16">
+        <a class="text-3xl font-black tracking-tight {% if request.resolver_match.url_name == 'services' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'services' %}">Services</a>
+        <a class="text-3xl font-black tracking-tight {% if request.resolver_match.url_name == 'about' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'about' %}">About</a>
+        <a class="text-3xl font-black tracking-tight {% if request.resolver_match.url_name == 'contact' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'contact' %}">Contact</a>
+        <a class="text-3xl font-black tracking-tight {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">LeadNexus</a>
+        
+        <div class="w-24 h-px bg-outline-variant/30 my-4"></div>
+        
+        <button onclick="window.location.href='{% url 'contact' %}'" class="w-full max-w-xs bg-primary text-on-primary font-bold text-lg py-4 rounded-2xl shadow-[0_0_20px_rgba(204,190,255,0.2)]">
+            Get a Quote
+        </button>
+    </div>
+</div>
+
+<script>
+    // Inline Mobile Menu Logic for immediate execution
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const body = document.body;
+        
+        let isMenuOpen = false;
+
+        mobileBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            
+            if (isMenuOpen) {
+                // Open Menu
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                hamburgerIcon.innerText = 'close';
+                hamburgerIcon.classList.add('rotate-90', 'text-secondary');
+                body.style.overflow = 'hidden'; // Prevent scrolling
+            } else {
+                // Close Menu
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                hamburgerIcon.innerText = 'menu';
+                hamburgerIcon.classList.remove('rotate-90', 'text-secondary');
+                body.style.overflow = ''; // Restore scrolling
+            }
+        });
+    });
+</script>
