@@ -6,6 +6,11 @@
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
 <!-- Floating Orbs -->
+<!-- Parallax Background Elements -->
+<div class="parallax absolute top-[15%] left-[5%] w-32 h-32 bg-primary/10 rounded-3xl blur-2xl rotate-45 pointer-events-none" data-speed="-0.2"></div>
+<div class="parallax absolute top-[40%] right-[15%] w-48 h-48 bg-secondary/10 rounded-full blur-3xl pointer-events-none" data-speed="0.1"></div>
+<div class="parallax absolute bottom-[20%] left-[20%] w-24 h-24 bg-tertiary/10 rounded-lg blur-xl -rotate-12 pointer-events-none" data-speed="-0.3"></div>
+
 <div class="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-primary-container/20 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
 <div class="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-secondary-container/15 rounded-full blur-[100px] pointer-events-none"></div>
 
@@ -14,7 +19,7 @@
 
 <div class="max-w-7xl mx-auto px-8 w-full relative z-10 grid md:grid-cols-2 gap-12 items-center">
 <div class="text-left" data-aos="fade-right" data-aos-duration="1000">
-<h1 class="text-[3.5rem] md:text-[5rem] leading-[1.05] font-black tracking-tighter text-on-surface mb-6 animate__animated animate__fadeInLeft">
+<h1 class="parallax text-[3.5rem] md:text-[5rem] leading-[1.05] font-black tracking-tighter text-on-surface mb-6 animate__animated animate__fadeInLeft" data-speed="0.1">
                     Digital Growth &amp; <br/><span class="text-secondary">Software</span> Solutions
                 </h1>
 <p class="text-xl font-medium text-on-surface-variant mb-10 max-w-xl animate__animated animate__fadeInLeft animate__delay-1s">
@@ -181,8 +186,10 @@
 </div>
 </section>
 <!-- What We Do (Bento Grid) -->
-<section class="py-32 px-8 relative bg-surface-container-lowest">
-<div class="max-w-7xl mx-auto">
+<section class="py-32 px-8 relative bg-surface-container-lowest overflow-hidden">
+    <div class="parallax absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none" data-speed="0.1"></div>
+    <div class="parallax absolute -bottom-20 -left-20 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] pointer-events-none" data-speed="-0.1"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
 <div class="mb-20">
 <span class="label-md uppercase tracking-[0.2em] text-secondary font-bold mb-4 block">Our Expertise</span>
 <h2 class="text-4xl md:text-6xl font-black tracking-tighter text-on-surface">Everything Your Business Needs to Scale</h2>
@@ -326,7 +333,7 @@
 <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-20">
 <div class="md:w-1/2" data-aos="fade-right">
 <span class="label-md uppercase tracking-[0.2em] text-secondary font-bold mb-4 block">New Product Release</span>
-<h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-tight">
+<h2 class="parallax text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-tight" data-speed="0.05">
                     Next-Gen Outreach with <br/><span class="text-primary">LeadNexus</span>
                 </h2>
 <p class="text-lg text-on-surface-variant mb-12 leading-relaxed">

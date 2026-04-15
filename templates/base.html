@@ -238,6 +238,16 @@
                 orb.style.transform = `translateX(${x}px) translateY(${y}px)`;
             });
         });
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const parallaxElements = document.querySelectorAll('.parallax');
+            parallaxElements.forEach(el => {
+                const speed = el.getAttribute('data-speed') || 0.5;
+                const offset = window.pageYOffset * speed;
+                el.style.transform = `translateY(${offset}px)`;
+            });
+        });
     </script>
 </body>
 </html>
