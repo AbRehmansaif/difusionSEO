@@ -1,5 +1,5 @@
-<nav class="fixed top-0 w-full z-[60] bg-transparent backdrop-blur-xl transition-all duration-500 px-6 lg:px-8 py-4 lg:py-6" id="main-nav">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
+<nav class="fixed top-0 w-full z-[60] bg-transparent backdrop-blur-xl transition-all duration-500 px-6 lg:px-8 py-4 lg:py-6 border-b border-transparent" id="main-nav">
+    <div class="max-w-7xl mx-auto flex justify-between items-center relative z-20">
         <!-- Logo -->
         <a href="{% url 'home' %}" class="text-xl lg:text-2xl font-black tracking-tighter text-primary relative">DifusionSEO</a>
         
@@ -17,37 +17,37 @@
         </button>
 
         <!-- Mobile/Tablet Hamburger Toggle -->
-        <button id="mobile-menu-btn" class="lg:hidden relative p-2 text-on-surface focus:outline-none">
-            <span class="material-symbols-outlined text-3xl transition-transform duration-300" id="hamburger-icon">menu</span>
+        <button id="mobile-menu-btn" class="lg:hidden relative p-2 text-on-surface focus:outline-none z-[70] bg-surface/50 rounded-lg border border-outline-variant/10 backdrop-blur-md">
+            <span class="material-symbols-outlined text-3xl transition-transform duration-300 block" id="hamburger-icon">menu</span>
         </button>
     </div>
 
     <!-- Scroll Progress Indicator -->
-    <div class="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-primary via-secondary to-tertiary w-0 transition-none ease-out" id="scroll-progress"></div>
+    <div class="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-primary via-secondary to-tertiary w-0 transition-none ease-out z-10" id="scroll-progress"></div>
 </nav>
 
-<!-- Mobile Menu Overlay (Moved outside nav to prevent backdrop-blur from creating a containing block) -->
-<div id="mobile-menu" class="fixed inset-0 bg-surface/98 backdrop-blur-2xl z-[50] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300">
-    <div class="flex flex-col items-center gap-8 text-center w-full px-8 mt-16">
-        <a class="text-3xl font-black tracking-tight {% if request.resolver_match.url_name == 'services' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'services' %}">Services</a>
-        <a class="text-3xl font-black tracking-tight {% if request.resolver_match.url_name == 'about' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'about' %}">About</a>
-        <a class="text-3xl font-black tracking-tight {% if request.resolver_match.url_name == 'contact' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'contact' %}">Contact</a>
-        <a class="text-3xl font-black tracking-tight {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">LeadNexus</a>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-surface/98 backdrop-blur-3xl z-[50] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-all duration-500 pt-20 pb-10">
+    <div class="flex flex-col items-center gap-8 text-center w-full px-8 overflow-y-auto">
+        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'services' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'services' %}">Services</a>
+        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'about' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'about' %}">About</a>
+        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'contact' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'contact' %}">Contact</a>
+        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">LeadNexus</a>
         
-        <div class="w-24 h-px bg-outline-variant/30 my-4"></div>
+        <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full my-4"></div>
         
-        <button onclick="window.location.href='{% url 'contact' %}'" class="w-full max-w-xs bg-primary text-on-primary font-bold text-lg py-4 rounded-2xl shadow-[0_0_20px_rgba(204,190,255,0.2)]">
+        <button onclick="window.location.href='{% url 'contact' %}'" class="w-full max-w-[280px] bg-primary text-on-primary font-bold text-lg py-5 rounded-full shadow-[0_0_30px_rgba(204,190,255,0.2)] hover:scale-105 transition-all">
             Get a Quote
         </button>
     </div>
 </div>
 
 <script>
-    // Inline Mobile Menu Logic for immediate execution
     document.addEventListener('DOMContentLoaded', () => {
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const hamburgerIcon = document.getElementById('hamburger-icon');
+        const mainNav = document.getElementById('main-nav');
         const body = document.body;
         
         let isMenuOpen = false;
@@ -56,19 +56,37 @@
             isMenuOpen = !isMenuOpen;
             
             if (isMenuOpen) {
-                // Open Menu
+                // Open Menu Configuration
                 mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
                 mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                
+                // Bulletproof Icon Transition
                 hamburgerIcon.innerText = 'close';
-                hamburgerIcon.classList.add('rotate-90', 'text-secondary');
-                body.style.overflow = 'hidden'; // Prevent scrolling
+                hamburgerIcon.classList.add('rotate-180', 'text-primary');
+                
+                // Lock Body Scroll safely
+                body.style.overflow = 'hidden';
+                
+                // Solidify Nav Background
+                mainNav.classList.add('bg-surface', 'border-outline-variant/10');
+                mainNav.classList.remove('bg-transparent');
             } else {
-                // Close Menu
+                // Close Menu Configuration
                 mobileMenu.classList.add('opacity-0', 'pointer-events-none');
                 mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                
+                // Bulletproof Icon Transition
                 hamburgerIcon.innerText = 'menu';
-                hamburgerIcon.classList.remove('rotate-90', 'text-secondary');
-                body.style.overflow = ''; // Restore scrolling
+                hamburgerIcon.classList.remove('rotate-180', 'text-primary');
+                
+                // Restore Scroll safely
+                body.style.overflow = '';
+                
+                // Revert Nav Background if scrolled to top
+                if (window.scrollY <= 50) {
+                    mainNav.classList.remove('bg-surface', 'border-outline-variant/10');
+                    mainNav.classList.add('bg-transparent');
+                }
             }
         });
     });
