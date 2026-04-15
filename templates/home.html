@@ -6,8 +6,12 @@
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
 <!-- Floating Orbs -->
-<div class="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-primary-container/20 rounded-full blur-[120px] animate-pulse"></div>
-<div class="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-secondary-container/15 rounded-full blur-[100px]"></div>
+<div class="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-primary-container/20 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
+<div class="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-secondary-container/15 rounded-full blur-[100px] pointer-events-none"></div>
+
+<!-- Mouse Glow Effect Wrapper -->
+<div id="hero-glow" class="absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-500 bg-[radial-gradient(circle_at_var(--x)_var(--y),rgba(162,231,255,0.15)_0%,transparent_50%)]"></div>
+
 <div class="max-w-7xl mx-auto px-8 w-full relative z-10 grid md:grid-cols-2 gap-12 items-center">
 <div class="text-left" data-aos="fade-right" data-aos-duration="1000">
 <h1 class="text-[3.5rem] md:text-[5rem] leading-[1.05] font-black tracking-tighter text-on-surface mb-6 animate__animated animate__fadeInLeft">
@@ -41,9 +45,127 @@
 </div>
 </div>
 <div class="hidden md:block relative" data-aos="fade-left" data-aos-duration="1200">
-<div class="glass-card p-4 rounded-[2rem] transform rotate-3 hover:rotate-0 transition-transform duration-700 hover-lift">
-<img alt="Digital Analytics Dashboard" class="rounded-[1.5rem] w-full shadow-2xl" data-alt="Modern dark dashboard interface with glowing purple and blue data visualization charts on a high-end glass texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC73zVOFe4aMF9AJWt7VsV9LE-5qMVqUFDJWfby0SpNh7P3D2k21kpr9R_e_wIbdrWoqJCcEYfDQum-dpK_hy_d2QodyuZ3ywaqYqJI50tKWZVJNImC84DrKYymMcOa1UMNG3FjFRtKGW1PudJYYOwKRzNE7iOQmm3obgYMhL4ZUWrwcs2qOUpUsTMlEUyxcrhPGSWjmH8cGWnJ10EG5CWK8uyERpc7j1zRcdbYHZjiWdANLZBn5hLk7SutWjHYZB9HZ0PWQ-dioAI"/>
+<div class="glass-card p-4 rounded-[3rem] transform rotate-3 hover:rotate-0 transition-transform duration-700 hover-lift flex items-center justify-center min-h-[550px] holographic-glow relative overflow-hidden bg-surface-container-low/80 border-primary/20">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 opacity-30 pointer-events-none"></div>
+    
+    <!-- Animated Robot Face -->
+    <div class="robot-container relative w-72 h-80 flex flex-col items-center justify-center translate-y-[-20px]">
+        <!-- Robot Head Shell -->
+        <div class="absolute inset-0 bg-gradient-to-b from-surface-container-high to-surface-container rounded-[4rem] border-4 border-outline-variant/30 shadow-[0_0_50px_rgba(204,190,255,0.1)]"></div>
+        
+        <!-- Eyes Section -->
+        <div class="relative z-10 flex gap-12 mb-12 translate-y-4">
+            <!-- Left Eye -->
+            <div class="eye relative w-16 h-16 bg-black rounded-full overflow-hidden border-2 border-primary/40">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,#CCBEFF_0%,transparent_70%)] opacity-40 animate-pulse"></div>
+                <div class="pupil absolute w-6 h-6 bg-primary rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-[0_0_15px_#CCBEFF]"></div>
+                <!-- Eyelid for blinking -->
+                <div class="eyelid absolute inset-0 bg-surface-container-high translate-y-[-100%] animate-[blink_4s_infinite]"></div>
+            </div>
+            <!-- Right Eye -->
+            <div class="eye relative w-16 h-16 bg-black rounded-full overflow-hidden border-2 border-primary/40">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,#CCBEFF_0%,transparent_70%)] opacity-40 animate-pulse"></div>
+                <div class="pupil absolute w-6 h-6 bg-primary rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-[0_0_15px_#CCBEFF]"></div>
+                <!-- Eyelid for blinking -->
+                <div class="eyelid absolute inset-0 bg-surface-container-high translate-y-[-100%] animate-[blink_4s_infinite]"></div>
+            </div>
+        </div>
+
+        <!-- Digital Mouth (Equalizer Style) -->
+        <div class="relative z-10 flex gap-1 items-end h-12 mb-8">
+            <div class="w-1.5 h-4 bg-secondary rounded-full animate-[voice_1.2s_infinite]"></div>
+            <div class="w-1.5 h-8 bg-secondary rounded-full animate-[voice_1.5s_infinite_0.2s]"></div>
+            <div class="w-1.5 h-6 bg-secondary rounded-full animate-[voice_1s_infinite_0.4s]"></div>
+            <div class="w-1.5 h-10 bg-secondary rounded-full animate-[voice_1.3s_infinite_0.1s]"></div>
+            <div class="w-1.5 h-6 bg-secondary rounded-full animate-[voice_1.1s_infinite_0.3s]"></div>
+            <div class="w-1.5 h-8 bg-secondary rounded-full animate-[voice_1.4s_infinite_0.5s]"></div>
+            <div class="w-1.5 h-4 bg-secondary rounded-full animate-[voice_1.2s_infinite_0.2s]"></div>
+        </div>
+
+        <!-- Circuit Lines on Cheeks -->
+        <div class="absolute left-6 top-1/2 w-8 h-0.5 bg-outline-variant/30"></div>
+        <div class="absolute right-6 top-1/2 w-8 h-0.5 bg-outline-variant/30"></div>
+        
+        <!-- Antenna -->
+        <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-1.5 h-12 bg-outline-variant/50">
+            <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-5 h-5 bg-tertiary rounded-full shadow-[0_0_20px_#DFB7FF] animate-pulse"></div>
+        </div>
+    </div>
+
+    <!-- Background Tech HUD elements -->
+    <div class="absolute top-10 left-10 opacity-20 rotate-45 pointer-events-none">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="10 5" class="animate-[spin_30s_linear_infinite]" />
+        </svg>
+    </div>
+    <div class="absolute bottom-10 right-10 opacity-20 -rotate-12 pointer-events-none">
+        <svg width="120" height="120" viewBox="0 0 100 100">
+            <rect x="5" y="5" width="90" height="90" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="20 10" class="animate-[spin_40s_linear_infinite_reverse]" />
+        </svg>
+    </div>
 </div>
+
+<style>
+    @keyframes blink {
+        0%, 90%, 100% { transform: translateY(-100%); }
+        95% { transform: translateY(0); }
+    }
+    @keyframes voice {
+        0%, 100% { height: 10px; opacity: 0.5; }
+        50% { height: 40px; opacity: 1; }
+    }
+    @keyframes glitch {
+        0% { transform: translate(0); }
+        20% { transform: translate(-2px, 2px); }
+        40% { transform: translate(-2px, -2px); }
+        60% { transform: translate(2px, 2px); }
+        80% { transform: translate(2px, -2px); }
+        100% { transform: translate(0); }
+    }
+    .robot-container:hover .eye {
+        animation: glitch 0.3s linear infinite;
+    }
+    .robot-container {
+        transition: transform 0.1s ease-out;
+    }
+</style>
+
+<script>
+    document.addEventListener('mousemove', (e) => {
+        const container = document.querySelector('.robot-container');
+        if (!container) return;
+        
+        const rect = container.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        
+        const rotateX = (e.clientY - centerY) / 20;
+        const rotateY = (e.clientX - centerX) / 20;
+        
+        container.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+        
+        // Move pupils
+        const pupils = document.querySelectorAll('.pupil');
+        pupils.forEach(pupil => {
+            const moveX = (e.clientX - centerX) / 30;
+            const moveY = (e.clientY - centerY) / 30;
+            pupil.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+        });
+
+        // Hero Glow update
+        const heroGlow = document.getElementById('hero-glow');
+        if (heroGlow) {
+            heroGlow.style.setProperty('--x', `${e.clientX}px`);
+            heroGlow.style.setProperty('--y', `${e.clientY}px`);
+            heroGlow.style.opacity = '1';
+        }
+    });
+
+    document.addEventListener('mouseleave', () => {
+        const heroGlow = document.getElementById('hero-glow');
+        if (heroGlow) heroGlow.style.opacity = '0';
+    });
+</script>
 <div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-2xl shadow-2xl animate__animated animate__bounceIn animate__delay-2s float-animation">
 <div class="flex items-center gap-4">
 <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
@@ -219,10 +341,34 @@
                     </a>
 </div>
 </div>
-<div class="md:w-1/2 relative" data-aos="fade-left">
-<div class="glass-panel p-4 rounded-[2rem] transform -rotate-2 hover:rotate-0 transition-all duration-700 hover-lift">
-<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC-F-9R6-C0W0W0W0W0W0W0W0W0W0W0W0W0W0W0W0W" class="rounded-[1.5rem] w-full shadow-2xl" alt="LeadNexus Interface" data-alt="Futuristic dark software dashboard for B2B lead generation showing growing trend lines and lead status charts">
-</div>
+<div class="md:w-1/2 relative group" data-aos="fade-left">
+    <!-- Interactive Background Glow -->
+    <div class="absolute -inset-20 bg-primary/5 rounded-full blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+    
+    <div class="glass-panel p-4 rounded-[2rem] transform -rotate-2 hover:rotate-0 transition-all duration-700 hover-lift flex items-center justify-center min-h-[400px] holographic-glow relative overflow-hidden bg-surface-container-low/50">
+        <div class="absolute inset-0 bg-gradient-to-tr from-secondary/5 via-transparent to-primary/5 opacity-50 pointer-events-none"></div>
+        
+        <!-- Data Network Animation -->
+        <div class="relative w-full h-full flex items-center justify-center">
+            <svg class="w-full h-full opacity-40" viewBox="0 0 400 300">
+                <defs>
+                    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ccbeff" />
+                        <stop offset="100%" stop-color="#a2e7ff" />
+                    </linearGradient>
+                </defs>
+                <circle cx="200" cy="150" r="4" fill="#ccbeff" class="animate-pulse" />
+                <path d="M100,80 L200,150 L300,80 M100,220 L200,150 L300,220" stroke="url(#lineGrad)" stroke-width="2" fill="none" stroke-dasharray="1000" class="animate-[draw_5s_linear_infinite]" />
+                <circle cx="100" cy="80" r="3" fill="#a2e7ff" />
+                <circle cx="300" cy="80" r="3" fill="#a2e7ff" />
+                <circle cx="100" cy="220" r="3" fill="#a2e7ff" />
+                <circle cx="300" cy="220" r="3" fill="#a2e7ff" />
+            </svg>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <span class="material-symbols-outlined text-6xl text-secondary animate-pulse">rocket_launch</span>
+            </div>
+        </div>
+    </div>
 <div class="absolute -bottom-10 -left-10 glass-card p-6 rounded-2xl shadow-2xl float-animation">
 <div class="flex items-center gap-4">
 <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     
     <script id="tailwind-config">
         tailwind.config = {
@@ -171,6 +172,22 @@
         }
         .aos-animate {
             pointer-events: auto;
+        }
+        .holographic-glow {
+            position: relative;
+        }
+        .holographic-glow::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, #ccbeff33, transparent, #a2e7ff33, transparent);
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .holographic-glow:hover::before {
+            opacity: 1;
         }
     </style>
     {% block extra_head %}{% endblock %}
