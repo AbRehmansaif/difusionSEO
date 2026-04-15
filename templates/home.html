@@ -172,12 +172,14 @@
     });
 
     // Sticky Scroll Progress
+    // Why Choose Us Scroll Progress
     window.addEventListener('scroll', () => {
-        const section = document.querySelector('section.py-32.bg-surface');
+        const section = document.getElementById('why-choose-us');
         const progressLine = document.getElementById('sticky-progress');
         if (section && progressLine) {
             const rect = section.getBoundingClientRect();
             const winHeight = window.innerHeight;
+            // Calculate how far into the section we are
             const progress = Math.max(0, Math.min(100, ((-rect.top) / (rect.height - winHeight)) * 100));
             progressLine.style.height = `${progress}%`;
         }
@@ -195,6 +197,44 @@
             card.style.transform = `translate(0, 0)`;
         });
     });
+
+    // Step Highlighting & Scroll Progress
+    const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -20% 0px',
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const step = entry.target.getAttribute('data-step');
+            const indicators = document.querySelectorAll('.step-indicator');
+            const card = entry.target;
+
+            if (entry.isIntersecting) {
+                indicators.forEach(indicator => {
+                    if (indicator.getAttribute('data-step') === step) {
+                        indicator.classList.remove('opacity-20');
+                        indicator.classList.add('opacity-100', 'scale-110');
+                    } else {
+                        indicator.classList.add('opacity-20');
+                        indicator.classList.remove('opacity-100', 'scale-110');
+                    }
+                });
+                card.style.opacity = '1';
+                card.style.transform = 'scale(1)';
+            } else {
+                if (entry.boundingClientRect.top < 0) {
+                    card.style.opacity = '0.3';
+                    card.style.transform = 'scale(0.95)';
+                }
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-card').forEach(card => observer.observe(card));
+
+
 </script>
 <div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-2xl shadow-2xl animate__animated animate__bounceIn animate__delay-2s float-animation">
 <div class="flex items-center gap-4">
@@ -253,72 +293,177 @@
 </div>
 </div>
 </section>
-<!-- Why Choose Us -->
-<section class="py-32 px-8 bg-surface relative overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-br from-primary-container/5 via-transparent to-secondary-container/5"></div>
-<div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row gap-20 items-start">
-    <!-- Fixed Left Column -->
-    <div class="md:w-1/2 md:sticky md:top-32 h-fit pr-12">
-        <div class="relative pl-8 border-l-2 border-outline-variant/20">
-            <!-- Active Progress Line -->
-            <div id="sticky-progress" class="absolute left-[-2px] top-0 w-[2px] bg-gradient-to-b from-primary to-secondary transition-all duration-300 origin-top h-0"></div>
+<!-- Why Choose Us (Pinned Scroll Section) -->
+<section class="relative min-h-[300vh] bg-surface" id="why-choose-us">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-container/5 via-transparent to-secondary-container/5 pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+        <div class="flex flex-col md:flex-row gap-20">
             
-            <span class="label-md uppercase tracking-[0.2em] text-primary font-bold mb-4 block">Why DifusionSEO?</span>
-            <h2 class="text-4xl md:text-7xl font-black tracking-tighter mb-8 leading-[0.9]">
-                We Build <span class="text-primary">Engines</span>, <br/>Not Just Websites.
-            </h2>
-            <p class="text-xl text-on-surface-variant mb-12 leading-relaxed max-w-md">
-                At DifusionSEO, we reject generic solutions. Our team blends technical engineering with creative marketing to deliver platforms that generate revenue automatically.
-            </p>
-            <div class="p-8 border-l-4 border-primary bg-surface-container-low/50 rounded-r-2xl backdrop-blur-sm">
-                <p class="text-2xl font-bold italic text-on-surface">"The most effective digital strategy is one that becomes invisible as it scales."</p>
+            <!-- FIXED LEFT COLUMN -->
+            <div class="md:w-1/2 md:sticky md:top-0 h-screen flex flex-col justify-center">
+                <div class="relative pl-16">
+                    <!-- DNA Scroller Effect -->
+                    <div class="absolute left-0 top-1/2 -translate-y-1/2 h-[500px] w-[2px] bg-outline-variant/10">
+                        <div id="sticky-progress" class="absolute left-0 top-0 w-full bg-gradient-to-b from-primary via-secondary to-tertiary transition-all duration-300 origin-top h-0 shadow-[0_0_20px_rgba(204,190,255,0.4)]">
+                            <!-- Glowing Orb -->
+                            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_25px_#ccbeff,0_0_10px_#ccbeff] animate-pulse"></div>
+                        </div>
+                    </div>
+                    
+                    <span class="label-md uppercase tracking-[0.3em] text-primary font-bold mb-6 block">The Difusion Edge</span>
+                    <h2 class="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.85] text-on-surface">
+                        Fixed <br/><span class="text-primary">Vision</span>, <br/><span class="opacity-20">Fluid Scale.</span>
+                    </h2>
+                    
+                    <!-- Interactive Step Indicators -->
+                    <div class="space-y-6 mt-16">
+                        <div class="step-indicator flex items-center gap-6 transition-all duration-500 opacity-20" data-step="1">
+                            <span class="w-12 h-[2px] bg-primary"></span>
+                            <span class="text-sm font-black uppercase tracking-widest">Experience</span>
+                        </div>
+                        <div class="step-indicator flex items-center gap-6 transition-all duration-500 opacity-20" data-step="2">
+                            <span class="w-12 h-[2px] bg-secondary"></span>
+                            <span class="text-sm font-black uppercase tracking-widest">Analytics</span>
+                        </div>
+                        <div class="step-indicator flex items-center gap-6 transition-all duration-500 opacity-20" data-step="3">
+                            <span class="w-12 h-[2px] bg-tertiary"></span>
+                            <span class="text-sm font-black uppercase tracking-widest">Agile Dev</span>
+                        </div>
+                        <div class="step-indicator flex items-center gap-6 transition-all duration-500 opacity-20" data-step="4">
+                            <span class="w-12 h-[2px] bg-primary"></span>
+                            <span class="text-sm font-black uppercase tracking-widest">Security</span>
+                        </div>
+                        <div class="step-indicator flex items-center gap-6 transition-all duration-500 opacity-20" data-step="5">
+                            <span class="w-12 h-[2px] bg-secondary"></span>
+                            <span class="text-sm font-black uppercase tracking-widest">Custom Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCROLLING RIGHT COLUMN -->
+            <div class="md:w-1/2 pt-32 pb-64 relative">
+                <!-- Floating Tech Ecosystem (Visible during scroll) -->
+                <div class="hidden md:flex absolute bottom-8 left-0 right-0 z-0 items-center gap-6 px-12 py-4 bg-surface/40 backdrop-blur-xl rounded-full border border-outline-variant/5 shadow-2xl animate-pulse-slow">
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-black text-outline">Tech Ecosystem :</span>
+                    <div class="flex items-center gap-6 opacity-60">
+                        <i class="fa-brands fa-react text-lg"></i>
+                        <i class="fa-brands fa-python text-lg"></i>
+                        <i class="fa-brands fa-aws text-lg"></i>
+                        <i class="fa-brands fa-docker text-lg"></i>
+                        <i class="fa-brands fa-node-js text-lg"></i>
+                    </div>
+                </div>
+
+                <div class="space-y-[40vh]">
+                    <!-- Card 01 -->
+                    <div class="scroll-card glass-card p-12 min-h-[450px] rounded-[3.5rem] flex flex-col gap-10 group transition-all duration-700 border-none shadow-[0_30px_60px_rgba(0,0,0,0.3)] bg-surface-container-high relative overflow-hidden md:sticky md:top-16" data-step="1">
+                        <div class="absolute inset-0 opacity-[0.15]" style="background-image: radial-gradient(rgba(255,255,255,0.4) 1px, transparent 0); background-size: 20px 20px;"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-primary to-transparent opacity-30"></div>
+                        <div class="flex items-center gap-8 relative z-10">
+                            <div class="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20">
+                                <span class="material-symbols-outlined text-primary text-4xl">terminal</span>
+                            </div>
+                            <div>
+                                <h4 class="text-4xl font-black mb-1">Senior Team</h4>
+                                <span class="text-xs uppercase font-black tracking-[0.4em] text-primary">Core Engineering</span>
+                            </div>
+                        </div>
+                        <p class="text-xl text-on-surface-variant leading-relaxed relative z-10 font-medium">Over a decade of engineering excellence. We architect for global scalability and zero-failure environments. We don't hire juniors to work on enterprise projects.</p>
+                        <div class="flex gap-4 mt-auto relative z-10">
+                            <span class="px-4 py-2 rounded-full bg-surface-container-low text-xs font-bold uppercase tracking-widest text-outline">Kubernetes</span>
+                            <span class="px-4 py-2 rounded-full bg-surface-container-low text-xs font-bold uppercase tracking-widest text-outline">Django</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 02 -->
+                    <div class="scroll-card glass-card p-12 min-h-[450px] rounded-[3.5rem] flex flex-col gap-10 group transition-all duration-700 border-none shadow-[0_30px_60px_rgba(0,0,0,0.3)] bg-surface-container-high relative overflow-hidden md:sticky md:top-28" data-step="2">
+                        <div class="absolute inset-0 opacity-[0.15]" style="background-image: radial-gradient(rgba(255,255,255,0.4) 1px, transparent 0); background-size: 20px 20px;"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-secondary to-transparent opacity-30"></div>
+                        <div class="flex items-center gap-8 relative z-10">
+                            <div class="w-20 h-20 rounded-2xl bg-secondary/10 flex items-center justify-center border border-secondary/20">
+                                <span class="material-symbols-outlined text-secondary text-4xl">monitoring</span>
+                            </div>
+                            <div>
+                                <h4 class="text-4xl font-black mb-1">Data DNA</h4>
+                                <span class="text-xs uppercase font-black tracking-[0.4em] text-secondary">Scientific Stream</span>
+                            </div>
+                        </div>
+                        <p class="text-xl text-on-surface-variant leading-relaxed relative z-10 font-medium">Every software decision is verified by live analytical streams. We turn raw data into profitable engineering roadmaps with statistical precision.</p>
+                        <div class="flex gap-4 mt-auto relative z-10">
+                            <span class="px-4 py-2 rounded-full bg-surface-container-low text-xs font-bold uppercase tracking-widest text-outline">BigQuery</span>
+                            <span class="px-4 py-2 rounded-full bg-surface-container-low text-xs font-bold uppercase tracking-widest text-outline">Real-time</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 03 -->
+                    <div class="scroll-card glass-card p-12 min-h-[450px] rounded-[3.5rem] flex flex-col gap-10 group transition-all duration-700 border-none shadow-[0_30px_60px_rgba(0,0,0,0.3)] bg-surface-container-high relative overflow-hidden md:sticky md:top-40" data-step="3">
+                        <div class="absolute inset-0 opacity-[0.15]" style="background-image: radial-gradient(rgba(255,255,255,0.4) 1px, transparent 0); background-size: 20px 20px;"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-tertiary to-transparent opacity-30"></div>
+                        <div class="flex items-center gap-8 relative z-10">
+                            <div class="w-20 h-20 rounded-2xl bg-tertiary/10 flex items-center justify-center border border-tertiary/20">
+                                <span class="material-symbols-outlined text-tertiary text-4xl">bolt</span>
+                            </div>
+                            <div>
+                                <h4 class="text-4xl font-black mb-1">Agile Pulse</h4>
+                                <span class="text-xs uppercase font-black tracking-[0.4em] text-tertiary">Rapid Release</span>
+                            </div>
+                        </div>
+                        <p class="text-xl text-on-surface-variant leading-relaxed relative z-10 font-medium">We release updates weekly. Your platform evolves in real-time, staying months ahead of the competition's release cycles.</p>
+                        <div class="flex gap-4 mt-auto relative z-10">
+                            <span class="px-4 py-2 rounded-full bg-surface-container-low text-xs font-bold uppercase tracking-widest text-outline">CI/CD</span>
+                            <span class="px-4 py-2 rounded-full bg-surface-container-low text-xs font-bold uppercase tracking-widest text-outline">Scrum</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 04 -->
+                    <div class="scroll-card glass-card p-12 min-h-[450px] rounded-[3.5rem] flex flex-col gap-10 group transition-all duration-700 border-none shadow-[0_30px_60px_rgba(0,0,0,0.3)] bg-surface-container-high relative overflow-hidden md:sticky md:top-52" data-step="4">
+                        <div class="absolute inset-0 opacity-[0.15]" style="background-image: radial-gradient(rgba(255,255,255,0.4) 1px, transparent 0); background-size: 20px 20px;"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-primary to-transparent opacity-30"></div>
+                        <div class="flex items-center gap-8 relative z-10">
+                            <div class="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20">
+                                <span class="material-symbols-outlined text-primary text-4xl">shield</span>
+                            </div>
+                            <div>
+                                <h4 class="text-4xl font-black mb-1">Iron Shield</h4>
+                                <span class="text-xs uppercase font-black tracking-[0.4em] text-primary">Cyber Protection</span>
+                            </div>
+                        </div>
+                        <p class="text-xl text-on-surface-variant leading-relaxed relative z-10 font-medium">Enterprise-grade encryption and 24/7 automated threat detection guarding your mission-critical business data.</p>
+                    </div>
+
+                    <!-- Card 05 -->
+                    <div class="scroll-card glass-card p-12 min-h-[450px] rounded-[3.5rem] flex flex-col gap-10 group transition-all duration-700 border-none shadow-[0_30px_60px_rgba(0,0,0,0.3)] bg-surface-container-high relative overflow-hidden md:sticky md:top-64" data-step="5">
+                        <div class="absolute inset-0 opacity-[0.15]" style="background-image: radial-gradient(rgba(255,255,255,0.4) 1px, transparent 0); background-size: 20px 20px;"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-secondary to-transparent opacity-30"></div>
+                        <div class="flex items-center gap-8 relative z-10">
+                            <div class="w-20 h-20 rounded-2xl bg-secondary/10 flex items-center justify-center border border-secondary/20">
+                                <span class="material-symbols-outlined text-secondary text-4xl">dashboard_customize</span>
+                            </div>
+                            <div>
+                                <h4 class="text-4xl font-black mb-1">Unique Core</h4>
+                                <span class="text-xs uppercase font-black tracking-[0.4em] text-secondary">Bespoke Logic</span>
+                            </div>
+                        </div>
+                        <p class="text-xl text-on-surface-variant leading-relaxed relative z-10 font-medium">No templates. We build bespoke architectures tailored to your specific business logic, scaling needs, and long-term vision.</p>
+                        <div class="mt-auto relative z-10">
+                            <a href="/contact" class="inline-flex items-center gap-4 bg-secondary text-on-secondary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-lg">
+                                Start a Project
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    </div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <!-- Sliding Right Column -->
-    <div class="md:w-1/2 space-y-12 pb-32">
-        <div class="glass-card p-10 rounded-[2rem] flex flex-col gap-6 group hover:translate-x-4 transition-all duration-500 border-none shadow-xl bg-surface-container-low/30" data-aos="fade-up" data-aos-delay="100">
-            <div class="flex items-center gap-6">
-                <span class="text-6xl font-black text-primary/20 group-hover:text-primary transition-colors duration-500">01</span>
-                <h4 class="text-3xl font-black mb-0">Experienced Team</h4>
-            </div>
-            <p class="text-lg text-on-surface-variant leading-relaxed">Senior engineers and SEO specialists with over 10+ years of domain experience across multiple industries.</p>
-        </div>
-
-        <div class="glass-card p-10 rounded-[2rem] flex flex-col gap-6 group hover:translate-x-4 transition-all duration-500 border-none shadow-xl bg-surface-container-low/30" data-aos="fade-up" data-aos-delay="200">
-            <div class="flex items-center gap-6">
-                <span class="text-6xl font-black text-secondary/20 group-hover:text-secondary transition-colors duration-500">02</span>
-                <h4 class="text-3xl font-black mb-0">Data-Driven Approach</h4>
-            </div>
-            <p class="text-lg text-on-surface-variant leading-relaxed">We don't guess. Every decision is backed by comprehensive analytical tracking and A/B testing protocols.</p>
-        </div>
-
-        <div class="glass-card p-10 rounded-[2rem] flex flex-col gap-6 group hover:translate-x-4 transition-all duration-500 border-none shadow-xl bg-surface-container-low/30" data-aos="fade-up" data-aos-delay="300">
-            <div class="flex items-center gap-6">
-                <span class="text-6xl font-black text-tertiary/20 group-hover:text-tertiary transition-colors duration-500">03</span>
-                <h4 class="text-3xl font-black mb-0">Agile Methodology</h4>
-            </div>
-            <p class="text-lg text-on-surface-variant leading-relaxed">Rapid deployment cycles ensuring your project is always evolving and staying ahead of market competition.</p>
-        </div>
-
-        <div class="glass-card p-10 rounded-[2rem] flex flex-col gap-6 group hover:translate-x-4 transition-all duration-500 border-none shadow-xl bg-surface-container-low/30" data-aos="fade-up" data-aos-delay="400">
-            <div class="flex items-center gap-6">
-                <span class="text-6xl font-black text-primary/20 group-hover:text-primary transition-colors duration-500">04</span>
-                <h4 class="text-3xl font-black mb-0">24/7 Monitoring</h4>
-            </div>
-            <p class="text-lg text-on-surface-variant leading-relaxed">Your systems are watched by our automated security and uptime monitors, ensuring 99.9% availability.</p>
-        </div>
-
-        <div class="glass-card p-10 rounded-[2rem] flex flex-col gap-6 group hover:translate-x-4 transition-all duration-500 border-none shadow-xl bg-surface-container-low/30" data-aos="fade-up" data-aos-delay="500">
-            <div class="flex items-center gap-6">
-                <span class="text-6xl font-black text-secondary/20 group-hover:text-secondary transition-colors duration-500">05</span>
-                <h4 class="text-3xl font-black mb-0">Custom Solutions</h4>
-            </div>
-            <p class="text-lg text-on-surface-variant leading-relaxed">No templates. We build bespoke architectures tailored to your specific business logic and scaling needs.</p>
-        </div>
-    </div>
-</div>
+</section>
 </section>
 <!-- Process -->
 <section class="py-32 px-8 bg-surface-container-low relative">
