@@ -521,23 +521,33 @@
 <section class="py-32 px-8 relative overflow-hidden bg-surface">
 <div class="absolute top-0 left-1/4 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
 <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-20">
-<div class="md:w-1/2" data-aos="fade-right">
-<span class="label-md uppercase tracking-[0.2em] text-secondary font-bold mb-4 block">New Product Release</span>
-<h2 class="parallax text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-tight" data-speed="0.05">
-                    Next-Gen Outreach with <br/><span class="text-primary">LeadNexus</span>
+            <div class="md:w-1/2" data-aos="fade-right">
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 mb-8">
+                    <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                    <span class="text-xs uppercase tracking-[0.3em] text-secondary font-black">New Product Release</span>
+                </div>
+                
+                <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-[0.9] text-white">
+                    Next Gen <br/>
+                    <span class="text-primary drop-shadow-[0_0_30px_rgba(204,190,255,0.3)]">Outreach</span> <br/>
+                    With LeadNexus
                 </h2>
-<p class="text-lg text-on-surface-variant mb-12 leading-relaxed">
-                    Tired of manual lead research? LeadNexus automates your entire B2B outreach pipeline—from extraction to deliverability-focused rotation. Scale your revenue without scaling your headcount.
+                
+                <p class="text-xl text-on-surface-variant mb-12 leading-relaxed max-w-lg font-medium">
+                    Tired of manual lead research? <span class="text-white">LeadNexus</span> automates your entire B2B outreach from extraction to deliverability focused rotation.
                 </p>
-<div class="flex gap-4">
-<a href="{% url 'leadnexus' %}" class="px-8 py-4 rounded-full bg-primary text-on-primary font-bold hover:scale-105 transition-transform hover-lift shimmer">
-                        Learn More about LeadNexus
+                
+                <div class="flex flex-wrap gap-6 items-center">
+                    <a href="{% url 'leadnexus' %}" class="px-10 py-5 rounded-full bg-primary text-on-primary font-black text-lg hover:scale-105 transition-all shadow-[0_20px_50px_rgba(204,190,255,0.3)] group flex items-center gap-3">
+                        Learn More
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                     </a>
-<a href="https://getleadnexus.com" target="_blank" class="px-8 py-4 rounded-full border border-outline-variant text-on-surface font-bold hover:bg-surface-container transition-all hover-lift">
-                        Visit External Site
+                    <a href="https://getleadnexus.com" target="_blank" class="px-10 py-5 rounded-full border-2 border-outline-variant text-on-surface font-black text-lg hover:bg-surface-container transition-all flex items-center gap-3 group">
+                        Live Demo
+                        <span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-all">open_in_new</span>
                     </a>
-</div>
-</div>
+                </div>
+            </div>
 <div class="md:w-1/2 relative group" data-aos="fade-left">
     <!-- Interactive Background Glow -->
     <div class="absolute -inset-20 bg-primary/5 rounded-full blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
