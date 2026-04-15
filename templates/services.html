@@ -298,248 +298,351 @@
             100% { transform: translateY(100vh); opacity: 0; }
         }
     </style>
+    <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Top Tier: Intro & Interactive Simulators -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start mb-24">
+            <div data-aos="fade-right">
+                <div class="w-20 h-1 bg-gradient-to-r from-secondary to-primary mb-10 shadow-[0_0_20px_rgba(162,231,255,0.3)]"></div>
+                <div class="flex items-center gap-6 mb-8 group">
+                    <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center border border-secondary/20 holographic-glow">
+                        <span class="material-symbols-outlined text-4xl text-secondary animate__animated animate__pulse animate__infinite">psychology</span>
+                    </div>
+                    <div>
+                        <span class="text-xs uppercase font-black tracking-[0.5em] text-secondary opacity-60 block mb-2">Synthetic Core</span>
+                        <h2 class="text-5xl font-black tracking-tight drop-shadow-[0_0_15px_rgba(162,231,255,0.3)]">AI &amp; Neural <br>Automation</h2>
+                    </div>
+                </div>
+                <p class="text-xl text-on-surface-variant leading-relaxed mb-12 opacity-90">
+                    We build <strong>AI powered chatbots and automation systems</strong> that help businesses 
+                    improve customer support, generate leads, and automate repetitive tasks. Our solutions use 
+                    <strong>NLP, machine learning, and LLM integrations</strong> to deliver real business value.
+                </p>
+                <div class="flex flex-wrap gap-6 mb-16">
+                    <a href="{% url 'contact' %}" class="px-10 py-5 rounded-2xl bg-secondary text-on-secondary font-black text-sm flex items-center gap-3 hover:scale-105 transition-all shadow-[0_20px_40px_rgba(162,231,255,0.2)] group inline-flex">
+                        View AI Case Studies 
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+                    </a>
+                </div>
 
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center relative z-10">
-        <div class="order-2 lg:order-1" data-aos="fade-right">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- AI Card 1 -->
-                <div class="glass-card group p-8 rounded-3xl border border-secondary/20 bg-secondary/5 hover:bg-secondary/10 transition-all duration-700 hover:border-secondary/40 relative overflow-hidden h-full perspective-1000" data-aos="zoom-in" data-aos-delay="100">
-                    <!-- Neural Circuit Background (Subtle) -->
-                    <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700 pointer-events-none">
-                        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <path d="M0 20 H100 M0 50 H100 M0 80 H100 M30 0 V100 M60 0 V100 M90 0 V100" stroke="currentColor" stroke-width="0.1" fill="none" class="text-secondary" />
-                            <circle cx="30" cy="20" r="1.5" fill="currentColor" class="text-secondary animate-pulse" />
-                            <circle cx="60" cy="50" r="1.5" fill="currentColor" class="text-secondary animate-pulse" style="animation-delay: 1s" />
-                            <circle cx="90" cy="80" r="1.5" fill="currentColor" class="text-secondary animate-pulse" style="animation-delay: 2s" />
-                        </svg>
+                <!-- Intelligence Stack Ribbon -->
+                <div class="space-y-10">
+                    <div>
+                        <div class="text-[9px] font-mono text-secondary/40 uppercase tracking-[0.3em] mb-6">Supported Intelligence Stack</div>
+                        <div class="flex flex-wrap gap-8 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+                            <div class="flex items-center gap-2 group/icon">
+                                <span class="material-symbols-outlined text-secondary text-xl group-hover/icon:scale-125 transition-transform">deployed_code</span>
+                                <span class="text-[10px] font-bold text-secondary tracking-widest">OpenAI</span>
+                            </div>
+                            <div class="flex items-center gap-2 group/icon">
+                                <span class="material-symbols-outlined text-primary text-xl group-hover/icon:scale-125 transition-transform">account_tree</span>
+                                <span class="text-[10px] font-bold text-primary tracking-widest">LangChain</span>
+                            </div>
+                            <div class="flex items-center gap-2 group/icon">
+                                <span class="material-symbols-outlined text-tertiary text-xl group-hover/icon:scale-125 transition-transform">terminal</span>
+                                <span class="text-[10px] font-bold text-tertiary tracking-widest">Python</span>
+                            </div>
+                            <div class="flex items-center gap-2 group/icon">
+                                <span class="material-symbols-outlined text-secondary text-xl group-hover/icon:scale-125 transition-transform">storage</span>
+                                <span class="text-[10px] font-bold text-secondary tracking-widest">Pinecone</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Holographic Scanline -->
-                    <div class="absolute inset-x-0 h-1/4 bg-gradient-to-b from-transparent via-secondary/10 to-transparent -top-full group-hover:top-full transition-all duration-[2000ms] ease-in-out pointer-events-none"></div>
+                    <!-- Neural Feature Matrix -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 border-t border-secondary/10 pt-10">
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-secondary/10 flex items-center justify-center border border-secondary/30">
+                                <span class="material-symbols-outlined text-xs text-secondary animate-pulse">done_all</span>
+                            </div>
+                            <span class="text-[11px] font-black text-secondary tracking-widest uppercase opacity-80">Real time Neural Learning</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center border border-primary/30">
+                                <span class="material-symbols-outlined text-xs text-primary animate-pulse">done_all</span>
+                            </div>
+                            <span class="text-[11px] font-black text-primary tracking-widest uppercase opacity-80">Semantic Data Analysis</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-tertiary/10 flex items-center justify-center border border-tertiary/30">
+                                <span class="material-symbols-outlined text-xs text-tertiary animate-pulse">done_all</span>
+                            </div>
+                            <span class="text-[11px] font-black text-tertiary tracking-widest uppercase opacity-80">Zero Latency Automation</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-secondary/10 flex items-center justify-center border border-secondary/30">
+                                <span class="material-symbols-outlined text-xs text-secondary animate-pulse">done_all</span>
+                            </div>
+                            <span class="text-[11px] font-black text-secondary tracking-widest uppercase opacity-80">LLM Intent Recognition</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary shadow-[0_0_20px_#a2e7ff]"></div>
+            <div class="space-y-8" data-aos="fade-left">
+                <!-- Neural Command Console -->
+                <div class="glass-card rounded-[2rem] border border-secondary/20 bg-black/40 p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary/50 to-transparent"></div>
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="flex gap-1.5">
+                                <div class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
+                            </div>
+                            <span class="text-xs font-mono text-secondary opacity-60 tracking-widest uppercase ml-2">Neural_Console.exe</span>
+                        </div>
+                        <div class="text-[10px] font-mono text-secondary/40 animate-pulse uppercase">Active_Link</div>
+                    </div>
                     
-                    <div class="flex items-center justify-between mb-8 relative z-10">
-                        <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center border border-secondary/20 group-hover:scale-110 transition-transform">
-                            <span class="material-symbols-outlined text-secondary text-2xl animate-pulse">smart_toy</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></div>
-                            <div class="text-[9px] font-black tracking-[0.3em] text-secondary uppercase px-3 py-1 bg-secondary/10 rounded-full border border-secondary/20">AGENT_ONLINE</div>
-                        </div>
-                    </div>
-
-                    <div class="relative z-10">
-                        <div class="text-[9px] font-mono text-secondary/40 mb-2 tracking-widest uppercase">Kernel_Core.01</div>
-                        <h3 class="text-2xl font-black mb-4 tracking-tight group-hover:text-secondary transition-colors duration-500">AI Chatbot Development</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed opacity-80 mb-8 border-l-2 border-secondary/10 pl-4 group-hover:border-secondary/30 transition-colors">Smart assistants for websites, eCommerce, and customer support. Built for scalable intent recognition.</p>
-                    </div>
-                    
-                    <!-- Tech Specs Footer -->
-                    <div class="pt-6 border-t border-secondary/10 flex flex-col gap-4 relative z-10">
-                        <div class="flex justify-between items-center text-[9px] font-mono text-secondary/60">
-                            <span class="flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-secondary/40"></span> LATENCY: &lt;420MS</span>
-                            <span class="text-secondary opacity-80 font-bold tracking-widest">98.4% ACCURACY</span>
-                        </div>
-                        <div class="h-1.5 w-full bg-secondary/5 rounded-full overflow-hidden p-[1px] border border-secondary/10">
-                            <div class="h-full bg-gradient-to-r from-secondary/50 via-secondary to-secondary/50 animate-[progress_3s_ease-in-out_infinite] rounded-full" style="width: 75%"></div>
+                    <div class="grid grid-cols-1 gap-8 items-center">
+                        <div class="space-y-1 font-mono text-[10px] text-secondary/70 h-24 overflow-hidden relative">
+                            <div class="animate-[scroll_10s_linear_infinite]">
+                                <p>> INITIALIZING NEURAL CORE...</p>
+                                <p>> LOADING VECTOR DATABASE: 1,402 NODES FOUND</p>
+                                <p>> ANALYZING BUSINESS WORKFLOW [94% EFFICIENCY]</p>
+                                <p>> DEPLOYING CUSTOM LLM AGENT: "NEXUS-7"</p>
+                                <p>> GPT-4O INTEGRATION: [STABLE]</p>
+                                <p>> MAPPING SEMANTIC DATA CLUSTERS...</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- AI Card 2 -->
-                <div class="glass-card group p-8 rounded-3xl border border-primary/20 bg-primary/5 mt-0 md:mt-12 hover:bg-primary/10 transition-all duration-700 hover:border-primary/40 relative overflow-hidden h-full perspective-1000" data-aos="zoom-in" data-aos-delay="200">
-                    <!-- Neural Circuit Background -->
-                    <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700 pointer-events-none">
-                        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <path d="M0 20 H100 M0 50 H100 M0 80 H100 M30 0 V100 M60 0 V100 m90 0 v100" stroke="currentColor" stroke-width="0.1" fill="none" class="text-primary" />
-                            <circle cx="30" cy="50" r="1.5" fill="currentColor" class="text-primary animate-pulse" />
-                            <circle cx="60" cy="20" r="1.5" fill="currentColor" class="text-primary animate-pulse" style="animation-delay: 1.5s" />
-                        </svg>
-                    </div>
-                    
-                    <!-- Scanline -->
-                    <div class="absolute inset-x-0 h-1/4 bg-gradient-to-b from-transparent via-primary/10 to-transparent -top-full group-hover:top-full transition-all duration-[2000ms] ease-in-out pointer-events-none"></div>
-
-                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary shadow-[0_0_20px_#ccbeff]"></div>
-                    
-                    <div class="flex items-center justify-between mb-8 relative z-10">
-                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
-                            <span class="material-symbols-outlined text-primary text-2xl animate-pulse">auto_mode</span>
+                <!-- Live AI Chatbot Simulator -->
+                <div class="glass-card rounded-[2rem] border border-primary/20 bg-black/30 p-8 relative overflow-hidden group">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
+                            <span class="material-symbols-outlined text-primary text-2xl animate__animated animate__pulse animate__infinite">support_agent</span>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></div>
-                            <div class="text-[9px] font-black tracking-[0.3em] text-primary uppercase px-3 py-1 bg-primary/10 rounded-full border border-primary/20">FLOW_SYNCED</div>
+                        <div>
+                            <div class="text-[10px] font-mono text-primary/60 uppercase tracking-widest leading-none mb-1">Live Simulator</div>
+                            <h4 class="text-xl font-bold tracking-tight">Nexus-V7 Agent Preview</h4>
                         </div>
                     </div>
 
-                    <div class="relative z-10">
-                        <div class="text-[9px] font-mono text-primary/40 mb-2 tracking-widest uppercase">Logic_Node.X7</div>
-                        <h3 class="text-2xl font-black mb-4 tracking-tight group-hover:text-primary transition-colors duration-500">Automation Workflows</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed opacity-80 mb-8 border-l-2 border-primary/10 pl-4 group-hover:border-primary/30 transition-colors">Zapier, Make, and custom Python systems designed to optimize repetitive business sequences.</p>
-                    </div>
-                    
-                    <!-- Tech Specs Footer -->
-                    <div class="pt-6 border-t border-primary/10 flex flex-col gap-4 relative z-10">
-                        <div class="flex justify-between items-center text-[9px] font-mono text-primary/60">
-                            <span class="flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-primary/40"></span> THROUGHPUT: 12GB/S</span>
-                            <span class="text-primary opacity-80 font-bold tracking-widest">SYNC_STABLE</span>
+                    <div class="space-y-6 relative h-[280px] overflow-hidden">
+                        <!-- Chat Bubbles Simulation -->
+                        <div class="flex flex-col gap-4 animate-[chat_15s_infinite]">
+                            <!-- Bot Message 1 -->
+                            <div class="flex flex-col items-start gap-2 max-w-[85%]">
+                                <div class="glass-card p-4 rounded-2xl rounded-tl-none border border-primary/20 bg-primary/5 text-sm leading-relaxed">
+                                    <div class="text-[10px] font-mono text-primary/40 mb-1">NEXUS_AI | 14:02:11</div>
+                                    "Hello! I've finished analyzing your current site performance. Would you like to see the optimization report?"
+                                </div>
+                            </div>
+                            
+                            <!-- Client Message (Mockup) -->
+                            <div class="flex flex-col items-end gap-2 max-w-[85%] ml-auto">
+                                <div class="p-4 rounded-2xl rounded-tr-none bg-surface/10 border border-outline-variant/10 text-sm leading-relaxed text-on-surface-variant font-medium">
+                                    "Yes, what did you find in the automation section?"
+                                </div>
+                            </div>
+
+                            <!-- Bot Message 2 -->
+                            <div class="flex flex-col items-start gap-2 max-w-[85%]">
+                                <div class="glass-card p-4 rounded-2xl rounded-tl-none border border-primary/30 bg-primary/10 text-sm leading-relaxed border-l-4">
+                                    <div class="text-[10px] font-mono text-primary/40 mb-1">NEXUS_AI | 14:02:45</div>
+                                    "Identified 3 bottlenecks in your lead capture flow. Estimated efficiency gain: <span class='text-primary font-bold'>+84%</span>. Shall I deploy a sandbox agent?"
+                                </div>
+                            </div>
+
+                            <!-- Typing Indicator -->
+                            <div class="flex items-center gap-2 px-4 py-2 bg-surface/5 rounded-full border border-outline-variant/5 w-fit">
+                                <div class="w-1.5 h-1.5 rounded-full bg-primary/40 animate-bounce"></div>
+                                <div class="w-1.5 h-1.5 rounded-full bg-primary/40 animate-bounce [animation-delay:0.2s]"></div>
+                                <div class="w-1.5 h-1.5 rounded-full bg-primary/40 animate-bounce [animation-delay:0.4s]"></div>
+                            </div>
                         </div>
-                        <div class="h-1.5 w-full bg-primary/5 rounded-full overflow-hidden p-[1px] border border-primary/10">
-                            <div class="h-full bg-gradient-to-r from-primary/50 via-primary to-primary/50 animate-[progress_4s_ease-in-out_infinite] rounded-full" style="width: 88%"></div>
+                        
+                        <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/80 to-transparent pointer-events-none"></div>
+                    </div>
+
+                    <!-- Interactive Input Field (Visual Only) -->
+                    <div class="mt-8 pt-6 border-t border-primary/10 flex items-center gap-4">
+                        <div class="flex-grow h-12 rounded-xl border border-primary/20 bg-black/40 flex items-center px-6 text-xs text-primary/40 font-mono">
+                            TYPE A COMMAND (E.G. /OPTIMIZE)...
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-[0_0_20px_#ccbeff]">
+                            <span class="material-symbols-outlined text-xl">send</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- AI Card 3 -->
-                <div class="glass-card group p-8 rounded-3xl border border-tertiary/20 bg-tertiary/5 hover:bg-tertiary/10 transition-all duration-700 hover:border-tertiary/40 relative overflow-hidden h-full perspective-1000" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700 pointer-events-none">
-                        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <path d="M0 20 H100 M0 50 H100 M0 80 H100 M30 0 V100 m60 0 v100" stroke="currentColor" stroke-width="0.1" fill="none" class="text-tertiary" />
-                        </svg>
-                    </div>
-
-                    <div class="absolute inset-x-0 h-1/4 bg-gradient-to-b from-transparent via-tertiary/10 to-transparent -top-full group-hover:top-full transition-all duration-[2000ms] ease-in-out pointer-events-none"></div>
-
-                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary shadow-[0_0_20px_#dfb7ff]"></div>
-                    
-                    <div class="flex items-center justify-between mb-8 relative z-10">
-                        <div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center border border-tertiary/20 group-hover:scale-110 transition-transform">
-                            <span class="material-symbols-outlined text-tertiary text-2xl animate-pulse">database</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></div>
-                            <div class="text-[9px] font-black tracking-[0.3em] text-tertiary uppercase px-3 py-1 bg-tertiary/10 rounded-full border border-tertiary/20">DATA_REFINED</div>
-                        </div>
-                    </div>
-
-                    <div class="relative z-10">
-                        <div class="text-[9px] font-mono text-tertiary/40 mb-2 tracking-widest uppercase">Cluster_Map.v2</div>
-                        <h3 class="text-2xl font-black mb-4 tracking-tight group-hover:text-tertiary transition-colors duration-500">Data Systems</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed opacity-80 mb-8 border-l-2 border-tertiary/10 pl-4 group-hover:border-tertiary/30 transition-colors">Advanced AI data pipelines (Vector DBs) and knowledge systems for LLM ingestion.</p>
-                    </div>
-                    
-                    <!-- Tech Specs Footer -->
-                    <div class="pt-6 border-t border-tertiary/10 flex flex-col gap-4 relative z-10">
-                        <div class="flex justify-between items-center text-[9px] font-mono text-tertiary/60">
-                            <span class="flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-tertiary/40"></span> VECTORS: 4.2M</span>
-                            <span class="text-tertiary opacity-80 font-bold tracking-widest">QUERY_OK</span>
-                        </div>
-                        <div class="h-1.5 w-full bg-tertiary/5 rounded-full overflow-hidden p-[1px] border border-tertiary/10">
-                            <div class="h-full bg-gradient-to-r from-tertiary/50 via-tertiary to-tertiary/50 animate-[progress_2s_ease-in-out_infinite] rounded-full" style="width: 62%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Card 4 -->
-                <div class="glass-card group p-8 rounded-3xl border border-secondary/20 bg-secondary/5 mt-0 md:mt-12 hover:bg-secondary/10 transition-all duration-700 hover:border-secondary/40 relative overflow-hidden h-full perspective-1000" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700 pointer-events-none">
-                        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <path d="M0 20 H100 M0 50 H100 m30 0 v100 m60 0 v100" stroke="currentColor" stroke-width="0.1" fill="none" class="text-secondary" />
-                        </svg>
-                    </div>
-
-                    <div class="absolute inset-x-0 h-1/4 bg-gradient-to-b from-transparent via-secondary/10 to-transparent -top-full group-hover:top-full transition-all duration-[2000ms] ease-in-out pointer-events-none"></div>
-
-                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary shadow-[0_0_20px_#a2e7ff]"></div>
-                    
-                    <div class="flex items-center justify-between mb-8 relative z-10">
-                        <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center border border-secondary/20 group-hover:scale-110 transition-transform">
-                            <span class="material-symbols-outlined text-secondary text-2xl animate-pulse">integration_instructions</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></div>
-                            <div class="text-[9px] font-black tracking-[0.3em] text-secondary uppercase px-3 py-1 bg-secondary/10 rounded-full border border-secondary/20">ENDPOINT_LINKED</div>
-                        </div>
-                    </div>
-
-                    <div class="relative z-10">
-                        <div class="text-[9px] font-mono text-secondary/40 mb-2 tracking-widest uppercase">Link_Tunnel.01</div>
-                        <h3 class="text-2xl font-black mb-4 tracking-tight group-hover:text-secondary transition-colors duration-500">API & Integrations</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed opacity-80 mb-8 border-l-2 border-secondary/10 pl-4 group-hover:border-secondary/30 transition-colors">Seamless AI integration into existing platforms to maximize legacy system intelligence.</p>
-                    </div>
-                    
-                    <!-- Tech Specs Footer -->
-                    <div class="pt-6 border-t border-secondary/10 flex flex-col gap-4 relative z-10">
-                        <div class="flex justify-between items-center text-[9px] font-mono text-secondary/60">
-                            <span class="flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-secondary/40"></span> UPTIME: 99.9%</span>
-                            <span class="text-secondary opacity-80 font-bold tracking-widest">ACTIVE_PROD</span>
-                        </div>
-                        <div class="h-1.5 w-full bg-secondary/5 rounded-full overflow-hidden p-[1px] border border-secondary/10">
-                            <div class="h-full bg-gradient-to-r from-secondary/50 via-secondary to-secondary/50 animate-[progress_5s_ease-in-out_infinite] rounded-full" style="width: 95%"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
-        <div class="order-1 lg:order-2">
-            <div class="w-20 h-1 bg-gradient-to-r from-secondary to-primary mb-10 shadow-[0_0_20px_rgba(162,231,255,0.3)]"></div>
-            <div class="flex items-center gap-6 mb-8 group">
-                <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center border border-secondary/20 holographic-glow">
-                    <span class="material-symbols-outlined text-4xl text-secondary animate__animated animate__pulse animate__infinite">psychology</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- AI Card 1 -->
+            <div class="glass-card group p-8 rounded-3xl border border-secondary/20 bg-secondary/5 hover:bg-secondary/10 transition-all duration-700 hover:border-secondary/40 relative overflow-hidden h-full perspective-1000" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700 pointer-events-none">
+                    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M0 20 H100 M0 50 H100 M30 0 V100" stroke="currentColor" stroke-width="0.1" fill="none" class="text-secondary" />
+                    </svg>
                 </div>
-                <div>
-                    <span class="text-xs uppercase font-black tracking-[0.5em] text-secondary opacity-60 block mb-2">Synthetic Core</span>
-                    <h2 class="text-5xl font-black tracking-tight drop-shadow-[0_0_15px_rgba(162,231,255,0.3)]">AI &amp; Neural <br>Automation</h2>
+                <div class="absolute inset-x-0 h-1/4 bg-gradient-to-b from-transparent via-secondary/10 to-transparent -top-full group-hover:top-full transition-all duration-[2000ms] pointer-events-none"></div>
+                <div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary shadow-[0_0_20px_#a2e7ff]"></div>
+                
+                <div class="flex items-center justify-between mb-8 relative z-10">
+                    <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center border border-secondary/20 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-secondary text-2xl animate-pulse">smart_toy</span>
+                    </div>
+                    <div class="text-[8px] font-mono text-secondary/40 tracking-widest uppercase">Kernel_v.94</div>
                 </div>
-            </div>
-            <p class="text-xl text-on-surface-variant leading-relaxed mb-12 opacity-90">
-                We build <strong>AI powered chatbots and automation systems</strong> that help businesses 
-                improve customer support, generate leads, and automate repetitive tasks. Our solutions use 
-                <strong>NLP, machine learning, and LLM integrations</strong> to deliver real business value.
-            </p>
-            <div class="flex flex-wrap gap-6">
-                <a href="{% url 'contact' %}" class="px-10 py-5 rounded-2xl bg-secondary text-on-secondary font-black text-sm flex items-center gap-3 hover:scale-105 transition-all shadow-[0_20px_40px_rgba(162,231,255,0.2)] group inline-flex">
-                    View AI Case Studies 
-                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
-                </a>
+                <div class="relative z-10 mb-8">
+                    <h3 class="text-xl font-black mb-3 leading-tight group-hover:text-secondary transition-colors">AI Chatbot Development</h3>
+                    <p class="text-on-surface-variant text-[11px] leading-relaxed opacity-70 mb-6">Smart assistants for eCommerce and support. Intent-ready.</p>
+                    
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-[10px] font-bold text-secondary/80">
+                            <span class="w-1 h-1 rounded-full bg-secondary animate-ping"></span> Live Lead Scoring
+                        </li>
+                        <li class="flex items-center gap-2 text-[10px] font-bold text-secondary/80">
+                            <span class="w-1 h-1 rounded-full bg-secondary"></span> Multi LLM Intent Mapping
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-secondary/10 relative z-10">
+                    <div class="flex justify-between text-[8px] font-mono text-secondary/50 mb-3 uppercase tracking-tighter">
+                        <span>Latency: &lt;420ms</span>
+                        <span>98% Accuracy</span>
+                    </div>
+                    <div class="h-1 w-full bg-secondary/5 rounded-full overflow-hidden border border-secondary/10 p-[1px]">
+                        <div class="h-full bg-secondary shadow-[0_0_5px_#a2e7ff] animate-[progress_3s_ease-in-out_infinite]" style="width: 75%"></div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Neural Command Console -->
-            <div class="mt-16 glass-card rounded-[2rem] border border-secondary/20 bg-black/40 p-8 relative overflow-hidden group">
-                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary/50 to-transparent"></div>
-                <div class="flex items-center justify-between mb-6">
-                    <div class="flex items-center gap-3">
-                        <div class="flex gap-1.5">
-                            <div class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
-                            <div class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
-                            <div class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
-                        </div>
-                        <span class="text-xs font-mono text-secondary opacity-60 tracking-widest uppercase ml-2">Neural_Console.exe v2.04</span>
-                    </div>
-                    <div class="text-[10px] font-mono text-secondary/40 animate-pulse">SYSTEM STATUS: OPTIMAL</div>
+            <!-- AI Card 2 -->
+            <div class="glass-card group p-8 rounded-3xl border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-all duration-700 hover:border-primary/40 relative overflow-hidden h-full perspective-1000" data-aos="fade-up" data-aos-delay="200">
+                <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700 pointer-events-none">
+                    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M0 50 H100 M60 0 V100" stroke="currentColor" stroke-width="0.1" fill="none" class="text-primary" />
+                    </svg>
                 </div>
+                <div class="absolute inset-x-0 h-1/4 bg-gradient-to-b from-transparent via-primary/10 to-transparent -top-full group-hover:top-full transition-all duration-[2000ms] pointer-events-none"></div>
+                <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary shadow-[0_0_20px_#ccbeff]"></div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div class="space-y-2 font-mono text-[11px] text-secondary/70 h-32 overflow-hidden relative">
-                        <div class="animate-[scroll_10s_linear_infinite]">
-                            <p>> INITIALIZING NEURAL CORE...</p>
-                            <p>> LOADING VECTOR DATABASE: 1,402 NODES FOUND</p>
-                            <p>> ANALYZING BUSINESS WORKFLOW [94% EFFICIENCY]</p>
-                            <p>> DEPLOYING CUSTOM LLM AGENT: "NEXUS-7"</p>
-                            <p>> GPT-4O INTEGRATION: [STABLE]</p>
-                            <p>> MAPPING SEMANTIC DATA CLUSTERS...</p>
-                            <p>> OPTIMIZING AUTOMATION SEQUENCES...</p>
-                            <p>> SCRAPING LEAD DATA: 142 ENTRIES RECOVERED</p>
-                            <p>> SYSTEM COLD START COMPLETED.</p>
-                        </div>
-                        <div class="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div class="flex items-center justify-between mb-8 relative z-10">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-2xl animate-pulse">auto_mode</span>
                     </div>
+                    <div class="text-[8px] font-mono text-primary/40 tracking-widest uppercase">Logic_x.Core</div>
+                </div>
+                <div class="relative z-10 mb-8">
+                    <h3 class="text-xl font-black mb-3 leading-tight group-hover:text-primary transition-colors">Automation Workflows</h3>
+                    <p class="text-on-surface-variant text-[11px] leading-relaxed opacity-70 mb-6">Zapier and Python systems for business sequences.</p>
                     
-                    <!-- AI Insight Core -->
-                    <div class="flex items-center justify-center relative">
-                        <div class="w-24 h-24 rounded-full border-2 border-secondary/20 relative animate-[spin_10s_linear_infinite]">
-                            <div class="absolute inset-2 border-t-2 border-primary rounded-full animate-[spin_3s_linear_infinite]"></div>
-                            <div class="absolute inset-4 border-b-2 border-tertiary rounded-full animate-[spin_5s_linear_infinite]"></div>
-                        </div>
-                        <div class="absolute w-4 h-4 rounded-full bg-secondary shadow-[0_0_20px_#a2e7ff] animate-pulse"></div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-[10px] font-bold text-primary/80">
+                            <span class="w-1 h-1 rounded-full bg-primary animate-ping"></span> Auto Content Clustering
+                        </li>
+                        <li class="flex items-center gap-2 text-[10px] font-bold text-primary/80">
+                            <span class="w-1 h-1 rounded-full bg-primary"></span> Mass Scale SEO Auditing
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-primary/10 relative z-10">
+                    <div class="flex justify-between text-[8px] font-mono text-primary/50 mb-3 uppercase tracking-tighter">
+                        <span>Speed: 84 Ops/Sec</span>
+                        <span>Fail-Safe Mode</span>
+                    </div>
+                    <div class="h-1 w-full bg-primary/5 rounded-full overflow-hidden border border-primary/10 p-[1px]">
+                        <div class="h-full bg-primary shadow-[0_0_5px_#ccbeff] animate-[progress_4s_ease-in-out_infinite]" style="width: 88%"></div>
                     </div>
                 </div>
             </div>
+
+            <!-- AI Card 3 -->
+            <div class="glass-card group p-8 rounded-3xl border border-tertiary/20 bg-tertiary/5 hover:bg-tertiary/10 transition-all duration-700 hover:border-tertiary/40 relative overflow-hidden h-full perspective-1000" data-aos="fade-up" data-aos-delay="300">
+                <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700 pointer-events-none">
+                    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M0 80 H100 M90 0 V100" stroke="currentColor" stroke-width="0.1" fill="none" class="text-tertiary" />
+                    </svg>
+                </div>
+                <div class="absolute inset-x-0 h-1/4 bg-gradient-to-b from-transparent via-tertiary/10 to-transparent -top-full group-hover:top-full transition-all duration-[2000ms] pointer-events-none"></div>
+                <div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary shadow-[0_0_20px_#dfb7ff]"></div>
+                
+                <div class="flex items-center justify-between mb-8 relative z-10">
+                    <div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center border border-tertiary/20 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-tertiary text-2xl animate-pulse">database</span>
+                    </div>
+                    <div class="text-[8px] font-mono text-tertiary/40 tracking-widest uppercase">Data_Map.v2</div>
+                </div>
+                <div class="relative z-10 mb-8">
+                    <h3 class="text-xl font-black mb-3 leading-tight group-hover:text-tertiary transition-colors">Data Systems</h3>
+                    <p class="text-on-surface-variant text-[11px] leading-relaxed opacity-70 mb-6">Advanced Vector DB pipelines for LLM ingestion.</p>
+                    
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-[10px] font-bold text-tertiary/80">
+                            <span class="w-1 h-1 rounded-full bg-tertiary animate-ping"></span> Real-time Serp Scraping
+                        </li>
+                        <li class="flex items-center gap-2 text-[10px] font-bold text-tertiary/80">
+                            <span class="w-1 h-1 rounded-full bg-tertiary"></span> Neural Content Mapping
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-tertiary/10 relative z-10">
+                    <div class="flex justify-between text-[8px] font-mono text-tertiary/50 mb-3 uppercase tracking-tighter">
+                        <span>Vectors: 4.2M</span>
+                        <span>Query_Sync: OK</span>
+                    </div>
+                    <div class="h-1 w-full bg-tertiary/5 rounded-full overflow-hidden border border-tertiary/10 p-[1px]">
+                        <div class="h-full bg-tertiary shadow-[0_0_5px_#dfb7ff] animate-[progress_2s_ease-in-out_infinite]" style="width: 62%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Card 4 -->
+            <div class="glass-card group p-8 rounded-3xl border border-secondary/20 bg-secondary/5 hover:bg-secondary/10 transition-all duration-700 hover:border-secondary/40 relative overflow-hidden h-full perspective-1000" data-aos="fade-up" data-aos-delay="400">
+                <div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700 pointer-events-none">
+                    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M0 20 H100 M60 0 V100" stroke="currentColor" stroke-width="0.1" fill="none" class="text-secondary" />
+                    </svg>
+                </div>
+                <div class="absolute inset-x-0 h-1/4 bg-gradient-to-b from-transparent via-secondary/10 to-transparent -top-full group-hover:top-full transition-all duration-[2000ms] pointer-events-none"></div>
+                <div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary shadow-[0_0_20px_#a2e7ff]"></div>
+                
+                <div class="flex items-center justify-between mb-8 relative z-10">
+                    <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center border border-secondary/20 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-secondary text-2xl animate-pulse">integration_instructions</span>
+                    </div>
+                    <div class="text-[8px] font-mono text-secondary/40 tracking-widest uppercase">API_Pool.01</div>
+                </div>
+                <div class="relative z-10 mb-8">
+                    <h3 class="text-xl font-black mb-3 leading-tight group-hover:text-secondary transition-colors">API & Integrations</h3>
+                    <p class="text-on-surface-variant text-[11px] leading-relaxed opacity-70 mb-6">Seamless AI integration into legacy platforms.</p>
+                    
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-[10px] font-bold text-secondary/80">
+                            <span class="w-1 h-1 rounded-full bg-secondary animate-ping"></span> Google API Tunneling
+                        </li>
+                        <li class="flex items-center gap-2 text-[10px] font-bold text-secondary/80">
+                            <span class="w-1 h-1 rounded-full bg-secondary"></span> Auto Search Console Sync
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-secondary/10 relative z-10">
+                    <div class="flex justify-between text-[8px] font-mono text-secondary/50 mb-3 uppercase tracking-tighter">
+                        <span>Uptime: 99.9%</span>
+                        <span>Endpoints: Active</span>
+                    </div>
+                    <div class="h-1 w-full bg-secondary/5 rounded-full overflow-hidden border border-secondary/10 p-[1px]">
+                        <div class="h-full bg-secondary shadow-[0_0_5px_#a2e7ff] animate-[progress_5s_ease-in-out_infinite]" style="width: 95%"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <style>
+        @keyframes chat {
+            0%, 20% { transform: translateY(0); opacity: 1; }
+            25%, 45% { transform: translateY(-80px); }
+            50%, 70% { transform: translateY(-160px); }
+            75%, 95% { transform: translateY(-240px); opacity: 0.5; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
 
     <!-- AI Metrics Bar -->
     <div class="max-w-7xl mx-auto mt-32 border-t border-secondary/10 pt-20 relative z-10">
