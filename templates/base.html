@@ -238,15 +238,24 @@
             offset: 100,
         });
 
-        // Navbar Scroll Effect
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
+            const progress = document.getElementById('scroll-progress');
+            
+            // Navbar Scroll Effect
             if (window.scrollY > 50) {
                 nav.classList.add('py-4', 'bg-surface/80', 'border-b', 'border-outline-variant/10');
                 nav.classList.remove('py-6', 'bg-transparent');
             } else {
                 nav.classList.add('py-6', 'bg-transparent');
                 nav.classList.remove('py-4', 'bg-surface/80', 'border-b', 'border-outline-variant/10');
+            }
+
+            // Progress Bar Update
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (window.scrollY / totalHeight) * 100;
+            if (progress) {
+                progress.style.width = scrollPercent + '%';
             }
         });
 
