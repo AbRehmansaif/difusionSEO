@@ -1,12 +1,13 @@
 #!/bin/bash
 # ==============================================================================
 #  DifusionSEO — VPS Deployment Script
+#  Repo:   https://github.com/AbRehmansaif/difusionSEO.git
 #  Server: 38.242.254.102  |  Domain: difusionseo.com
 #
 #  HOW TO USE:
-#  1. Upload your project:  scp -r "d:\Products\difusionseo" root@38.242.254.102:/var/www/
-#  2. SSH in:               ssh root@38.242.254.102
-#  3. Run this script:      bash /var/www/difusionseo/deploy/deploy.sh
+#  1. SSH into your server:  ssh root@38.242.254.102
+#  2. Run this one command:
+#     bash <(curl -s https://raw.githubusercontent.com/AbRehmansaif/difusionSEO/main/deploy/deploy.sh)
 # ==============================================================================
 set -e
 
@@ -15,41 +16,56 @@ echo "🚀 Starting DifusionSEO deployment..."
 # ── STEP 1: Install system dependencies ───────────────────────────────────────
 echo "[1/8] Installing system packages..."
 apt-get update -q
-apt-get install -y python3 python3-pip python3-venv nginx git
+apt-get install -y python3 python3-pip python3-venv nginx git curl
 
-# ── STEP 2: Set up Python virtual environment ─────────────────────────────────
-echo "[2/8] Setting up virtual environment..."
-cd /var/www/difusionseo
-python3 -m venv env
-source env/bin/activate
+# ── STEP 2: Clone the project from GitHub ─────────────────────────────────────
+echo "[2/8] Cloning project from GitHub..."
+if [ -d "/var/www/difusionseo/.git" ]; then
+    echo "   → Repo already exists, pulling latest changes..."
+    cd /var/www/difusionseo
+    git pull origin main
+else
+    echo "   → Fresh clone..."
+    rm -rf /var/www/difusionseo
+    git clone https://github.com/AbRehmansaif/difusionSEO.git /var/www/difusionseo
+    cd /var/www/difusionseo
+fi
+
+# ── STEP 3: Set up Python virtual environment ─────────────────────────────────
+echo "[3/8] Setting up virtual environment..."
+python3 -m venv /var/www/difusionseo/env
+source /var/www/difusionseo/env/bin/activate
 pip install --upgrade pip -q
 pip install -r requirements.txt -q
 
-# ── STEP 3: Create the production .env file ───────────────────────────────────
-echo "[3/8] Creating /var/www/difusionseo/.env ..."
-# Generate a random secret key automatically
-SECRET=$(python3 -c "import secrets; print(secrets.token_urlsafe(50))")
-cat > /var/www/difusionseo/.env << EOF
+# ── STEP 4: Create the production .env file ───────────────────────────────────
+echo "[4/8] Creating /var/www/difusionseo/.env ..."
+if [ -f "/var/www/difusionseo/.env" ]; then
+    echo "   → .env already exists, skipping to preserve your settings."
+else
+    SECRET=$(python3 -c "import secrets; print(secrets.token_urlsafe(50))")
+    cat > /var/www/difusionseo/.env << EOF
 DEBUG=False
 SECRET_KEY=${SECRET}
 ALLOWED_HOSTS=difusionseo.com,www.difusionseo.com,38.242.254.102
 EOF
-echo "✅ .env created with a generated SECRET_KEY."
+    echo "   → .env created with auto-generated SECRET_KEY."
+fi
 
-# ── STEP 4: Run Django setup commands ─────────────────────────────────────────
-echo "[4/8] Running migrate and collectstatic..."
+# ── STEP 5: Run Django setup commands ─────────────────────────────────────────
+echo "[5/8] Running migrate and collectstatic..."
 python manage.py migrate --noinput
 python manage.py collectstatic --noinput
 deactivate
 
-# ── STEP 5: Create log directories ────────────────────────────────────────────
-echo "[5/8] Creating Gunicorn log directory..."
+# ── STEP 6: Create Gunicorn log directory ─────────────────────────────────────
+echo "[6/8] Creating Gunicorn log directory..."
 mkdir -p /var/log/gunicorn
 touch /var/log/gunicorn/difusionseo-access.log
 touch /var/log/gunicorn/difusionseo-error.log
 
-# ── STEP 6: Create the systemd service at /etc/systemd/system/ ───────────────
-echo "[6/8] Writing /etc/systemd/system/difusionseo.service ..."
+# ── STEP 7: Create systemd service at /etc/systemd/system/ ───────────────────
+echo "[7/8] Writing /etc/systemd/system/difusionseo.service ..."
 cat > /etc/systemd/system/difusionseo.service << 'EOF'
 [Unit]
 Description=Gunicorn daemon for difusionseo
@@ -77,8 +93,8 @@ sleep 2
 echo "Gunicorn status:"
 systemctl status difusionseo --no-pager
 
-# ── STEP 7: Create the Nginx server block at /etc/nginx/sites-available/ ──────
-echo "[7/8] Writing /etc/nginx/sites-available/difusionseo ..."
+# ── STEP 8: Create Nginx server block at /etc/nginx/sites-available/ ──────────
+echo "[8/8] Writing /etc/nginx/sites-available/difusionseo ..."
 cat > /etc/nginx/sites-available/difusionseo << 'EOF'
 server {
     listen 80;
@@ -105,9 +121,7 @@ server {
 }
 EOF
 
-# Enable it (symlink) and test — won't break your existing project
 ln -sf /etc/nginx/sites-available/difusionseo /etc/nginx/sites-enabled/difusionseo
-echo "[8/8] Testing Nginx config and reloading..."
 nginx -t
 systemctl reload nginx
 
