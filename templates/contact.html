@@ -20,7 +20,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-start">
         <!-- Left: Contact Form -->
         <section class="glass-panel rounded-[2rem] p-6 sm:p-8 md:p-12 shadow-2xl border border-outline-variant/10 relative z-10" data-aos="fade-right" data-aos-duration="1000">
-            <form class="space-y-6" method="POST" id="contactForm" novalidate>
+            <form class="space-y-6" method="POST" action="{% url 'contact' %}" id="contactForm" novalidate>
                 {% csrf_token %}
                 <div class="hidden">
                     <input name="bot_check" type="text" tabindex="-1" autocomplete="off"/>
@@ -126,6 +126,37 @@
         </section>
     </div>
 </main>
+
+{% if messages %}
+{% for message in messages %}
+<div id="toast-notification"
+     class="fixed bottom-8 left-1/2 -translate-x-1/2 z-[200] flex items-center gap-4 px-6 py-4 rounded-2xl shadow-2xl border backdrop-blur-xl transition-all duration-500
+            {% if message.tags == 'success' %}bg-black/80 border-secondary/30 text-secondary{% else %}bg-black/80 border-error/30 text-error{% endif %}">
+    <span class="material-symbols-outlined text-2xl">
+        {% if message.tags == 'success' %}check_circle{% else %}error{% endif %}
+    </span>
+    <div>
+        {% if message.tags == 'success' %}
+        <p class="font-black text-sm uppercase tracking-widest">Message Sent!</p>
+        <p class="text-xs text-on-surface-variant mt-0.5">We'll get back to you within 24 hours.</p>
+        {% else %}
+        <p class="font-black text-sm uppercase tracking-widest">Submission Failed</p>
+        <p class="text-xs text-on-surface-variant mt-0.5">{{ message }}</p>
+        {% endif %}
+    </div>
+    <button onclick="document.getElementById('toast-notification').remove()" class="ml-2 text-on-surface-variant hover:text-on-surface transition-colors">
+        <span class="material-symbols-outlined text-lg">close</span>
+    </button>
+</div>
+<script>
+    setTimeout(() => {
+        const toast = document.getElementById('toast-notification');
+        if (toast) toast.style.opacity = '0';
+        setTimeout(() => toast && toast.remove(), 500);
+    }, 5000);
+</script>
+{% endfor %}
+{% endif %}
 
 <script>
     const form = document.getElementById('contactForm');
