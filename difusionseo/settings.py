@@ -14,10 +14,11 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Load environment variables from .env file
+load_dotenv(BASE_DIR / '.env')
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,7 +30,14 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'default-secret-key-change-in-production')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+# ALLOWED_HOSTS parsing: handle spaces and empty strings correctly
+ALLOWED_HOSTS_RAW = os.getenv('ALLOWED_HOSTS', '')
+if ALLOWED_HOSTS_RAW:
+    ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS_RAW.split(',') if host.strip()]
+else:
+    # Default to an empty list or '*' for development if needed, 
+    # but in production this will correctly fail if not provided.
+    ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -120,8 +128,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
