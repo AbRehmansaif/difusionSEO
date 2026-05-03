@@ -84,9 +84,9 @@
 <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 <div data-aos="fade-right">
 <div class="w-16 h-1 bg-primary mb-8" data-aos="stretch-x" data-aos-delay="300"></div>
-<div class="flex items-center gap-4 mb-6">
-<span class="material-symbols-outlined text-4xl text-primary animate__animated animate__pulse animate__infinite">query_stats</span>
-<h2 class="text-4xl font-bold tracking-tight">Advanced SEO Strategy</h2>
+<div class="flex items-center gap-4 mb-6 group cursor-pointer" onclick="window.location.href='{% url 'seo_strategy' %}'">
+<span class="material-symbols-outlined text-4xl text-primary animate__animated animate__pulse animate__infinite group-hover:scale-110 transition-transform">query_stats</span>
+<h2 class="text-4xl font-bold tracking-tight group-hover:text-primary transition-colors">Advanced SEO Strategy</h2>
 </div>
 <p class="text-on-surface-variant mb-10 text-lg leading-relaxed">
                         Data-driven organic growth strategies designed to dominate competitive niches. We focus on technical precision and semantic authority to ensure long-term visibility.
@@ -107,12 +107,12 @@
 <span class="material-symbols-outlined text-primary text-sm">check_circle</span> Content Clustering
                             </li>
 </ul>
-<div class="mt-8 flex flex-wrap gap-4">
-    <a href="{% url 'seo_strategy' %}" class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
-        Full SEO Strategy <span class="material-symbols-outlined">arrow_forward</span>
+<div class="mt-8 flex flex-col sm:flex-row gap-4">
+    <a href="{% url 'seo_strategy' %}" class="flex items-center justify-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-[0_10px_30px_rgba(162,231,255,0.2)] group w-full sm:w-auto">
+        View Complete SEO Service <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
     </a>
-    <a href="{% url 'backlink_service' %}" class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all opacity-70">
-        Backlink Building <span class="material-symbols-outlined">link</span>
+    <a href="{% url 'backlink_service' %}" class="flex items-center justify-center gap-3 border border-outline-variant/30 text-on-surface hover:border-primary/50 px-8 py-4 rounded-full font-bold text-sm hover:bg-surface-container transition-all group w-full sm:w-auto">
+        Explore Backlinks <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">link</span>
     </a>
 </div>
 </div>
@@ -356,9 +356,9 @@
 <div class="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse gap-20 items-start">
 <div class="lg:w-1/2">
 <div class="w-16 h-1 bg-secondary mb-8"></div>
-<div class="flex items-center gap-4 mb-6">
-<span class="material-symbols-outlined text-4xl text-secondary">location_on</span>
-<h2 class="text-4xl font-bold tracking-tight">Local SEO Services</h2>
+<div class="flex items-center gap-4 mb-6 group cursor-pointer" onclick="window.location.href='{% url 'local_seo' %}'">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:scale-110 transition-transform">location_on</span>
+<h2 class="text-4xl font-bold tracking-tight group-hover:text-secondary transition-colors">Local SEO Services</h2>
 </div>
 <p class="text-on-surface-variant mb-10 text-lg leading-relaxed">
                         We help your business dominate local search results by optimizing your online presence so you appear exactly when customers are searching for your services in your area. Our focus is simple, more visibility, more calls, and more local leads.
@@ -379,9 +379,9 @@
                             <span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Review & Reputation Strategy
                         </li>
                     </ul>
-                    <div class="mt-8">
-                        <a href="{% url 'local_seo' %}" class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all">
-                            Explore Local SEO Details <span class="material-symbols-outlined">arrow_forward</span>
+                    <div class="mt-8 flex">
+                        <a href="{% url 'local_seo' %}" class="flex items-center justify-center gap-3 bg-secondary text-on-secondary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-[0_10px_30px_rgba(204,190,255,0.2)] group w-full sm:w-auto">
+                            View Complete Local SEO Service <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
                         </a>
                     </div>
                 </div>
@@ -447,11 +447,11 @@
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-20">
             <div data-aos="fade-right">
                 <div class="w-16 h-1 bg-tertiary mb-8"></div>
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-14 h-14 rounded-2xl bg-tertiary/10 flex items-center justify-center border border-tertiary/20">
+                <div class="flex items-center gap-4 mb-6 group cursor-pointer" onclick="window.location.href='{% url 'web_development' %}'">
+                    <div class="w-14 h-14 rounded-2xl bg-tertiary/10 flex items-center justify-center border border-tertiary/20 group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-3xl text-tertiary">code_blocks</span>
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-black tracking-tight">Full Stack Web Development <br class="hidden md:block">& Engineering</h2>
+                    <h2 class="text-4xl md:text-5xl font-black tracking-tight group-hover:text-tertiary transition-colors">Full Stack Web Development <br class="hidden md:block">& Engineering</h2>
                 </div>
             </div>
             <div class="lg:max-w-xl" data-aos="fade-left" data-aos-delay="200">
@@ -561,9 +561,9 @@
                 </div>
             </div>
         </div>
-        <div class="mt-12 text-center">
-            <a href="{% url 'web_development' %}" class="inline-flex items-center gap-2 bg-tertiary text-on-tertiary px-8 py-4 rounded-full font-bold hover:scale-105 transition-all">
-                View Engineering Details <span class="material-symbols-outlined">arrow_forward</span>
+        <div class="mt-12 text-center flex justify-center">
+            <a href="{% url 'web_development' %}" class="flex items-center justify-center gap-3 bg-tertiary text-on-tertiary px-10 py-5 rounded-full font-black text-sm hover:scale-105 transition-all shadow-[0_10px_30px_rgba(223,183,255,0.2)] group w-full sm:w-auto">
+                View Complete Web Dev Service <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
             </a>
         </div>
 </div>
@@ -606,13 +606,13 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start mb-24">
             <div data-aos="fade-right">
                 <div class="w-20 h-1 bg-gradient-to-r from-secondary to-primary mb-10 shadow-[0_0_20px_rgba(162,231,255,0.3)]"></div>
-                <div class="flex items-center gap-6 mb-8 group">
-                    <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center border border-secondary/20 holographic-glow">
+                <div class="flex items-center gap-6 mb-8 group cursor-pointer" onclick="window.location.href='{% url 'ai_automation' %}'">
+                    <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center border border-secondary/20 holographic-glow group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-4xl text-secondary animate__animated animate__pulse animate__infinite">psychology</span>
                     </div>
                     <div>
                         <span class="text-xs uppercase font-black tracking-[0.5em] text-secondary opacity-60 block mb-2">Synthetic Core</span>
-                        <h2 class="text-5xl font-black tracking-tight drop-shadow-[0_0_15px_rgba(162,231,255,0.3)]">AI &amp; Neural <br>Automation</h2>
+                        <h2 class="text-5xl font-black tracking-tight drop-shadow-[0_0_15px_rgba(162,231,255,0.3)] group-hover:text-secondary transition-colors">AI &amp; Neural <br>Automation</h2>
                     </div>
                 </div>
                 <p class="text-xl text-on-surface-variant leading-relaxed mb-12 opacity-90">
@@ -621,8 +621,8 @@
                     <strong>NLP, machine learning, and LLM integrations</strong> to deliver real business value.
                 </p>
                 <div class="flex flex-wrap gap-6 mb-16">
-                    <a href="{% url 'ai_automation' %}" class="px-10 py-5 rounded-2xl bg-secondary text-on-secondary font-black text-sm flex items-center gap-3 hover:scale-105 transition-all shadow-[0_20px_40px_rgba(162,231,255,0.2)] group inline-flex">
-                        Explore AI Solutions 
+                    <a href="{% url 'ai_automation' %}" class="px-10 py-5 rounded-full bg-secondary text-on-secondary font-black text-sm flex items-center justify-center gap-3 hover:scale-105 transition-all shadow-[0_20px_40px_rgba(162,231,255,0.2)] group w-full sm:w-auto">
+                        View Complete AI Automation Service 
                         <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
                     </a>
                 </div>
@@ -993,9 +993,9 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 <div>
 <div class="w-16 h-1 bg-error mb-8"></div>
-<div class="flex items-center gap-4 mb-6">
-<span class="material-symbols-outlined text-4xl text-error">shield_lock</span>
-<h2 class="text-4xl font-bold tracking-tight">Advanced App Security</h2>
+<div class="flex items-center gap-4 mb-6 group cursor-pointer" onclick="window.location.href='{% url 'cyber_security' %}'">
+<span class="material-symbols-outlined text-4xl text-error group-hover:scale-110 transition-transform">shield_lock</span>
+<h2 class="text-4xl font-bold tracking-tight group-hover:text-error transition-colors">Advanced App Security</h2>
 </div>
 <p class="text-on-surface-variant mb-12 text-lg leading-relaxed">
                             Security is not a feature; it's the foundation. We audit, harden, and monitor your digital assets to prevent breaches before they happen.
@@ -1026,9 +1026,9 @@
 <p class="text-sm text-on-surface-variant">Comprehensive vulnerability scanning and penetration testing.</p>
 </div>
 </div>
-<div class="mt-12">
-    <a href="{% url 'cyber_security' %}" class="inline-flex items-center gap-2 text-error font-bold hover:gap-4 transition-all">
-        Explore Security Details <span class="material-symbols-outlined">arrow_forward</span>
+<div class="mt-12 flex">
+    <a href="{% url 'cyber_security' %}" class="flex items-center justify-center gap-3 bg-error text-white px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-[0_10px_30px_rgba(255,180,171,0.2)] group w-full sm:w-auto">
+        View Complete Security Service <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
     </a>
 </div>
 </div>
