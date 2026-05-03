@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Local SEO Services | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Dominate your local market with DifusionSEO. We optimize Google Business Profiles, build local citations, and improve map rankings for local businesses.">
+{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/services/local_seo.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="pt-24 overflow-hidden">
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] py-16 md:py-32 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
+        <div class="absolute top-1/4 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center relative z-10">
+            <div data-aos="fade-right">
+                <span class="label-md uppercase tracking-[0.3em] text-primary font-black mb-6 md:mb-8 block italic">Hyper-Local Growth</span>
+                <h1 class="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[1.1] mb-8">
+                    Local SEO <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Services</span>
+                </h1>
+                <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed font-light max-w-xl opacity-80">
+                    We help your business dominate local search results by optimizing your online presence so you appear exactly when customers are searching for your services in your area.
+                </p>
+                <div class="mt-10 flex items-center gap-6">
+                    <a href="{% url 'contact' %}" class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-lg">Get Local Leads</a>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-black text-secondary">#1</span>
+                        <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Map Pack Rankings</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative hidden lg:block" data-aos="zoom-in">
+                <div class="glass-card rounded-[3rem] p-8 border border-secondary/20 aspect-square flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-primary/10 animate-pulse"></div>
+                    <span class="material-symbols-outlined text-9xl text-secondary animate-bounce">location_on</span>
+                    
+                    <!-- Decorative Map Elements -->
+                    <div class="absolute inset-0 opacity-20 pointer-events-none">
+                        <svg class="w-full h-full" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="0.1" class="text-secondary" />
+                            <circle cx="50" cy="50" r="10" fill="currentColor" class="text-secondary animate-ping" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scope of Work -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl md:text-5xl font-black mb-10">Dominate Your <span class="text-secondary">Neighborhood</span></h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4 p-6 glass-card rounded-2xl border-l-4 border-secondary hover-lift">
+                            <span class="material-symbols-outlined text-secondary">google</span>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Google Business Profile</h4>
+                                <p class="text-on-surface-variant text-sm opacity-80">Full optimization of your GBP to increase visibility in the Local Pack and Maps.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 p-6 glass-card rounded-2xl border-l-4 border-primary hover-lift">
+                            <span class="material-symbols-outlined text-primary">add_location_alt</span>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Local Citations</h4>
+                                <p class="text-on-surface-variant text-sm opacity-80">Consistent NAP (Name, Address, Phone) across all major local directories and industry sites.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 p-6 glass-card rounded-2xl border-l-4 border-tertiary hover-lift">
+                            <span class="material-symbols-outlined text-tertiary">star_half</span>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Reputation Strategy</h4>
+                                <p class="text-on-surface-variant text-sm opacity-80">Building and managing reviews to build trust with local customers and search engines.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <div class="glass-card rounded-[2.5rem] overflow-hidden aspect-square shadow-2xl">
+                        <img class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-700" src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&q=80&w=2070" alt="Local Search Visualization">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 right-8">
+                            <div class="flex items-center gap-4 text-secondary mb-2">
+                                <span class="material-symbols-outlined">map</span>
+                                <span class="font-mono text-xs uppercase tracking-widest">Live_Local_Matrix</span>
+                            </div>
+                            <h3 class="text-2xl font-black">90% of local searches lead to a visit within 24 hours.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Local SEO -->
+    <section class="py-32 px-8 bg-[#0a0a0b] relative">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-black mb-8">Why Local Visibility <span class="text-secondary">Matters</span></h2>
+            <p class="text-xl text-on-surface-variant mb-12 opacity-80 leading-relaxed">
+                Most customers search online before choosing a local business. If your business is not visible in local search or map results, you are losing potential customers to competitors every single day.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 glass-card rounded-3xl border border-secondary/20">
+                    <div class="text-4xl font-black text-secondary mb-2">88%</div>
+                    <p class="text-[10px] uppercase tracking-widest opacity-60">Mobile search conversion</p>
+                </div>
+                <div class="p-8 glass-card rounded-3xl border border-primary/20">
+                    <div class="text-4xl font-black text-primary mb-2">3x</div>
+                    <p class="text-[10px] uppercase tracking-widest opacity-60">More map interactions</p>
+                </div>
+                <div class="p-8 glass-card rounded-3xl border border-tertiary/20">
+                    <div class="text-4xl font-black text-tertiary mb-2">46%</div>
+                    <p class="text-[10px] uppercase tracking-widest opacity-60">Local Intent Searches</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 px-8">
+        <div class="max-w-5xl mx-auto glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden" data-aos="zoom-in">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <h2 class="text-4xl md:text-6xl font-black mb-6">Let’s Dominate Your Market</h2>
+            <p class="text-xl text-on-surface-variant mb-10 opacity-80 max-w-2xl mx-auto">Ready to get more qualified calls and local foot traffic? Let’s optimize your business profile today.</p>
+            <a href="{% url 'contact' %}" class="inline-flex items-center gap-3 bg-secondary text-on-secondary px-10 py-5 rounded-full font-black hover:scale-105 transition-all shadow-xl">
+                Get Started Locally
+                <span class="material-symbols-outlined">near_me</span>
+            </a>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/services/local_seo.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Full Stack Web Development & Engineering | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Custom web development using Node.js, Python, Django, and modern cloud architectures. Scalable, high-performance web applications for startups and enterprises.">
+{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/services/web_dev.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="pt-24 overflow-hidden">
+    <!-- Hero Section -->
+    <section class="relative min-h-[70vh] py-16 md:py-32 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
+        <div class="absolute top-1/4 right-0 w-[600px] h-[600px] bg-tertiary/10 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center relative z-10">
+            <div data-aos="fade-right">
+                <span class="label-md uppercase tracking-[0.3em] text-tertiary font-black mb-6 md:mb-8 block italic">Bespoke Engineering</span>
+                <h1 class="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[1.1] mb-8">
+                    Full Stack <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-tertiary via-primary to-secondary">Web Engineering</span>
+                </h1>
+                <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed font-light max-w-xl opacity-80">
+                    We build scalable, high-performance web applications using modern technologies. Built for long-term growth and business automation.
+                </p>
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a href="{% url 'contact' %}" class="bg-tertiary text-on-tertiary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-lg">Start Building</a>
+                    <div class="flex items-center gap-4 bg-surface-container-high px-6 py-3 rounded-full border border-outline-variant/20">
+                        <span class="material-symbols-outlined text-tertiary">code</span>
+                        <span class="text-xs font-mono font-bold tracking-widest">Node.js / Python / React</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative hidden lg:block" data-aos="zoom-in">
+                <div class="glass-card rounded-[3rem] p-12 border border-tertiary/20 aspect-video flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black/40"></div>
+                    <div class="relative z-10 w-full font-mono text-sm text-tertiary/80 space-y-2">
+                        <p class="animate__animated animate__fadeInLeft">> initializing_engine.sh</p>
+                        <p class="animate__animated animate__fadeInLeft animate__delay-1s">> loading_modules... [OK]</p>
+                        <p class="animate__animated animate__fadeInLeft animate__delay-2s">> building_ui_components... [100%]</p>
+                        <p class="animate__animated animate__pulse animate__infinite mt-4 text-white">READY_TO_DEPLOY_SUCCESS</p>
+                    </div>
+                    <!-- Decorative Orbs -->
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-tertiary/20 rounded-full blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack Cards -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Backend -->
+                <div class="glass-card p-10 rounded-[2.5rem] border-t-4 border-tertiary/40 hover-lift group" data-aos="fade-up" data-aos-delay="100">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">database</span>
+                    <h3 class="text-2xl font-black mb-4">Backend & Cloud</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-80 mb-8">Node.js, Python, and Django architectures built for massive scale and reliability.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-tertiary rounded-full"></span> REST & GraphQL APIs</li>
+                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-tertiary rounded-full"></span> Serverless Logic</li>
+                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-tertiary rounded-full"></span> Security First Design</li>
+                    </ul>
+                </div>
+                <!-- Frontend -->
+                <div class="glass-card p-10 rounded-[2.5rem] border-t-4 border-primary/40 hover-lift group" data-aos="fade-up" data-aos-delay="200">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-6">devices</span>
+                    <h3 class="text-2xl font-black mb-4">Interactive UI/UX</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-80 mb-8">Next.js and React applications optimized for search engines and user experience.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-primary rounded-full"></span> Core Web Vitals Focus</li>
+                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-primary rounded-full"></span> Micro-Interactions</li>
+                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-primary rounded-full"></span> Responsive Design</li>
+                    </ul>
+                </div>
+                <!-- Custom -->
+                <div class="glass-card p-10 rounded-[2.5rem] border-t-4 border-secondary/40 hover-lift group" data-aos="fade-up" data-aos-delay="300">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-6">token</span>
+                    <h3 class="text-2xl font-black mb-4">Custom SaaS</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-80 mb-8">End-to-end software development tailored to your specific business requirements.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-secondary rounded-full"></span> Workflow Automation</li>
+                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-secondary rounded-full"></span> CRM Integrations</li>
+                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-secondary rounded-full"></span> Legacy Modernization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Section -->
+    <section class="py-40 px-8 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 grayscale opacity-20">
+            <img class="w-full h-full object-cover parallax" data-speed="-0.2" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070" alt="Code Background">
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-5xl md:text-7xl font-black mb-8">Code That Scales.</h2>
+            <p class="text-xl text-on-surface-variant opacity-90 leading-relaxed mb-10">We don't just write code; we architect systems that grow with your business. From MVP to global enterprise platform.</p>
+            <div class="flex justify-center gap-8 items-center flex-wrap grayscale opacity-50">
+                <i class="fab fa-node-js text-5xl"></i>
+                <i class="fab fa-python text-5xl"></i>
+                <i class="fab fa-react text-5xl"></i>
+                <i class="fab fa-aws text-5xl"></i>
+                <i class="fab fa-docker text-5xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 px-8 bg-tertiary/5">
+        <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
+            <h2 class="text-4xl md:text-6xl font-black mb-8">Have a Project in Mind?</h2>
+            <p class="text-xl text-on-surface-variant mb-10 opacity-80">Let's turn your idea into a high-performance digital reality.</p>
+            <a href="{% url 'contact' %}" class="inline-flex items-center gap-3 bg-tertiary text-on-tertiary px-10 py-5 rounded-full font-black hover:scale-105 transition-all shadow-2xl">
+                Start Consultation
+                <span class="material-symbols-outlined">rocket</span>
+            </a>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/services/web_dev.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,16 @@
+/* Backlinks Specific Styles */
+
+.holographic-glow {
+    filter: drop-shadow(0 0 20px rgba(204, 190, 255, 0.4));
+}
+
+.link-node-pulse {
+    animation: node-ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes node-ping {
+    75%, 100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}

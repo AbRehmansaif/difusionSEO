@@ -12,6 +12,24 @@ def about(request):
 def services(request):
     return render(request, 'services.html')
 
+def seo_strategy(request):
+    return render(request, 'services/seo_strategy.html')
+
+def local_seo(request):
+    return render(request, 'services/local_seo.html')
+
+def web_development(request):
+    return render(request, 'services/web_development.html')
+
+def ai_automation(request):
+    return render(request, 'services/ai_automation.html')
+
+def cyber_security(request):
+    return render(request, 'services/cyber_security.html')
+
+def backlink_service(request):
+    return render(request, 'services/backlinks.html')
+
 def contact(request):
     if request.method == 'POST':
         # Honeypot check — bots fill this hidden field

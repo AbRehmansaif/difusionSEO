@@ -1,0 +1,48 @@
+/* SEO Specific Styles */
+
+.seo-pulse-orb {
+    filter: blur(100px);
+    opacity: 0.15;
+    z-index: -1;
+    position: absolute;
+    border-radius: 50%;
+    animation: seo-pulse 8s ease-in-out infinite;
+}
+
+@keyframes seo-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.15; }
+    50% { transform: scale(1.2); opacity: 0.25; }
+}
+
+.seo-chart-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+    to { stroke-dashoffset: 0; }
+}
+
+.matrix-text {
+    text-shadow: 0 0 10px rgba(204, 190, 255, 0.5);
+}
+
+.service-card-glow {
+    position: relative;
+}
+
+.service-card-glow::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(45deg, var(--primary), transparent, var(--secondary));
+    z-index: -1;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.service-card-glow:hover::after {
+    opacity: 0.3;
+}

@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Backlink Building & Authority Engineering | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Build high-authority backlinks with DifusionSEO. We provide strategic outreach, guest posting, and link building services to dominate search engine rankings.">
+{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/services/backlinks.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="pt-24 overflow-hidden">
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] py-16 md:py-32 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
+        <div class="absolute top-1/4 left-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center relative z-10">
+            <div data-aos="fade-right">
+                <span class="label-md uppercase tracking-[0.3em] text-primary font-black mb-6 md:mb-8 block italic">Authority Engineering</span>
+                <h1 class="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[1.1] mb-8">
+                    High Authority <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-secondary">Link Building</span>
+                </h1>
+                <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed font-light max-w-xl opacity-80">
+                    Propel your domain authority with high-quality, relevant backlinks. We engineer links that search engines trust, driving sustainable organic growth.
+                </p>
+                <div class="mt-10 flex flex-wrap gap-6">
+                    <a href="{% url 'contact' %}" class="bg-primary text-on-primary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-lg">Scale My Rankings</a>
+                    <div class="flex items-center gap-2 font-mono text-xs text-primary/60 uppercase tracking-widest">
+                        <span class="material-symbols-outlined text-sm animate-bounce">link</span>
+                        DA_Boost_Ready
+                    </div>
+                </div>
+            </div>
+            <div class="relative hidden lg:block" data-aos="zoom-in">
+                <div class="glass-card rounded-[3rem] p-12 border border-primary/20 aspect-square flex items-center justify-center relative overflow-hidden bg-black/40">
+                    <div class="absolute inset-0 opacity-[0.05] grid-pattern"></div>
+                    <span class="material-symbols-outlined text-[120px] text-primary holographic-glow">hub</span>
+                    
+                    <!-- Floating Nodes -->
+                    <div class="absolute top-1/4 right-8 w-12 h-12 glass-card rounded-xl flex items-center justify-center border-primary/40 animate-bounce">
+                        <span class="material-symbols-outlined text-primary text-xl">language</span>
+                    </div>
+                    <div class="absolute bottom-1/4 left-8 w-12 h-12 glass-card rounded-xl flex items-center justify-center border-secondary/40 animate-bounce [animation-delay:0.5s]">
+                        <span class="material-symbols-outlined text-secondary text-xl">trending_up</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link Building Pillars -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Guest Posting -->
+                <div class="p-10 glass-card rounded-[2.5rem] border-t-4 border-primary/40 hover-lift group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-8">
+                        <span class="material-symbols-outlined text-primary">article</span>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">Strategic Guest Posting</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">High-quality content placement on authoritative industry websites to drive referral traffic and authority.</p>
+                </div>
+                <!-- Resource Links -->
+                <div class="p-10 glass-card rounded-[2.5rem] border-t-4 border-secondary/40 hover-lift group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-8">
+                        <span class="material-symbols-outlined text-secondary">inventory_2</span>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">Resource Page Building</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">Getting your brand featured on curated resource lists and industry guides for maximum relevancy.</p>
+                </div>
+                <!-- Competitor Backlinks -->
+                <div class="p-10 glass-card rounded-[2.5rem] border-t-4 border-tertiary/40 hover-lift group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center mb-8">
+                        <span class="material-symbols-outlined text-tertiary">analytics</span>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">Competitor Gap Analysis</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">Identifying and acquiring the links that give your competitors an edge in search results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority Growth Visualization -->
+    <section class="py-32 px-8 bg-[#0a0a0b] relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-8">The Authority <span class="text-primary">Compound</span></h2>
+                <p class="text-lg text-on-surface-variant leading-relaxed opacity-80 mb-10">
+                    Backlinks are the currency of the web. Our strategic link building process focuses on **quality over quantity**, ensuring every link serves as a powerful vote of confidence from the web's most trusted sources.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-2 h-2 bg-primary rounded-full"></div>
+                        <span class="text-sm font-bold opacity-70">Natural Outreach (No PBNs)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                        <span class="text-sm font-bold opacity-70">Niche-Relevant Placements</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-2 h-2 bg-tertiary rounded-full"></div>
+                        <span class="text-sm font-bold opacity-70">Sustainable DR/DA Growth</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <div class="glass-card rounded-[3rem] p-12 border border-primary/20 bg-black/40 shadow-2xl relative overflow-hidden min-h-[400px] flex flex-col justify-center text-center">
+                    <div class="text-7xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-tr from-primary to-secondary animate-pulse italic">AUTHORITY</div>
+                    <div class="mt-8 flex justify-center gap-4">
+                        <div class="px-6 py-3 glass-card rounded-xl border-primary/30">
+                            <div class="text-2xl font-black text-primary">+85%</div>
+                            <div class="text-[8px] font-mono uppercase tracking-widest">DR_Lift</div>
+                        </div>
+                        <div class="px-6 py-3 glass-card rounded-xl border-secondary/30">
+                            <div class="text-2xl font-black text-secondary">x3</div>
+                            <div class="text-[8px] font-mono uppercase tracking-widest">Organic_Reach</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 px-8">
+        <div class="max-w-5xl mx-auto glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden bg-primary/5" data-aos="zoom-in">
+            <h2 class="text-4xl md:text-6xl font-black mb-6">Build Your Digital Fortress</h2>
+            <p class="text-xl text-on-surface-variant mb-10 opacity-80 max-w-2xl mx-auto">Ready to acquire the links that move the needle? Let's start your authority campaign.</p>
+            <a href="{% url 'contact' %}" class="inline-flex items-center gap-3 bg-primary text-on-primary px-10 py-5 rounded-full font-black hover:scale-105 transition-all shadow-xl">
+                Get Backlink Audit
+                <span class="material-symbols-outlined">link</span>
+            </a>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/services/backlinks.js' %}"></script>
+{% endblock %}

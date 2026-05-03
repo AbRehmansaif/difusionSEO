@@ -8,7 +8,62 @@
         
         <!-- Desktop Menu -->
         <div class="hidden lg:flex items-center gap-8 xl:gap-10">
-            <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'services' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'services' %}">Services</a>
+            <!-- Services Dropdown -->
+            <div class="relative group">
+                <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 flex items-center gap-1 {% if 'services' in request.path %}text-secondary{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'services' %}">
+                    Services
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+                </a>
+                <!-- Dropdown Menu -->
+                <div class="absolute top-full left-0 mt-4 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-[100]">
+                    <div class="glass-card p-4 rounded-2xl border border-outline-variant/10 bg-surface/90 backdrop-blur-2xl shadow-2xl">
+                        <div class="space-y-1">
+                            <a href="{% url 'seo_strategy' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors group/item">
+                                <span class="material-symbols-outlined text-primary text-xl">query_stats</span>
+                                <div>
+                                    <div class="text-xs font-black text-on-surface">SEO Strategy</div>
+                                    <div class="text-[10px] text-on-surface-variant">Advanced Organic Growth</div>
+                                </div>
+                            </a>
+                            <a href="{% url 'backlink_service' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors group/item">
+                                <span class="material-symbols-outlined text-primary text-xl">link</span>
+                                <div>
+                                    <div class="text-xs font-black text-on-surface">Backlink Building</div>
+                                    <div class="text-[10px] text-on-surface-variant">Authority Engineering</div>
+                                </div>
+                            </a>
+                            <a href="{% url 'local_seo' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-secondary/10 transition-colors group/item">
+                                <span class="material-symbols-outlined text-secondary text-xl">location_on</span>
+                                <div>
+                                    <div class="text-xs font-black text-on-surface">Local SEO</div>
+                                    <div class="text-[10px] text-on-surface-variant">Regional Dominance</div>
+                                </div>
+                            </a>
+                            <a href="{% url 'web_development' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-tertiary/10 transition-colors group/item">
+                                <span class="material-symbols-outlined text-tertiary text-xl">code</span>
+                                <div>
+                                    <div class="text-xs font-black text-on-surface">Web Development</div>
+                                    <div class="text-[10px] text-on-surface-variant">Custom Engineering</div>
+                                </div>
+                            </a>
+                            <a href="{% url 'ai_automation' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-secondary/10 transition-colors group/item">
+                                <span class="material-symbols-outlined text-secondary text-xl">psychology</span>
+                                <div>
+                                    <div class="text-xs font-black text-on-surface">AI & Automation</div>
+                                    <div class="text-[10px] text-on-surface-variant">Neural Solutions</div>
+                                </div>
+                            </a>
+                            <a href="{% url 'cyber_security' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-error/10 transition-colors group/item">
+                                <span class="material-symbols-outlined text-error text-xl">shield_lock</span>
+                                <div>
+                                    <div class="text-xs font-black text-on-surface">Cyber Security</div>
+                                    <div class="text-[10px] text-on-surface-variant">App Hardening</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'about' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'about' %}">About</a>
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'contact' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'contact' %}">Contact</a>
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">LeadNexus</a>
@@ -33,6 +88,14 @@
 <div id="mobile-menu" class="fixed inset-0 bg-surface/98 backdrop-blur-3xl z-[50] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-all duration-500 pt-20 pb-10">
     <div class="flex flex-col items-center gap-8 text-center w-full px-8 overflow-y-auto">
         <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'services' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'services' %}">Services</a>
+        <div class="flex flex-col gap-4 text-center">
+            <a href="{% url 'seo_strategy' %}" class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors">Advanced SEO</a>
+            <a href="{% url 'backlink_service' %}" class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors">Backlink Building</a>
+            <a href="{% url 'local_seo' %}" class="text-sm font-bold text-on-surface-variant hover:text-secondary transition-colors">Local SEO</a>
+            <a href="{% url 'web_development' %}" class="text-sm font-bold text-on-surface-variant hover:text-tertiary transition-colors">Web Development</a>
+            <a href="{% url 'ai_automation' %}" class="text-sm font-bold text-on-surface-variant hover:text-secondary transition-colors">AI Automation</a>
+            <a href="{% url 'cyber_security' %}" class="text-sm font-bold text-on-surface-variant hover:text-error transition-colors">Cyber Security</a>
+        </div>
         <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'about' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'about' %}">About</a>
         <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'contact' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'contact' %}">Contact</a>
         <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">LeadNexus</a>

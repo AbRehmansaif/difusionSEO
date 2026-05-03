@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Cyber Security & App Hardening | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Secure your digital future with DifusionSEO's advanced cyber security solutions. We provide application hardening, API security, and vulnerability audits.">
+{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/services/security.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="pt-24 overflow-hidden">
+    <!-- Hero Section -->
+    <section class="relative min-h-[70vh] py-16 md:py-32 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
+        <div class="absolute top-1/4 right-0 w-[600px] h-[600px] bg-error/10 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center relative z-10">
+            <div data-aos="fade-right">
+                <span class="label-md uppercase tracking-[0.3em] text-error font-black mb-6 md:mb-8 block italic">Mission Critical Security</span>
+                <h1 class="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[1.1] mb-8">
+                    Cyber & <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-error via-white to-primary">App Security</span>
+                </h1>
+                <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed font-light max-w-xl opacity-80">
+                    Security is not a feature; it's the foundation. We audit, harden, and monitor your digital assets to prevent breaches before they happen.
+                </p>
+                <div class="mt-10 flex flex-wrap gap-6">
+                    <a href="{% url 'contact' %}" class="bg-error text-white px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-[0_20px_40px_rgba(255,180,171,0.2)]">Harden My App</a>
+                    <div class="flex items-center gap-2 font-mono text-xs text-error/60 uppercase tracking-widest">
+                        <span class="material-symbols-outlined text-sm animate-spin">encrypted</span>
+                        Zero_Trust_Active
+                    </div>
+                </div>
+            </div>
+            <div class="relative hidden lg:block" data-aos="zoom-in">
+                <div class="glass-card rounded-[3rem] p-12 border border-error/20 aspect-square flex items-center justify-center relative overflow-hidden bg-black/40">
+                    <div class="absolute inset-0 opacity-[0.05] grid-pattern"></div>
+                    <span class="material-symbols-outlined text-[120px] text-error holographic-glow">shield_lock</span>
+                    
+                    <!-- Decorative scanning line -->
+                    <div class="absolute inset-x-0 h-px bg-error/40 top-0 animate-[scan_4s_linear_infinite] z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Pillars -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-10 glass-card rounded-[2.5rem] border-l-4 border-error hover-lift group" data-aos="fade-up" data-aos-delay="100">
+                    <span class="material-symbols-outlined text-4xl text-error mb-6">lock_person</span>
+                    <h3 class="text-2xl font-black mb-4">Auth & IAM</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">Zero-trust architecture and secure authentication flows to protect user identities and prevent unauthorized access.</p>
+                </div>
+                <div class="p-10 glass-card rounded-[2.5rem] border-l-4 border-secondary hover-lift group" data-aos="fade-up" data-aos-delay="200">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-6">api</span>
+                    <h3 class="text-2xl font-black mb-4">API Hardening</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">Rate limiting, SQL injection prevention, and robust JWT validation to secure your backend communication channels.</p>
+                </div>
+                <div class="p-10 glass-card rounded-[2.5rem] border-l-4 border-primary hover-lift group" data-aos="fade-up" data-aos-delay="300">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-6">security</span>
+                    <h3 class="text-2xl font-black mb-4">AppSec Audits</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">Comprehensive vulnerability scanning and penetration testing to identify and patch security holes in your applications.</p>
+                </div>
+                <div class="p-10 glass-card rounded-[2.5rem] border-l-4 border-tertiary hover-lift group" data-aos="fade-up" data-aos-delay="400">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">speed</span>
+                    <h3 class="text-2xl font-black mb-4">Secure Performance</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">Maintaining high-speed performance while implementing end-to-end encryption and secure data handling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terminal Visualization -->
+    <section class="py-32 px-8 bg-[#0a0a0b]">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-card rounded-[2rem] border border-error/20 bg-black/60 p-10 font-mono text-sm overflow-hidden" data-aos="flip-up">
+                <div class="flex items-center gap-3 mb-6 border-b border-error/10 pb-4">
+                    <div class="w-3 h-3 rounded-full bg-error animate-pulse"></div>
+                    <span class="text-error/60 text-xs">CYBER_CORE_INIT_SEQUENCE</span>
+                </div>
+                <div class="space-y-2 text-error/80">
+                    <p>> [SCANNING] ALL_ENDPOINTS_LOCKED</p>
+                    <p>> [AUDIT] NO_CRITICAL_VULNERABILITIES_FOUND</p>
+                    <p>> [SHIELD] FIREWALL_ACTIVE_LOAD_1.4%</p>
+                    <p>> [ENCRYPT] AES-256_ACTIVE_PROTOCOL</p>
+                    <p class="animate-pulse mt-4 text-white">PROTECTION_LEVEL: MAXIMUM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 px-8">
+        <div class="max-w-5xl mx-auto glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden bg-error/5" data-aos="zoom-in">
+            <h2 class="text-4xl md:text-6xl font-black mb-6">Is Your Data Safe?</h2>
+            <p class="text-xl text-on-surface-variant mb-10 opacity-80 max-w-2xl mx-auto">Don't wait for a breach to happen. Let's audit and harden your systems today.</p>
+            <a href="{% url 'contact' %}" class="inline-flex items-center gap-3 bg-error text-white px-10 py-5 rounded-full font-black hover:scale-105 transition-all shadow-xl">
+                Get Security Audit
+                <span class="material-symbols-outlined">gpp_maybe</span>
+            </a>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/services/security.js' %}"></script>
+{% endblock %}

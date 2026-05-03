@@ -1,0 +1,16 @@
+/* Local SEO Specific Styles */
+
+.map-glow {
+    box-shadow: 0 0 30px rgba(162, 231, 255, 0.2);
+}
+
+.marker-pulse {
+    animation: marker-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes marker-ping {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}

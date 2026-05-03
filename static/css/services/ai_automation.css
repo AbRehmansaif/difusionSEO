@@ -1,0 +1,14 @@
+/* AI Automation Specific Styles */
+
+.holographic-glow {
+    filter: drop-shadow(0 0 20px rgba(162, 231, 255, 0.4));
+}
+
+.ai-grid-pulse {
+    animation: grid-flicker 4s linear infinite;
+}
+
+@keyframes grid-flicker {
+    0%, 100% { opacity: 0.03; }
+    50% { opacity: 0.08; }
+}
