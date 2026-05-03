@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n %}
 <nav class="fixed top-0 w-full z-[60] bg-transparent backdrop-blur-xl transition-all duration-500 px-6 lg:px-8 py-4 lg:py-6 border-b border-transparent" id="main-nav">
     <div class="max-w-7xl mx-auto flex justify-between items-center relative z-20">
         <!-- Logo -->
@@ -11,7 +11,7 @@
             <!-- Services Dropdown -->
             <div class="relative group">
                 <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 flex items-center gap-1 {% if 'services' in request.path %}text-secondary{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'services' %}">
-                    Services
+                    {% trans "Services" %}
                     <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
                 </a>
                 <!-- Dropdown Menu -->
@@ -21,57 +21,87 @@
                             <a href="{% url 'seo_strategy' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors group/item">
                                 <span class="material-symbols-outlined text-primary text-xl">query_stats</span>
                                 <div>
-                                    <div class="text-xs font-black text-on-surface">SEO Strategy</div>
-                                    <div class="text-[10px] text-on-surface-variant">Advanced Organic Growth</div>
+                                    <div class="text-xs font-black text-on-surface">{% trans "SEO Strategy" %}</div>
+                                    <div class="text-[10px] text-on-surface-variant">{% trans "Advanced Organic Growth" %}</div>
                                 </div>
                             </a>
                             <a href="{% url 'backlink_service' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors group/item">
                                 <span class="material-symbols-outlined text-primary text-xl">link</span>
                                 <div>
-                                    <div class="text-xs font-black text-on-surface">Backlink Building</div>
-                                    <div class="text-[10px] text-on-surface-variant">Authority Engineering</div>
+                                    <div class="text-xs font-black text-on-surface">{% trans "Backlink Building" %}</div>
+                                    <div class="text-[10px] text-on-surface-variant">{% trans "Authority Engineering" %}</div>
                                 </div>
                             </a>
                             <a href="{% url 'local_seo' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-secondary/10 transition-colors group/item">
                                 <span class="material-symbols-outlined text-secondary text-xl">location_on</span>
                                 <div>
-                                    <div class="text-xs font-black text-on-surface">Local SEO</div>
-                                    <div class="text-[10px] text-on-surface-variant">Regional Dominance</div>
+                                    <div class="text-xs font-black text-on-surface">{% trans "Local SEO" %}</div>
+                                    <div class="text-[10px] text-on-surface-variant">{% trans "Regional Dominance" %}</div>
                                 </div>
                             </a>
                             <a href="{% url 'web_development' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-tertiary/10 transition-colors group/item">
                                 <span class="material-symbols-outlined text-tertiary text-xl">code</span>
                                 <div>
-                                    <div class="text-xs font-black text-on-surface">Web Development</div>
-                                    <div class="text-[10px] text-on-surface-variant">Custom Engineering</div>
+                                    <div class="text-xs font-black text-on-surface">{% trans "Web Development" %}</div>
+                                    <div class="text-[10px] text-on-surface-variant">{% trans "Custom Engineering" %}</div>
                                 </div>
                             </a>
                             <a href="{% url 'ai_automation' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-secondary/10 transition-colors group/item">
                                 <span class="material-symbols-outlined text-secondary text-xl">psychology</span>
                                 <div>
-                                    <div class="text-xs font-black text-on-surface">AI & Automation</div>
-                                    <div class="text-[10px] text-on-surface-variant">Neural Solutions</div>
+                                    <div class="text-xs font-black text-on-surface">{% trans "AI & Automation" %}</div>
+                                    <div class="text-[10px] text-on-surface-variant">{% trans "Neural Solutions" %}</div>
                                 </div>
                             </a>
                             <a href="{% url 'cyber_security' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-error/10 transition-colors group/item">
                                 <span class="material-symbols-outlined text-error text-xl">shield_lock</span>
                                 <div>
-                                    <div class="text-xs font-black text-on-surface">Cyber Security</div>
-                                    <div class="text-[10px] text-on-surface-variant">App Hardening</div>
+                                    <div class="text-xs font-black text-on-surface">{% trans "Cyber Security" %}</div>
+                                    <div class="text-[10px] text-on-surface-variant">{% trans "App Hardening" %}</div>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'about' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'about' %}">About</a>
-            <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'contact' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'contact' %}">Contact</a>
-            <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">LeadNexus</a>
+            <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'about' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'about' %}">{% trans "About" %}</a>
+            <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'contact' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'contact' %}">{% trans "Contact" %}</a>
+            <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">{% trans "LeadNexus" %}</a>
         </div>
         
-        <!-- Desktop CTA -->
+        <!-- Desktop Actions -->
+        <div class="hidden lg:flex items-center gap-4">
+            <!-- Language Switcher -->
+            <div class="relative group">
+                {% get_current_language as LANGUAGE_CODE %}
+                <div class="glass-card rounded-full border border-outline-variant/30 px-4 py-2 flex items-center gap-2 cursor-pointer hover:border-secondary/50 transition-colors">
+                    <img src="https://flagcdn.com/w20/{% if LANGUAGE_CODE == 'en' %}gb{% elif LANGUAGE_CODE == 'es' %}es{% elif LANGUAGE_CODE == 'fr' %}fr{% elif LANGUAGE_CODE == 'de' %}de{% elif LANGUAGE_CODE == 'it' %}it{% elif LANGUAGE_CODE == 'nl' %}nl{% elif LANGUAGE_CODE == 'de-ch' %}ch{% else %}gb{% endif %}.png" alt="{{ LANGUAGE_CODE }}" class="w-4 h-3 rounded-[2px] object-cover">
+                    <span class="text-sm font-medium text-on-surface-variant group-hover:text-secondary uppercase">{{ LANGUAGE_CODE }}</span>
+                    <span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-secondary transition-transform group-hover:rotate-180">language</span>
+                </div>
+                
+                <!-- Dropdown Menu -->
+                <div class="absolute top-full right-0 mt-2 w-32 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-[100]">
+                    <div class="glass-card p-2 rounded-2xl border border-outline-variant/10 bg-surface/95 backdrop-blur-2xl shadow-2xl">
+                        <form action="{% url 'set_language' %}" method="post" class="m-0 space-y-1">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ request.get_full_path|default:request.path }}">
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                            <button type="submit" name="language" value="{{ language.code }}" class="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-secondary/10 transition-colors text-left {% if language.code == LANGUAGE_CODE %}bg-primary/10 border border-primary/20{% endif %}">
+                                <img src="https://flagcdn.com/w20/{% if language.code == 'en' %}gb{% elif language.code == 'es' %}es{% elif language.code == 'fr' %}fr{% elif language.code == 'de' %}de{% elif language.code == 'it' %}it{% elif language.code == 'nl' %}nl{% elif language.code == 'de-ch' %}ch{% else %}gb{% endif %}.png" alt="{{ language.code }}" class="w-5 h-4 rounded-[2px] object-cover shadow-sm">
+                                <span class="text-sm font-bold text-on-surface">{{ language.code|upper }}</span>
+                            </button>
+                            {% endfor %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop CTA -->
         <button onclick="window.location.href='{% url 'contact' %}'" class="hidden lg:block bg-primary text-on-primary font-['Inter'] font-bold text-sm tracking-wide px-6 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(204,190,255,0.3)] transition-all active:scale-95">
-            Get a Quote
+            {% trans "Get a Quote" %}
         </button>
 
         <!-- Mobile/Tablet Hamburger Toggle -->
@@ -87,23 +117,41 @@
 <!-- Mobile Menu Overlay -->
 <div id="mobile-menu" class="fixed inset-0 bg-surface/98 backdrop-blur-3xl z-[50] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-all duration-500 pt-20 pb-10">
     <div class="flex flex-col items-center gap-8 text-center w-full px-8 overflow-y-auto">
-        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'services' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'services' %}">Services</a>
+        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'services' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'services' %}">{% trans "Services" %}</a>
         <div class="flex flex-col gap-4 text-center">
-            <a href="{% url 'seo_strategy' %}" class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors">Advanced SEO</a>
-            <a href="{% url 'backlink_service' %}" class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors">Backlink Building</a>
-            <a href="{% url 'local_seo' %}" class="text-sm font-bold text-on-surface-variant hover:text-secondary transition-colors">Local SEO</a>
-            <a href="{% url 'web_development' %}" class="text-sm font-bold text-on-surface-variant hover:text-tertiary transition-colors">Web Development</a>
-            <a href="{% url 'ai_automation' %}" class="text-sm font-bold text-on-surface-variant hover:text-secondary transition-colors">AI Automation</a>
-            <a href="{% url 'cyber_security' %}" class="text-sm font-bold text-on-surface-variant hover:text-error transition-colors">Cyber Security</a>
+            <a href="{% url 'seo_strategy' %}" class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors">{% trans "Advanced SEO" %}</a>
+            <a href="{% url 'backlink_service' %}" class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors">{% trans "Backlink Building" %}</a>
+            <a href="{% url 'local_seo' %}" class="text-sm font-bold text-on-surface-variant hover:text-secondary transition-colors">{% trans "Local SEO" %}</a>
+            <a href="{% url 'web_development' %}" class="text-sm font-bold text-on-surface-variant hover:text-tertiary transition-colors">{% trans "Web Development" %}</a>
+            <a href="{% url 'ai_automation' %}" class="text-sm font-bold text-on-surface-variant hover:text-secondary transition-colors">{% trans "AI Automation" %}</a>
+            <a href="{% url 'cyber_security' %}" class="text-sm font-bold text-on-surface-variant hover:text-error transition-colors">{% trans "Cyber Security" %}</a>
         </div>
-        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'about' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'about' %}">About</a>
-        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'contact' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'contact' %}">Contact</a>
-        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">LeadNexus</a>
+        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'about' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'about' %}">{% trans "About" %}</a>
+        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'contact' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'contact' %}">{% trans "Contact" %}</a>
+
+        <!-- Mobile Language Switcher -->
+        <div class="w-full max-w-[280px] mt-4 mb-2">
+            <p class="text-xs font-bold text-on-surface-variant mb-3 uppercase tracking-widest text-left">{% trans "Select Region" %}</p>
+            <form action="{% url 'set_language' %}" method="post" class="grid grid-cols-4 gap-2">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path|default:request.path }}">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <button type="submit" name="language" value="{{ language.code }}" class="glass-card flex flex-col items-center justify-center py-3 rounded-xl border {% if language.code == LANGUAGE_CODE %}border-primary bg-primary/10 shadow-[0_0_15px_rgba(204,190,255,0.2)]{% else %}border-outline-variant/30 hover:border-secondary/50{% endif %} transition-all active:scale-95">
+                        <img src="https://flagcdn.com/w20/{% if language.code == 'en' %}gb{% elif language.code == 'es' %}es{% elif language.code == 'fr' %}fr{% elif language.code == 'de' %}de{% elif language.code == 'it' %}it{% elif language.code == 'nl' %}nl{% elif language.code == 'de-ch' %}ch{% else %}gb{% endif %}.png" alt="{{ language.code }}" class="w-6 h-4 rounded-[2px] object-cover mb-1.5 shadow-sm">
+                        <span class="text-[10px] font-bold text-on-surface uppercase tracking-wider">{{ language.code }}</span>
+                    </button>
+                {% endfor %}
+            </form>
+        </div>
+        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">{% trans "LeadNexus" %}</a>
         
         <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full my-4"></div>
         
         <button onclick="window.location.href='{% url 'contact' %}'" class="w-full max-w-[280px] bg-primary text-on-primary font-bold text-lg py-5 rounded-full shadow-[0_0_30px_rgba(204,190,255,0.2)] hover:scale-105 transition-all">
-            Get a Quote
+            {% trans "Get a Quote" %}
         </button>
     </div>
 </div>

@@ -17,10 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
+from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n')),
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
     path('sitemap.xml', TemplateView.as_view(template_name="sitemap.xml", content_type="application/xml")),
-    path('', include('core.urls')),
 ]
+
+urlpatterns += i18n_patterns(
+    path('admin/', admin.site.urls),
+    path('', include('core.urls')),
+    prefix_default_language=False
+)
