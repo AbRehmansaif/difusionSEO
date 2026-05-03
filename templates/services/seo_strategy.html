@@ -80,7 +80,7 @@
 
 {% block content %}
 <main class="pt-24 overflow-hidden">
-    <!-- Hero Section -->
+    <!-- 1. Hero (Hook + CTA) -->
     <section class="relative min-h-[60vh] py-16 md:py-32 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
         <div class="absolute top-1/4 right-0 w-[600px] h-[600px] bg-primary-container/20 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center relative z-10">
@@ -184,18 +184,24 @@
 
                 <!-- Link Building -->
                 <div class="glass-card p-10 rounded-[2.5rem] border-t-4 border-tertiary/40 hover-lift group" data-aos="fade-up" data-aos-delay="300">
-                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-80">Strategic link acquisition from high-authority domains to boost your domain's power.</p>
+                    <div class="w-14 h-14 rounded-2xl bg-tertiary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl text-tertiary" aria-hidden="true">link</span>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">Authority Link Building</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70">Strategic link acquisition from high-authority domains to maximize your domain rating and establish off-page dominance.</p>
                 </div>
                 <div class="glass-card p-10 rounded-[2.5rem] border-t-4 border-primary/40 hover-lift group" data-aos="fade-up" data-aos-delay="400">
-                    <span class="material-symbols-outlined text-4xl text-primary mb-6">dashboard_customize</span>
+                    <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl text-primary" aria-hidden="true">dashboard_customize</span>
+                    </div>
                     <h3 class="text-2xl font-black mb-4">Content Clustering</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-80">Organizing content into powerful hubs that dominate specific industry sub-topics.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-80">Organizing content into powerful topic hubs that dominate entire industry sub-topics and establish topical authority.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Workflow Section -->
+    <!-- 5. How It Works -->
     <section class="py-32 px-8 bg-[#0a0a0b] relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-24" data-aos="fade-up">
@@ -256,7 +262,7 @@
         </div>
     </section>
 
-    <!-- Performance Section -->
+    <!-- SEO Performance Matrix (Bonus Section) -->
     <section class="py-32 px-8 bg-surface relative">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div data-aos="fade-right">
@@ -464,7 +470,7 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- 10. Final CTA -->
     <section class="py-32 px-8 bg-primary/5">
         <div class="max-w-3xl mx-auto text-center" data-aos="zoom-in">
             <h2 class="text-4xl md:text-6xl font-black mb-8">Ready to Rank #1?</h2>
