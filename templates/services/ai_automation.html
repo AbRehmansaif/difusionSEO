@@ -1,14 +1,81 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}AI & Neural Automation Solutions | DifusionSEO{% endblock %}
+{% block title %}Enterprise AI Solutions & Business Automation | DifusionSEO{% endblock %}
 
 {% block meta %}
-<meta name="description" content="Integrate AI and neural automation into your business. Custom LLM agents, NLP chatbots, and workflow automation for maximum efficiency.">
+<meta name="description" content="Transform your business with intelligent AI solutions. We build custom LLM agents, NLP chatbots, and automated workflows to reduce costs and scale operations rapidly.">
+<!-- Open Graph / Social -->
+<meta property="og:title" content="Enterprise AI Solutions & Business Automation | DifusionSEO">
+<meta property="og:description" content="Transform your business with intelligent AI solutions. Custom LLM agents, NLP chatbots, and automated workflows.">
+<meta property="og:type" content="website">
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
 {% endblock %}
 
 {% block extra_head %}
 <link rel="stylesheet" href="{% static 'css/services/ai_automation.css' %}">
+<!-- Advanced AI Automation Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "AI & Neural Automation",
+      "serviceType": "Artificial Intelligence Consulting",
+      "provider": {
+        "@type": "Organization",
+        "name": "DifusionSEO"
+      },
+      "description": "Custom AI-powered chatbots, autonomous agents, and business process automation systems using modern LLMs and neural networks.",
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Automation Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Intelligent Chatbots Development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Autonomous Workflow Agents"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ request.scheme }}://{{ request.get_host }}/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "{{ request.scheme }}://{{ request.get_host }}{% url 'services' %}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Automation"
+        }
+      ]
+    }
+  ]
+}
+</script>
 {% endblock %}
 
 {% block content %}
