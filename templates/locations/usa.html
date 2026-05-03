@@ -1,0 +1,216 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Top SEO Agency USA | National SEO Services | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="The premier SEO agency in the USA. We provide national enterprise SEO, AI automation, and full-stack web development to scale American businesses.">
+<meta name="keywords" content="Top SEO agency USA, enterprise SEO services US, national SEO company, local SEO experts USA, B2B digital marketing America">
+<meta property="og:title" content="Top Enterprise SEO Agency in the USA | DifusionSEO">
+<meta property="og:description" content="Technical organic growth strategies designed to dominate competitive niches across the United States.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+{% endblock %}
+
+{% block extra_head %}
+<!-- USA Geo-Targeted Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Top SEO Agency USA",
+  "description": "Enterprise-grade technical SEO and AI Automation specifically tailored for American businesses in New York, LA, and Chicago.",
+  "provider": {
+    "@type": "Organization",
+    "name": "DifusionSEO",
+    "url": "{{ request.scheme }}://{{ request.get_host }}"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<main class="pt-24 overflow-hidden">
+    <!-- Hero Section: USA Focus -->
+    <section class="relative min-h-[85vh] py-20 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
+        <!-- American Grid Background -->
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(162,231,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(162,231,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 mb-6 border border-primary/30 bg-primary/5 px-4 py-1.5 rounded-full text-xs font-mono text-primary uppercase tracking-widest shadow-[0_0_15px_rgba(162,231,255,0.1)]">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                    National US Campaigns Active
+                </div>
+                
+                <h1 class="text-6xl sm:text-7xl md:text-8xl font-black tracking-tighter leading-[1.05] mb-8 uppercase">
+                    American <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary">Dominance.</span>
+                </h1>
+                
+                <p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-xl font-light">
+                    The United States is the most ruthless search market on earth. To outrank national competitors from <strong>New York</strong> to <strong>Los Angeles</strong>, you need an engineering-first SEO agency. We scale B2B and SaaS companies using programmatic content, elite entity mapping, and technical web development.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 mt-12">
+                    <a href="{% url 'contact' %}?location=USA" class="bg-primary text-on-primary px-10 py-5 rounded-none font-black text-sm hover:-translate-y-1 transition-transform w-full sm:w-auto text-center border-b-4 border-r-4 border-black">
+                        Start National Campaign
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Comprehensive USA Services Grid -->
+    <section class="py-24 px-8 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black mb-16 text-center">Full-Stack Digital Dominance for <span class="text-primary">Google USA</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'seo_strategy' %}'">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-6">query_stats</span>
+                    <h3 class="text-2xl font-bold mb-4">Enterprise Technical SEO</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Dominate national search volume across all 50 states. We execute ruthless technical audits and semantic entity mapping to outrank massive US competitors.</p>
+                    <span class="text-primary font-bold text-sm">View National SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Local SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'local_seo' %}'">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-6">location_on</span>
+                    <h3 class="text-2xl font-bold mb-4">Local Map Pack (USA)</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Capture hyper-local intent in competitive markets like NYC, Miami, and Chicago with aggressive Google Business Profile (GBP) optimization and US citations.</p>
+                    <span class="text-secondary font-bold text-sm">View Local SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Backlinks -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'backlink_service' %}'">
+                    <span class="material-symbols-outlined text-4xl text-white mb-6">link</span>
+                    <h3 class="text-2xl font-bold mb-4">Tier-1 US Link Building</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Authority is everything. We secure high-DR, DoFollow editorial backlinks exclusively from trusted American publications like Forbes, WSJ, and industry leaders.</p>
+                    <span class="text-white font-bold text-sm">View US Link Building <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Web Dev -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'web_development' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#ff0055] mb-6">code</span>
+                    <h3 class="text-2xl font-bold mb-4">High-Performance Web Dev</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">We replace bloated WordPress with custom Next.js & Python architectures, guaranteeing sub-second load times across US networks to pass Core Web Vitals.</p>
+                    <span class="text-[#ff0055] font-bold text-sm">View Web Engineering <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- AI Automation -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'ai_automation' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#00E5FF] mb-6">smart_toy</span>
+                    <h3 class="text-2xl font-bold mb-4">AI Business Automation</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Scale your US operations instantly. We deploy custom LLM agents, RAG chatbots, and automated workflows to handle customer service and lead qualification.</p>
+                    <span class="text-[#00E5FF] font-bold text-sm">View AI Solutions <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Cyber Security -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'cyber_security' %}'">
+                    <span class="material-symbols-outlined text-4xl text-yellow-400 mb-6">security</span>
+                    <h3 class="text-2xl font-bold mb-4">Cyber Security & Audits</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Protect your US enterprise from ransomware and data breaches. We provide military-grade penetration testing, DDoS protection, and secure infrastructure auditing.</p>
+                    <span class="text-yellow-400 font-bold text-sm">View Cyber Security <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- American Cities Dominance Strategy -->
+    <section class="py-32 px-8 bg-black/40 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-primary font-black block mb-4">Metropolitan Architecture</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Conquering Top <span class="text-primary">US Markets</span></h2>
+                <p class="text-lg text-on-surface-variant max-w-3xl mx-auto">The United States operates as 50 distinct search markets. We deploy highly targeted, state-specific organic campaigns that penetrate America's most lucrative metropolitan regions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-primary" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">Enterprise Finance & Tech in <span class="text-primary">New York (NYC)</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Ranking in Manhattan requires military-grade SEO. We engineer massive organic authority for NYC's financial, legal, and tech sectors. Our approach bypasses standard content writing—we deploy programmatic landing pages, aggressive PR backlink acquisition from Wall Street publications, and hyper-structured schema markup for elite corporate visibility.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-secondary" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">Entertainment & Startups in <span class="text-secondary">Los Angeles</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">The LA market is visually and creatively driven, but the search algorithms still rely on math. We build blisteringly fast React/Next.js architectures that pass Google's Core Web Vitals, combined with semantic AI entity optimization to help LA startups, media companies, and agencies outrank legacy brands on the West Coast.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-white" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">B2B Manufacturing in <span class="text-white">Chicago</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Chicago is the backbone of American B2B manufacturing and logistics. We transform complex industrial catalogs into SEO powerhouses. By optimizing thousands of SKUs, implementing faceted search SEO, and acquiring high-DR backlinks from midwest industrial directories, we turn your website into a lead-generation machine.</p>
+                </div>
+
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-[#ff0055]" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">Real Estate & Crypto in <span class="text-[#ff0055]">Miami</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Miami moves fast. Our SEO strategies here are aggressive and heavily localized. We dominate the Map Pack for high-ticket real estate and execute sophisticated national SEO campaigns for South Florida's booming Web3 and SaaS sectors, ensuring your brand captures intent exactly when buyers are searching.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 20-Year Veteran SEO Methodology (USA) -->
+    <section class="py-32 px-8 bg-surface-container-low border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-primary font-black block mb-4">The Mathematical Blueprint</span>
+                <h2 class="text-4xl md:text-6xl font-black mb-8">Surviving Google's <span class="text-primary">SGE & AI Core Updates</span> in the USA</h2>
+                <p class="text-xl text-on-surface-variant max-w-4xl leading-relaxed font-light">
+                    The United States search landscape is the testing ground for every major Google algorithm update. As an agency with decades of collective SEO engineering experience, we know that traditional "keyword density" and generic guest posting no longer work. Google has transitioned into an <strong>AI-driven Semantic Search Engine</strong> utilizing advanced Natural Language Processing (MUM and BERT models). To rank nationally in the US, you must mathematically prove your entity's authority.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-8 border border-primary/20">
+                        <span class="text-2xl font-black text-primary">01</span>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">Semantic Entity Mapping</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">We don't optimize for single keywords; we optimize for <em>Entities</em>. We restructure your website's architecture to build topical clusters. By linking overarching pillar pages to hyper-specific long-tail US queries (e.g., "Enterprise SaaS SEO in Austin"), we force Google's Knowledge Graph to recognize your brand as the definitive national authority.</p>
+                </div>
+
+                <div class="glass-card p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-8 border border-primary/20">
+                        <span class="text-2xl font-black text-primary">02</span>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">Core Web Vitals Engineering</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">In the US market, milliseconds cost millions. We strip bloated WordPress themes and rebuild frontends using Python, React, and Next.js. We guarantee LCP (Largest Contentful Paint) under 2.5 seconds, zero Cumulative Layout Shift (CLS), and instantaneous server response times, ensuring maximum crawl budget allocation from Googlebot.</p>
+                </div>
+
+                <div class="glass-card p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-8 border border-primary/20">
+                        <span class="text-2xl font-black text-primary">03</span>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">Digital PR & US Trust Signals</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Authority is the ultimate ranking factor. We execute sophisticated Digital PR campaigns to secure unlinked mentions and DoFollow backlinks from highly trusted American publications (Forbes, Business Insider, WSJ). This satisfies Google's E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) requirements at the highest level.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 glass-card p-10 rounded-3xl border border-primary/20 bg-gradient-to-br from-surface to-surface-container" data-aos="zoom-in">
+                <h4 class="text-2xl font-black mb-6 text-white">The Danger of "Local" US Agencies</h4>
+                <p class="text-on-surface-variant leading-relaxed">
+                    Many US businesses hire a local agency in their city because it feels safe. This is a critical error. Local agencies typically rely on outsourced white-label services and templated WordPress builds. To outrank national competitors generating millions in organic revenue, you require an <strong>Engineering-First Growth Partner</strong>. We write custom Python scraping scripts to reverse-engineer your competitors' backlink profiles, utilize AI automation to scale content, and build custom web applications that physically load faster than anyone else in your industry.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- USA FAQ -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-black mb-12 text-center">US SEO <span class="text-primary">FAQ</span></h2>
+            <div class="space-y-6">
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/10">
+                    <h4 class="text-xl font-bold mb-3 text-primary">How do you rank a company nationally across the US?</h4>
+                    <p class="text-on-surface-variant">National SEO in the US requires extreme domain authority and programmatic structure. We deploy "hub and spoke" content architectures, acquire high-DR backlinks from major US publishers (Forbes, TechCrunch, local news), and create hyper-optimized, programmatic location/service pages targeting thousands of long-tail US search intents.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/10">
+                    <h4 class="text-xl font-bold mb-3 text-primary">Do you offer local SEO for American franchises?</h4>
+                    <p class="text-on-surface-variant">Yes. For multi-location businesses, we scale your presence using dynamic Google Business Profile (GBP) optimization APIs and localized schema markup. Whether you have 5 locations in Texas or 500 across the USA, we ensure each one dominates its specific local Map Pack.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

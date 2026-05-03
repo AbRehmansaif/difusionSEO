@@ -1,0 +1,234 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Agenzia SEO & Digital Marketing in Italy | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Dominate the Italian search market with elite SEO, AI automation, and web development. We help businesses in Rome, Milan, and Naples scale organic traffic.">
+<meta name="keywords" content="Best SEO agency Italy, Italian SEO consultant, digital marketing Milan, enterprise SEO Rome, web development Italy, agenzia SEO Italia">
+<meta property="og:title" content="Elite SEO Agency in Italy | DifusionSEO">
+<meta property="og:description" content="Technical organic growth strategies designed to dominate competitive niches in the Italian market.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+{% endblock %}
+
+{% block extra_head %}
+<!-- Italian Geo-Targeted Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Agenzia SEO & Digital Marketing Italy",
+  "description": "Enterprise-grade technical SEO and AI Automation specifically tailored for Italian businesses in Rome and Milan.",
+  "provider": {
+    "@type": "Organization",
+    "name": "DifusionSEO",
+    "url": "{{ request.scheme }}://{{ request.get_host }}"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Italy"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<main class="pt-24 overflow-hidden">
+    <!-- Hero Section: Italy Focus -->
+    <section class="relative min-h-[75vh] py-20 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
+        <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] animate-pulse pointer-events-none"></div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div data-aos="fade-right">
+                <div class="flex items-center gap-3 mb-8 bg-surface-container/50 w-fit px-4 py-2 rounded-full border border-outline-variant/10 shadow-lg">
+                    <img src="https://flagcdn.com/w40/it.png" alt="Italy Flag" class="w-6 rounded-sm shadow-sm">
+                    <span class="text-xs uppercase tracking-widest text-secondary font-black">Italian Market Dominance</span>
+                </div>
+                
+                <h1 class="text-5xl sm:text-7xl font-black tracking-tighter leading-[1.1] mb-6">
+                    Conquer the <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Italian SERPs</span>
+                </h1>
+                <p class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-lg">
+                    Whether you are an enterprise in <strong>Milan</strong> or a fast-growing tech startup in <strong>Rome</strong>, ranking on Google.it requires deep technical infrastructure. As a premium <em>agenzia SEO</em>, we deploy advanced semantic mapping, high-authority localized backlinks, and Python-driven automation to crush your Italian competitors.
+                </p>
+                
+                <a href="{% url 'contact' %}?location=Italy" class="bg-primary text-on-primary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all flex items-center gap-2 w-fit">
+                    Schedule Your Italian Growth Audit <span class="material-symbols-outlined">analytics</span>
+                </a>
+            </div>
+            
+            <div class="relative hidden lg:block" data-aos="fade-left">
+                <div class="glass-card rounded-[2rem] p-10 border border-primary/20 aspect-square flex flex-col justify-center relative shadow-2xl bg-black/40">
+                    <h3 class="text-2xl font-black mb-6 border-b border-outline-variant/20 pb-4">Organic Trajectory (Google.it)</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-xs mb-2 font-mono"><span class="text-error">Pre-DifusionSEO</span><span>Page 3</span></div>
+                            <div class="h-2 bg-surface-container rounded-full"><div class="h-full bg-error w-1/4 rounded-full"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-2 font-mono"><span class="text-primary">Post-Optimization (Milan Cohort)</span><span>#1 Ranking</span></div>
+                            <div class="h-2 bg-surface-container rounded-full"><div class="h-full bg-primary w-[95%] rounded-full shadow-[0_0_15px_rgba(162,231,255,0.5)]"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-24 px-8 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black mb-16 text-center">Engineered for <span class="text-primary">Italy</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Italy SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-6">query_stats</span>
+                    <h3 class="text-xl font-bold mb-4">Italian Technical SEO</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Deep crawling and indexing optimization tailored for the Italian Google algorithm. We fix Core Web Vitals and implement rigorous hreflang architectures.</p>
+                    <a href="{% url 'seo_strategy' %}" class="text-primary font-bold text-sm hover:underline">View SEO Services</a>
+                </div>
+                <!-- Local SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-6">location_on</span>
+                    <h3 class="text-xl font-bold mb-4">Local SEO (Rome, Milan, Naples)</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Dominate the Google Map Pack across Italy's largest metropolitan areas with hyper-localized citations and GBP optimization.</p>
+                    <a href="{% url 'local_seo' %}" class="text-secondary font-bold text-sm hover:underline">View Local SEO</a>
+                </div>
+                <!-- Backlinks -->
+                <div class="glass-card p-8 rounded-3xl hover-lift">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">link</span>
+                    <h3 class="text-xl font-bold mb-4">Italian Backlink Acquisition</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Authority matters. We secure high DR backlinks from reputable .it domains, Italian news outlets, and industry-specific regional blogs.</p>
+                    <a href="{% url 'backlink_service' %}" class="text-tertiary font-bold text-sm hover:underline">View Link Building</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Italy Services Grid -->
+    <section class="py-24 px-8 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black mb-16 text-center">Full-Stack Digital Dominance for <span class="text-[#009246]">Google.it</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'seo_strategy' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#009246] mb-6">query_stats</span>
+                    <h3 class="text-2xl font-bold mb-4">Enterprise Technical SEO</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Dominate national search volume across Italy. We execute ruthless technical audits and semantic entity mapping specifically in native Italian to outrank local competitors.</p>
+                    <span class="text-[#009246] font-bold text-sm">View Italian SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Local SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'local_seo' %}'">
+                    <span class="material-symbols-outlined text-4xl text-white mb-6">location_on</span>
+                    <h3 class="text-2xl font-bold mb-4">Local Map Pack (Italy)</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Capture hyper-local intent in competitive markets like Milan, Rome, and Turin with aggressive Google Business Profile (GBP) optimization and local Italian citations.</p>
+                    <span class="text-white font-bold text-sm">View Local SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Backlinks -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'backlink_service' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#ce2b37] mb-6">link</span>
+                    <h3 class="text-2xl font-bold mb-4">Tier-1 .IT Link Building</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Authority is everything. We secure high-DR, DoFollow editorial backlinks exclusively from trusted Italian publications, news outlets, and `.it` portals.</p>
+                    <span class="text-[#ce2b37] font-bold text-sm">View .IT Link Building <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Web Dev -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'web_development' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#ff0055] mb-6">code</span>
+                    <h3 class="text-2xl font-bold mb-4">High-Performance Web Dev</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">We replace bloated WordPress with custom Next.js architectures, guaranteeing instantaneous load times across Italian networks to pass Core Web Vitals.</p>
+                    <span class="text-[#ff0055] font-bold text-sm">View Web Engineering <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- AI Automation -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'ai_automation' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#00E5FF] mb-6">smart_toy</span>
+                    <h3 class="text-2xl font-bold mb-4">AI Business Automation</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Scale your Italian operations instantly. We deploy custom LLM agents and Italian-speaking RAG chatbots to handle customer service and lead qualification.</p>
+                    <span class="text-[#00E5FF] font-bold text-sm">View AI Solutions <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Cyber Security -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'cyber_security' %}'">
+                    <span class="material-symbols-outlined text-4xl text-yellow-400 mb-6">security</span>
+                    <h3 class="text-2xl font-bold mb-4">Cyber Security & Audits</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Protect your Italian enterprise from ransomware. We provide GDPR-compliant penetration testing, DDoS protection, and secure infrastructure auditing.</p>
+                    <span class="text-yellow-400 font-bold text-sm">View Cyber Security <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Italian Cities Dominance Strategy -->
+    <section class="py-32 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-primary font-black block mb-4">La Nostra Strategia</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Dominating Italian <span class="text-primary">Metropolitan Hubs</span></h2>
+                <p class="text-lg text-on-surface-variant max-w-3xl mx-auto">To capture the Italian market, you cannot rely on generic national SEO. We deploy hyper-localized semantic targeting for Italy's most competitive economic centers.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="glass-card p-10 rounded-3xl border-l-4 border-primary" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">Enterprise SEO in <span class="text-primary">Milan (Milano)</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Milan is the financial and fashion capital of Italy. The B2B search landscape here requires elite technical infrastructure and high-authority link building from premier Italian news outlets like <em>Il Sole 24 Ore</em> and local industry directories. We help Milan-based enterprises outrank international conglomerates.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Financial & Tech Sector Link Building</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> B2B SaaS Organic Scaling</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card p-10 rounded-3xl border-l-4 border-secondary" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">Local Market Capture in <span class="text-secondary">Rome (Roma)</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">In the capital, local intent is everything. Our strategies in Rome focus heavily on the Google Map Pack, mobile optimization, and targeting massive tourism/service queries. We optimize your Google Business Profile (GBP) and generate powerful localized citations to put you at the top of Roman search queries.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check</span> Google Map Pack Dominance</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check</span> Hyper-local Service Schema</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card p-10 rounded-3xl border-l-4 border-tertiary" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">eCommerce Growth in <span class="text-tertiary">Turin (Torino)</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Turin's industrial and automotive heritage has shifted rapidly into digital retail and manufacturing. We engineer massive eCommerce SEO architectures for Torino businesses, optimizing thousands of product pages, implementing faceted navigation, and deploying precise hreflang tags for cross-border European sales.</p>
+                </div>
+
+                <div class="glass-card p-10 rounded-3xl border-l-4 border-error" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">Authority Scaling in <span class="text-error">Naples (Napoli)</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">The Southern Italian market presents a massive opportunity for early digital adopters. We help businesses in Naples establish unbreakable digital authority before their competitors do, utilizing advanced semantic content clustering and programmatic SEO to capture regional search volume.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Italian FAQ -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-black mb-12 text-center">Italian SEO <span class="text-primary">FAQ</span></h2>
+            <div class="space-y-6">
+                <div class="glass-card p-8 rounded-2xl">
+                    <h4 class="text-xl font-bold mb-3 text-primary">Do you acquire local backlinks from .it domains?</h4>
+                    <p class="text-on-surface-variant">Yes. To rank on Google.it, you need trust signals from within Italy. We have established relationships with high Domain Rating (DR) Italian publishers, news sites, and niche blogs to secure powerful editorial backlinks for your brand.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <h4 class="text-xl font-bold mb-3 text-primary">Can you handle multi-lingual SEO for the European market?</h4>
+                    <p class="text-on-surface-variant">Absolutely. Many Italian businesses sell across Europe. We implement precise hreflang tags, translating and localizing your technical SEO structure so you rank simultaneously in Italy, Spain, France, and Germany without duplicate content penalties.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <h4 class="text-xl font-bold mb-3 text-primary">Why choose you over a local Milan or Rome agency?</h4>
+                    <p class="text-on-surface-variant">Local agencies often rely on outdated tactics. We are a technical SEO engineering firm. We combine deep code-level optimization (React, Node.js, Next.js), AI-driven programmatic content, and enterprise security, giving you an unfair advantage over local competitors who only focus on basic keyword stuffing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-32 px-8 bg-primary/5 text-center border-t border-primary/20">
+        <div class="max-w-3xl mx-auto" data-aos="zoom-in">
+            <h2 class="text-5xl font-black mb-8">Ready to Dominate <span class="text-primary">Italy?</span></h2>
+            <p class="text-xl text-on-surface-variant mb-10">Stop losing traffic to your Italian competitors. Let's architect your organic growth strategy.</p>
+            <a href="{% url 'contact' %}?location=Italy" class="bg-primary text-on-primary px-12 py-5 rounded-full font-black text-lg hover:scale-105 transition-all shadow-2xl inline-block">
+                Claim Your Market Share
+            </a>
+        </div>
+    </section>
+</main>
+{% endblock %}

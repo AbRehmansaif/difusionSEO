@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}SEO Services New Zealand | Auckland Digital Marketing | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Dominate the New Zealand search market with top-rated SEO, AI automation, and web development. We help businesses in Auckland and Wellington scale organic revenue.">
+<meta name="keywords" content="SEO services New Zealand, Auckland digital marketing, NZ SEO agency, enterprise SEO New Zealand">
+<meta property="og:title" content="Top SEO Agency in New Zealand | DifusionSEO">
+<meta property="og:description" content="Technical organic growth strategies designed to dominate competitive niches in the New Zealand market.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+{% endblock %}
+
+{% block extra_head %}
+<!-- NZ Geo-Targeted Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "SEO Services New Zealand",
+  "description": "Enterprise-grade technical SEO and AI Automation specifically tailored for businesses in Auckland and Wellington.",
+  "provider": {
+    "@type": "Organization",
+    "name": "DifusionSEO",
+    "url": "{{ request.scheme }}://{{ request.get_host }}"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "New Zealand"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<main class="pt-24 overflow-hidden">
+    <!-- Hero Section: NZ Focus -->
+    <section class="relative min-h-[70vh] py-20 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/connected.png')] opacity-[0.03] pointer-events-none"></div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div data-aos="fade-right">
+                <div class="flex items-center gap-3 mb-6">
+                    <img src="https://flagcdn.com/w40/nz.png" alt="NZ Flag" class="w-8 rounded-sm shadow-sm border border-outline-variant/20">
+                    <span class="text-xs uppercase tracking-widest text-primary font-black">NZ Digital Excellence</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] mb-6">
+                    Capture Search in <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-secondary">New Zealand</span>
+                </h1>
+                
+                <p class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-lg">
+                    Whether you are an established brand in <strong>Auckland</strong> or a growing eCommerce business in <strong>Wellington</strong>, our technical SEO and custom software engineering give you an unfair advantage over local competitors. We build high DR .co.nz backlinks and engineer flawless semantic structures.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="{% url 'contact' %}?location=New Zealand" class="bg-primary text-on-primary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-[0_10px_30px_rgba(162,231,255,0.2)] flex items-center gap-2">
+                        Get NZ Strategy Plan <span class="material-symbols-outlined">map</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="relative hidden lg:flex justify-end" data-aos="zoom-in">
+                <div class="glass-card rounded-full p-1 border-4 border-primary/20 aspect-square w-full max-w-[400px] flex items-center justify-center relative shadow-2xl">
+                    <div class="absolute inset-0 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
+                    <div class="text-center relative z-10">
+                        <span class="material-symbols-outlined text-6xl text-primary mb-4 drop-shadow-[0_0_15px_rgba(162,231,255,0.5)]">rocket_launch</span>
+                        <h3 class="text-3xl font-black text-white">#1 on Google.co.nz</h3>
+                        <p class="text-sm text-primary uppercase tracking-widest mt-2">Guaranteed Methodology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Core Services Section -->
+    <section class="py-24 px-8 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black mb-16 text-center">Comprehensive Services for <span class="text-primary">Google.co.nz</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'seo_strategy' %}'">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-6">query_stats</span>
+                    <h3 class="text-xl font-bold mb-4">Technical SEO</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Deep crawling and indexing optimization tailored for the Kiwi algorithm. We fix severe Core Web Vitals latency drops and implement rigorous entity mapping.</p>
+                    <span class="text-primary font-bold text-sm">View SEO Services <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Local SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'local_seo' %}'">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-6">location_on</span>
+                    <h3 class="text-xl font-bold mb-4">Local Map Pack</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Dominate the Google Map Pack across Auckland, Wellington, and Christchurch with hyper-localized citations and local schema optimization.</p>
+                    <span class="text-secondary font-bold text-sm">View Local SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Backlinks -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'backlink_service' %}'">
+                    <span class="material-symbols-outlined text-4xl text-white mb-6">link</span>
+                    <h3 class="text-xl font-bold mb-4">.CO.NZ Link Building</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Authority matters. We secure high DR backlinks exclusively from reputable .co.nz domains, Kiwi news outlets, and domestic B2B directories.</p>
+                    <span class="text-white font-bold text-sm">View Link Building <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Web Dev -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'web_development' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#ff0055] mb-6">code</span>
+                    <h3 class="text-xl font-bold mb-4">High-Performance Web Dev</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">We deploy custom React/Next.js architectures hosted on localized CDN edge nodes to completely eliminate Oceanic latency and pass Google Speed tests.</p>
+                    <span class="text-[#ff0055] font-bold text-sm">View Web Engineering <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- AI Automation -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'ai_automation' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#00E5FF] mb-6">smart_toy</span>
+                    <h3 class="text-xl font-bold mb-4">AI Business Automation</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Scale your NZ operations instantly. We deploy custom LLM agents and 24/7 automated workflows to handle customer service while you sleep.</p>
+                    <span class="text-[#00E5FF] font-bold text-sm">View AI Solutions <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Cyber Security -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'cyber_security' %}'">
+                    <span class="material-symbols-outlined text-4xl text-yellow-400 mb-6">security</span>
+                    <h3 class="text-xl font-bold mb-4">Cyber Security & Audits</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Protect your enterprise from ransomware. We provide military-grade penetration testing and secure infrastructure auditing for Kiwi businesses.</p>
+                    <span class="text-yellow-400 font-bold text-sm">View Cyber Security <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NZ Cities Dominance Strategy -->
+    <section class="py-32 px-8 bg-surface-container-low border-y border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-primary font-black block mb-4">National Market Share</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Targeting Major <span class="text-primary">Kiwi Markets</span></h2>
+                <p class="text-lg text-on-surface-variant max-w-3xl mx-auto">New Zealand's search market is highly concentrated but extremely lucrative. We deploy technical SEO architectures to capture traffic across the North and South Islands.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-primary bg-surface/50" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-black mb-4">Enterprise SEO in <span class="text-primary">Auckland</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Auckland is the economic engine of NZ. To outrank established corporate competitors, we deploy elite technical SEO, AI-driven semantic clustering, and acquire premium .co.nz editorial backlinks from top-tier publishers.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-secondary bg-surface/50" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-black mb-4">Tech & Govt in <span class="text-secondary">Wellington</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Wellington's dynamic tech and public sector require a highly authoritative approach. We build massive programmatic architectures and ensure strict E-E-A-T compliance for businesses serving the capital's specialized markets.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-white bg-surface/50" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-black mb-4">Local Map Pack in <span class="text-white">Christchurch</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">For businesses in the South Island, local search is everything. We aggressively optimize your Google Business Profile (GBP) and generate powerful regional citations to ensure you capture all high-intent commercial traffic in Christchurch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 20-Year Veteran SEO Methodology (New Zealand) -->
+    <section class="py-32 px-8 bg-black/40 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-primary font-black block mb-4">The Mathematical Blueprint</span>
+                <h2 class="text-4xl md:text-6xl font-black mb-8">Decoding the <span class="text-primary">Google.co.nz</span> Algorithm</h2>
+                <p class="text-xl text-on-surface-variant max-w-4xl leading-relaxed font-light">
+                    New Zealand presents a highly concentrated, isolated search market. With 20 years of technical SEO engineering, we know that Google.co.nz severely penalizes high latency and aggressively filters non-local entities. To capture market share in Auckland, Wellington, or Christchurch, you must mathematically prove your brand's physical presence and authority within New Zealand through an ironclad technical foundation.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group" data-aos="fade-up">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-black mb-6 text-primary border-l-4 border-primary pl-6">Core Web Vitals & Latency Elimination</h3>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            Distance from major internet backbones severely affects New Zealand websites hosted overseas. Google uses Time to First Byte (TTFB) and Largest Contentful Paint (LCP) as massive ranking factors. We engineer your web architecture to deploy on localized CDN edge networks in Auckland or Sydney. We guarantee instantaneous load times, forcing Googlebot to prioritize your lightning-fast site over sluggish, US-hosted competitors.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-black mb-6 text-secondary border-l-4 border-secondary pl-6">Entity Mapping & Local Schema</h3>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            We don't optimize for simple keywords; we optimize for Entities. We utilize advanced JSON-LD structured data (LocalBusiness, Organization) to inject precise geo-coordinates and regional identifiers directly into your site's code. This explicitly maps your business to New Zealand within Google's Knowledge Graph, allowing you to dominate localized intent queries across both islands instantly.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group md:col-span-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-black mb-6 text-white border-l-4 border-white pl-6">.CO.NZ Authority Engineering (Digital PR)</h3>
+                        <p class="text-lg text-on-surface-variant leading-relaxed mb-6">
+                            Domain Authority in New Zealand is entirely dependent on trust signals originating from within the country. A thousand backlinks from low-quality international domains will not move the needle for competitive Kiwi queries.
+                        </p>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            Our Digital PR division engineers customized outreach campaigns to acquire high-DR, DoFollow editorial links exclusively from Tier-1 New Zealand media (NZ Herald niches), premium `.co.nz` industry portals, and recognized local directories. This mathematical injection of pure national authority permanently anchors your website as the definitive leader in the NZ market.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NZ FAQ -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-black mb-12 text-center">New Zealand SEO <span class="text-primary">FAQ</span></h2>
+            <div class="space-y-6">
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/10">
+                    <h4 class="text-xl font-bold mb-3 text-primary">Why do I need .co.nz backlinks?</h4>
+                    <p class="text-on-surface-variant">Google's algorithm prioritizes geographic relevance. If you want to rank #1 in New Zealand, you need trust signals originating from NZ. We conduct targeted outreach to secure high Domain Rating (DR) backlinks exclusively from legitimate Kiwi publishers.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/10">
+                    <h4 class="text-xl font-bold mb-3 text-primary">Can you help us rank in Australia too?</h4>
+                    <p class="text-on-surface-variant">Yes. We specialize in cross-Tasman SEO strategies. By utilizing strict hreflang tags and separate country-code subdirectories or domains, we ensure your New Zealand traffic remains strong while rapidly capturing market share on Google.com.au.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

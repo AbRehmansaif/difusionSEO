@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}SEO Bureau Amsterdam | Digital Marketing Netherlands | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Het beste SEO bureau in the Netherlands. We deliver technical SEO, eCommerce growth, and Dutch backlink strategies to businesses in Amsterdam and Rotterdam.">
+<meta name="keywords" content="SEO bureau Amsterdam, Dutch SEO experts, digital marketing Netherlands, eCommerce SEO Rotterdam, AI automation NL">
+<meta property="og:title" content="Top SEO Bureau in the Netherlands | DifusionSEO">
+<meta property="og:description" content="Technical organic growth strategies designed to dominate competitive niches in the Dutch market.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+{% endblock %}
+
+{% block extra_head %}
+<!-- Netherlands Geo-Targeted Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "SEO Bureau Netherlands",
+  "description": "Enterprise-grade technical SEO specifically tailored for Dutch businesses in Amsterdam and Rotterdam.",
+  "provider": {
+    "@type": "Organization",
+    "name": "DifusionSEO",
+    "url": "{{ request.scheme }}://{{ request.get_host }}"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Netherlands"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<main class="pt-24 overflow-hidden">
+    <!-- Hero Section: Netherlands Focus -->
+    <section class="relative min-h-[75vh] py-20 px-6 md:px-8 max-w-7xl mx-auto flex items-center justify-center text-center">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF9B00]/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div class="relative z-10 max-w-3xl mx-auto" data-aos="fade-up">
+            <div class="inline-flex items-center gap-2 mb-8 border border-[#FF9B00]/30 bg-[#FF9B00]/10 px-5 py-2 rounded-full">
+                <img src="https://flagcdn.com/w40/nl.png" alt="Netherlands Flag" class="w-6 rounded-sm">
+                <span class="text-xs uppercase tracking-widest text-[#FF9B00] font-black">Dutch Market SEO</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] mb-8">
+                Dominate Search in <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF9B00] to-[#FF5E00]">The Netherlands.</span>
+            </h1>
+            
+            <p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl mx-auto font-light">
+                From high-tech startups in <strong>Amsterdam</strong> to maritime logistics in <strong>Rotterdam</strong>, we are the premium <em>SEO Bureau</em> engineering organic dominance on Google.nl. We deploy semantic entity models and powerful Dutch backlinks to scale your traffic.
+            </p>
+            
+            <a href="{% url 'contact' %}?location=Netherlands" class="inline-flex bg-[#FF9B00] text-black px-10 py-5 rounded-xl font-black text-sm hover:-translate-y-2 transition-transform shadow-[0_15px_30px_rgba(255,155,0,0.2)]">
+                Claim Your Dutch Strategy
+            </a>
+        </div>
+    </section>
+    
+    <!-- Core Services Section -->
+    <section class="py-24 px-8 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black mb-16 text-center">Comprehensive Services for <span class="text-[#FF9B00]">Google.nl</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'seo_strategy' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#FF9B00] mb-6">query_stats</span>
+                    <h3 class="text-xl font-bold mb-4">Technical SEO</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Deep crawling and indexing optimization tailored for the Dutch algorithm. We fix faceted navigation crawl traps and implement strict semantic mappings.</p>
+                    <span class="text-[#FF9B00] font-bold text-sm">View SEO Services <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Local SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'local_seo' %}'">
+                    <span class="material-symbols-outlined text-4xl text-white mb-6">location_on</span>
+                    <h3 class="text-xl font-bold mb-4">Local Map Pack</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Dominate the Google Map Pack across Amsterdam, Rotterdam, and Utrecht with hyper-localized Dutch citations and GBP optimization.</p>
+                    <span class="text-white font-bold text-sm">View Local SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Backlinks -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'backlink_service' %}'">
+                    <span class="material-symbols-outlined text-4xl text-blue-400 mb-6">link</span>
+                    <h3 class="text-xl font-bold mb-4">.NL Link Building</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Authority matters. We secure high DR backlinks exclusively from reputable .nl domains, Dutch media portals, and Randstad directories.</p>
+                    <span class="text-blue-400 font-bold text-sm">View Link Building <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Web Dev -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'web_development' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#ff0055] mb-6">code</span>
+                    <h3 class="text-xl font-bold mb-4">High-Performance Web Dev</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">We deploy custom React/Next.js architectures hosted on European CDN nodes, guaranteeing lightning-fast load times compliant with GDPR.</p>
+                    <span class="text-[#ff0055] font-bold text-sm">View Web Engineering <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- AI Automation -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'ai_automation' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#00E5FF] mb-6">smart_toy</span>
+                    <h3 class="text-xl font-bold mb-4">AI Business Automation</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Scale your Dutch operations instantly. We deploy custom LLM agents and native Dutch-speaking RAG chatbots to handle B2B qualification.</p>
+                    <span class="text-[#00E5FF] font-bold text-sm">View AI Solutions <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Cyber Security -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'cyber_security' %}'">
+                    <span class="material-symbols-outlined text-4xl text-yellow-400 mb-6">security</span>
+                    <h3 class="text-xl font-bold mb-4">Cyber Security & Audits</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Protect your enterprise data. We provide fully GDPR/AVG-compliant penetration testing and secure infrastructure auditing.</p>
+                    <span class="text-yellow-400 font-bold text-sm">View Cyber Security <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dutch Cities Dominance Strategy -->
+    <section class="py-32 px-8 bg-black/40 border-y border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-[#FF9B00] font-black block mb-4">Regionale SEO Strategie</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Targeting <span class="text-[#FF9B00]">Randstad Hubs</span></h2>
+                <p class="text-lg text-on-surface-variant max-w-3xl mx-auto">The Dutch economy is highly centralized within the Randstad, but each city demands a unique semantic approach. We deploy hyper-localized architectures for maximum commercial capture.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-[#FF9B00] bg-surface/50" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">Startups & FinTech in <span class="text-[#FF9B00]">Amsterdam</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Amsterdam is highly competitive for tech, finance, and international B2B. We execute elite programmatic SEO, multi-lingual keyword mapping, and acquire premium backlinks from high-DR Dutch publications. Outrank your competitors on Google.nl with pure technical superiority.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-primary bg-surface/50" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">Logistics & Maritime in <span class="text-primary">Rotterdam</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">As Europe's largest port, Rotterdam thrives on B2B logistics and industrial queries. We optimize complex enterprise websites, building semantic entity relationships that align perfectly with the specific search intent of international supply chain buyers.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-secondary bg-surface/50" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">Corporate & Legal in <span class="text-secondary">The Hague (Den Haag)</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">The Hague requires a sophisticated, highly authoritative approach. We specialize in YMYL (Your Money or Your Life) SEO for legal and corporate entities, ensuring flawless E-E-A-T signals, strict data compliance, and authoritative citations.</p>
+                </div>
+
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-white bg-surface/50" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">eCommerce Growth in <span class="text-white">Utrecht</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Centrally located Utrecht is a massive hub for domestic eCommerce and retail. We fix crawl budgets, optimize faceted navigation, and accelerate Core Web Vitals to ensure your online store dominates Dutch shopping queries and captures maximum revenue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 20-Year Veteran SEO Methodology (Netherlands) -->
+    <section class="py-32 px-8 bg-surface-container-low border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-[#FF9B00] font-black block mb-4">De Technische Blauwdruk (Technical Blueprint)</span>
+                <h2 class="text-4xl md:text-6xl font-black mb-8">Decoding the <span class="text-[#FF9B00]">Google.nl</span> Algorithm</h2>
+                <p class="text-xl text-on-surface-variant max-w-4xl leading-relaxed font-light">
+                    The Dutch search landscape is highly concentrated, technologically advanced, and heavily contested by global enterprise brands. With 20 years of elite SEO engineering experience, we understand that standard marketing tactics fail on Google.nl. To capture high-intent commercial traffic in the Randstad, you must deploy an absolute, mathematically precise technical architecture and secure unshakeable Dutch digital authority.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group" data-aos="fade-up">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#FF9B00]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-black mb-6 text-[#FF9B00] border-l-4 border-[#FF9B00] pl-6">Dutch Semantic Entity Mapping (NLP)</h3>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            Google utilizes Natural Language Processing (MUM/BERT) to interpret the semantic intent behind Dutch queries. We do not translate; we engineer native Dutch topic clusters. By mapping strict "Entities" and targeting highly specific B2B semantic variations (e.g., combining English tech terms with Dutch commercial intent), we capture high-converting enterprise traffic that standard agencies fundamentally misunderstand.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-black mb-6 text-white border-l-4 border-white pl-6">Technical Crawl Budgeting</h3>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            For complex Dutch eCommerce and corporate platforms, poor architecture causes Googlebot to waste its crawl budget on faceted navigation and low-value parameterized URLs. We execute surgical technical SEO audits using Python. We rebuild your internal link graph, eliminate JavaScript rendering bottlenecks, and guarantee your most lucrative commercial pages are instantly crawled, indexed, and prioritized.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group md:col-span-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-black mb-6 text-primary border-l-4 border-primary pl-6">Tier-1 .NL Link Acquisition (E-E-A-T)</h3>
+                        <p class="text-lg text-on-surface-variant leading-relaxed mb-6">
+                            The Google.nl algorithm demands powerful local trust signals to satisfy E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) criteria. Generic backlinks from US or UK domains provide negligible ranking power in the Netherlands.
+                        </p>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            Our Digital PR division engineers sophisticated outreach campaigns to acquire high-DR, DoFollow editorial backlinks exclusively from Tier-1 Dutch media, premium `.nl` industry portals, and recognized regional hubs in Amsterdam and Rotterdam. This mathematical injection of pure regional authority permanently locks your website into the top ranking positions across the Netherlands.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dutch FAQ -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-black mb-12 text-center">Dutch SEO <span class="text-[#FF9B00]">FAQ</span></h2>
+            <div class="space-y-6">
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/10">
+                    <h4 class="text-xl font-bold mb-3 text-[#FF9B00]">Do you build backlinks from .nl domains?</h4>
+                    <p class="text-on-surface-variant">Yes, absolute priority. Contextual relevance is everything for Google.nl. We secure high-quality editorial links from established .nl domains, Dutch news portals, and local industry directories to rapidly scale your domain authority.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/10">
+                    <h4 class="text-xl font-bold mb-3 text-[#FF9B00]">Do you optimize for English or Dutch search terms?</h4>
+                    <p class="text-on-surface-variant">Both. The Netherlands has a massive volume of English queries. We create flawless multi-lingual architectures using hreflang tagging, ensuring you capture domestic Dutch intent while also ranking for high-value English search terms within the country.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

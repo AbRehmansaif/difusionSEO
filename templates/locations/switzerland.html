@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}SEO Agentur Schweiz | Swiss Digital Marketing | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Premium SEO Agentur services in Switzerland. Dominate Google.ch with precision technical SEO in Zurich, Geneva, and Bern.">
+<meta name="keywords" content="SEO Agentur Schweiz, Swiss SEO services, digital marketing Zurich, enterprise SEO Geneva, tech consulting Switzerland">
+<meta property="og:title" content="Premium SEO Agentur in Switzerland | DifusionSEO">
+<meta property="og:description" content="Technical organic growth strategies designed to dominate competitive niches in the Swiss market.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+{% endblock %}
+
+{% block extra_head %}
+<!-- Switzerland Geo-Targeted Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "SEO Agentur Schweiz",
+  "description": "Enterprise-grade technical SEO specifically tailored for Swiss businesses in Zurich and Geneva.",
+  "provider": {
+    "@type": "Organization",
+    "name": "DifusionSEO",
+    "url": "{{ request.scheme }}://{{ request.get_host }}"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Switzerland"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<main class="pt-24 overflow-hidden">
+    <!-- Hero Section: Switzerland Focus -->
+    <section class="relative min-h-[75vh] py-20 px-6 md:px-8 max-w-7xl mx-auto flex items-center justify-center text-center">
+        <div class="absolute inset-0 bg-gradient-to-t from-red-900/10 via-surface to-surface pointer-events-none z-0"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto" data-aos="fade-up">
+            <div class="flex items-center justify-center gap-3 mb-8">
+                <img src="https://flagcdn.com/w40/ch.png" alt="Switzerland Flag" class="w-8 rounded-sm shadow-lg border border-white/10">
+                <span class="text-sm uppercase tracking-[0.4em] text-red-400 font-black">Swiss Precision SEO</span>
+            </div>
+            
+            <h1 class="text-5xl sm:text-7xl font-black tracking-tighter leading-[1.1] mb-8">
+                Engineering Growth in <br>
+                <span class="text-white">Switzerland.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-12 max-w-2xl mx-auto">
+                The Swiss market is highly lucrative and incredibly competitive. From B2B finance in <strong>Zurich</strong> to luxury retail in <strong>Geneva</strong>, our <em>SEO Agentur</em> delivers meticulous technical optimization and multi-lingual hreflang architectures (German, French, Italian) to ensure dominance on Google.ch.
+            </p>
+            
+            <div class="flex justify-center gap-6">
+                <a href="{% url 'contact' %}?location=Switzerland" class="bg-red-600 text-white px-10 py-5 rounded-full font-black text-sm hover:scale-105 transition-all flex items-center gap-3 shadow-[0_10px_30px_rgba(220,38,38,0.2)]">
+                    Audit Your Swiss Search Visibility
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Core Services Section -->
+    <section class="py-24 px-8 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black mb-16 text-center">Comprehensive Services for <span class="text-red-400">Google.ch</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'seo_strategy' %}'">
+                    <span class="material-symbols-outlined text-4xl text-red-400 mb-6">query_stats</span>
+                    <h3 class="text-xl font-bold mb-4">Technical SEO</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Deep crawling and indexing optimization tailored for the Swiss algorithm. We fix Core Web Vitals and implement rigorous quad-lingual architectures.</p>
+                    <span class="text-red-400 font-bold text-sm">View SEO Services <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Local SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'local_seo' %}'">
+                    <span class="material-symbols-outlined text-4xl text-white mb-6">location_on</span>
+                    <h3 class="text-xl font-bold mb-4">Local Map Pack</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Dominate the Google Map Pack across Zurich, Geneva, and Bern with hyper-localized citations and GBP optimization.</p>
+                    <span class="text-white font-bold text-sm">View Local SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Backlinks -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'backlink_service' %}'">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-6">link</span>
+                    <h3 class="text-xl font-bold mb-4">.CH Link Building</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Authority matters. We secure high DR backlinks exclusively from reputable .ch domains across German, French, and Italian speaking regions.</p>
+                    <span class="text-primary font-bold text-sm">View Link Building <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Web Dev -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'web_development' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#ff0055] mb-6">code</span>
+                    <h3 class="text-xl font-bold mb-4">High-Performance Web Dev</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">We deploy custom React/Next.js architectures hosted on Swiss servers, guaranteeing instantaneous load times compliant with Swiss data privacy laws.</p>
+                    <span class="text-[#ff0055] font-bold text-sm">View Web Engineering <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- AI Automation -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'ai_automation' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#00E5FF] mb-6">smart_toy</span>
+                    <h3 class="text-xl font-bold mb-4">AI Business Automation</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Scale your Swiss operations instantly. We deploy custom LLM agents and multi-lingual RAG chatbots to handle B2B qualification across all cantons.</p>
+                    <span class="text-[#00E5FF] font-bold text-sm">View AI Solutions <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Cyber Security -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'cyber_security' %}'">
+                    <span class="material-symbols-outlined text-4xl text-yellow-400 mb-6">security</span>
+                    <h3 class="text-xl font-bold mb-4">Cyber Security & Audits</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Protect your financial and enterprise data. We provide FINMA-compliant penetration testing and highly secure infrastructure auditing.</p>
+                    <span class="text-yellow-400 font-bold text-sm">View Cyber Security <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Swiss Cities Dominance Strategy -->
+    <section class="py-32 px-8 bg-surface-container-low border-y border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-red-400 font-black block mb-4">Marktdominanz</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Targeting Major <span class="text-red-400">Swiss Cantons</span></h2>
+                <p class="text-lg text-on-surface-variant max-w-3xl mx-auto">Switzerland requires the most linguistically precise SEO strategies in Europe. We engineer flawless, multi-lingual architectures to capture the unique commercial intent of each major canton.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-red-500 bg-surface/50" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">Finance & Tech in <span class="text-red-400">Zurich (Zürich)</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Zurich is the financial heartbeat of Europe. To rank here, you need impeccable technical SEO and extremely high Domain Authority. We acquire editorial backlinks from top-tier Swiss-German media and engineer programmatic content hubs for Zurich's banking, FinTech, and B2B sectors to outrank established giants.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-white bg-surface/50" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">Luxury & NGOs in <span class="text-white">Geneva (Genève)</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Geneva's French-speaking market is dominated by luxury brands, international organizations, and private wealth management. We deploy advanced semantic entity mapping and strict E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) protocols to ensure your brand commands elite visibility on Google.ch.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-primary bg-surface/50" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">Pharma & Life Sciences in <span class="text-primary">Basel</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Basel is a global hub for pharmaceuticals. We align technical SEO with highly specific medical and industrial niches. By optimizing complex technical documentation and securing highly relevant industry citations, we ensure your B2B offerings rank perfectly for niche queries.</p>
+                </div>
+
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-secondary bg-surface/50" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">Government & B2B in <span class="text-secondary">Bern</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">For businesses serving the capital, establishing authority is critical. We execute aggressive local SEO and high-level PR link acquisition strategies, ensuring your digital presence captures every high-intent commercial query generated in the region.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 20-Year Veteran SEO Methodology (Switzerland) -->
+    <section class="py-32 px-8 bg-black/40 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-red-400 font-black block mb-4">The Mathematical Blueprint</span>
+                <h2 class="text-4xl md:text-6xl font-black mb-8">Dominating the <span class="text-red-400">Google.ch</span> Algorithm</h2>
+                <p class="text-xl text-on-surface-variant max-w-4xl leading-relaxed font-light">
+                    Switzerland presents the most complex linguistic and algorithmic SEO challenge in the world. With four national languages and incredibly high commercial value per click, standard SEO tactics will not work. Leveraging 20 years of elite technical SEO experience, we engineer quad-lingual architectures, deploy stringent YMYL (Your Money or Your Life) trust signals, and mathematically acquire DACH-region authority to guarantee rankings on Google.ch.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group" data-aos="fade-up">
+                    <div class="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-black mb-6 text-red-400 border-l-4 border-red-400 pl-6">Quad-Lingual Hreflang Architecture</h3>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            A single technical error in your multi-lingual setup will destroy your Swiss rankings. We deploy flawless, server-level `hreflang` maps (`de-CH`, `fr-CH`, `it-CH`, `en-CH`), ensuring Googlebot routes Zurich users to German semantic clusters, and Geneva users to perfectly localized French content, completely eliminating duplicate content indexing penalties.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-black mb-6 text-white border-l-4 border-white pl-6">YMYL & E-E-A-T Engineering</h3>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            Switzerland's economy is dominated by Finance, Banking, and Pharmaceuticals—industries heavily regulated by Google's YMYL (Your Money or Your Life) algorithm. We strictly engineer E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) into your codebase. We utilize advanced Person and Organization schema markup, linking author profiles to external entity validation, mathematically proving to Google that your brand is an elite, trusted authority.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group md:col-span-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-gradient-to-r from-red-600/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-black mb-6 text-red-500 border-l-4 border-red-500 pl-6">DACH-Region Link Velocity & .CH Authority</h3>
+                        <p class="text-lg text-on-surface-variant leading-relaxed mb-6">
+                            To rank #1 in Switzerland, your website must possess overwhelming localized trust. A surge of cheap international backlinks will trigger Google's spam filters and permanently demote your domain.
+                        </p>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            Our methodology is rooted in elite Digital PR. We acquire high-DR, DoFollow editorial links exclusively from premium `.ch` domains, Swiss media portals, and recognized DACH-region (Germany, Austria, Switzerland) industry networks. By engineering a link profile that perfectly mirrors natural Swiss authority, we render your website untouchable by core algorithm updates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Swiss FAQ -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-black mb-12 text-center">Swiss SEO <span class="text-red-400">FAQ</span></h2>
+            <div class="space-y-6">
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/10">
+                    <h4 class="text-xl font-bold mb-3 text-red-400">How do you manage the 4 national languages of Switzerland?</h4>
+                    <p class="text-on-surface-variant">We utilize advanced hreflang architectures (e.g., hreflang="de-CH", "fr-CH", "it-CH") and separate subdirectories. This ensures that a user searching in German from Zurich sees the German content, while a user in Geneva sees the French version, perfectly satisfying Google.ch intent without duplicate content penalties.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/10">
+                    <h4 class="text-xl font-bold mb-3 text-red-400">Do you acquire .ch backlinks?</h4>
+                    <p class="text-on-surface-variant">Absolutely. The Google.ch algorithm relies heavily on regional trust signals. We conduct manual outreach to secure high Domain Rating (DR) backlinks from premium Swiss domains, local news portals, and authoritative industry networks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

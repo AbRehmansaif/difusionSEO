@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Agencia SEO & Digital Marketing en España | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Escale su negocio en España con la mejor agencia SEO. Technical SEO in Madrid, Barcelona, and Valencia to dominate the Spanish Google SERPs.">
+<meta name="keywords" content="Agencia SEO España, SEO services Madrid, digital marketing Barcelona, top SEO experts Spain, local SEO Spain">
+<meta property="og:title" content="Top Tier SEO Agency in Spain | DifusionSEO">
+<meta property="og:description" content="Technical organic growth strategies designed to dominate competitive niches in the Spanish market.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+{% endblock %}
+
+{% block extra_head %}
+<!-- Spain Geo-Targeted Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Agencia SEO España & Digital Marketing",
+  "description": "Enterprise-grade technical SEO and AI Automation tailored for Spanish businesses in Madrid and Barcelona.",
+  "provider": {
+    "@type": "Organization",
+    "name": "DifusionSEO",
+    "url": "{{ request.scheme }}://{{ request.get_host }}"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Spain"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<main class="pt-24 overflow-hidden">
+    <!-- Hero Section: Spain Focus -->
+    <section class="relative min-h-[75vh] py-20 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
+        <div class="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[100px] animate-pulse pointer-events-none"></div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 flex-row-reverse">
+            <div data-aos="fade-left">
+                <div class="flex items-center gap-3 mb-8 bg-surface-container/50 w-fit px-4 py-2 rounded-full border border-outline-variant/10 shadow-lg">
+                    <img src="https://flagcdn.com/w40/es.png" alt="Spain Flag" class="w-6 rounded-sm shadow-sm">
+                    <span class="text-xs uppercase tracking-widest text-primary font-black">Spanish Market Authority</span>
+                </div>
+                
+                <h1 class="text-5xl sm:text-7xl font-black tracking-tighter leading-[1.1] mb-6">
+                    Dominate the <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Spanish Market</span>
+                </h1>
+                <p class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-lg">
+                    Ranking #1 in <strong>Madrid</strong> or <strong>Barcelona</strong> isn't about luck. It's about engineering. As a leading <em>Agencia SEO</em>, we provide hyper-technical search engine optimization, AI automation workflows, and high DR Spanish link building to drastically scale your organic revenue.
+                </p>
+                
+                <a href="{% url 'contact' %}?location=Spain" class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all flex items-center gap-2 w-fit shadow-[0_10px_30px_rgba(204,190,255,0.2)]">
+                    Audit Your Spanish SEO <span class="material-symbols-outlined">rocket_launch</span>
+                </a>
+            </div>
+            
+            <div class="relative hidden lg:block" data-aos="fade-right">
+                <div class="glass-card rounded-[3rem] p-12 border border-secondary/20 bg-gradient-to-br from-surface to-surface-container shadow-2xl">
+                    <div class="flex items-center gap-4 mb-8">
+                        <span class="material-symbols-outlined text-5xl text-secondary">trending_up</span>
+                        <div>
+                            <div class="text-xs text-on-surface-variant uppercase tracking-widest font-black">Spain Market Share</div>
+                            <div class="text-3xl font-black text-white">+245% Lift</div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-on-surface-variant italic border-l-2 border-secondary pl-4">"Our visibility across Google.es skyrocketed within 90 days of implementing their entity mapping strategy."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-24 px-8 border-t border-outline-variant/10 bg-black/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black">Digital Solutions in <span class="text-secondary">Spain</span></h2>
+                <p class="text-on-surface-variant mt-4">Enterprise SEO and Development for the Spanish economy.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Spain Technical SEO -->
+                <div class="glass-card p-10 rounded-[2.5rem] hover-lift group">
+                    <h3 class="text-2xl font-black mb-4 group-hover:text-primary transition-colors">National SEO España</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Comprehensive semantic research, technical auditing, and content clustering to dominate national search terms in Spain.</p>
+                    <a href="{% url 'seo_strategy' %}" class="inline-flex items-center gap-2 text-primary font-bold">Read More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </div>
+                <!-- Backlinks -->
+                <div class="glass-card p-10 rounded-[2.5rem] hover-lift group">
+                    <h3 class="text-2xl font-black mb-4 group-hover:text-secondary transition-colors">Spanish Link Building</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">We don't use generic PBNs. We acquire powerful, editorially-placed backlinks from high-authority Spanish (.es) domains and publications.</p>
+                    <a href="{% url 'backlink_service' %}" class="inline-flex items-center gap-2 text-secondary font-bold">Read More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Spain Services Grid -->
+    <section class="py-24 px-8 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black mb-16 text-center">Full-Stack Digital Dominance for <span class="text-yellow-400">Google.es</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'seo_strategy' %}'">
+                    <span class="material-symbols-outlined text-4xl text-red-500 mb-6">query_stats</span>
+                    <h3 class="text-2xl font-bold mb-4">Enterprise Technical SEO</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Dominate national search volume across Spain. We execute ruthless technical audits and Castilian-specific semantic entity mapping to outrank massive competitors.</p>
+                    <span class="text-red-500 font-bold text-sm">View Spanish SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Local SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'local_seo' %}'">
+                    <span class="material-symbols-outlined text-4xl text-yellow-400 mb-6">location_on</span>
+                    <h3 class="text-2xl font-bold mb-4">Local Map Pack (Spain)</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Capture hyper-local intent in competitive markets like Madrid, Barcelona, and Valencia with aggressive Google Business Profile (GBP) optimization.</p>
+                    <span class="text-yellow-400 font-bold text-sm">View Local SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Backlinks -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'backlink_service' %}'">
+                    <span class="material-symbols-outlined text-4xl text-white mb-6">link</span>
+                    <h3 class="text-2xl font-bold mb-4">Tier-1 .ES Link Building</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Authority is everything. We secure high-DR, DoFollow editorial backlinks exclusively from trusted Spanish publications, news outlets, and `.es` portals.</p>
+                    <span class="text-white font-bold text-sm">View .ES Link Building <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Web Dev -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'web_development' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#ff0055] mb-6">code</span>
+                    <h3 class="text-2xl font-bold mb-4">High-Performance Web Dev</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">We replace bloated WordPress with custom Next.js architectures, guaranteeing instantaneous load times across Spanish networks to pass Core Web Vitals.</p>
+                    <span class="text-[#ff0055] font-bold text-sm">View Web Engineering <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- AI Automation -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'ai_automation' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#00E5FF] mb-6">smart_toy</span>
+                    <h3 class="text-2xl font-bold mb-4">AI Business Automation</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Scale your Spanish operations instantly. We deploy custom LLM agents and Castilian-speaking RAG chatbots to handle customer service and lead qualification.</p>
+                    <span class="text-[#00E5FF] font-bold text-sm">View AI Solutions <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Cyber Security -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'cyber_security' %}'">
+                    <span class="material-symbols-outlined text-4xl text-green-400 mb-6">security</span>
+                    <h3 class="text-2xl font-bold mb-4">Cyber Security & Audits</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Protect your enterprise from ransomware. We provide GDPR-compliant penetration testing, DDoS protection, and secure infrastructure auditing across the Iberian Peninsula.</p>
+                    <span class="text-green-400 font-bold text-sm">View Cyber Security <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spanish Cities Dominance Strategy -->
+    <section class="py-32 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-secondary font-black block mb-4">Nuestra Metodología</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Dominating Spanish <span class="text-secondary">Commercial Centers</span></h2>
+                <p class="text-lg text-on-surface-variant max-w-3xl mx-auto">To win the Spanish market, you must dominate the specific economic hubs where commercial intent is highest. We customize our SEO strategies for Spain's largest metropolitan regions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="glass-card p-10 rounded-3xl border-l-4 border-secondary" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">Corporate SEO in <span class="text-secondary">Madrid</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Madrid is the economic heart of Spain. Our Madrid SEO campaigns focus on B2B lead generation, enterprise brand authority, and securing high-DR backlinks from top-tier Spanish business publications and national directories. We structure your digital assets to dominate corporate search queries.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-3xl border-l-4 border-primary" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">Tech & Startup Growth in <span class="text-primary">Barcelona</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">As Europe's rising tech hub, Barcelona's search landscape is highly sophisticated. We deploy cutting-edge technical SEO (Next.js/React optimization), semantic AI entity mapping, and programmatic content scaling to help Barcelona startups and SaaS companies outpace traditional incumbents.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-3xl border-l-4 border-tertiary" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">Local Market Capture in <span class="text-tertiary">Valencia</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">For businesses in Valencia, dominating the local search ecosystem is critical. We aggressively optimize Google Business Profiles (GBP), deploy localized schema markup (LocalBusiness, Organization), and build powerful regional citations to ensure you capture the "near me" and regional search traffic.</p>
+                </div>
+
+                <div class="glass-card p-10 rounded-3xl border-l-4 border-error" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">Tourism & eCommerce in <span class="text-error">Seville (Sevilla)</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Seville presents massive opportunities for tourism, real estate, and retail SEO. We build multi-lingual SEO architectures for Andalusian businesses, ensuring they rank simultaneously for Spanish and English high-intent commercial queries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spanish FAQ -->
+    <section class="py-32 px-8 bg-surface-container-lowest border-t border-outline-variant/10">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-black mb-12 text-center">Spanish SEO <span class="text-secondary">FAQ</span></h2>
+            <div class="space-y-6">
+                <div class="glass-card p-8 rounded-2xl">
+                    <h4 class="text-xl font-bold mb-3 text-secondary">Do you acquire backlinks from .es domains?</h4>
+                    <p class="text-on-surface-variant">Yes. The Google.es algorithm heavily favors contextual links from Spanish IP addresses and .es domains. We conduct manual outreach to high-authority Spanish blogs, news sites, and industry portals to build a powerful, natural link profile.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <h4 class="text-xl font-bold mb-3 text-secondary">Do you optimize content for Latin America or just Spain?</h4>
+                    <p class="text-on-surface-variant">Spanish is spoken globally, but search intent varies drastically between Spain and LatAm. We use strict hreflang tags (e.g., hreflang="es-ES") and localized Spanish terminology to ensure Google knows your content is specifically targeting the European Spanish market.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-32 px-8 bg-secondary/5 text-center border-t border-secondary/20">
+        <div class="max-w-3xl mx-auto" data-aos="zoom-in">
+            <h2 class="text-5xl font-black mb-8">Ready to Dominate <span class="text-secondary">Spain?</span></h2>
+            <p class="text-xl text-on-surface-variant mb-10">Stop losing traffic to your Spanish competitors. Let's architect your organic growth strategy.</p>
+            <a href="{% url 'contact' %}?location=Spain" class="bg-secondary text-on-secondary px-12 py-5 rounded-full font-black text-lg hover:scale-105 transition-all shadow-2xl inline-block">
+                Start Your Campaign
+            </a>
+        </div>
+    </section>
+</main>
+{% endblock %}

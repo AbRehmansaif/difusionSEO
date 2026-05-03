@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Best SEO Agency Australia | Sydney & Melbourne | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Top SEO agency in Australia. We deliver elite technical SEO, local SEO, and backlinking strategies to businesses in Sydney, Melbourne, and Brisbane.">
+<meta name="keywords" content="SEO agency Australia, Sydney SEO consultant, digital marketing Melbourne, local SEO services AU, eCommerce SEO Australia">
+<meta property="og:title" content="Elite SEO Agency Australia | DifusionSEO">
+<meta property="og:description" content="Technical organic growth strategies designed to dominate competitive niches in the Australian market.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+{% endblock %}
+
+{% block extra_head %}
+<!-- Australia Geo-Targeted Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Best SEO Agency Australia",
+  "description": "Enterprise-grade technical SEO specifically tailored for Australian businesses in Sydney and Melbourne.",
+  "provider": {
+    "@type": "Organization",
+    "name": "DifusionSEO",
+    "url": "{{ request.scheme }}://{{ request.get_host }}"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Australia"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<main class="pt-24 overflow-hidden">
+    <!-- Hero Section: Australia Focus -->
+    <section class="relative min-h-[80vh] py-20 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div data-aos="fade-right">
+                <div class="flex items-center gap-3 mb-6 bg-surface-container w-fit px-4 py-2 rounded-xl border border-outline-variant/10">
+                    <img src="https://flagcdn.com/w40/au.png" alt="Australia Flag" class="w-6 rounded-sm">
+                    <span class="text-xs uppercase tracking-[0.2em] text-on-surface font-black">Australian SEO Experts</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] mb-6">
+                    Capture the <br>
+                    <span class="text-secondary">Australian Market.</span>
+                </h1>
+                
+                <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                    The Australian search landscape requires highly localized strategies. Whether you are targeting local customers in <strong>Sydney</strong> or scaling a national B2B brand from <strong>Melbourne</strong>, our engineering-driven SEO tactics ensure you dominate Google.com.au.
+                </p>
+                
+                <ul class="space-y-4 mb-10">
+                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">check_circle</span> .COM.AU Backlink Acquisition</li>
+                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">check_circle</span> Sydney & Melbourne Local SEO</li>
+                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">check_circle</span> Technical Auditing & Core Web Vitals</li>
+                </ul>
+                
+                <a href="{% url 'contact' %}?location=Australia" class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-[0_10px_30px_rgba(204,190,255,0.2)] inline-flex items-center gap-2">
+                    Dominate Down Under <span class="material-symbols-outlined">public</span>
+                </a>
+            </div>
+            
+            <div class="relative hidden lg:block" data-aos="fade-left">
+                <div class="bg-surface-container-low rounded-[3rem] p-10 border-t-8 border-secondary shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-6 opacity-20"><span class="material-symbols-outlined text-8xl">map</span></div>
+                    <h3 class="text-2xl font-black mb-4">Australian Growth Blueprint</h3>
+                    <p class="text-sm text-on-surface-variant mb-6">Our proprietary methodology for scaling traffic on Google.com.au.</p>
+                    <div class="space-y-3">
+                        <div class="bg-surface p-4 rounded-xl border border-outline-variant/10 flex justify-between"><span>Phase 1: Technical Fixes</span><span class="text-secondary font-bold">Weeks 1-3</span></div>
+                        <div class="bg-surface p-4 rounded-xl border border-outline-variant/10 flex justify-between"><span>Phase 2: Semantic Mapping</span><span class="text-secondary font-bold">Weeks 4-6</span></div>
+                        <div class="bg-surface p-4 rounded-xl border border-outline-variant/10 flex justify-between"><span>Phase 3: High-DR AU Links</span><span class="text-secondary font-bold">Ongoing</span></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Core Services Section -->
+    <section class="py-24 px-8 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black mb-16 text-center">Comprehensive Services for <span class="text-secondary">Google.com.au</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'seo_strategy' %}'">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-6">query_stats</span>
+                    <h3 class="text-xl font-bold mb-4">Technical SEO</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Deep crawling and indexing optimization tailored for the Australian algorithm. We fix Core Web Vitals and resolve severe latency issues.</p>
+                    <span class="text-secondary font-bold text-sm">View SEO Services <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Local SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'local_seo' %}'">
+                    <span class="material-symbols-outlined text-4xl text-white mb-6">location_on</span>
+                    <h3 class="text-xl font-bold mb-4">Local Map Pack</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Dominate the Google Map Pack across Sydney, Melbourne, and Brisbane with hyper-localized Aussie citations and GBP optimization.</p>
+                    <span class="text-white font-bold text-sm">View Local SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Backlinks -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'backlink_service' %}'">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-6">link</span>
+                    <h3 class="text-xl font-bold mb-4">.COM.AU Link Building</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Authority matters. We secure high DR backlinks exclusively from reputable .com.au domains, Australian news outlets, and state directories.</p>
+                    <span class="text-primary font-bold text-sm">View Link Building <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Web Dev -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'web_development' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#ff0055] mb-6">code</span>
+                    <h3 class="text-xl font-bold mb-4">High-Performance Web Dev</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">We deploy custom React/Next.js architectures on local Sydney CDN nodes, guaranteeing instantaneous load times to pass Google Core Web Vitals.</p>
+                    <span class="text-[#ff0055] font-bold text-sm">View Web Engineering <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- AI Automation -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'ai_automation' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#00E5FF] mb-6">smart_toy</span>
+                    <h3 class="text-xl font-bold mb-4">AI Business Automation</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Scale your Australian operations instantly. We deploy custom LLM agents and 24/7 automated workflows to handle customer service while you sleep.</p>
+                    <span class="text-[#00E5FF] font-bold text-sm">View AI Solutions <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Cyber Security -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'cyber_security' %}'">
+                    <span class="material-symbols-outlined text-4xl text-yellow-400 mb-6">security</span>
+                    <h3 class="text-xl font-bold mb-4">Cyber Security & Audits</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Protect your Australian enterprise from ransomware and breaches. We provide military-grade penetration testing and secure infrastructure auditing.</p>
+                    <span class="text-yellow-400 font-bold text-sm">View Cyber Security <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Australian Cities Dominance Strategy -->
+    <section class="py-32 px-8 bg-black/40 border-y border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-secondary font-black block mb-4">State Dominance</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Targeting Top <span class="text-secondary">Aussie Markets</span></h2>
+                <p class="text-lg text-on-surface-variant max-w-3xl mx-auto">Australia's population is highly concentrated in specific coastal capitals. We deploy aggressive, localized SEO strategies designed to monopolize search volume in these exact regions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-secondary bg-surface/50" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">Enterprise SEO in <span class="text-secondary">Sydney</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Sydney is the most fiercely competitive search market in Australia. To outrank established financial, legal, and tech giants, we deploy elite technical SEO, AI-driven content clustering, and acquire premium .com.au editorial backlinks. We don't guess—we engineer dominance.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-primary bg-surface/50" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">Startups & B2B in <span class="text-primary">Melbourne</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Melbourne's dynamic SaaS and B2B sectors require a highly semantic approach. We build massive programmatic landing page architectures that capture every variation of commercial intent, ensuring your brand is omnipresent across Google.com.au.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-white bg-surface/50" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">Local Map Pack in <span class="text-white">Brisbane</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">For businesses serving Queensland, local search is everything. We aggressively optimize your Google Business Profile (GBP), deploy hyper-local LocalBusiness schema, and generate powerful regional citations to ensure you capture all 'near me' intent in Brisbane.</p>
+                </div>
+
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-[#ff0055] bg-surface/50" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">Industrial SEO in <span class="text-[#ff0055]">Perth</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Perth's mining, resource, and heavy industry sectors demand specialized B2B SEO. We optimize complex technical websites, align LinkedIn outreach with organic search, and secure high-value industrial backlinks to generate lucrative corporate leads.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 20-Year Veteran SEO Methodology (Australia) -->
+    <section class="py-32 px-8 bg-black/40 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-secondary font-black block mb-4">The Mathematical Blueprint</span>
+                <h2 class="text-4xl md:text-6xl font-black mb-8">Decoding the <span class="text-secondary">Google.com.au</span> Algorithm</h2>
+                <p class="text-xl text-on-surface-variant max-w-4xl leading-relaxed font-light">
+                    Australia presents a unique algorithmic challenge. With a massive geographical footprint but a highly concentrated population, generic SEO fails completely. Backed by 20 years of technical SEO expertise, we understand that Google Australia heavily weights geographic proximity signals and strict TLD (Top Level Domain) relevance. To outrank entrenched enterprise competitors in Sydney or Melbourne, you must mathematically prove your brand's localized authority through aggressive semantic engineering.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mb-8 border border-secondary/20">
+                        <span class="text-2xl font-black text-secondary">01</span>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">State-Level Entity Isolation</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Google's Helpful Content Update destroyed templated "local SEO" pages. We build physically unique, semantically isolated landing pages for NSW, VIC, QLD, and WA. We inject localized LSI keywords, region-specific structured data (JSON-LD), and unique schema markups that definitively tie your business entity to the target Australian state without triggering duplicate content penalties.</p>
+                </div>
+
+                <div class="glass-card p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mb-8 border border-secondary/20">
+                        <span class="text-2xl font-black text-secondary">02</span>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">Core Web Vitals for the Oceanic Node</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Hosting matters. If your site is hosted in the US, latency will destroy your Australian rankings. We engineer your web architecture (using Python and Next.js) to be deployed on CDN edge networks physically located in Sydney or Melbourne. We guarantee instantaneous Time to First Byte (TTFB), forcing Google to prioritize your lightning-fast site over sluggish competitors.</p>
+                </div>
+
+                <div class="glass-card p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mb-8 border border-secondary/20">
+                        <span class="text-2xl font-black text-secondary">03</span>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">.COM.AU Authority Acquisition</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">A backlink from an American blog has severely diminished ROI on Google.com.au. The algorithm demands local trust. We execute high-level Digital PR campaigns to secure contextual, DoFollow editorial links from top-tier Australian media outlets (News.com.au, AFR) and hyper-relevant `.com.au` industry directories, cementing your unshakeable Domain Authority.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Australian FAQ -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-black mb-12 text-center">Australian SEO <span class="text-secondary">FAQ</span></h2>
+            <div class="space-y-6">
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/10">
+                    <h4 class="text-xl font-bold mb-3 text-secondary">Why do I need .com.au backlinks?</h4>
+                    <p class="text-on-surface-variant">Google's algorithm looks for geographic relevance. If you want to rank #1 in Australia, you need trust signals originating from Australia. We conduct targeted outreach to secure high Domain Rating (DR) backlinks from legitimate Australian publishers and industry sites.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/10">
+                    <h4 class="text-xl font-bold mb-3 text-secondary">How do you handle national vs local campaigns?</h4>
+                    <p class="text-on-surface-variant">We separate the architecture. National campaigns utilize semantic clusters and programmatic content hubs targeting broad commercial intent. Local campaigns (e.g., targeting Sydney specifically) rely on localized landing pages, GBP signals, and geographic schema.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

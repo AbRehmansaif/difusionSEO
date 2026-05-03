@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Canadian SEO Agency | Digital Marketing Toronto | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Top Canadian SEO agency driving organic growth for businesses in Toronto, Vancouver, and Montreal. Expert technical SEO and web development.">
+<meta name="keywords" content="Canadian SEO agency, Toronto SEO experts, digital marketing Vancouver, enterprise SEO Canada, technical SEO services CA">
+<meta property="og:title" content="Canadian SEO & Digital Marketing | DifusionSEO">
+<meta property="og:description" content="Technical organic growth strategies designed to dominate competitive niches in the Canadian market.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+{% endblock %}
+
+{% block extra_head %}
+<!-- Canada Geo-Targeted Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Canadian SEO Agency",
+  "description": "Enterprise-grade technical SEO specifically tailored for Canadian businesses in Toronto and Vancouver.",
+  "provider": {
+    "@type": "Organization",
+    "name": "DifusionSEO",
+    "url": "{{ request.scheme }}://{{ request.get_host }}"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Canada"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<main class="pt-24 overflow-hidden">
+    <!-- Hero Section: Canada Focus -->
+    <section class="relative min-h-[70vh] py-20 px-6 md:px-8 max-w-7xl mx-auto flex flex-col items-center justify-center text-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-error/5 to-surface pointer-events-none z-0"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto" data-aos="fade-down">
+            <div class="inline-flex items-center gap-2 mb-8 bg-surface-container px-4 py-2 rounded-full border border-error/20">
+                <img src="https://flagcdn.com/w40/ca.png" alt="Canada Flag" class="w-6 rounded-sm">
+                <span class="text-xs uppercase tracking-widest text-on-surface font-black">Search Dominance in Canada</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] mb-8">
+                Outrank Your <br>
+                <span class="text-error">Canadian Competitors.</span>
+            </h1>
+            
+            <p class="text-xl text-on-surface-variant leading-relaxed mb-12 max-w-2xl mx-auto font-light">
+                Whether you're a startup in <strong>Toronto</strong>, an eCommerce brand in <strong>Vancouver</strong>, or a B2B enterprise in <strong>Montreal</strong>, we provide the technical SEO infrastructure to capture the Canadian search market. Stop relying on paid ads. Build an organic moat.
+            </p>
+            
+            <div class="flex justify-center gap-4">
+                <a href="{% url 'contact' %}?location=Canada" class="bg-error text-white px-10 py-5 rounded-full font-black text-sm hover:scale-105 transition-all shadow-[0_10px_30px_rgba(255,0,0,0.2)]">
+                    Audit My Canadian Traffic
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section class="py-20 px-8 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-surface-container p-6 rounded-2xl text-center" data-aos="fade-up" data-aos-delay="100">
+                <span class="material-symbols-outlined text-3xl text-error mb-4">search</span>
+                <h4 class="font-black mb-2">Google.ca SEO</h4>
+                <p class="text-xs text-on-surface-variant">Deep algorithm alignment for the Canadian engine.</p>
+            </div>
+            <div class="bg-surface-container p-6 rounded-2xl text-center" data-aos="fade-up" data-aos-delay="200">
+                <span class="material-symbols-outlined text-3xl text-error mb-4">location_on</span>
+                <h4 class="font-black mb-2">Local Map Pack</h4>
+                <p class="text-xs text-on-surface-variant">Dominate searches in Toronto, Calgary, and beyond.</p>
+            </div>
+            <div class="bg-surface-container p-6 rounded-2xl text-center" data-aos="fade-up" data-aos-delay="300">
+                <span class="material-symbols-outlined text-3xl text-error mb-4">link</span>
+                <h4 class="font-black mb-2">.CA Backlinks</h4>
+                <p class="text-xs text-on-surface-variant">High authority links from relevant Canadian publishers.</p>
+            </div>
+            <div class="bg-surface-container p-6 rounded-2xl text-center" data-aos="fade-up" data-aos-delay="400">
+                <span class="material-symbols-outlined text-3xl text-error mb-4">code_blocks</span>
+                <h4 class="font-black mb-2">Web Engineering</h4>
+                <p class="text-xs text-on-surface-variant">Lightning-fast architecture passing Core Web Vitals.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Core Services Section -->
+    <section class="py-24 px-8 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black mb-16 text-center">Comprehensive Services for <span class="text-error">Google.ca</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'seo_strategy' %}'">
+                    <span class="material-symbols-outlined text-4xl text-error mb-6">query_stats</span>
+                    <h3 class="text-xl font-bold mb-4">Technical SEO</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Deep crawling and indexing optimization tailored for the Canadian algorithm. We resolve complex bilingual hreflang mapping for English/French indexing.</p>
+                    <span class="text-error font-bold text-sm">View SEO Services <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Local SEO -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'local_seo' %}'">
+                    <span class="material-symbols-outlined text-4xl text-white mb-6">location_on</span>
+                    <h3 class="text-xl font-bold mb-4">Local Map Pack</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Dominate the Google Map Pack across Toronto, Vancouver, and Montreal with hyper-localized citations and GBP optimization.</p>
+                    <span class="text-white font-bold text-sm">View Local SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Backlinks -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'backlink_service' %}'">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-6">link</span>
+                    <h3 class="text-xl font-bold mb-4">.CA Link Building</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Authority matters. We secure high DR backlinks exclusively from reputable .ca domains, Canadian news broadcasters, and national B2B directories.</p>
+                    <span class="text-primary font-bold text-sm">View Link Building <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Web Dev -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'web_development' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#ff0055] mb-6">code</span>
+                    <h3 class="text-xl font-bold mb-4">High-Performance Web Dev</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">We deploy custom React/Next.js architectures, guaranteeing instantaneous load times and perfectly functioning multi-lingual toggles for Canadian users.</p>
+                    <span class="text-[#ff0055] font-bold text-sm">View Web Engineering <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- AI Automation -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'ai_automation' %}'">
+                    <span class="material-symbols-outlined text-4xl text-[#00E5FF] mb-6">smart_toy</span>
+                    <h3 class="text-xl font-bold mb-4">AI Business Automation</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Scale your Canadian operations instantly. We deploy custom LLM agents and bilingual RAG chatbots to handle customer service in both English and French.</p>
+                    <span class="text-[#00E5FF] font-bold text-sm">View AI Solutions <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+                <!-- Cyber Security -->
+                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'cyber_security' %}'">
+                    <span class="material-symbols-outlined text-4xl text-yellow-400 mb-6">security</span>
+                    <h3 class="text-xl font-bold mb-4">Cyber Security & Audits</h3>
+                    <p class="text-on-surface-variant text-sm mb-6">Protect your Canadian enterprise from ransomware and PIPEDA breaches. We provide military-grade penetration testing and secure infrastructure auditing.</p>
+                    <span class="text-yellow-400 font-bold text-sm">View Cyber Security <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Canadian Cities Dominance Strategy -->
+    <section class="py-32 px-8 bg-surface-container-lowest border-y border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-error font-black block mb-4">Provincial Dominance</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Targeting Key <span class="text-error">Canadian Hubs</span></h2>
+                <p class="text-lg text-on-surface-variant max-w-3xl mx-auto">To win the Canadian market, you must dominate its highly concentrated metropolitan areas. We customize SEO campaigns for Canada's distinct economic regions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-error" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">Enterprise & Finance SEO in <span class="text-error">Toronto</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Toronto is the corporate engine of Canada. Our campaigns here focus on high-level B2B lead generation, elite technical SEO, and securing premium editorial backlinks from national Canadian publications. We help Toronto-based enterprises outrank massive US competitors spilling into the .ca index.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-primary" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">Tech & eCommerce in <span class="text-primary">Vancouver</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Vancouver's booming tech and retail scene requires agility. We deploy headless CMS architectures, programmatic SEO, and aggressive local link-building to scale Vancouver SaaS companies and eCommerce brands to national prominence.</p>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-secondary" data-aos="fade-right">
+                    <h3 class="text-3xl font-black mb-4">Bilingual SEO in <span class="text-secondary">Montreal</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Montreal requires a flawless dual-language approach. We engineer perfect hreflang architectures and semantic content clusters in both French and English, ensuring you capture the entirety of Quebec's search volume without cannibalizing your national English rankings.</p>
+                </div>
+
+                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-white" data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-4">B2B & Industrial SEO in <span class="text-white">Calgary</span></h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">Calgary's energy and industrial sectors operate on high-ticket B2B relationships. We optimize complex technical catalogs, deploy highly targeted LinkedIn/SEO alignment strategies, and capture hyper-specific commercial intent keywords for Alberta's industries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 20-Year Veteran SEO Methodology (Canada) -->
+    <section class="py-32 px-8 bg-black/40 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20" data-aos="fade-right">
+                <span class="text-xs uppercase tracking-[0.4em] text-error font-black block mb-4">The Strategic Blueprint</span>
+                <h2 class="text-4xl md:text-6xl font-black mb-8">Dominating the <span class="text-error">Google.ca</span> Algorithm</h2>
+                <p class="text-xl text-on-surface-variant max-w-4xl leading-relaxed font-light">
+                    Scaling organic traffic in Canada requires a highly sophisticated approach. The Canadian algorithm operates on dual-language indexing and strict geographic proximity. With over 20 years of technical SEO engineering, we know that templated strategies fail here. To capture national market share across Google.ca, you must deploy an ironclad technical foundation, perfect hreflang architectures, and secure dominant Canadian trust signals.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group" data-aos="fade-up">
+                    <div class="absolute inset-0 bg-gradient-to-br from-error/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-black mb-6 text-error border-l-4 border-error pl-6">Bilingual Hreflang Architecture</h3>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            Canada is functionally two search markets: English and French-Canadian. If your site architecture doesn't correctly map these languages, Google will cannibalize your rankings or penalize you for duplicate content. We engineer flawless bidirectional `hreflang` tags (`en-CA` and `fr-CA`), ensuring Googlebot routes Quebec users to perfectly localized French semantic clusters, while the rest of Canada is served optimized English content.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-black mb-6 text-white border-l-4 border-white pl-6">Cross-Border Crawl Optimization</h3>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            Many Canadian businesses share domains or content with their US counterparts, leading to massive indexation failures on Google.ca. We utilize Python to conduct deep crawl analysis, fixing canonicalization errors and IP-redirect loops. By isolating your Canadian entity through structured data (Organization schema) and localized sitemaps, we force Google to recognize your site as a distinct, highly authoritative Canadian business.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group md:col-span-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-black mb-6 text-primary border-l-4 border-primary pl-6">.CA Link Velocity & Digital PR</h3>
+                        <p class="text-lg text-on-surface-variant leading-relaxed mb-6">
+                            To rank #1 in Toronto, Vancouver, or Montreal, you need links that the algorithm trusts. A surge of cheap US or international backlinks will trigger spam filters and plateau your organic growth.
+                        </p>
+                        <p class="text-lg text-on-surface-variant leading-relaxed">
+                            Our methodology is rooted in elite Digital PR. We acquire high-DR, DoFollow editorial links exclusively from premium `.ca` domains, Canadian news broadcasters (CBC, Global News niches), and recognized national industry associations. By mathematically engineering a link profile that perfectly mirrors natural Canadian authority, we render your website untouchable by core algorithm updates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Canadian FAQ -->
+    <section class="py-32 px-8 bg-surface-container-low">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-black mb-12 text-center">Canadian SEO <span class="text-error">FAQ</span></h2>
+            <div class="space-y-6">
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/10 hover:border-error/30 transition-colors">
+                    <h4 class="text-xl font-bold mb-3 text-error">Do you focus on Google.ca specifically?</h4>
+                    <p class="text-on-surface-variant">Yes. Ranking on Google.ca requires distinct signals compared to Google.com. We prioritize acquiring .ca backlinks, integrating Canadian-specific semantic terms, and hosting optimizations to clearly signal Canadian relevance to the algorithm.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/10 hover:border-error/30 transition-colors">
+                    <h4 class="text-xl font-bold mb-3 text-error">Can you handle French-Canadian SEO for Quebec?</h4>
+                    <p class="text-on-surface-variant">Absolutely. We manage complex multi-lingual site architectures. By correctly implementing hreflang tags and separate URL structures for fr-CA, we ensure your French content ranks in Quebec while your English content dominates the rest of Canada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

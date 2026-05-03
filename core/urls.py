@@ -15,4 +15,5 @@ urlpatterns = [
     path('leadnexus/', views.leadnexus, name='leadnexus'),
     path('privacy-policy/', views.privacy, name='privacy'),
     path('terms-of-service/', views.terms, name='terms'),
+    path('seo-services/<slug:country_slug>/', views.location_page, name='location_page'),
 ]

@@ -67,3 +67,10 @@ def privacy(request):
 
 def terms(request):
     return render(request, 'terms.html')
+
+def location_page(request, country_slug):
+    valid_countries = ['italy', 'spain', 'germany', 'netherlands', 'uk', 'usa', 'canada', 'australia', 'new-zealand', 'france', 'switzerland']
+    if country_slug.lower() in valid_countries:
+        return render(request, f'locations/{country_slug.lower()}.html')
+    from django.http import Http404
+    raise Http404("Location not found")
