@@ -148,6 +148,96 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="py-32 px-8 bg-surface-container-low">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-black mb-4">AI & Automation <span class="text-secondary">FAQs</span></h2>
+                <p class="text-on-surface-variant opacity-70">Answers to common questions about our AI solutions.</p>
+            </div>
+            
+            <div class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+                <!-- FAQ Item 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">How can AI automate my business?</span>
+                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                    </button>
+                    <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
+                            AI can automate repetitive tasks, handle initial customer support via intelligent chatbots, sort and analyze large datasets, and integrate with your CRM to streamline lead qualification and follow-ups.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">Do you use LLMs like ChatGPT?</span>
+                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                    </button>
+                    <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
+                            Yes, we utilize powerful Large Language Models (LLMs) including OpenAI's GPT models, Claude, and open-source alternatives like Llama. We fine-tune and integrate these models specifically for your business data using RAG (Retrieval-Augmented Generation).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">Can AI improve my SEO?</span>
+                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                    </button>
+                    <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
+                            Absolutely. We use AI for deep semantic research, programmatic SEO, and intent mapping. AI tools can analyze search engine results pages (SERPs) at scale to identify content gaps and optimization opportunities that humans might miss.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">Will AI replace my employees?</span>
+                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                    </button>
+                    <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
+                            We view AI as an augmentation tool, not a replacement. AI handles repetitive, low-level tasks, freeing up your human workforce to focus on high-level strategy, complex problem-solving, and building genuine customer relationships.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">How secure is the data processed by your AI?</span>
+                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                    </button>
+                    <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
+                            Data security is our top priority. We use enterprise-grade APIs where data is NOT used to train public models. We can also deploy open-source models entirely on your private infrastructure for total data sovereignty.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">What is RAG (Retrieval-Augmented Generation)?</span>
+                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                    </button>
+                    <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
+                            RAG is a technique where we connect an AI model to your private company data (like PDFs, databases, or wikis). Instead of guessing, the AI "reads" your specific documents before answering, drastically reducing hallucinations and providing accurate, company-specific answers.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA -->
     <section class="py-32 px-8 bg-secondary/5">
         <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
