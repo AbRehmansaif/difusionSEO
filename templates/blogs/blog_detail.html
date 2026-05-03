@@ -198,7 +198,9 @@
                 <div class="flex justify-center gap-6">
                     <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ post.title }}" target="_blank" rel="noopener noreferrer" class="text-on-surface-variant hover:text-primary transition-colors"><i class="fab fa-twitter text-xl"></i></a>
                     <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ post.title }}" target="_blank" rel="noopener noreferrer" class="text-on-surface-variant hover:text-primary transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="https://api.whatsapp.com/send?text={{ post.title }}%20{{ request.build_absolute_uri }}" target="_blank" rel="noopener noreferrer" class="text-on-surface-variant hover:text-primary transition-colors"><i class="fab fa-whatsapp text-xl"></i></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" rel="noopener noreferrer" class="text-on-surface-variant hover:text-primary transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                    <a href="https://www.instagram.com/difusionseo" target="_blank" rel="noopener noreferrer" class="text-on-surface-variant hover:text-primary transition-colors"><i class="fab fa-instagram text-xl"></i></a>
                 </div>
             </div>
         </aside>
