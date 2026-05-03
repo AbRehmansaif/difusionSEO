@@ -66,6 +66,7 @@
             </div>
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'about' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'about' %}">{% trans "About" %}</a>
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'contact' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'contact' %}">{% trans "Contact" %}</a>
+            <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if 'blogs' in request.path %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'blogs:blog_list' %}">{% trans "Blog" %}</a>
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">{% trans "LeadNexus" %}</a>
         </div>
         
@@ -128,6 +129,7 @@
         </div>
         <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'about' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'about' %}">{% trans "About" %}</a>
         <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'contact' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'contact' %}">{% trans "Contact" %}</a>
+        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if 'blogs' in request.path %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'blogs:blog_list' %}">{% trans "Blog" %}</a>
 
         <!-- Mobile Language Switcher -->
         <div class="w-full max-w-[280px] mt-4 mb-2">

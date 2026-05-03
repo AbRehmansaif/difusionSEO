@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Insights & SEO Strategy Blog | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Stay ahead with the latest in SEO engineering, AI automation, and full-stack development. Expert insights for global market dominance.">
+<meta property="og:title" content="Insights & SEO Strategy Blog | DifusionSEO">
+<meta property="og:type" content="blog">
+{% endblock %}
+
+{% block content %}
+<section class="pt-32 pb-20 px-6 md:px-8 max-w-7xl mx-auto relative overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+
+    <div class="text-center mb-20" data-aos="fade-up">
+        <span class="text-xs uppercase tracking-[0.4em] text-primary font-black block mb-4">Engineering Knowledge</span>
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-8">
+            The <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Growth Lab.</span>
+        </h1>
+        <p class="text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+            Technical blueprints, algorithmic breakdowns, and the future of AI-driven business intelligence.
+        </p>
+    </div>
+
+    <!-- Category Filter (Optional for future) -->
+    <div class="flex flex-wrap justify-center gap-4 mb-16" data-aos="fade-up" data-aos-delay="100">
+        <a href="{% url 'blogs:blog_list' %}" class="px-6 py-2 rounded-full glass-card border border-primary/30 text-white font-bold text-sm">All Insights</a>
+        {% for category in categories %}
+        <a href="#" class="px-6 py-2 rounded-full glass-card border border-outline-variant/20 text-on-surface-variant hover:text-primary hover:border-primary/50 transition-all font-bold text-sm">{{ category.name }}</a>
+        {% endfor %}
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for post in posts %}
+        <article class="glass-card rounded-[2.5rem] overflow-hidden group hover-lift flex flex-col h-full" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:1 }}00">
+            <div class="relative aspect-[16/10] overflow-hidden">
+                <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+                <div class="absolute top-4 left-4">
+                    <span class="px-4 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-[10px] font-black uppercase tracking-widest text-primary">
+                        {{ post.category.name }}
+                    </span>
+                </div>
+            </div>
+            
+            <div class="p-8 flex-grow flex flex-col">
+                <div class="flex items-center gap-3 mb-4 text-[10px] font-black uppercase tracking-widest text-on-surface-variant/60">
+                    <span>{{ post.created_at|date:"M d, Y" }}</span>
+                    <span class="w-1 h-1 bg-primary rounded-full"></span>
+                    <span>5 min read</span>
+                </div>
+                
+                <h2 class="text-2xl font-black mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+                    <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                </h2>
+                
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-8 line-clamp-3">
+                    {{ post.excerpt }}
+                </p>
+                
+                <div class="mt-auto">
+                    <a href="{{ post.get_absolute_url }}" class="flex items-center gap-2 text-primary font-black text-xs uppercase tracking-widest hover:gap-4 transition-all">
+                        Read Blueprint <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </article>
+        {% empty %}
+        <div class="col-span-full py-20 text-center">
+            <h3 class="text-2xl font-bold opacity-50">No blueprints published yet. Stay tuned.</h3>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if is_paginated %}
+    <div class="mt-20 flex justify-center gap-4" data-aos="fade-up">
+        {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}" class="w-12 h-12 glass-card rounded-full flex items-center justify-center border border-outline-variant/20 hover:border-primary/50 transition-all">
+            <span class="material-symbols-outlined">chevron_left</span>
+        </a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+            <span class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-black">{{ num }}</span>
+            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+            <a href="?page={{ num }}" class="w-12 h-12 glass-card rounded-full flex items-center justify-center border border-outline-variant/20 hover:border-primary/50 transition-all font-bold">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}" class="w-12 h-12 glass-card rounded-full flex items-center justify-center border border-outline-variant/20 hover:border-primary/50 transition-all">
+            <span class="material-symbols-outlined">chevron_right</span>
+        </a>
+        {% endif %}
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

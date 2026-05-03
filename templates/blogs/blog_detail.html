@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ post.meta_title|default:post.title }} | DifusionSEO{% endblock %}
+
+{% block meta %}
+<meta name="description" content="{{ post.meta_description|default:post.excerpt }}">
+<meta name="keywords" content="{{ post.primary_keyword }}">
+<meta property="og:title" content="{{ post.title }}">
+<meta property="og:description" content="{{ post.excerpt }}">
+<meta property="og:image" content="{{ post.featured_image.url }}">
+<meta property="og:type" content="article">
+<link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+<!-- Schema.org Article Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ post.title }}",
+  "image": ["{{ request.scheme }}://{{ request.get_host }}{{ post.featured_image.url }}"],
+  "datePublished": "{{ post.created_at|date:'c' }}",
+  "dateModified": "{{ post.updated_at|date:'c' }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ post.author.get_full_name|default:post.author.username }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DifusionSEO",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ request.scheme }}://{{ request.get_host }}{% static 'images/logo.png' %}"
+    }
+  },
+  "description": "{{ post.excerpt }}"
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<article class="pt-32 pb-32">
+    <!-- Hero Header -->
+    <header class="max-w-5xl mx-auto px-6 md:px-8 mb-16 text-center">
+        <div class="mb-8" data-aos="fade-up">
+            <span class="px-4 py-1 rounded-full bg-primary/10 border border-primary/30 text-[10px] font-black uppercase tracking-widest text-primary mb-6 inline-block">
+                {{ post.category.name }}
+            </span>
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] mb-8">
+                {{ post.title }}
+            </h1>
+            
+            <div class="flex items-center justify-center gap-6 text-on-surface-variant font-bold text-sm">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-secondary p-[1px]">
+                        <div class="w-full h-full rounded-full bg-surface flex items-center justify-center overflow-hidden">
+                            <span class="material-symbols-outlined text-sm">person</span>
+                        </div>
+                    </div>
+                    <span>{{ post.author.get_full_name|default:post.author.username }}</span>
+                </div>
+                <span class="w-1 h-1 bg-outline-variant/30 rounded-full"></span>
+                <time datetime="{{ post.created_at|date:'Y-m-d' }}">{{ post.created_at|date:"F d, Y" }}</time>
+                <span class="w-1 h-1 bg-outline-variant/30 rounded-full"></span>
+                <span>8 min read</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Image -->
+    <div class="max-w-6xl mx-auto px-6 mb-24" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative aspect-[21/9] rounded-[3rem] overflow-hidden shadow-2xl">
+            <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-40"></div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <!-- Main Content -->
+        <div class="lg:col-span-8 lg:col-start-1" data-aos="fade-up">
+            <div class="prose prose-invert prose-lg max-w-none 
+                        prose-headings:font-black prose-headings:tracking-tighter
+                        prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+                        prose-strong:text-white prose-img:rounded-[2rem]
+                        text-on-surface-variant leading-relaxed">
+                {{ post.content|safe }}
+            </div>
+
+            <!-- Tags/Keyword focus -->
+            <div class="mt-16 pt-8 border-t border-outline-variant/10 flex flex-wrap gap-4">
+                <span class="text-xs uppercase tracking-widest font-black text-on-surface-variant mr-4 py-2">Primary Target:</span>
+                <span class="px-4 py-2 rounded-full glass-card border border-outline-variant/20 text-xs font-bold text-primary">{{ post.primary_keyword }}</span>
+            </div>
+        </div>
+
+        <!-- Sidebar / Table of Contents -->
+        <aside class="lg:col-span-4 hidden lg:block sticky top-32 h-fit space-y-12">
+            <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/20">
+                <h4 class="text-xs uppercase tracking-[0.3em] font-black text-primary mb-6">Inside this Blueprint</h4>
+                <nav class="space-y-4 text-sm font-bold text-on-surface-variant">
+                    <!-- Simple TOC logic - in a real app you'd parse headings from content -->
+                    <a href="#" class="block hover:text-white transition-colors">01. Strategy Architecture</a>
+                    <a href="#" class="block hover:text-white transition-colors">02. Algorithmic Impact</a>
+                    <a href="#" class="block hover:text-white transition-colors">03. Implementation Data</a>
+                    <a href="#" class="block hover:text-white transition-colors">04. Growth Projections</a>
+                </nav>
+            </div>
+
+            <!-- Share -->
+            <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/20 text-center">
+                <h4 class="text-xs uppercase tracking-[0.3em] font-black text-white mb-6">Distribute Intel</h4>
+                <div class="flex justify-center gap-6">
+                    <a href="#" class="text-on-surface-variant hover:text-primary transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-on-surface-variant hover:text-primary transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="text-on-surface-variant hover:text-primary transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Related Posts -->
+    {% if related_posts %}
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mt-32">
+        <div class="flex items-end justify-between mb-12">
+            <div>
+                <span class="text-xs uppercase tracking-[0.4em] text-primary font-black block mb-4">Recursive Learning</span>
+                <h3 class="text-4xl font-black tracking-tighter">Related <span class="text-secondary">Insights.</span></h3>
+            </div>
+            <a href="{% url 'blogs:blog_list' %}" class="text-xs font-black uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">All Blueprints</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for r_post in related_posts %}
+            <article class="glass-card rounded-[2rem] overflow-hidden group hover-lift flex flex-col">
+                <div class="aspect-video overflow-hidden">
+                    <img src="{{ r_post.featured_image.url }}" alt="{{ r_post.title }}" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow">
+                    <h5 class="text-lg font-black mb-3 line-clamp-2 leading-tight">
+                        <a href="{{ r_post.get_absolute_url }}">{{ r_post.title }}</a>
+                    </h5>
+                    <p class="text-on-surface-variant text-xs leading-relaxed line-clamp-2">
+                        {{ r_post.excerpt }}
+                    </p>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+</article>
+{% endblock %}
