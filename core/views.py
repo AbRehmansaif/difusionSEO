@@ -74,3 +74,8 @@ def location_page(request, country_slug):
         return render(request, f'locations/{country_slug.lower()}.html')
     from django.http import Http404
     raise Http404("Location not found")
+
+def sitemap_view(request):
+    from blogs.models import BlogPost
+    posts = BlogPost.objects.filter(status='published')
+    return render(request, 'sitemap.xml', {'posts': posts}, content_type="application/xml")

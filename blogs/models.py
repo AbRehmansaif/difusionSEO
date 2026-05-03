@@ -31,13 +31,16 @@ class BlogPost(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, related_name='posts')
     
     featured_image = models.ImageField(upload_to='blog_images/')
-    content = models.TextField()
+    alt_text = models.CharField(max_length=200, blank=True, help_text="Crucial for SEO. Describe the image for search engines.")
+    image_caption = models.CharField(max_length=250, blank=True, help_text="Caption displayed below the image.")
+    reading_time = models.PositiveIntegerField(default=5, help_text="Reading time in minutes.")
+    content = models.TextField(help_text="Use HTML tags for styling: <h2> for subheadings, <ul><li> for points, <strong> for bold.")
     excerpt = models.TextField(max_length=500, help_text="Brief summary for the blog list page.")
     
     # SEO Fields
     meta_title = models.CharField(max_length=70, blank=True, help_text="SEO title (max 70 chars)")
     meta_description = models.TextField(max_length=160, blank=True, help_text="SEO description (max 160 chars)")
-    primary_keyword = models.CharField(max_length=100, blank=True)
+    target_keywords = models.CharField(max_length=250, blank=True, help_text="Comma-separated keywords (e.g. SEO, AI, Growth)")
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

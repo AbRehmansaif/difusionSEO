@@ -16,10 +16,10 @@ class BlogPostAdmin(admin.ModelAdmin):
     
     fieldsets = (
         ('Content', {
-            'fields': ('title', 'slug', 'author', 'category', 'featured_image', 'content', 'excerpt', 'status')
+            'fields': ('title', 'slug', 'author', 'category', 'featured_image', 'alt_text', 'image_caption', 'reading_time', 'content', 'excerpt', 'status')
         }),
         ('SEO Optimization', {
-            'fields': ('meta_title', 'meta_description', 'primary_keyword'),
+            'fields': ('meta_title', 'meta_description', 'target_keywords'),
             'description': 'Fields to improve search engine rankings.'
         }),
     )

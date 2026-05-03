@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from django.conf.urls.i18n import i18n_patterns
+from core import views as core_views
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
-    path('sitemap.xml', TemplateView.as_view(template_name="sitemap.xml", content_type="application/xml")),
+    path('sitemap.xml', core_views.sitemap_view, name='sitemap'),
     path('blogs/', include('blogs.urls', namespace='blogs')),
 ]
 
