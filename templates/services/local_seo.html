@@ -102,16 +102,55 @@
                 </div>
             </div>
             <div class="relative hidden lg:block" data-aos="zoom-in">
-                <div class="glass-card rounded-[3rem] p-8 border border-secondary/20 aspect-square flex items-center justify-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-primary/10 animate-pulse"></div>
-                    <span class="material-symbols-outlined text-9xl text-secondary animate-bounce">location_on</span>
+                <div class="glass-card rounded-[3rem] p-8 border border-secondary/20 aspect-square flex flex-col items-center justify-center relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/5"></div>
                     
-                    <!-- Decorative Map Elements -->
-                    <div class="absolute inset-0 opacity-20 pointer-events-none">
-                        <svg class="w-full h-full" viewBox="0 0 100 100">
-                            <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="0.1" class="text-secondary" />
-                            <circle cx="50" cy="50" r="10" fill="currentColor" class="text-secondary animate-ping" />
-                        </svg>
+                    <!-- Before State -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-100 group-hover:opacity-0 group-hover:scale-95">
+                        <div class="text-error mb-4 font-mono text-sm uppercase tracking-widest bg-error/10 px-4 py-1 rounded-full">Before Optimization</div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="material-symbols-outlined text-6xl text-on-surface-variant opacity-50">wrong_location</span>
+                            <div>
+                                <div class="text-3xl font-black opacity-50">0</div>
+                                <div class="text-sm opacity-50">Map Pack Clicks</div>
+                            </div>
+                        </div>
+                        <div class="w-full max-w-[200px] opacity-20 filter grayscale blur-[2px]">
+                            <!-- Mock Map -->
+                            <div class="h-20 rounded-xl bg-surface-container flex items-center justify-center border border-on-surface/10">
+                                <span class="material-symbols-outlined text-4xl">map</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- After State -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-100">
+                        <div class="text-secondary mb-4 font-mono text-sm uppercase tracking-widest bg-secondary/10 px-4 py-1 rounded-full shadow-[0_0_15px_rgba(157,255,203,0.3)]">Local Monopoly</div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="material-symbols-outlined text-6xl text-secondary drop-shadow-[0_0_15px_rgba(157,255,203,0.5)] animate-bounce">location_on</span>
+                            <div>
+                                <div class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">+450%</div>
+                                <div class="text-sm text-secondary">Inbound Calls</div>
+                            </div>
+                        </div>
+                        <div class="w-full max-w-[200px]">
+                            <!-- Mock Map -->
+                            <div class="h-20 rounded-xl bg-surface-container border border-secondary/40 flex items-center justify-center relative overflow-hidden">
+                                <div class="absolute inset-0 bg-secondary/10 animate-pulse"></div>
+                                <span class="material-symbols-outlined text-4xl text-secondary">map</span>
+                                <div class="absolute top-2 right-2 flex gap-1">
+                                    <span class="material-symbols-outlined text-[10px] text-yellow-400">star</span>
+                                    <span class="material-symbols-outlined text-[10px] text-yellow-400">star</span>
+                                    <span class="material-symbols-outlined text-[10px] text-yellow-400">star</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-xs font-mono text-secondary/70 animate-pulse">> TOP_3_PLACEMENT</p>
+                    </div>
+
+                    <!-- Interactive Hint -->
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-widest opacity-40 group-hover:opacity-0 transition-opacity flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[14px]">ads_click</span> Hover to Rank
                     </div>
                 </div>
             </div>

@@ -102,13 +102,44 @@
                 </div>
             </div>
             <div class="relative hidden lg:block" data-aos="zoom-in">
-                <div class="glass-card rounded-[3rem] p-8 border border-primary/20 aspect-square flex items-center justify-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 animate-pulse"></div>
-                    <span class="material-symbols-outlined text-9xl text-primary animate-bounce">query_stats</span>
+                <div class="glass-card rounded-[3rem] p-8 border border-primary/20 aspect-square flex flex-col items-center justify-center relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5"></div>
                     
-                    <!-- Decorative Orbs -->
-                    <div class="seo-pulse absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
-                    <div class="seo-pulse absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl"></div>
+                    <!-- Before State -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-100 group-hover:opacity-0 group-hover:-translate-y-10">
+                        <div class="text-error mb-4 font-mono text-sm uppercase tracking-widest bg-error/10 px-4 py-1 rounded-full">Before DifusionSEO</div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="material-symbols-outlined text-6xl text-on-surface-variant opacity-50">trending_down</span>
+                            <div>
+                                <div class="text-3xl font-black opacity-50">Page 4</div>
+                                <div class="text-sm opacity-50">Avg. Position</div>
+                            </div>
+                        </div>
+                        <div class="w-full max-w-[200px] h-2 bg-surface-container rounded-full overflow-hidden">
+                            <div class="h-full bg-error w-[15%]"></div>
+                        </div>
+                    </div>
+
+                    <!-- After State -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0">
+                        <div class="text-primary mb-4 font-mono text-sm uppercase tracking-widest bg-primary/10 px-4 py-1 rounded-full shadow-[0_0_15px_rgba(162,231,255,0.3)]">After 90 Days</div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="material-symbols-outlined text-6xl text-primary drop-shadow-[0_0_15px_rgba(162,231,255,0.5)]">trending_up</span>
+                            <div>
+                                <div class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">#1</div>
+                                <div class="text-sm text-primary">Avg. Position</div>
+                            </div>
+                        </div>
+                        <div class="w-full max-w-[200px] h-2 bg-surface-container rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-primary to-secondary w-[95%] shadow-[0_0_10px_rgba(162,231,255,0.5)]"></div>
+                        </div>
+                        <p class="mt-4 text-xs font-mono text-primary/70 animate-pulse">> DOMINATING_SERP</p>
+                    </div>
+
+                    <!-- Interactive Hint -->
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-widest opacity-40 group-hover:opacity-0 transition-opacity flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[14px]">ads_click</span> Hover to Deploy
+                    </div>
                 </div>
             </div>
         </div>

@@ -102,12 +102,44 @@
                 </div>
             </div>
             <div class="relative hidden lg:block" data-aos="zoom-in">
-                <div class="glass-card rounded-[3rem] p-12 border border-error/20 aspect-square flex items-center justify-center relative overflow-hidden bg-black/40">
+                <div class="glass-card rounded-[3rem] p-8 border border-error/20 aspect-square flex flex-col items-center justify-center relative overflow-hidden group bg-black/40">
                     <div class="absolute inset-0 opacity-[0.05] grid-pattern"></div>
-                    <span class="material-symbols-outlined text-[120px] text-error holographic-glow">shield_lock</span>
                     
-                    <!-- Decorative scanning line -->
-                    <div class="absolute inset-x-0 h-px bg-error/40 top-0 animate-[scan_4s_linear_infinite] z-10"></div>
+                    <!-- Before State -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-100 group-hover:opacity-0 group-hover:scale-110">
+                        <div class="text-error mb-4 font-mono text-sm uppercase tracking-widest bg-error/10 px-4 py-1 rounded-full border border-error/30 animate-pulse">Critical Vulnerability</div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="material-symbols-outlined text-6xl text-error drop-shadow-[0_0_10px_rgba(255,180,171,0.5)]">warning</span>
+                            <div>
+                                <div class="text-3xl font-black text-error">14</div>
+                                <div class="text-sm text-error/80">Open Exploits</div>
+                            </div>
+                        </div>
+                        <div class="w-full max-w-[200px] h-2 bg-surface-container rounded-full overflow-hidden">
+                            <div class="h-full bg-error w-[90%] animate-pulse"></div>
+                        </div>
+                        <p class="mt-4 text-xs font-mono text-error/70 animate-pulse">! DATA_BREACH_IMMINENT</p>
+                    </div>
+
+                    <!-- After State -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 bg-black/80 backdrop-blur-sm">
+                        <div class="text-primary mb-4 font-mono text-sm uppercase tracking-widest bg-primary/10 px-4 py-1 rounded-full shadow-[0_0_15px_rgba(162,231,255,0.3)]">Zero-Trust Secured</div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="material-symbols-outlined text-6xl text-primary drop-shadow-[0_0_15px_rgba(162,231,255,0.5)]">shield_lock</span>
+                            <div>
+                                <div class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">0</div>
+                                <div class="text-sm text-primary">Active Threats</div>
+                            </div>
+                        </div>
+                        <!-- Decorative scanning line -->
+                        <div class="absolute inset-x-0 h-px bg-primary/40 top-0 animate-[scan_4s_linear_infinite] z-10"></div>
+                        <p class="mt-4 text-xs font-mono text-primary/70 animate-pulse">> ASSETS_FORTIFIED</p>
+                    </div>
+
+                    <!-- Interactive Hint -->
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-widest text-error opacity-60 group-hover:opacity-0 transition-opacity flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[14px]">ads_click</span> Hover to Harden
+                    </div>
                 </div>
             </div>
         </div>
