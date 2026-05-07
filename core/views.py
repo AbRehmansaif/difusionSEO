@@ -78,4 +78,8 @@ def location_page(request, country_slug):
 def sitemap_view(request):
     from blogs.models import BlogPost
     posts = BlogPost.objects.filter(status='published')
-    return render(request, 'sitemap.xml', {'posts': posts}, content_type="application/xml")
+    valid_countries = ['italy', 'spain', 'germany', 'netherlands', 'uk', 'usa', 'canada', 'australia', 'new-zealand', 'france', 'switzerland']
+    return render(request, 'sitemap.xml', {
+        'posts': posts,
+        'countries': valid_countries
+    }, content_type="application/xml")
