@@ -91,7 +91,7 @@
     <!-- Blog Posts (Dynamic) -->
     {% for post in posts %}
     <url>
-        <loc>{{ request.scheme }}://{{ request.get_host }}{{ post.get_absolute_url }}</loc>
+        <loc>https://www.difusionseo.com{{ post.get_absolute_url }}</loc>
         <lastmod>{{ post.updated_at|date:"Y-m-d" }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
