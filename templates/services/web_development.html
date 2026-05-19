@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Enterprise Full Stack Web Development Services | DifusionSEO{% endblock %}
+{% block title %}Custom Web Development Services for Scalable Business Growth | DifusionSEO{% endblock %}
 
 {% block meta %}
-<meta name="description" content="Build scalable, high-performance web applications with our Full Stack Engineering team. Specializing in Python, Django, Node.js, and modern React architectures.">
+<meta name="description" content="Build a responsive website with SEO-friendly architecture, fast loading speed, secure development, and conversion focused design. Our custom web development services are designed to support business goals.">
 <!-- Open Graph / Social -->
-<meta property="og:title" content="Enterprise Full Stack Web Development Services | DifusionSEO">
-<meta property="og:description" content="Build scalable, high-performance web applications with our Full Stack Engineering team. Specializing in Python, Django, and Node.js.">
+<meta property="og:title" content="Custom Web Development Services for Scalable Business Growth | DifusionSEO">
+<meta property="og:description" content="Build a responsive website with SEO-friendly architecture, fast loading speed, secure development, and conversion focused design. Our custom web development services support business goals.">
 <meta property="og:type" content="website">
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
@@ -15,37 +15,44 @@
 
 {% block extra_head %}
 <link rel="stylesheet" href="{% static 'css/services/web_dev.css' %}">
-<!-- Advanced Web Development Schema Markup -->
+<!-- Custom Web Development Schema Markup -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Service",
-      "name": "Full Stack Web Development",
-      "serviceType": "Software Development",
+      "name": "Custom Web Development Services",
+      "serviceType": "Web Development",
       "provider": {
         "@type": "Organization",
         "name": "DifusionSEO"
       },
-      "description": "Custom, scalable, high-performance web applications and SaaS platforms built using modern cloud architectures, Python, Node.js, and React.",
+      "description": "Custom web development services designed to support business goals, improve online visibility, and create a strong digital presence through tailored solutions.",
       "areaServed": "Worldwide",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Engineering Services",
+        "name": "Web Development Offerings",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Custom SaaS Development"
+              "name": "Custom Web Development"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "API & Backend Engineering"
+              "name": "Ecommerce Development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web App Development"
             }
           }
         ]
@@ -80,24 +87,37 @@
 
 {% block content %}
 <main class="pt-24 overflow-hidden">
-    <!-- 1. Hero (Hook + CTA) -->
+    <!-- 1. Hero Section -->
     <section class="relative min-h-[70vh] py-16 md:py-32 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
         <div class="absolute top-1/4 right-0 w-[600px] h-[600px] bg-tertiary/10 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center relative z-10">
             <div data-aos="fade-right">
-                <span class="label-md uppercase tracking-[0.3em] text-tertiary font-black mb-6 md:mb-8 block italic">Bespoke Engineering</span>
-                <h1 class="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[1.1] mb-8">
-                    Full Stack <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-tertiary via-primary to-secondary">Web Engineering</span>
+                <span class="label-md uppercase tracking-[0.3em] text-tertiary font-black mb-6 md:mb-8 block italic">Tailored Solutions</span>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-[1.1] mb-8">
+                    Custom Web Development Services for <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-tertiary via-primary to-secondary">Scalable Business Growth</span>
                 </h1>
-                <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed font-light max-w-xl opacity-80">
-                    Your web application is either your best salesperson or your biggest liability. We architect high-performance, enterprise-grade platforms using React, Node.js, and Python — engineered to load in under 1.5 seconds, handle millions of concurrent users, and convert visitors into high-value customers. We don't build websites. We build revenue infrastructure.
+                <p class="text-lg text-on-surface-variant leading-relaxed font-light max-w-xl opacity-80 mb-6">
+                    Build a responsive website with SEO friendly architecture, fast loading speed, secure development, and conversion focused design. Our custom web development services are designed to support business goals, improve online visibility, and create a strong digital presence through tailored solutions.
                 </p>
-                <div class="mt-10 flex flex-wrap gap-4">
-                    <a href="{% url 'contact' %}" class="bg-tertiary text-on-tertiary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-lg">Start Building</a>
+                <div class="flex flex-wrap gap-4 text-xs font-mono opacity-80 mb-8 text-tertiary">
+                    <span>• Custom Web Development</span>
+                    <span>• WordPress Development</span>
+                    <span>• Ecommerce Development</span>
+                    <span>• Web App Development</span>
+                    <span>• ERP Development</span>
+                    <span>• CMS Development</span>
+                    <span>• Website Redesign</span>
+                    <span>• API Integration Services</span>
+                    <span>• Website Migration</span>
+                    <span>• Shopify Store Development</span>
+                    <span>• AI Development Services</span>
+                </div>
+                <div class="mt-4 flex flex-wrap gap-4">
+                    <a href="{% url 'contact' %}" class="bg-tertiary text-on-tertiary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-lg" aria-label="Get a Custom Website Built for Performance, Growth & Conversions">Get a Custom Website Built</a>
                     <div class="flex items-center gap-4 bg-surface-container-high px-6 py-3 rounded-full border border-outline-variant/20">
                         <span class="material-symbols-outlined text-tertiary">code</span>
-                        <span class="text-xs font-mono font-bold tracking-widest">Node.js / Python / React</span>
+                        <span class="text-xs font-mono font-bold tracking-widest">Built for Performance</span>
                     </div>
                 </div>
             </div>
@@ -106,277 +126,570 @@
                     <div class="absolute inset-0 bg-gradient-to-br from-tertiary/5 to-secondary/5"></div>
                     <div class="absolute inset-0 bg-black/40"></div>
                     
-                    <!-- Before State -->
-                    <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-100 group-hover:opacity-0 group-hover:-translate-x-10">
-                        <div class="text-error mb-4 font-mono text-sm uppercase tracking-widest bg-error/10 px-4 py-1 rounded-full border border-error/30">Legacy Codebase</div>
-                        <div class="flex items-center gap-4 mb-6">
-                            <span class="material-symbols-outlined text-6xl text-error opacity-70">hourglass_bottom</span>
-                            <div>
-                                <div class="text-3xl font-black text-error opacity-70">4.8s</div>
-                                <div class="text-sm text-error/80">Page Load Time</div>
-                            </div>
+                    <!-- Code window visualization -->
+                    <div class="w-full h-full rounded-2xl bg-surface-container-lowest/80 border border-outline-variant/20 p-6 font-mono text-xs text-left relative overflow-hidden">
+                        <div class="flex items-center gap-2 mb-4 border-b border-outline-variant/20 pb-3">
+                            <span class="w-3 h-3 rounded-full bg-error/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-warning/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-success/80"></span>
+                            <span class="text-[10px] text-on-surface-variant opacity-60 ml-2">web_architecture.py</span>
                         </div>
-                        <div class="flex flex-col gap-2 w-full max-w-[200px]">
-                            <div class="h-6 bg-error/10 border border-error/20 rounded-md flex items-center px-3 opacity-70">
-                                <span class="material-symbols-outlined text-[12px] text-error mr-2">warning</span> <span class="text-xs text-error">High Bounce Rate</span>
-                            </div>
-                            <div class="h-6 bg-error/10 border border-error/20 rounded-md flex items-center px-3 opacity-70">
-                                <span class="material-symbols-outlined text-[12px] text-error mr-2">warning</span> <span class="text-xs text-error">Poor UX Metrics</span>
-                            </div>
+                        <p class="text-tertiary">class WebDevelopmentEngine:</p>
+                        <p class="text-on-surface-variant pl-4">def __init__(self, brand_goals):</p>
+                        <p class="text-primary pl-8">self.seo_friendly = True</p>
+                        <p class="text-primary pl-8">self.fast_loading = True</p>
+                        <p class="text-primary pl-8">self.secure_development = True</p>
+                        <p class="text-primary pl-8">self.conversion_focused = True</p>
+                        <p class="text-on-surface-variant pl-4 mt-2">def deploy(self):</p>
+                        <p class="text-secondary pl-8">return " SCALABLE_GROWTH_DEPLOYED"</p>
+                        
+                        <div class="absolute bottom-4 right-4 bg-tertiary/10 text-tertiary border border-tertiary/20 px-3 py-1 rounded font-bold text-[10px] animate-pulse">
+                            ACTIVE_ENGINE
                         </div>
-                    </div>
-
-                    <!-- After State -->
-                    <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-0 translate-x-10 group-hover:opacity-100 group-hover:translate-x-0">
-                        <div class="text-tertiary mb-4 font-mono text-sm uppercase tracking-widest bg-tertiary/10 px-4 py-1 rounded-full shadow-[0_0_15px_rgba(202,166,255,0.3)] border border-tertiary/30">Modern Architecture</div>
-                        <div class="flex items-center gap-4 mb-6">
-                            <span class="material-symbols-outlined text-6xl text-tertiary drop-shadow-[0_0_15px_rgba(202,166,255,0.5)]">rocket_launch</span>
-                            <div>
-                                <div class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-tertiary to-secondary">0.8s</div>
-                                <div class="text-sm text-tertiary">Page Load Time</div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-2 w-full max-w-[200px]">
-                            <div class="h-6 bg-tertiary/10 border border-tertiary/20 rounded-md flex items-center px-3">
-                                <span class="material-symbols-outlined text-[12px] text-tertiary mr-2">check_circle</span> <span class="text-xs text-tertiary">Core Web Vitals Pass</span>
-                            </div>
-                            <div class="h-6 bg-tertiary/10 border border-tertiary/20 rounded-md flex items-center px-3">
-                                <span class="material-symbols-outlined text-[12px] text-tertiary mr-2">check_circle</span> <span class="text-xs text-tertiary">+35% Conversion</span>
-                            </div>
-                        </div>
-                        <p class="mt-4 text-xs font-mono text-tertiary/70 animate-pulse">> PERFORMANCE_OPTIMIZED</p>
-                    </div>
-
-                    <!-- Decorative Orbs -->
-                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-tertiary/20 rounded-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                    
-                    <!-- Interactive Hint -->
-                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-widest text-tertiary opacity-40 group-hover:opacity-0 transition-opacity flex items-center gap-2 w-max">
-                        <span class="material-symbols-outlined text-[14px]">ads_click</span> Hover to Refactor
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. Problem (Pain) -->
-    <section class="py-32 px-8 bg-surface-container-low">
-        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <span class="text-tertiary font-black uppercase tracking-widest text-sm mb-4 block">The Problem</span>
-            <h2 class="text-4xl md:text-5xl font-black mb-8">Slow, Buggy Software is <span class="text-error">Costing You Clients</span>.</h2>
-            <p class="text-xl text-on-surface-variant opacity-80 leading-relaxed">
-                Off-the-shelf templates and bloated plugins might work for a startup, but they break at enterprise scale. When your application takes 5 seconds to load, drops database connections, or looks outdated on mobile, users instantly lose trust and bounce to your competitors.
-            </p>
-        </div>
-    </section>
-
-    <!-- 3. Solution -->
-    <section class="py-32 px-8">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <!-- 2. AI Overview -->
+    <section class="py-32 px-8 bg-surface-container-low border-y border-outline-variant/10">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div data-aos="fade-right">
-                <span class="text-tertiary font-black uppercase tracking-widest text-sm mb-4 block">The Solution</span>
-                <h2 class="text-4xl font-black mb-6">High-Performance <br><span class="text-tertiary">Custom Architecture</span></h2>
-                <p class="text-lg text-on-surface-variant opacity-80 leading-relaxed mb-6">
-                    We write clean, modular, and infinitely scalable code. By utilizing modern frameworks like React, Node.js, and Python, we build custom applications that load instantly, handle millions of requests, and provide a frictionless, premium user experience.
-                </p>
+                <span class="text-tertiary font-black uppercase tracking-widest text-sm mb-4 block">Core Capability</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Designed Around User Experience & Performance Optimization</h2>
                 <p class="text-lg text-on-surface-variant opacity-80 leading-relaxed">
-                    Stop fighting your tech stack. Start scaling it.
+                    Custom web development helps businesses create scalable solutions built around client requirements, user experience, and performance optimization. A professional web development company focuses on responsive website design, SEO-friendly structure, mobile optimization, secure website deployment, and conversion optimization to support business growth and search engine visibility.
                 </p>
             </div>
             <div class="glass-card p-8 rounded-3xl border border-tertiary/20 bg-tertiary/5" data-aos="fade-left">
-                <div class="flex items-center justify-between border-b border-tertiary/10 pb-4 mb-4">
-                    <span class="font-bold text-tertiary">Load Time Goal</span>
-                    <span class="font-mono text-sm">< 1.5 Seconds</span>
-                </div>
-                <div class="flex items-center justify-between border-b border-tertiary/10 pb-4 mb-4">
-                    <span class="font-bold text-white">Uptime Reliability</span>
-                    <span class="font-mono text-sm text-white">99.99%</span>
-                </div>
-                <div class="flex items-center justify-between pt-2">
-                    <span class="font-bold text-on-surface">Conversion Impact</span>
-                    <span class="font-mono text-sm text-tertiary">+20% per second saved</span>
+                <h3 class="text-xl font-bold mb-6 text-white">Our web development services cover:</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Custom Website Development</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Ecommerce Website Design</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Shopify Development</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>WordPress Web Design</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Full Stack Development</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>API Integration</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>CMS Development</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Website Redesign Services</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Website Maintenance</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Technical SEO</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Secure Server Deployment</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Cross Browser Testing</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Stack Cards (Services) -->
+    <!-- 3. Featured Products Section (Showcasing the requested items) -->
     <section class="py-32 px-8 bg-surface-container-lowest">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Backend -->
-                <div class="glass-card p-10 rounded-[2.5rem] border-t-4 border-tertiary/40 hover-lift group" data-aos="fade-up" data-aos-delay="100">
-                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">database</span>
-                    <h3 class="text-2xl font-black mb-4">Backend & Cloud</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-80 mb-8">Node.js, Python, and Django architectures built for massive scale and reliability.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-tertiary rounded-full"></span> REST & GraphQL APIs</li>
-                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-tertiary rounded-full"></span> Serverless Logic</li>
-                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-tertiary rounded-full"></span> Security First Design</li>
-                    </ul>
+            <div class="text-center mb-24" data-aos="fade-up">
+                <span class="text-tertiary font-black uppercase tracking-widest text-sm mb-4 block">Product Showcase</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Our Featured <span class="text-tertiary">Live Solutions</span></h2>
+                <p class="text-lg text-on-surface-variant opacity-80 max-w-2xl mx-auto">
+                    Explore web platforms, applications, and custom enterprise tools designed and built by our development team.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 1. Twil Tex -->
+                <div class="p-8 glass-card rounded-[2.5rem] border border-outline-variant/20 hover:border-tertiary/50 hover-lift flex flex-col justify-between transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-xs uppercase font-mono tracking-widest text-tertiary bg-tertiary/10 px-3 py-1 rounded-full border border-tertiary/20">Corporate & Fabric Portal</span>
+                            <span class="material-symbols-outlined text-tertiary">language</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-4">Twil Tex</h3>
+                        <p class="text-on-surface-variant text-sm opacity-80 mb-6 leading-relaxed">
+                            A high-performance custom business interface developed for Twil Tex. Engineered with SEO-friendly architecture, fast-loading speed parameters, and mobile responsive layouts for corporate clients.
+                        </p>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between border-t border-outline-variant/10 pt-6">
+                        <a href="https://twiltex.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-tertiary font-bold hover:underline">
+                            Visit Live Site
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                        <span class="text-[10px] font-mono text-on-surface-variant opacity-50">twiltex.com</span>
+                    </div>
                 </div>
-                <!-- Frontend -->
-                <div class="glass-card p-10 rounded-[2.5rem] border-t-4 border-primary/40 hover-lift group" data-aos="fade-up" data-aos-delay="200">
-                    <span class="material-symbols-outlined text-4xl text-primary mb-6">devices</span>
-                    <h3 class="text-2xl font-black mb-4">Interactive UI/UX</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-80 mb-8">Next.js and React applications optimized for search engines and user experience.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-primary rounded-full"></span> Core Web Vitals Focus</li>
-                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-primary rounded-full"></span> Micro-Interactions</li>
-                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-primary rounded-full"></span> Responsive Design</li>
-                    </ul>
+
+                <!-- 2. LeadNexus -->
+                <div class="p-8 glass-card rounded-[2.5rem] border border-outline-variant/20 hover:border-primary/50 hover-lift flex flex-col justify-between transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-xs uppercase font-mono tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">SaaS Application</span>
+                            <span class="material-symbols-outlined text-primary">hub</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-4">LeadNexus</h3>
+                        <p class="text-on-surface-variant text-sm opacity-80 mb-6 leading-relaxed">
+                            An advanced lead aggregation and outreach software system. Built with secure authentication, multi-channel API integrations, and robust real-time analytics dashboard metrics.
+                        </p>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between border-t border-outline-variant/10 pt-6">
+                        <a href="https://getleadnexus.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-primary font-bold hover:underline">
+                            Explore Software
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                        <span class="text-[10px] font-mono text-on-surface-variant opacity-50">getleadnexus.com</span>
+                    </div>
                 </div>
-                <!-- Custom -->
-                <div class="glass-card p-10 rounded-[2.5rem] border-t-4 border-secondary/40 hover-lift group" data-aos="fade-up" data-aos-delay="300">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-6">token</span>
-                    <h3 class="text-2xl font-black mb-4">Custom SaaS</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-80 mb-8">End-to-end software development tailored to your specific business requirements.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-secondary rounded-full"></span> Workflow Automation</li>
-                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-secondary rounded-full"></span> CRM Integrations</li>
-                        <li class="flex items-center gap-2 text-xs font-bold opacity-60"><span class="w-1 h-1 bg-secondary rounded-full"></span> Legacy Modernization</li>
-                    </ul>
+
+                <!-- 3. ERP System for Stores -->
+                <div class="p-8 glass-card rounded-[2.5rem] border border-outline-variant/20 hover:border-secondary/50 hover-lift flex flex-col justify-between transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-xs uppercase font-mono tracking-widest text-secondary bg-secondary/10 px-3 py-1 rounded-full border border-secondary/20">Enterprise Software</span>
+                            <span class="material-symbols-outlined text-secondary">database</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-4">ERP System for Stores</h3>
+                        <p class="text-on-surface-variant text-sm opacity-80 mb-6 leading-relaxed">
+                            A tailor-made ERP system developed for retail and multi-store management. Features synchronized inventory tracking, database management, accounting integration, and store reporting logs.
+                        </p>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between border-t border-outline-variant/10 pt-6">
+                        <span class="inline-flex items-center gap-2 text-xs font-bold text-secondary">
+                            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span> Custom ERP Deployment
+                        </span>
+                        <span class="text-[10px] font-mono text-on-surface-variant opacity-50">Bespoke System</span>
+                    </div>
+                </div>
+
+                <!-- 4. Hotel Management System -->
+                <div class="p-8 glass-card rounded-[2.5rem] border border-outline-variant/20 hover:border-tertiary/50 hover-lift flex flex-col justify-between transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-xs uppercase font-mono tracking-widest text-tertiary bg-tertiary/10 px-3 py-1 rounded-full border border-tertiary/20">Hospitality Platform</span>
+                            <span class="material-symbols-outlined text-tertiary">hotel</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-4">Hotel Management</h3>
+                        <p class="text-on-surface-variant text-sm opacity-80 mb-6 leading-relaxed">
+                            A bespoke booking and operations suite. Coordinates room assignments, customer check-ins/check-outs, online billing integrations, and internal housekeeping schedules.
+                        </p>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between border-t border-outline-variant/10 pt-6">
+                        <span class="inline-flex items-center gap-2 text-xs font-bold text-tertiary">
+                            <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span> Custom Booking engine
+                        </span>
+                        <span class="text-[10px] font-mono text-on-surface-variant opacity-50">Bespoke CRM</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. How It Works -->
+    <!-- 4. Services Grid (Detailed Services Overview) -->
     <section class="py-32 px-8 bg-surface-container-low border-y border-outline-variant/10">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <h2 class="text-4xl font-black mb-4">The Engineering <span class="text-tertiary">Lifecycle</span></h2>
-                <p class="text-on-surface-variant opacity-80 max-w-2xl mx-auto">From concept to scalable deployment.</p>
+            <div class="text-center mb-24" data-aos="fade-up">
+                <span class="text-tertiary font-black uppercase tracking-widest text-sm mb-4 block">Web Development Services</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Scalable Solutions For Modern Businesses</h2>
+                <p class="text-lg text-on-surface-variant opacity-80 max-w-2xl mx-auto">Professional web development services focused on creating responsive websites with scalable solutions, user-friendly structure, and fast loading speed.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Step 1 -->
-                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-tertiary" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-6xl font-black text-tertiary/20 absolute -top-6 right-4">01</div>
-                    <h3 class="text-xl font-bold mb-4 mt-4">Architecture Design</h3>
-                    <p class="text-sm text-on-surface-variant opacity-80">We map out the database schema, API endpoints, and cloud infrastructure needed to support your scale.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. Web Development Services -->
+                <div class="p-8 glass-card rounded-[2.5rem] border border-outline-variant/20 hover:border-tertiary/50 hover-lift transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">devices</span>
+                    <h3 class="text-xl font-bold mb-4">Development Frameworks</h3>
+                    <p class="text-on-surface-variant text-sm opacity-70 mb-6">Our standard full stack and responsive solutions built to support brand visibility.</p>
+                    <ul class="space-y-2 text-xs text-on-surface-variant opacity-90">
+                        <li>• Website Design and Development</li>
+                        <li>• Custom Web Development Services</li>
+                        <li>• Front-End Development</li>
+                        <li>• Back-End Development</li>
+                        <li>• Full Stack Development Services</li>
+                        <li>• Enterprise Web Development</li>
+                        <li>• Corporate Website Development</li>
+                        <li>• Custom Website Design Company Solutions</li>
+                        <li>• Secure Website Development</li>
+                        <li>• Responsive Website Development</li>
+                    </ul>
                 </div>
-                <!-- Step 2 -->
-                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-primary" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-6xl font-black text-primary/20 absolute -top-6 right-4">02</div>
-                    <h3 class="text-xl font-bold mb-4 mt-4">Backend Logic</h3>
-                    <p class="text-sm text-on-surface-variant opacity-80">Our engineers build secure, high-speed APIs using Node.js or Python to handle complex business logic.</p>
+
+                <!-- 2. Custom Web Development -->
+                <div class="p-8 glass-card rounded-[2.5rem] border border-outline-variant/20 hover:border-tertiary/50 hover-lift transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">edit_note</span>
+                    <h3 class="text-xl font-bold mb-4">Custom Web Development</h3>
+                    <p class="text-on-surface-variant text-sm opacity-70 mb-6">Bespoke features designed and coded from scratch for tailored business workflows.</p>
+                    <ul class="space-y-2 text-xs text-on-surface-variant opacity-90">
+                        <li>• Custom Website Development</li>
+                        <li>• Custom Website Design</li>
+                        <li>• Custom Software Development</li>
+                        <li>• Custom CMS Development</li>
+                        <li>• Web Application Development</li>
+                        <li>• Web App Development</li>
+                        <li>• Information Architecture</li>
+                        <li>• Secure Server Deployment</li>
+                        <li>• Performance Optimization</li>
+                    </ul>
                 </div>
-                <!-- Step 3 -->
-                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-secondary" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-6xl font-black text-secondary/20 absolute -top-6 right-4">03</div>
-                    <h3 class="text-xl font-bold mb-4 mt-4">Frontend UX</h3>
-                    <p class="text-sm text-on-surface-variant opacity-80">We develop dynamic, responsive user interfaces in React that look beautiful and feel instantly reactive.</p>
+
+                <!-- 3. Ecommerce Development -->
+                <div class="p-8 glass-card rounded-[2.5rem] border border-outline-variant/20 hover:border-tertiary/50 hover-lift transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">shopping_bag</span>
+                    <h3 class="text-xl font-bold mb-4">Ecommerce Development</h3>
+                    <p class="text-on-surface-variant text-sm opacity-70 mb-6">Designed for conversion focused online stores with mobile responsive layouts.</p>
+                    <ul class="space-y-2 text-xs text-on-surface-variant opacity-90">
+                        <li>• Ecommerce Website Design</li>
+                        <li>• Ecommerce Web Development Solutions</li>
+                        <li>• Ecommerce Web Design</li>
+                        <li>• Ecommerce Conversion Optimization</li>
+                        <li>• Shopify Website Development</li>
+                        <li>• Shopify Store Development</li>
+                        <li>• Shopify Website Design</li>
+                        <li>• Payment Gateway Integration</li>
+                        <li>• Ecommerce Platform Support</li>
+                        <li>• Shopify Development Partners</li>
+                        <li>• WordPress Development & CMS</li>
+                    </ul>
                 </div>
-                <!-- Step 4 -->
-                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-tertiary" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-6xl font-black text-tertiary/20 absolute -top-6 right-4">04</div>
-                    <h3 class="text-xl font-bold mb-4 mt-4">QA & Deploy</h3>
-                    <p class="text-sm text-on-surface-variant opacity-80">Rigorous load testing and security audits before deploying to AWS or Vercel via automated CI/CD pipelines.</p>
+
+                <!-- 4. Web App Development -->
+                <div class="p-8 glass-card rounded-[2.5rem] border border-outline-variant/20 hover:border-tertiary/50 hover-lift transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">terminal</span>
+                    <h3 class="text-xl font-bold mb-4">Web App Development</h3>
+                    <p class="text-on-surface-variant text-sm opacity-70 mb-6">Bespoke applications designed to automate business tasks and integrate systems.</p>
+                    <ul class="space-y-2 text-xs text-on-surface-variant opacity-90">
+                        <li>• Web App Development</li>
+                        <li>• Web Application Development</li>
+                        <li>• ERP Development</li>
+                        <li>• API Integration Services</li>
+                        <li>• Custom Software Development</li>
+                        <li>• Enterprise Web Development</li>
+                        <li>• Full Stack Development Services</li>
+                    </ul>
+                </div>
+
+                <!-- 5. CMS Development -->
+                <div class="p-8 glass-card rounded-[2.5rem] border border-outline-variant/20 hover:border-tertiary/50 hover-lift transition-all" data-aos="fade-up" data-aos-delay="500">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">dashboard</span>
+                    <h3 class="text-xl font-bold mb-4">CMS Solutions</h3>
+                    <p class="text-on-surface-variant text-sm opacity-70 mb-6">Providing user-friendly dashboards for content management and updates.</p>
+                    <ul class="space-y-2 text-xs text-on-surface-variant opacity-90">
+                        <li>• CMS Development</li>
+                        <li>• Custom CMS Development</li>
+                        <li>• WordPress Development Agency</li>
+                        <li>• WordPress Web Design</li>
+                        <li>• Website Migration</li>
+                        <li>• Website Maintenance</li>
+                        <li>• Website Redesign</li>
+                    </ul>
+                </div>
+
+                <!-- 6. Website Redesign Services -->
+                <div class="p-8 glass-card rounded-[2.5rem] border border-outline-variant/20 hover:border-tertiary/50 hover-lift transition-all" data-aos="fade-up" data-aos-delay="600">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">refresh</span>
+                    <h3 class="text-xl font-bold mb-4">Website Redesign</h3>
+                    <p class="text-on-surface-variant text-sm opacity-70 mb-6">Improving performance, mobile layouts, and search engine visibility.</p>
+                    <ul class="space-y-2 text-xs text-on-surface-variant opacity-90">
+                        <li>• Website Redesign Services</li>
+                        <li>• Mobile Optimization</li>
+                        <li>• Responsive Website Design</li>
+                        <li>• SEO Friendly Web Design</li>
+                        <li>• Website Speed Optimization</li>
+                        <li>• Launch Optimization</li>
+                        <li>• Quality Assurance Testing</li>
+                    </ul>
+                </div>
+
+                <!-- 7. Testing & Optimization -->
+                <div class="p-8 glass-card rounded-[2.5rem] border border-outline-variant/20 hover:border-tertiary/50 hover-lift transition-all" data-aos="fade-up" data-aos-delay="700">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">speed</span>
+                    <h3 class="text-xl font-bold mb-4">Testing & Optimization</h3>
+                    <p class="text-on-surface-variant text-sm opacity-70 mb-6">Ensuring stable performance, secure operations, and fast website loads.</p>
+                    <ul class="space-y-2 text-xs text-on-surface-variant opacity-90">
+                        <li>• Responsive Testing</li>
+                        <li>• Cross Browser Testing</li>
+                        <li>• Quality Assurance Testing</li>
+                        <li>• Technical SEO</li>
+                        <li>• Website Speed Optimization</li>
+                        <li>• Conversion Optimization</li>
+                        <li>• Mobile Optimization</li>
+                        <li>• Performance Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- 8. SEO & Marketing Related Services -->
+                <div class="p-8 glass-card rounded-[2.5rem] border border-outline-variant/20 hover:border-tertiary/50 hover-lift transition-all md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="800">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">campaign</span>
+                    <h3 class="text-xl font-bold mb-4">SEO & Digital Marketing</h3>
+                    <p class="text-on-surface-variant text-sm opacity-70 mb-6">Supporting search rankings, online visibility, and organic lead acquisition.</p>
+                    <ul class="space-y-2 text-xs text-on-surface-variant opacity-90">
+                        <li>• Search Engine Optimization</li>
+                        <li>• Technical SEO</li>
+                        <li>• Email Marketing</li>
+                        <li>• Social Media Marketing</li>
+                        <li>• Digital Marketing</li>
+                        <li>• Content Marketing</li>
+                        <li>• Brand Marketing</li>
+                        <li>• Digital Branding</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. Benefits (ROI Focus) -->
-    <section class="py-32 px-8">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1 relative" data-aos="zoom-in">
-                <div class="glass-card rounded-[3rem] p-12 border border-tertiary/20 bg-black/40 flex flex-col items-center justify-center aspect-square text-center">
-                    <span class="material-symbols-outlined text-[80px] text-tertiary mb-6 animate-pulse">rocket_launch</span>
-                    <div class="text-5xl font-black text-white mb-2">10x</div>
-                    <p class="text-tertiary font-mono text-sm uppercase tracking-widest">Performance Scale</p>
+    <!-- 5. Results & ROI -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <span class="text-tertiary font-black uppercase tracking-widest text-sm mb-4 block">Proven Execution</span>
+                <h2 class="text-4xl font-black mb-8">Web Development Focused On <span class="text-tertiary">Real Metrics</span></h2>
+                <p class="text-lg text-on-surface-variant opacity-80 leading-relaxed mb-6">
+                    Our engineering process ensures every project delivers responsive experience, secure coding, and optimized page speed structure that matches your business model.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>SEO-friendly website structure</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Fast loading speed</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Mobile responsive layouts</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Secure website architecture</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Conversion focused development</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Scalable solutions</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Website performance optimization</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Improved user experience</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Better online visibility</span>
+                    <span class="flex items-center gap-2 text-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Strong digital presence</span>
                 </div>
             </div>
-            <div class="order-1 md:order-2" data-aos="fade-left">
-                <span class="text-tertiary font-black uppercase tracking-widest text-sm mb-4 block">The ROI</span>
-                <h2 class="text-4xl font-black mb-8">Speed Equals <span class="text-tertiary">Revenue.</span></h2>
-                <ul class="space-y-6">
-                    <li class="flex items-start gap-4">
-                        <span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
-                        <div>
-                            <h4 class="font-bold text-lg">Increased Conversion Rates</h4>
-                            <p class="text-on-surface-variant opacity-80">Every 1-second delay in page load time reduces conversions by 7%. A high-performance app directly increases sales.</p>
-                        </div>
+            <div class="glass-card p-10 rounded-[2.5rem] border border-outline-variant/20 bg-black/20" data-aos="fade-left">
+                <h3 class="text-xl font-bold mb-6 text-white">Every project is built around:</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                        <span class="text-white font-medium text-lg">Client requirements</span>
                     </li>
-                    <li class="flex items-start gap-4">
-                        <span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
-                        <div>
-                            <h4 class="font-bold text-lg">Reduced Churn</h4>
-                            <p class="text-on-surface-variant opacity-80">A seamless, bug-free user experience keeps SaaS users engaged and significantly lowers your cancellation rates.</p>
-                        </div>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                        <span class="text-white font-medium text-lg">Business goals</span>
                     </li>
-                    <li class="flex items-start gap-4">
-                        <span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
-                        <div>
-                            <h4 class="font-bold text-lg">Operational Efficiency</h4>
-                            <p class="text-on-surface-variant opacity-80">Custom internal tools and workflow automations drastically reduce manual labor costs across your entire organization.</p>
-                        </div>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                        <span class="text-white font-medium text-lg">Tailored solutions</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                        <span class="text-white font-medium text-lg">Information architecture</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                        <span class="text-white font-medium text-lg">Performance optimization</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                        <span class="text-white font-medium text-lg">Quality assurance</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                        <span class="text-white font-medium text-lg">Post-launch support</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                        <span class="text-white font-medium text-lg">Business growth strategy</span>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- 7. Use Cases -->
-    <section class="py-32 px-8 bg-surface-container-lowest border-y border-outline-variant/10">
+    <!-- 6. Process Workflow -->
+    <section class="py-32 px-8 bg-surface-container-low border-y border-outline-variant/10">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-black mb-4">Engineering <span class="text-tertiary">Use Cases</span></h2>
+            <div class="text-center mb-24" data-aos="fade-up">
+                <span class="text-xs uppercase font-black tracking-[0.5em] text-tertiary opacity-60 block mb-4">Our Methodology</span>
+                <h2 class="text-5xl font-black tracking-tight">Our Web Development <span class="text-transparent bg-clip-text bg-gradient-to-r from-tertiary to-secondary">Process</span></h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-tertiary/50 transition-colors">
-                    <h3 class="font-bold text-xl mb-3 text-tertiary">Custom SaaS Products</h3>
-                    <p class="text-sm opacity-80">Building secure, multi-tenant architectures from scratch, complete with subscription billing and user management.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <!-- Step 1 -->
+                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-tertiary hover-lift transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-6xl font-black text-tertiary/20 absolute -top-6 right-4">01</div>
+                    <h3 class="text-lg font-bold mb-2 mt-4">Discovery</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80">We map business goals, client requirements, and information architecture strategy.</p>
                 </div>
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-tertiary/50 transition-colors">
-                    <h3 class="font-bold text-xl mb-3 text-tertiary">Headless E-Commerce</h3>
-                    <p class="text-sm opacity-80">Decoupling the frontend from the backend (Shopify/Magento) to build lightning-fast custom shopping experiences.</p>
+                <!-- Step 2 -->
+                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-primary hover-lift transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-6xl font-black text-primary/20 absolute -top-6 right-4">02</div>
+                    <h3 class="text-lg font-bold mb-2 mt-4">UI/UX Design</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80">Creating responsive website design structures and mobile layouts focused on conversions.</p>
                 </div>
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-tertiary/50 transition-colors">
-                    <h3 class="font-bold text-xl mb-3 text-tertiary">Enterprise Portals</h3>
-                    <p class="text-sm opacity-80">Developing custom internal dashboards that aggregate data from multiple APIs into one cohesive interface.</p>
+                <!-- Step 3 -->
+                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-secondary hover-lift transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-6xl font-black text-secondary/20 absolute -top-6 right-4">03</div>
+                    <h3 class="text-lg font-bold mb-2 mt-4">Development</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80">Executing Front-End, Back-End, Ecommerce development, and custom API connections.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-tertiary hover-lift transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-6xl font-black text-tertiary/20 absolute -top-6 right-4">04</div>
+                    <h3 class="text-lg font-bold mb-2 mt-4">Testing</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80">Cross Browser Testing, speed checking, and security scans before launch.</p>
+                </div>
+                <!-- Step 5 -->
+                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-primary hover-lift transition-all" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-6xl font-black text-primary/20 absolute -top-6 right-4">05</div>
+                    <h3 class="text-lg font-bold mb-2 mt-4">Launch & Support</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80">Executing migration, server deployment, and ongoing website maintenance schedules.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 8. Proof (Testimonials) -->
-    <section class="py-32 px-8">
-        <div class="max-w-5xl mx-auto">
+    <!-- 7. EEAT Section -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-black mb-4">Trusted by <span class="text-tertiary">Innovators</span></h2>
+                <span class="text-tertiary font-black uppercase tracking-widest text-sm mb-4 block">Our Standard</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-4">Experience, Expertise & Trust</h2>
             </div>
-            <div class="glass-card p-12 rounded-[3rem] border border-tertiary/20 relative" data-aos="fade-up">
-                <span class="material-symbols-outlined text-6xl text-tertiary/20 absolute top-8 left-8">format_quote</span>
-                <p class="text-xl md:text-2xl font-light italic leading-relaxed text-center relative z-10">
-                    "DifusionSEO rebuilt our entire web application from the ground up using React and Node.js. Not only is it incredibly fast, but our user retention rate jumped by 40% in the first quarter."
-                </p>
-                <div class="mt-8 text-center">
-                    <p class="font-bold text-tertiary">Elena R.</p>
-                    <p class="text-sm opacity-60 uppercase tracking-widest font-mono">Product Director, FinTech Solutions</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="p-6 glass-card rounded-2xl border border-outline-variant/10">
+                    <h4 class="font-black text-lg text-tertiary mb-4">Experience</h4>
+                    <p class="text-xs text-on-surface-variant opacity-80 mb-4">Extensive execution in custom web systems.</p>
+                    <ul class="space-y-1 text-xs opacity-70">
+                        <li>• Custom Web Development</li>
+                        <li>• Ecommerce Website Design</li>
+                        <li>• Shopify Website Development</li>
+                        <li>• WordPress Development</li>
+                        <li>• Web App Development</li>
+                        <li>• API Integration Services</li>
+                    </ul>
+                </div>
+                <div class="p-6 glass-card rounded-2xl border border-outline-variant/10">
+                    <h4 class="font-black text-lg text-tertiary mb-4">Expertise</h4>
+                    <p class="text-xs text-on-surface-variant opacity-80 mb-4">Specialized skills in programming & design.</p>
+                    <ul class="space-y-1 text-xs opacity-70">
+                        <li>• Technical SEO</li>
+                        <li>• Full Stack Development</li>
+                        <li>• CMS Development</li>
+                        <li>• Responsive Web Development</li>
+                        <li>• Performance Optimization</li>
+                        <li>• Payment Integration</li>
+                    </ul>
+                </div>
+                <div class="p-6 glass-card rounded-2xl border border-outline-variant/10">
+                    <h4 class="font-black text-lg text-tertiary mb-4">Authority</h4>
+                    <p class="text-xs text-on-surface-variant opacity-80 mb-4">Professional web agency standards.</p>
+                    <ul class="space-y-1 text-xs opacity-70">
+                        <li>• Industry-leading practices</li>
+                        <li>• Scalable architecture</li>
+                        <li>• Tailored business solutions</li>
+                        <li>• Secure website deployment</li>
+                        <li>• SEO-friendly development</li>
+                        <li>• Cross browser compatibility</li>
+                    </ul>
+                </div>
+                <div class="p-6 glass-card rounded-2xl border border-outline-variant/10">
+                    <h4 class="font-black text-lg text-tertiary mb-4">Trust</h4>
+                    <p class="text-xs text-on-surface-variant opacity-80 mb-4">Committed to reliable client partnerships.</p>
+                    <ul class="space-y-1 text-xs opacity-70">
+                        <li>• Secure website standards</li>
+                        <li>• Quality assurance</li>
+                        <li>• Performance optimization</li>
+                        <li>• Ongoing support</li>
+                        <li>• Transparent workflow</li>
+                        <li>• Client-focused solutions</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 9. FAQ Section -->
-    <section class="py-32 px-8 bg-surface-container-low">
+    <!-- 8. Locations / Areas We Serve -->
+    <section class="py-32 px-8 bg-surface-container-low border-y border-outline-variant/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-tertiary font-black uppercase tracking-widest text-sm mb-4 block">Target Focus</span>
+                <h2 class="text-4xl font-black mb-4">Industries We Provide Services For</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
+                <div class="p-6 glass-card rounded-2xl border border-outline-variant/10 hover-lift transition-all">
+                    <span class="material-symbols-outlined text-tertiary text-3xl mb-3 block">storefront</span>
+                    <h4 class="font-bold text-xs text-white">Local Businesses</h4>
+                </div>
+                <div class="p-6 glass-card rounded-2xl border border-outline-variant/10 hover-lift transition-all">
+                    <span class="material-symbols-outlined text-tertiary text-3xl mb-3 block">shopping_cart</span>
+                    <h4 class="font-bold text-xs text-white">Ecommerce Brands</h4>
+                </div>
+                <div class="p-6 glass-card rounded-2xl border border-outline-variant/10 hover-lift transition-all">
+                    <span class="material-symbols-outlined text-tertiary text-3xl mb-3 block">business</span>
+                    <h4 class="font-bold text-xs text-white">Corporate Businesses</h4>
+                </div>
+                <div class="p-6 glass-card rounded-2xl border border-outline-variant/10 hover-lift transition-all">
+                    <span class="material-symbols-outlined text-tertiary text-3xl mb-3 block">domain</span>
+                    <h4 class="font-bold text-xs text-white">Enterprise Companies</h4>
+                </div>
+                <div class="p-6 glass-card rounded-2xl border border-outline-variant/10 hover-lift transition-all">
+                    <span class="material-symbols-outlined text-tertiary text-3xl mb-3 block">rocket</span>
+                    <h4 class="font-bold text-xs text-white">Growing Startups</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Why Choose Us -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-tertiary font-black uppercase tracking-widest text-sm mb-4 block">Advantages</span>
+                <h2 class="text-4xl font-black mb-4">Why Our Web Development Services Work Better</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-8 glass-card rounded-2xl border border-outline-variant/10 hover-lift transition-all">
+                    <h4 class="font-bold text-lg text-white mb-3">Responsive Design</h4>
+                    <p class="text-xs text-on-surface-variant opacity-80">Mobile responsive websites designed for better user experience, accessibility, and performance across all devices.</p>
+                </div>
+                <div class="p-8 glass-card rounded-2xl border border-outline-variant/10 hover-lift transition-all">
+                    <h4 class="font-bold text-lg text-white mb-3">SEO-Friendly Development</h4>
+                    <p class="text-xs text-on-surface-variant opacity-80">SEO-friendly web design focused on search engine visibility, technical speed structure, and online discoverability.</p>
+                </div>
+                <div class="p-8 glass-card rounded-2xl border border-outline-variant/10 hover-lift transition-all">
+                    <h4 class="font-bold text-lg text-white mb-3">Scalable Solutions</h4>
+                    <p class="text-xs text-on-surface-variant opacity-80">Scalable web development solutions built to support custom features, business scaling, and enterprise growth.</p>
+                </div>
+                <div class="p-8 glass-card rounded-2xl border border-outline-variant/10 hover-lift transition-all">
+                    <h4 class="font-bold text-lg text-white mb-3">Conversion Focused</h4>
+                    <p class="text-xs text-on-surface-variant opacity-80">Development focused on web traffic, conversion rates, user engagement metrics, and strategic layout design.</p>
+                </div>
+                <div class="p-8 glass-card rounded-2xl border border-outline-variant/10 hover-lift transition-all md:col-span-2 lg:col-span-1">
+                    <h4 class="font-bold text-lg text-white mb-3">Professional Team</h4>
+                    <p class="text-xs text-on-surface-variant opacity-80">Bespoke developers committed to clean code, quality assurance checkpoints, and reliable ongoing support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. About Us -->
+    <section class="py-24 px-8 bg-surface-container-lowest">
+        <div class="max-w-4xl mx-auto text-center glass-card p-12 rounded-[3rem] border border-tertiary/20 bg-tertiary/5" data-aos="zoom-in">
+            <span class="text-tertiary font-black uppercase tracking-widest text-xs mb-4 block">About Our Agency</span>
+            <h3 class="text-3xl font-black mb-6">Professional Web Development Focused on Brand Performance</h3>
+            <p class="text-lg text-on-surface-variant opacity-95 leading-relaxed max-w-2xl mx-auto font-light mb-8">
+                We provide custom web development services focused on responsive websites, scalable solutions, SEO-friendly architecture, and performance optimization. Our services include website design and development, ecommerce development, CMS development, web app development, API integration, website redesign, and ongoing website maintenance.
+            </p>
+        </div>
+    </section>
+
+    <!-- 11. FAQ Section -->
+    <section class="py-32 px-8 bg-surface-container-low border-y border-outline-variant/10">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl font-black mb-4">Web Development <span class="text-tertiary">FAQs</span></h2>
-                <p class="text-on-surface-variant opacity-70">Common questions about our Full Stack Development services.</p>
+                <p class="text-on-surface-variant opacity-70 font-mono text-xs">Everything you need to know about our services.</p>
             </div>
             
             <div class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
                 <!-- FAQ Item 1 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-tertiary/10 transition-all duration-300 hover:border-tertiary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">What tech stack do you use?</span>
+                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">What’s the difference between custom web development and using a website builder?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-tertiary">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            We specialize in modern, high-performance stacks. For the backend, we typically use Python (Django/FastAPI) or Node.js. For the frontend, we build with React, Next.js, and TailwindCSS to ensure fast load times and excellent UX.
+                        <div class="text-on-surface-variant leading-relaxed opacity-80 text-sm" itemprop="text">
+                            Custom web development focuses on tailored solutions, scalable architecture, custom features, SEO-friendly structure, and business-specific functionality. Website builders usually provide limited customization and restricted scalability.
                         </div>
                     </div>
                 </div>
@@ -384,12 +697,12 @@
                 <!-- FAQ Item 2 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-tertiary/10 transition-all duration-300 hover:border-tertiary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">Are your websites mobile-friendly and SEO optimized?</span>
+                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">How long does a custom website take to build?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-tertiary">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Absolutely. Mobile-first design and technical SEO (Core Web Vitals, Schema markup, semantic HTML) are built into the foundation of every project we deploy. We don't just build sites; we build them to rank.
+                        <div class="text-on-surface-variant leading-relaxed opacity-80 text-sm" itemprop="text">
+                            Project timelines depend on website size, custom features, ecommerce functionality, API integration requirements, CMS development needs, and testing scope.
                         </div>
                     </div>
                 </div>
@@ -397,12 +710,12 @@
                 <!-- FAQ Item 3 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-tertiary/10 transition-all duration-300 hover:border-tertiary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">Do you build custom SaaS products?</span>
+                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">Will my website be SEO-friendly and mobile responsive?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-tertiary">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Yes. We develop complete bespoke SaaS platforms, internal business tools, and custom dashboards. We handle everything from database architecture and API development to frontend user interfaces.
+                        <div class="text-on-surface-variant leading-relaxed opacity-80 text-sm" itemprop="text">
+                            Yes. Development includes SEO-friendly web design, technical SEO setup, responsive website structure, mobile optimization, website speed optimization, and cross browser testing.
                         </div>
                     </div>
                 </div>
@@ -410,12 +723,12 @@
                 <!-- FAQ Item 4 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-tertiary/10 transition-all duration-300 hover:border-tertiary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">How long does it take to build a custom web app?</span>
+                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">Can you redesign my existing website?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-tertiary">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Timelines vary based on complexity. A corporate marketing site might take 4-6 weeks, while a complex custom SaaS platform could take 3-6 months. We provide detailed roadmaps during the scoping phase.
+                        <div class="text-on-surface-variant leading-relaxed opacity-80 text-sm" itemprop="text">
+                            Yes. Website redesign services include website performance improvements, mobile responsive redesign layouts, user experience optimization, conversion optimization, and technical SEO improvements.
                         </div>
                     </div>
                 </div>
@@ -423,12 +736,12 @@
                 <!-- FAQ Item 5 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-tertiary/10 transition-all duration-300 hover:border-tertiary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">Do you provide ongoing maintenance?</span>
+                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">What platforms do you work with for web development?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-tertiary">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Yes, we offer ongoing Service Level Agreements (SLAs) to ensure your application remains secure, up-to-date with the latest dependencies, and performing optimally long after launch.
+                        <div class="text-on-surface-variant leading-relaxed opacity-80 text-sm" itemprop="text">
+                            Our services include Shopify development, custom Shopify setups, WordPress development, CMS development, custom CMS, web app engineering, and full stack deployment.
                         </div>
                     </div>
                 </div>
@@ -436,12 +749,38 @@
                 <!-- FAQ Item 6 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-tertiary/10 transition-all duration-300 hover:border-tertiary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">Can you integrate third-party APIs?</span>
+                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">Will I be able to manage and update the website after launch?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-tertiary">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Absolutely. We frequently integrate payment gateways (Stripe, PayPal), CRMs (Salesforce, HubSpot), marketing tools, AI models (OpenAI), and any other modern REST or GraphQL APIs your business requires.
+                        <div class="text-on-surface-variant leading-relaxed opacity-80 text-sm" itemprop="text">
+                            Yes. CMS development and content management systems allow website updates, content changes, and ongoing management after launch.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-tertiary/10 transition-all duration-300 hover:border-tertiary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">Do you provide website maintenance and post-launch support?</span>
+                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-tertiary">expand_more</span>
+                    </button>
+                    <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <div class="text-on-surface-variant leading-relaxed opacity-80 text-sm" itemprop="text">
+                            Yes. Services include website maintenance, post-launch support, website migration, secure server deployment, performance optimization, and ongoing technical support.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-tertiary/10 transition-all duration-300 hover:border-tertiary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                        <span class="font-bold text-lg group-hover:text-tertiary transition-colors" itemprop="name">Can you integrate custom features, APIs, and payment gateways into the website?</span>
+                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-tertiary">expand_more</span>
+                    </button>
+                    <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <div class="text-on-surface-variant leading-relaxed opacity-80 text-sm" itemprop="text">
+                            Yes. Services include API integration, API integration services, payment gateway integration, custom features, ERP development, and ecommerce functionality.
                         </div>
                     </div>
                 </div>
@@ -449,19 +788,18 @@
         </div>
     </section>
 
-    <!-- 10. Final CTA -->
-    <section class="py-32 px-8 bg-tertiary/5">
-        <div class="max-w-5xl mx-auto glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden" data-aos="zoom-in">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-tertiary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-            <span class="text-tertiary font-black uppercase tracking-widest text-sm mb-6 block">Your Application is Losing You Revenue Every Day It Underperforms</span>
-            <h2 class="text-4xl md:text-6xl font-black mb-6">Stop Tolerating <span class="text-tertiary">Mediocre Software.</span></h2>
-            <p class="text-xl text-on-surface-variant mb-10 opacity-80 max-w-2xl mx-auto">A 1-second improvement in load time can increase conversions by 7%. A flawless mobile UX retains 40% more users. Every day your current application underperforms is money left on the table. Let's architect the platform your business deserves.</p>
+    <!-- 12. Final CTA -->
+    <section class="py-32 px-8">
+        <div class="max-w-5xl mx-auto glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden bg-tertiary/5 border border-tertiary/20" data-aos="zoom-in">
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-tertiary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+            <span class="text-tertiary font-black uppercase tracking-widest text-sm mb-6 block">Build a High-Performance Custom Website for Business Growth</span>
+            <h2 class="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-tertiary via-white to-secondary">Deploy Your Digital Assets</h2>
+            <p class="text-xl text-on-surface-variant mb-10 opacity-80 max-w-2xl mx-auto">Get custom web development services designed for SEO-friendly performance, responsive website experience, scalable solutions, ecommerce growth, conversion optimization, secure website deployment, and long-term business growth.</p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <a href="{% url 'contact' %}" class="inline-flex items-center gap-3 bg-tertiary text-on-tertiary px-10 py-5 rounded-full font-black hover:scale-105 transition-all shadow-2xl">
-                    Architect My Platform
-                    <span class="material-symbols-outlined">rocket</span>
+                <a href="{% url 'contact' %}" class="inline-flex items-center gap-3 bg-tertiary text-on-tertiary px-10 py-5 rounded-full font-black hover:scale-105 transition-all shadow-xl hover:scale-105">
+                    Start Your Custom Web Development Project Today
+                    <span class="material-symbols-outlined">arrow_forward</span>
                 </a>
-                <p class="text-sm font-mono text-tertiary/60 uppercase tracking-widest">Free Technical Discovery Call</p>
             </div>
         </div>
     </section>
