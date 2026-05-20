@@ -2,6 +2,49 @@
 
 {% block title %}LeadNexus | Ultimate B2B Lead Generation & Outreach Engine{% endblock %}
 
+{% block meta %}
+<!-- PRIMARY SEO META TAGS -->
+<meta name="description" content="Discover LeadNexus: the ultimate B2B lead generation CRM & cold email outreach software. Automate campaigns with SMTP rotation, built-in verification & spam score check.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="keywords" content="B2B lead generation, cold email outreach, SMTP rotation, email verification tool, lead generation software, spam score check, outreach campaign automation">
+<meta name="author" content="DifusionSEO">
+
+<!-- OPEN GRAPH / FACEBOOK META TAGS -->
+<meta property="og:title" content="LeadNexus | Ultimate B2B Lead Generation & Outreach Engine">
+<meta property="og:description" content="Automate cold outreach campaigns, scrape B2B prospects, verify emails in real-time, and manage sender reputation with multi-SMTP rotation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.difusionseo.com/leadnexus/">
+<meta property="og:image" content="https://www.difusionseo.com/static/images/difusionseo_logo.png">
+
+<!-- TWITTER CARD META TAGS -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LeadNexus | Ultimate B2B Lead Generation & Outreach Engine">
+<meta name="twitter:description" content="Automate cold outreach campaigns, scrape B2B prospects, verify emails in real-time, and manage sender reputation with multi-SMTP rotation.">
+
+<!-- STRUCTURED DATA (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.difusionseo.com/leadnexus/#software",
+      "name": "LeadNexus",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "url": "https://www.difusionseo.com/leadnexus/",
+      "description": "Automated cold email outreach and B2B lead scraping platform with intelligent multi-SMTP rotation.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  ]
+}
+</script>
+{% endblock %}
+
 {% block content %}
 <main class="pt-24 md:pt-32 overflow-hidden">
     <!-- Hero Section -->
@@ -39,7 +82,7 @@
             </div>
             <div class="glass-panel p-2 sm:p-4 rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl relative z-10 border border-outline-variant/10" data-aos="zoom-in">
                 <div class="aspect-video w-full rounded-[1rem] md:rounded-[1.5rem] overflow-hidden bg-black">
-                    <iframe id="nexusVideo" class="w-full h-full" src="https://www.youtube.com/embed/yvCGO7-N53Y?si=1DsIcTADGT-x67JQ&enablejsapi=1" title="LeadNexus Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="nexusVideo" class="w-full h-full" data-src="https://www.youtube.com/embed/yvCGO7-N53Y?si=1DsIcTADGT-x67JQ&enablejsapi=1" title="LeadNexus Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -747,12 +790,12 @@
         entries.forEach(entry => {
             if (entry.isIntersecting && !videoStarted) {
                 // To comply with browser policies, autoplay must be muted
-                const currentSrc = videoIframe.src;
-                videoIframe.src = currentSrc + "&autoplay=1&mute=1";
+                const targetSrc = videoIframe.dataset.src;
+                videoIframe.src = targetSrc + "&autoplay=1&mute=1";
                 videoStarted = true;
             }
         });
-    }, { threshold: 0.5 }); // Trigger when 50% of the video is visible
+    }, { threshold: 0.1 }); // Trigger when 10% of the video is visible
 
     observer.observe(videoIframe);
 </script>
