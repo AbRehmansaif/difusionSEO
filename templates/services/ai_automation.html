@@ -80,426 +80,682 @@
 
 {% block content %}
 <main class="pt-24 overflow-hidden">
-    <!-- 1. Hero (Hook + CTA) -->
-    <section class="relative min-h-[70vh] py-16 md:py-32 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
+    <!-- Hero Section -->
+    <section class="relative min-h-[70vh] py-16 md:py-32 px-6 md:px-8 max-w-7xl mx-auto flex flex-col justify-center">
+        <!-- background effects -->
         <div class="absolute top-1/2 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
+        
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center relative z-10">
             <div data-aos="fade-right">
-                <span class="label-md uppercase tracking-[0.5em] text-secondary font-black mb-6 md:mb-8 block italic">Synthetic Intelligence</span>
-                <h1 class="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[1.1] mb-8">
-                    AI & Neural <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-white to-primary">Automation</span>
+                <span class="label-md uppercase tracking-[0.3em] text-secondary font-black mb-6 md:mb-8 block italic">Intelligent Business Growth</span>
+                <h1 class="text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter leading-[1.1] mb-8">
+                    AI Automation <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-white to-primary">Services</span>
                 </h1>
-                <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed font-light max-w-xl opacity-80">
-                    Elite enterprises aren't hiring more staff to scale — they're deploying intelligent AI agents. We engineer proprietary LLM-powered systems that eliminate your most expensive operational bottlenecks, giving you the leverage of a 100-person team at a fraction of the cost. Your competitors are already automating. The question is: will you lead, or be left behind?
+                <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed font-light max-w-xl opacity-80 mb-6">
+                    Transform operations with advanced AI Automation Services designed to improve workflow efficiency, automate repetitive processes, and create intelligent business systems. Our solutions combine Artificial Intelligence, Machine Learning, Deep Learning, Neural Networks, Natural Language Processing, Predictive Analytics, Reinforcement Learning, Large Language Models, and Generative AI to help businesses build scalable automation systems.
                 </p>
-                <div class="mt-10 flex flex-wrap gap-6">
-                    <a href="{% url 'contact' %}" class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-black text-sm hover:scale-110 transition-all shadow-[0_20px_40px_rgba(162,231,255,0.2)]">Deploy AI Now</a>
-                    <div class="flex items-center gap-2 font-mono text-xs text-secondary/60 uppercase tracking-widest">
-                        <span class="w-2 h-2 bg-secondary rounded-full animate-ping"></span>
-                        Neural_Core_Active
-                    </div>
+                <p class="text-base text-on-surface-variant opacity-80 mb-8">
+                    We deliver AI business automation solutions focused on workflow optimization, AI powered automation, enterprise workflow automation, AI orchestration, and intelligent workflows that improve operational efficiency across multiple industries.
+                </p>
+                <div class="flex flex-col gap-4 mt-4">
+                    <a href="{% url 'contact' %}" class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-black text-sm hover:scale-110 transition-all shadow-[0_20px_40px_rgba(162,231,255,0.2)] w-fit">Start Building Workflows</a>
+                    <p class="text-xs font-mono text-secondary/70 opacity-80 max-w-sm">> Start building intelligent workflows with AI Driven Automation solutions tailored for modern enterprises.</p>
                 </div>
             </div>
-            <div class="relative hidden lg:block" data-aos="zoom-in">
-                <div class="glass-card rounded-[3rem] p-8 border border-secondary/20 aspect-square flex flex-col items-center justify-center relative overflow-hidden group">
+            
+            <div class="relative hidden lg:flex flex-col gap-6" data-aos="zoom-in">
+                <!-- Animation Card -->
+                <div class="glass-card rounded-[2rem] p-6 border border-secondary/20 relative overflow-hidden group h-[280px]">
                     <div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/5"></div>
                     <div class="absolute inset-0 opacity-[0.05] grid-pattern"></div>
                     
-                    <!-- Before State -->
-                    <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-100 group-hover:opacity-0 group-hover:-translate-x-10">
-                        <div class="text-error mb-4 font-mono text-sm uppercase tracking-widest bg-error/10 px-4 py-1 rounded-full">Manual Operations</div>
-                        <div class="flex items-center gap-4 mb-6">
-                            <span class="material-symbols-outlined text-6xl text-on-surface-variant opacity-50">hourglass_empty</span>
+                    <!-- Before State (Manual) -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-100 group-hover:opacity-0 group-hover:-translate-y-10">
+                        <div class="text-error mb-4 font-mono text-sm uppercase tracking-widest bg-error/10 px-4 py-1 rounded-full">Manual Workflow</div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="material-symbols-outlined text-5xl text-on-surface-variant opacity-50">hourglass_empty</span>
                             <div>
-                                <div class="text-3xl font-black opacity-50">14 hrs</div>
-                                <div class="text-sm opacity-50">Wasted Daily</div>
+                                <div class="text-2xl font-black opacity-50">High</div>
+                                <div class="text-xs opacity-50">Friction & Delay</div>
                             </div>
                         </div>
-                        <div class="flex flex-col gap-2 w-full max-w-[200px]">
-                            <div class="h-6 bg-surface-container rounded-md flex items-center px-3 opacity-50">
-                                <span class="w-2 h-2 rounded-full bg-error mr-2 animate-pulse"></span> <span class="text-xs">Data Entry</span>
+                        <div class="flex flex-col gap-2 w-full max-w-[220px]">
+                            <div class="h-6 bg-surface-container rounded-md flex items-center px-3 opacity-50 justify-between">
+                                <span class="text-[10px]">Data Processing</span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span> 
                             </div>
-                            <div class="h-6 bg-surface-container rounded-md flex items-center px-3 opacity-50">
-                                <span class="w-2 h-2 rounded-full bg-error mr-2 animate-pulse"></span> <span class="text-xs">Support Tickets</span>
-                            </div>
-                            <div class="h-6 bg-surface-container rounded-md flex items-center px-3 opacity-50">
-                                <span class="w-2 h-2 rounded-full bg-error mr-2 animate-pulse"></span> <span class="text-xs">Lead Qualification</span>
+                            <div class="h-6 bg-surface-container rounded-md flex items-center px-3 opacity-50 justify-between">
+                                <span class="text-[10px]">Task Execution</span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span> 
                             </div>
                         </div>
                     </div>
 
-                    <!-- After State -->
-                    <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-0 translate-x-10 group-hover:opacity-100 group-hover:translate-x-0">
-                        <div class="text-secondary mb-4 font-mono text-sm uppercase tracking-widest bg-secondary/10 px-4 py-1 rounded-full shadow-[0_0_15px_rgba(157,255,203,0.3)]">AI Infrastructure</div>
-                        <div class="flex items-center gap-4 mb-6">
-                            <span class="material-symbols-outlined text-6xl text-secondary drop-shadow-[0_0_15px_rgba(157,255,203,0.5)] animate-spin-slow">psychology</span>
+                    <!-- After State (AI Automation) -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 p-6">
+                        <div class="text-secondary mb-4 font-mono text-sm uppercase tracking-widest bg-secondary/10 px-4 py-1 rounded-full shadow-[0_0_15px_rgba(157,255,203,0.3)]">AI Orchestration Active</div>
+                        
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="material-symbols-outlined text-5xl text-secondary drop-shadow-[0_0_15px_rgba(157,255,203,0.5)] animate-spin-slow">psychology</span>
                             <div>
-                                <div class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">0 hrs</div>
-                                <div class="text-sm text-secondary">Manual Effort</div>
+                                <div class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">0 hrs</div>
+                                <div class="text-xs text-secondary">Manual Effort</div>
                             </div>
                         </div>
-                        <div class="flex flex-col gap-2 w-full max-w-[200px]">
-                            <div class="h-6 bg-secondary/10 border border-secondary/20 rounded-md flex items-center px-3 relative overflow-hidden">
+
+                        <div class="flex flex-col gap-2 w-full max-w-[220px]">
+                            <div class="h-6 bg-secondary/10 border border-secondary/20 rounded-md flex items-center px-3 relative overflow-hidden justify-between">
                                 <div class="absolute inset-0 bg-secondary/20 w-full animate-[progress_2s_ease-in-out_infinite]"></div>
-                                <span class="material-symbols-outlined text-[12px] text-secondary mr-2 relative z-10">check_circle</span> <span class="text-xs text-secondary relative z-10">Fully Automated</span>
+                                <span class="text-[10px] text-secondary relative z-10">Optimized Operations</span>
+                                <span class="material-symbols-outlined text-[12px] text-secondary relative z-10">check_circle</span>
                             </div>
-                            <div class="h-6 bg-secondary/10 border border-secondary/20 rounded-md flex items-center px-3 relative overflow-hidden">
-                                <div class="absolute inset-0 bg-secondary/20 w-full animate-[progress_2s_ease-in-out_infinite] [animation-delay:0.2s]"></div>
-                                <span class="material-symbols-outlined text-[12px] text-secondary mr-2 relative z-10">check_circle</span> <span class="text-xs text-secondary relative z-10">24/7 Processing</span>
+                            <div class="h-6 bg-primary/10 border border-primary/20 rounded-md flex items-center px-3 relative overflow-hidden justify-between">
+                                <div class="absolute inset-0 bg-primary/20 w-full animate-[progress_2s_ease-in-out_infinite] [animation-delay:0.2s]"></div>
+                                <span class="text-[10px] text-primary relative z-10">Intelligent Automation</span>
+                                <span class="material-symbols-outlined text-[12px] text-primary relative z-10">check_circle</span>
                             </div>
                         </div>
-                        <p class="mt-4 text-xs font-mono text-secondary/70 animate-pulse">> SYSTEM_AUTONOMOUS</p>
                     </div>
 
                     <!-- Interactive Hint -->
-                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-widest opacity-40 group-hover:opacity-0 transition-opacity flex items-center gap-2">
-                        <span class="material-symbols-outlined text-[14px]">ads_click</span> Hover to Automate
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-[9px] uppercase tracking-widest opacity-40 group-hover:opacity-0 transition-opacity flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[12px]">ads_click</span> Hover to Automate
+                    </div>
+                </div>
+
+                <!-- Core Capabilities List -->
+                <div class="glass-card rounded-[2rem] p-6 border border-secondary/20 bg-surface-container">
+                    <h3 class="text-lg font-black text-white mb-4">Core Capabilities</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-surface rounded-lg text-[11px] text-secondary border border-secondary/20 hover:bg-secondary/10 transition-colors">AI Workflow Automation</span>
+                        <span class="px-3 py-1.5 bg-surface rounded-lg text-[11px] text-secondary border border-secondary/20 hover:bg-secondary/10 transition-colors">AI Process Automation</span>
+                        <span class="px-3 py-1.5 bg-surface rounded-lg text-[11px] text-secondary border border-secondary/20 hover:bg-secondary/10 transition-colors">Intelligent Automation Systems</span>
+                        <span class="px-3 py-1.5 bg-surface rounded-lg text-[11px] text-primary border border-primary/20 hover:bg-primary/10 transition-colors">AI Powered Task Execution</span>
+                        <span class="px-3 py-1.5 bg-surface rounded-lg text-[11px] text-primary border border-primary/20 hover:bg-primary/10 transition-colors">Enterprise AI Solutions</span>
+                        <span class="px-3 py-1.5 bg-surface rounded-lg text-[11px] text-primary border border-primary/20 hover:bg-primary/10 transition-colors">AI Integration Services</span>
+                        <span class="px-3 py-1.5 bg-surface rounded-lg text-[11px] text-tertiary border border-tertiary/20 hover:bg-tertiary/10 transition-colors">AI Workflow Intelligence</span>
+                        <span class="px-3 py-1.5 bg-surface rounded-lg text-[11px] text-tertiary border border-tertiary/20 hover:bg-tertiary/10 transition-colors">AI Operational Analytics</span>
+                        <span class="px-3 py-1.5 bg-surface rounded-lg text-[11px] text-on-surface border border-outline-variant/20 hover:bg-white/10 transition-colors">AI Decision Systems</span>
+                        <span class="px-3 py-1.5 bg-surface rounded-lg text-[11px] text-on-surface border border-outline-variant/20 hover:bg-white/10 transition-colors">AI Powered CRM Solutions</span>
+                        <span class="px-3 py-1.5 bg-surface rounded-lg text-[11px] text-on-surface border border-outline-variant/20 hover:bg-white/10 transition-colors">AI Data Processing Solutions</span>
+                        <span class="px-3 py-1.5 bg-surface rounded-lg text-[11px] text-on-surface border border-outline-variant/20 hover:bg-white/10 transition-colors">AI Optimization Solutions</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. Problem (Pain) -->
-    <section class="py-32 px-8 bg-surface-container-low">
+    <!-- Overview -->
+    <section class="py-24 px-6 md:px-8 bg-surface-container-low border-y border-outline-variant/10">
         <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <span class="text-error font-black uppercase tracking-widest text-sm mb-4 block">The Problem</span>
-            <h2 class="text-4xl md:text-5xl font-black mb-8">Scaling Operations is <span class="text-error">Breaking</span> Your Business.</h2>
-            <p class="text-xl text-on-surface-variant opacity-80 leading-relaxed">
-                As your company grows, so do your overhead costs. Customer support queues get longer, data entry errors multiply, and your best employees are wasting 40% of their day on repetitive, soul-crushing tasks. Hiring more humans to solve this isn't scaling—it's just increasing your burn rate.
-            </p>
+            <span class="text-secondary font-black uppercase tracking-widest text-sm mb-4 block">Overview</span>
+            <h2 class="text-3xl md:text-5xl font-black mb-8">AI Automation Overview</h2>
+            <div class="space-y-6 text-lg text-on-surface-variant opacity-90 leading-relaxed text-left">
+                <p>AI Automation combines Artificial Intelligence with workflow systems to automate tasks, improve operational accuracy, and optimize enterprise processes. Modern AI automation systems use Machine Learning, Deep Learning, Neural Networks, Predictive Analytics, Reinforcement Learning, Natural Language Processing, and Large Language Models to create intelligent workflows capable of handling complex business operations.</p>
+                <p>Businesses use AI Automation Services to improve workflow optimization, automate operational processes, manage enterprise workflow automation, and enhance AI operational efficiency. AI powered automation solutions can automate repetitive activities, streamline data processing, improve customer support systems, and provide intelligent reporting capabilities.</p>
+                <p>Our AI Automation Company develops scalable AI based automation platforms that help organizations build intelligent workflows across departments, operations, and customer experiences. We focus on AI integration, enterprise AI deployment, AI infrastructure management, and workflow orchestration to ensure businesses achieve long-term operational scalability.</p>
+                <div class="mt-8 grid sm:grid-cols-2 gap-4 font-semibold text-white">
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> AI Workflow Automation</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> AI Process Automation</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Enterprise AI Solutions</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Intelligent Process Automation</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> AI Powered Workflows</li>
+                    </ul>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> AI Orchestration</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> AI Driven Customer Experience</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> AI Operational Analytics</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> AI Workflow Intelligence</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> AI Based Automation Platforms</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- 3. Solution -->
-    <section class="py-32 px-8">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <!-- Services Overview -->
+    <section class="py-32 px-6 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-primary font-black uppercase tracking-widest text-sm mb-4 block">AI Automation Services</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Services Overview</h2>
+                <p class="text-lg md:text-xl text-on-surface-variant max-w-4xl mx-auto mb-8 leading-relaxed">
+                    Our AI Automation Services are designed to automate business workflows, improve operational efficiency, and create intelligent process systems using Artificial Intelligence and Machine Learning technologies.
+                </p>
+                <div class="bg-surface-container/50 border border-outline-variant/20 rounded-[2rem] p-8 max-w-5xl mx-auto mb-16 text-left relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/5"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-lg font-black mb-6 text-white text-center md:text-left">Key capabilities include:</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-2 text-sm text-on-surface-variant mb-6">
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[18px]">bolt</span> AI Workflow Automation</div>
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[18px]">bolt</span> Workflow Optimization</div>
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[18px]">bolt</span> AI Powered Automation</div>
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[18px]">bolt</span> Intelligent Workflows</div>
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">bolt</span> Enterprise Workflow Automation</div>
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">bolt</span> AI Operational Efficiency</div>
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">bolt</span> AI Process Intelligence</div>
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">bolt</span> Operational Automation</div>
+                        </div>
+                        <div class="border-t border-outline-variant/20 pt-6 mt-2 text-center">
+                            <p class="text-sm font-mono text-secondary/80">> We create AI systems that improve enterprise productivity through intelligent automation and process optimization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Item 1 -->
+                <div class="glass-card p-8 rounded-[2rem] border-t-4 border-secondary hover-lift flex flex-col h-full group" data-aos="fade-up">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center border border-secondary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-secondary">schema</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">Workflow Automation</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-8 flex-grow">
+                        Workflow Automation solutions streamline repetitive business operations and improve workflow coordination across departments.
+                    </p>
+                    <div class="mb-8 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10">
+                        <p class="text-sm font-bold text-white mb-4">Our workflow automation services include:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> Enterprise workflow automation</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> Workflow orchestration</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI workflow intelligence</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI process automation</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI powered workflows</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> Intelligent reporting systems</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI operational analytics</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI powered dashboards</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-sm text-secondary bg-secondary/10 py-3 px-4 rounded-xl border border-secondary/20">These systems help businesses reduce manual operations and improve process consistency.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="glass-card p-8 rounded-[2rem] border-t-4 border-primary hover-lift flex flex-col h-full group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-primary">precision_manufacturing</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">Business Process Automation</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-8 flex-grow">
+                        Business Process Automation solutions automate operational tasks using intelligent automation systems and AI driven workflows.
+                    </p>
+                    <div class="mb-8 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10">
+                        <p class="text-sm font-bold text-white mb-4">Capabilities include:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> AI task automation</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> Intelligent process automation</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> AI review systems</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> Automated evaluation systems</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> Compliance automation</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> AI operational analytics</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> AI powered task execution</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> Workflow optimization</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-sm text-primary bg-primary/10 py-3 px-4 rounded-xl border border-primary/20">We design scalable automation systems that support enterprise process management and operational efficiency.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="glass-card p-8 rounded-[2rem] border-t-4 border-tertiary hover-lift flex flex-col h-full group" data-aos="fade-up">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-tertiary/10 flex items-center justify-center border border-tertiary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-tertiary">memory</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">Intelligent Automation Systems</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-8 flex-grow">
+                        Our Intelligent Automation Systems combine Artificial Intelligence, Machine Learning, and Deep Learning technologies to create adaptive workflow environments.
+                    </p>
+                    <div class="mb-8 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10">
+                        <p class="text-sm font-bold text-white mb-4">Core components include:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> Neural Network Solutions</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> Machine Learning Solutions</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> Deep Learning Solutions</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> Reinforcement Learning Systems</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> Transformer Model Integration</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> AI Intelligence Platforms</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> AI Decision Systems</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> AI Optimization Solutions</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-sm text-tertiary bg-tertiary/10 py-3 px-4 rounded-xl border border-tertiary/20">These intelligent systems support advanced workflow automation and enterprise process intelligence.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="glass-card p-8 rounded-[2rem] border-t-4 border-secondary hover-lift flex flex-col h-full group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center border border-secondary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-secondary">corporate_fare</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">Enterprise AI Solutions</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-8 flex-grow">
+                        Enterprise AI Solutions help organizations deploy scalable AI infrastructure and automation systems across enterprise operations.
+                    </p>
+                    <div class="mb-8 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10">
+                        <p class="text-sm font-bold text-white mb-4">Services include:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> Enterprise AI deployment</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI infrastructure setup</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI integration services</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI cloud solutions</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI infrastructure management</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI scalability solutions</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI governance solutions</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI system architecture</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-sm text-secondary bg-secondary/10 py-3 px-4 rounded-xl border border-secondary/20">We build enterprise-ready AI systems focused on long-term scalability and intelligent automation.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="glass-card p-8 rounded-[2rem] border-t-4 border-primary hover-lift flex flex-col h-full group" data-aos="fade-up">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-primary">chat</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">Conversational AI Solutions</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-8 flex-grow">
+                        Conversational AI solutions improve customer interactions using Natural Language Processing, Large Language Models, and Generative AI technologies.
+                    </p>
+                    <div class="mb-8 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10">
+                        <p class="text-sm font-bold text-white mb-4">Our conversational AI services include:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> AI chatbot development</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> AI virtual assistants</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> Virtual AI agents</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> AI customer service solutions</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> Customer support AI</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> NLP solutions</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> AI business assistants</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> AI copilots</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-sm text-primary bg-primary/10 py-3 px-4 rounded-xl border border-primary/20">These systems help businesses automate customer communication and improve operational responsiveness.</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="glass-card p-8 rounded-[2rem] border-t-4 border-tertiary hover-lift flex flex-col h-full group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-tertiary/10 flex items-center justify-center border border-tertiary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-tertiary">query_stats</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">Predictive Analytics Solutions</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-8 flex-grow">
+                        Predictive Analytics Solutions use AI models and Machine Learning systems to analyze operational data and generate intelligent forecasting insights.
+                    </p>
+                    <div class="mb-8 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10">
+                        <p class="text-sm font-bold text-white mb-4">Capabilities include:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> Predictive analytics</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> AI forecasting</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> Real time analytics</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> AI monitoring systems</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> Intelligent reporting systems</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> AI operational analytics</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> AI decision systems</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check</span> Anomaly detection systems</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-sm text-tertiary bg-tertiary/10 py-3 px-4 rounded-xl border border-tertiary/20">These solutions support data-driven operational planning and intelligent workflow optimization.</p>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="glass-card p-8 rounded-[2rem] border-t-4 border-secondary hover-lift flex flex-col h-full group" data-aos="fade-up">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center border border-secondary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-secondary">smart_toy</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">AI Agent Development</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-8 flex-grow">
+                        AI Agent Development services create autonomous systems capable of performing operational tasks and workflow management.
+                    </p>
+                    <div class="mb-8 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10">
+                        <p class="text-sm font-bold text-white mb-4">Our AI agent services include:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> Autonomous AI agents</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> Agentic AI systems</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI copilots</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI business assistants</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> Virtual AI agents</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI workflow intelligence</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span> AI powered task execution</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-sm text-secondary bg-secondary/10 py-3 px-4 rounded-xl border border-secondary/20">These AI systems improve business productivity through intelligent operational automation.</p>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="glass-card p-8 rounded-[2rem] border-t-4 border-primary hover-lift flex flex-col h-full group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-primary">database</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">AI Data Processing Solutions</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-8 flex-grow">
+                        AI Data Processing Solutions help businesses manage operational data through intelligent AI systems and automated workflows.
+                    </p>
+                    <div class="mb-8 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10">
+                        <p class="text-sm font-bold text-white mb-4">Capabilities include:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> AI data processing solutions</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> Intelligent document processing</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> AI review systems</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> Automated evaluation systems</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> AI operational analytics</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> Real time analytics</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check</span> AI powered dashboards</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-sm text-primary bg-primary/10 py-3 px-4 rounded-xl border border-primary/20">These systems improve data processing speed, operational visibility, and workflow intelligence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Solutions -->
+    <section class="py-24 px-6 md:px-8 bg-surface-container-lowest border-y border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-black mb-6">Industry AI Solutions</h2>
+                <p class="text-lg text-on-surface-variant max-w-2xl mx-auto">We provide industry-focused AI powered business solutions designed for operational automation and workflow optimization.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="glass-card p-6 text-center rounded-2xl border border-secondary/20 hover:bg-secondary/10 transition-colors cursor-pointer group">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-3 group-hover:scale-110 transition-transform">medical_services</span>
+                    <h4 class="font-bold text-sm">Healthcare</h4>
+                </div>
+                <div class="glass-card p-6 text-center rounded-2xl border border-primary/20 hover:bg-primary/10 transition-colors cursor-pointer group">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-3 group-hover:scale-110 transition-transform">precision_manufacturing</span>
+                    <h4 class="font-bold text-sm">Manufacturing</h4>
+                </div>
+                <div class="glass-card p-6 text-center rounded-2xl border border-tertiary/20 hover:bg-tertiary/10 transition-colors cursor-pointer group">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-3 group-hover:scale-110 transition-transform">account_balance</span>
+                    <h4 class="font-bold text-sm">Finance</h4>
+                </div>
+                <div class="glass-card p-6 text-center rounded-2xl border border-secondary/20 hover:bg-secondary/10 transition-colors cursor-pointer group">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-3 group-hover:scale-110 transition-transform">directions_car</span>
+                    <h4 class="font-bold text-sm">Automotive</h4>
+                </div>
+                <div class="glass-card p-6 text-center rounded-2xl border border-primary/20 hover:bg-primary/10 transition-colors cursor-pointer group">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-3 group-hover:scale-110 transition-transform">storefront</span>
+                    <h4 class="font-bold text-sm">Retail</h4>
+                </div>
+                <div class="glass-card p-6 text-center rounded-2xl border border-tertiary/20 hover:bg-tertiary/10 transition-colors cursor-pointer group">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-3 group-hover:scale-110 transition-transform">contact_mail</span>
+                    <h4 class="font-bold text-sm">CRM</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results and Impact -->
+    <section class="py-32 px-6 md:px-8">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div data-aos="fade-right">
-                <span class="text-secondary font-black uppercase tracking-widest text-sm mb-4 block">The Solution</span>
-                <h2 class="text-4xl font-black mb-6">Infinite Scale via <br><span class="text-secondary">Neural Automation</span></h2>
-                <p class="text-lg text-on-surface-variant opacity-80 leading-relaxed mb-6">
-                    Enter the age of synthetic employees. We integrate custom AI agents directly into your workflows to handle everything from complex customer inquiries to backend data processing—instantly, perfectly, and without sleep.
-                </p>
-                <p class="text-lg text-on-surface-variant opacity-80 leading-relaxed">
-                    Stop paying for busywork. Start investing in infinite leverage.
-                </p>
+                <h2 class="text-4xl font-black mb-6">Results and Operational Impact</h2>
+                <p class="text-lg text-on-surface-variant mb-6">AI Automation Services help organizations improve workflow efficiency, automate repetitive operations, and optimize enterprise processes through intelligent automation systems.</p>
+                <p class="text-lg text-on-surface-variant mb-6">Using AI, Machine Learning, Deep Learning, and Predictive Analytics, organizations can create advanced workflow systems capable of automating operational tasks and improving enterprise scalability.</p>
+                <p class="text-lg text-on-surface-variant">AI integration services also help businesses connect existing operational systems with intelligent automation infrastructure for improved workflow coordination and operational consistency.</p>
             </div>
-            <div class="glass-card p-8 rounded-3xl border border-secondary/20 bg-secondary/5" data-aos="fade-left">
-                <div class="flex items-center justify-between border-b border-secondary/10 pb-4 mb-4">
-                    <span class="font-bold text-secondary">Human Output</span>
-                    <span class="font-mono text-sm">40 tasks/day</span>
-                </div>
-                <div class="flex items-center justify-between border-b border-secondary/10 pb-4 mb-4">
-                    <span class="font-bold text-primary">AI Output</span>
-                    <span class="font-mono text-sm text-primary">10,000+ tasks/sec</span>
-                </div>
-                <div class="flex items-center justify-between pt-2">
-                    <span class="font-bold text-on-surface">Error Rate</span>
-                    <span class="font-mono text-sm text-secondary">0.01%</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Core AI Pillars (Services) -->
-    <section class="py-32 px-8 bg-surface-container-lowest">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Chatbots -->
-                <div class="p-10 glass-card rounded-[2.5rem] border-t-4 border-secondary/40 hover-lift group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-8">
-                        <span class="material-symbols-outlined text-secondary">forum</span>
-                    </div>
-                    <h3 class="text-2xl font-black mb-4">Intelligent Chatbots</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">Multi-LLM intent mapping for support and sales automation. Human-like interaction at scale.</p>
-                    <div class="pt-4 border-t border-secondary/10">
-                        <div class="flex justify-between text-[10px] font-mono text-secondary/60">
-                            <span>Accuracy: 98%</span>
-                            <span>Latency: <400ms</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Agents -->
-                <div class="p-10 glass-card rounded-[2.5rem] border-t-4 border-primary/40 hover-lift group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-8">
-                        <span class="material-symbols-outlined text-primary">robot_2</span>
-                    </div>
-                    <h3 class="text-2xl font-black mb-4">Autonomous Agents</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">Custom AI agents that can perform tasks, manage workflows, and interact with your existing tools.</p>
-                    <div class="pt-4 border-t border-primary/10">
-                        <div class="flex justify-between text-[10px] font-mono text-primary/60">
-                            <span>Status: Active</span>
-                            <span>Logic: Neural_Link</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Analysis -->
-                <div class="p-10 glass-card rounded-[2.5rem] border-t-4 border-tertiary/40 hover-lift group" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center mb-8">
-                        <span class="material-symbols-outlined text-tertiary">insights</span>
-                    </div>
-                    <h3 class="text-2xl font-black mb-4">Data Intelligence</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">Transforming raw business data into actionable insights using advanced machine learning models.</p>
-                    <div class="pt-4 border-t border-tertiary/10">
-                        <div class="flex justify-between text-[10px] font-mono text-tertiary/60">
-                            <span>Engine: V9 Matrix</span>
-                            <span>Sync: Completed</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Ribbon -->
-    <section class="py-20 bg-[#0a0a0b] border-y border-outline-variant/10">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="flex flex-wrap justify-center gap-12 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-secondary text-3xl">deployed_code</span>
-                    <span class="font-black tracking-widest text-sm">OPENAI</span>
-                </div>
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-primary text-3xl">account_tree</span>
-                    <span class="font-black tracking-widest text-sm">LANGCHAIN</span>
-                </div>
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-tertiary text-3xl">terminal</span>
-                    <span class="font-black tracking-widest text-sm">PYTHON</span>
-                </div>
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-secondary text-3xl">storage</span>
-                    <span class="font-black tracking-widest text-sm">PINECONE</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Live Console -->
-    <section class="py-32 px-8">
-        <div class="max-w-4xl mx-auto">
-            <div class="glass-card rounded-[3rem] border border-secondary/20 bg-black/60 p-12 relative overflow-hidden" data-aos="zoom-in">
-                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent"></div>
-                <div class="flex items-center gap-4 mb-8">
-                    <div class="flex gap-2">
-                        <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
-                        <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
-                        <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
-                    </div>
-                    <span class="font-mono text-xs text-secondary/60">NEURAL_TERMINAL_v0.9.bin</span>
-                </div>
-                <div class="space-y-4 font-mono text-sm text-secondary/80">
-                    <p class="animate__animated animate__fadeIn">> analyzing_business_bottlenecks... [FOUND: 4]</p>
-                    <p class="animate__animated animate__fadeIn animate__delay-1s">> calculating_automation_roi... [ESTIMATED: 420%]</p>
-                    <p class="animate__animated animate__fadeIn animate__delay-2s">> deploying_neural_agents... [OK]</p>
-                    <p class="animate__animated animate__flash animate__infinite mt-8 text-secondary">READY_FOR_INTEGRATION</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. How It Works -->
-    <section class="py-32 px-8 bg-surface-container-lowest">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <h2 class="text-4xl font-black mb-4">Our <span class="text-secondary">Deployment</span> Process</h2>
-                <p class="text-on-surface-variant opacity-80 max-w-2xl mx-auto">From messy operations to fully autonomous workflows in 4 steps.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Step 1 -->
-                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-secondary" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-6xl font-black text-secondary/20 absolute -top-6 right-4">01</div>
-                    <h3 class="text-xl font-bold mb-4 mt-4">Audit & Map</h3>
-                    <p class="text-sm text-on-surface-variant opacity-80">We shadow your team and map out every repetitive, rule-based bottleneck in your business.</p>
-                </div>
-                <!-- Step 2 -->
-                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-primary" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-6xl font-black text-primary/20 absolute -top-6 right-4">02</div>
-                    <h3 class="text-xl font-bold mb-4 mt-4">LLM Selection</h3>
-                    <p class="text-sm text-on-surface-variant opacity-80">We match the right intelligence (GPT-4, Claude, Llama) to your specific use case for maximum efficiency.</p>
-                </div>
-                <!-- Step 3 -->
-                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-tertiary" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-6xl font-black text-tertiary/20 absolute -top-6 right-4">03</div>
-                    <h3 class="text-xl font-bold mb-4 mt-4">Integration</h3>
-                    <p class="text-sm text-on-surface-variant opacity-80">We securely plug the AI agents into your existing tech stack (HubSpot, Slack, Zendesk, internal DBs).</p>
-                </div>
-                <!-- Step 4 -->
-                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-secondary" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-6xl font-black text-secondary/20 absolute -top-6 right-4">04</div>
-                    <h3 class="text-xl font-bold mb-4 mt-4">Observation</h3>
-                    <p class="text-sm text-on-surface-variant opacity-80">We deploy the agents in "ghost mode" to monitor decisions before turning them fully autonomous.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Benefits (ROI Focus) -->
-    <section class="py-32 px-8">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1 relative" data-aos="zoom-in">
-                <div class="glass-card rounded-[3rem] p-12 border border-secondary/20 bg-black/40 flex flex-col items-center justify-center aspect-square text-center">
-                    <span class="material-symbols-outlined text-[80px] text-secondary mb-6 animate-pulse">monitoring</span>
-                    <div class="text-5xl font-black text-white mb-2">350%</div>
-                    <p class="text-secondary font-mono text-sm uppercase tracking-widest">Average Year 1 ROI</p>
-                </div>
-            </div>
-            <div class="order-1 md:order-2" data-aos="fade-left">
-                <span class="text-secondary font-black uppercase tracking-widest text-sm mb-4 block">The ROI</span>
-                <h2 class="text-4xl font-black mb-8">Cut Costs. <span class="text-secondary">Multiply Margins.</span></h2>
-                <ul class="space-y-6">
-                    <li class="flex items-start gap-4">
-                        <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
-                        <div>
-                            <h4 class="font-bold text-lg">Drastic Labor Cost Reduction</h4>
-                            <p class="text-on-surface-variant opacity-80">Automate roles that previously required full-time salaries, immediately increasing your profit margins.</p>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
-                        <div>
-                            <h4 class="font-bold text-lg">Zero Downtime</h4>
-                            <p class="text-on-surface-variant opacity-80">AI agents work 24/7/365 without vacations, sick days, or sleep, ensuring your business is always responsive.</p>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
-                        <div>
-                            <h4 class="font-bold text-lg">Instant Scalability</h4>
-                            <p class="text-on-surface-variant opacity-80">Handle 10 tickets or 100,000 tickets with the exact same infrastructure and zero delay.</p>
-                        </div>
-                    </li>
+            <div class="glass-card p-8 rounded-[2rem] border border-secondary/20 bg-surface-container" data-aos="zoom-in">
+                <h3 class="text-xl font-bold mb-6 text-white text-center">Improvements Achieved:</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4 bg-surface p-4 rounded-xl shadow-md"><span class="material-symbols-outlined text-secondary text-3xl">trending_up</span> <span class="font-bold">Workflow optimization</span></li>
+                    <li class="flex items-center gap-4 bg-surface p-4 rounded-xl shadow-md"><span class="material-symbols-outlined text-primary text-3xl">bolt</span> <span class="font-bold">AI operational efficiency</span></li>
+                    <li class="flex items-center gap-4 bg-surface p-4 rounded-xl shadow-md"><span class="material-symbols-outlined text-tertiary text-3xl">insights</span> <span class="font-bold">Intelligent reporting systems</span></li>
+                    <li class="flex items-center gap-4 bg-surface p-4 rounded-xl shadow-md"><span class="material-symbols-outlined text-secondary text-3xl">analytics</span> <span class="font-bold">Real time analytics</span></li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- 7. Use Cases -->
-    <section class="py-32 px-8 bg-surface-container-lowest border-y border-outline-variant/10">
+    <!-- Process -->
+    <section class="py-32 px-6 md:px-8 bg-surface-container-low">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-black mb-4">Enterprise <span class="text-secondary">Use Cases</span></h2>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Process – How We Work</h2>
+                <p class="text-xl text-on-surface-variant">Our proven methodology for implementing AI automation systems.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-secondary/50 transition-colors">
-                    <h3 class="font-bold text-xl mb-3 text-secondary">Customer Support</h3>
-                    <p class="text-sm opacity-80">Resolves 85% of tier-1 support tickets instantly using RAG trained on your specific company knowledge base.</p>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <!-- 1 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-secondary relative hover:-translate-y-2 transition-transform" data-aos="fade-up" data-aos-delay="0">
+                    <div class="text-6xl font-black text-secondary/10 absolute top-2 right-4">1</div>
+                    <h4 class="font-bold text-xl mb-3 mt-4 text-white relative z-10">AI Strategy</h4>
+                    <p class="text-sm opacity-80 text-on-surface-variant relative z-10">Identify workflow automation opportunities and enterprise automation requirements.</p>
                 </div>
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-secondary/50 transition-colors">
-                    <h3 class="font-bold text-xl mb-3 text-secondary">Sales Qualification</h3>
-                    <p class="text-sm opacity-80">Engages inbound leads 24/7, qualifies them based on your criteria, and automatically books meetings for human closers.</p>
+                <!-- 2 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-primary relative hover:-translate-y-2 transition-transform" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-6xl font-black text-primary/10 absolute top-2 right-4">2</div>
+                    <h4 class="font-bold text-xl mb-3 mt-4 text-white relative z-10">System Architecture</h4>
+                    <p class="text-sm opacity-80 text-on-surface-variant relative z-10">Design scalable AI infrastructure, cloud solutions, and integration services.</p>
                 </div>
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-secondary/50 transition-colors">
-                    <h3 class="font-bold text-xl mb-3 text-secondary">Data Processing</h3>
-                    <p class="text-sm opacity-80">Extracts data from unstructured PDFs and emails, categorizes it, and securely pushes it to your CRM or ERP system.</p>
+                <!-- 3 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-tertiary relative hover:-translate-y-2 transition-transform" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-6xl font-black text-tertiary/10 absolute top-2 right-4">3</div>
+                    <h4 class="font-bold text-xl mb-3 mt-4 text-white relative z-10">Development</h4>
+                    <p class="text-sm opacity-80 text-on-surface-variant relative z-10">Build models, chatbots, and autonomous agents using LLMs and Machine Learning.</p>
+                </div>
+                <!-- 4 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-secondary relative hover:-translate-y-2 transition-transform" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-6xl font-black text-secondary/10 absolute top-2 right-4">4</div>
+                    <h4 class="font-bold text-xl mb-3 mt-4 text-white relative z-10">Deployment</h4>
+                    <p class="text-sm opacity-80 text-on-surface-variant relative z-10">Launch enterprise AI workflows, analytics, and intelligent process automation.</p>
+                </div>
+                <!-- 5 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-primary relative hover:-translate-y-2 transition-transform" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-6xl font-black text-primary/10 absolute top-2 right-4">5</div>
+                    <h4 class="font-bold text-xl mb-3 mt-4 text-white relative z-10">Optimization</h4>
+                    <p class="text-sm opacity-80 text-on-surface-variant relative z-10">Continuously optimize workflows and AI scalability for long-term operational growth.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 8. Proof (Testimonials) -->
-    <section class="py-32 px-8">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-black mb-4">Trusted by <span class="text-secondary">Pioneers</span></h2>
-            </div>
-            <div class="glass-card p-12 rounded-[3rem] border border-secondary/20 relative" data-aos="fade-up">
-                <span class="material-symbols-outlined text-6xl text-secondary/20 absolute top-8 left-8">format_quote</span>
-                <p class="text-xl md:text-2xl font-light italic leading-relaxed text-center relative z-10">
-                    "Implementing DifusionSEO's autonomous workflow agents allowed us to scale our operations by 3x without hiring a single new data entry specialist. The ROI was realized in week two."
-                </p>
-                <div class="mt-8 text-center">
-                    <p class="font-bold text-secondary">Michael T.</p>
-                    <p class="text-sm opacity-60 uppercase tracking-widest font-mono">VP of Operations, TechFlow Inc.</p>
+    <!-- EEAT & Info Sections -->
+    <section class="py-24 px-6 md:px-8 bg-surface-container-lowest">
+        <div class="max-w-6xl mx-auto space-y-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                <div>
+                    <h3 class="text-3xl font-black mb-6 text-white">AI Expertise and Enterprise Automation Experience</h3>
+                    <p class="text-on-surface-variant leading-relaxed text-lg mb-4">Our AI Automation Company focuses on building intelligent automation systems using Artificial Intelligence, Machine Learning, Deep Learning, Neural Networks, Natural Language Processing, Predictive Analytics, Reinforcement Learning, Large Language Models, and Generative AI technologies.</p>
+                    <p class="text-on-surface-variant leading-relaxed text-lg">Our development approach prioritizes workflow optimization, intelligent process automation, enterprise scalability, and AI operational efficiency.</p>
                 </div>
+                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20">
+                    <h4 class="font-bold text-xl mb-4 text-secondary">We specialize in:</h4>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant">
+                        <li>• AI Workflow Automation</li>
+                        <li>• AI Process Automation</li>
+                        <li>• Enterprise AI Solutions</li>
+                        <li>• AI Integration Services</li>
+                        <li>• AI Infrastructure Management</li>
+                        <li>• AI Engineering Solutions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                <div class="order-2 md:order-1 glass-card p-8 rounded-3xl border border-outline-variant/20 text-center">
+                    <span class="material-symbols-outlined text-6xl text-primary mb-4">security</span>
+                    <h4 class="font-bold text-xl mb-2 text-white">Secure Integrations</h4>
+                    <p class="text-sm text-on-surface-variant">Protected workflow environments and stable enterprise automation systems.</p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="text-3xl font-black mb-6 text-white">Website Security and Operational Reliability</h3>
+                    <p class="text-on-surface-variant leading-relaxed text-lg">Our AI systems are developed with operational reliability and website-focused security practices in mind. We focus on secure AI integrations, workflow stability, enterprise system reliability, and protected operational environments related to website and platform infrastructure.</p>
+                </div>
+            </div>
+
+            <div class="text-center" data-aos="fade-up">
+                <h3 class="text-3xl font-black mb-6 text-white">Locations and Areas We Serve</h3>
+                <p class="text-on-surface-variant leading-relaxed text-lg max-w-3xl mx-auto">We provide AI Automation Services for businesses seeking intelligent automation systems, workflow optimization, and enterprise AI solutions across multiple industries and operational environments globally.</p>
+            </div>
+
+            <div data-aos="fade-up" class="pt-16">
+                <div class="text-center mb-12">
+                    <span class="text-primary font-black uppercase tracking-widest text-sm mb-4 block">Our Advantage</span>
+                    <h3 class="text-4xl md:text-5xl font-black text-white">Why Choose Us</h3>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 text-center">
+                    <!-- Item 1 -->
+                    <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-2 transition-all duration-300 group border border-outline-variant/10 hover:border-secondary/50 hover:shadow-[0_10px_40px_rgba(162,231,255,0.1)]">
+                        <span class="material-symbols-outlined text-4xl text-secondary mb-4 group-hover:scale-110 transition-transform block">psychology</span>
+                        <h4 class="font-bold text-lg text-white mb-3">AI Focused Automation Solutions</h4>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">We specialize in AI Automation Services designed for workflow automation, intelligent process systems, and enterprise AI deployment.</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-2 transition-all duration-300 group border border-outline-variant/10 hover:border-primary/50 hover:shadow-[0_10px_40px_rgba(255,200,87,0.1)]">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-4 group-hover:scale-110 transition-transform block">corporate_fare</span>
+                        <h4 class="font-bold text-lg text-white mb-3">Enterprise Workflow Automation Expertise</h4>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Our solutions support enterprise workflow automation, workflow orchestration, and operational scalability.</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-2 transition-all duration-300 group border border-outline-variant/10 hover:border-tertiary/50 hover:shadow-[0_10px_40px_rgba(255,159,28,0.1)] md:col-span-2 lg:col-span-1 xl:col-span-2 text-left sm:text-center md:text-left lg:text-center xl:text-left xl:flex xl:items-center xl:gap-8">
+                        <div class="shrink-0">
+                            <span class="material-symbols-outlined text-5xl text-tertiary mb-4 xl:mb-0 group-hover:scale-110 transition-transform block">memory</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-white mb-3">Advanced AI Technologies</h4>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">We use Artificial Intelligence, Machine Learning, Deep Learning, Neural Networks, Natural Language Processing, Predictive Analytics, Reinforcement Learning, Large Language Models, and Generative AI technologies.</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-2 transition-all duration-300 group border border-outline-variant/10 hover:border-secondary/50 hover:shadow-[0_10px_40px_rgba(162,231,255,0.1)]">
+                        <span class="material-symbols-outlined text-4xl text-secondary mb-4 group-hover:scale-110 transition-transform block">dns</span>
+                        <h4 class="font-bold text-lg text-white mb-3">Scalable AI Infrastructure</h4>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Our AI infrastructure setup and AI scalability solutions support long-term enterprise growth and intelligent automation.</p>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-2 transition-all duration-300 group border border-outline-variant/10 hover:border-primary/50 hover:shadow-[0_10px_40px_rgba(255,200,87,0.1)]">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-4 group-hover:scale-110 transition-transform block">hub</span>
+                        <h4 class="font-bold text-lg text-white mb-3">AI Integration Services</h4>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">We connect AI systems with enterprise workflows through intelligent AI integration services and operational automation strategies.</p>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-2 transition-all duration-300 group border border-outline-variant/10 hover:border-tertiary/50 hover:shadow-[0_10px_40px_rgba(255,159,28,0.1)]">
+                        <span class="material-symbols-outlined text-4xl text-tertiary mb-4 group-hover:scale-110 transition-transform block">bolt</span>
+                        <h4 class="font-bold text-lg text-white mb-3">AI Powered Operational Efficiency</h4>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Our intelligent workflows help businesses improve workflow optimization, AI operational efficiency, and operational analytics.</p>
+                    </div>
+                    <!-- Item 7 -->
+                    <div class="glass-card p-8 rounded-[2rem] hover:-translate-y-2 transition-all duration-300 group border border-outline-variant/10 hover:border-secondary/50 hover:shadow-[0_10px_40px_rgba(162,231,255,0.1)]">
+                        <span class="material-symbols-outlined text-4xl text-secondary mb-4 group-hover:scale-110 transition-transform block">engineering</span>
+                        <h4 class="font-bold text-lg text-white mb-3">AI Engineering and Development</h4>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">We provide AI engineering solutions, AI software development, AI model development, and AI system architecture services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-10 md:p-16 rounded-[3rem] text-center bg-surface border border-outline-variant/20" data-aos="fade-up">
+                <h3 class="text-3xl font-black mb-6 text-white">About Us</h3>
+                <p class="text-on-surface-variant leading-relaxed text-lg max-w-3xl mx-auto">We are an AI Automation Company focused on intelligent automation systems, enterprise workflow automation, and AI powered business solutions. We help businesses implement intelligent workflows, AI operational analytics, AI orchestration systems, and enterprise AI infrastructure designed for scalable operational growth.</p>
             </div>
         </div>
     </section>
 
-    <!-- 9. FAQ Section -->
-    <section class="py-32 px-8 bg-surface-container-low">
+    <!-- FAQ Section -->
+    <section class="py-32 px-6 md:px-8 bg-surface-container-low border-t border-outline-variant/10">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-black mb-4">AI & Automation <span class="text-secondary">FAQs</span></h2>
-                <p class="text-on-surface-variant opacity-70">Answers to common questions about our AI solutions.</p>
+                <h2 class="text-4xl font-black mb-4">Frequently Asked Questions</h2>
             </div>
             
             <div class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
-                <!-- FAQ Item 1 -->
+                <!-- FAQ 1 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">How can AI automate my business?</span>
+                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">What is AI automation?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                         <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            AI can automate repetitive tasks, handle initial customer support via intelligent chatbots, sort and analyze large datasets, and integrate with your CRM to streamline lead qualification and follow-ups.
+                            AI automation combines Artificial Intelligence with workflow systems to automate operational tasks, improve workflow optimization, and create intelligent business processes. AI automation systems use technologies such as Machine Learning, Deep Learning, Neural Networks, Predictive Analytics, and Natural Language Processing to improve operational efficiency.
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ Item 2 -->
+                <!-- FAQ 2 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">Do you use LLMs like ChatGPT?</span>
+                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">What are AI agents?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                         <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Yes, we utilize powerful Large Language Models (LLMs) including OpenAI's GPT models, Claude, and open-source alternatives like Llama. We fine-tune and integrate these models specifically for your business data using RAG (Retrieval-Augmented Generation).
+                            AI agents are intelligent systems designed to perform operational tasks, automate workflows, and support business processes through autonomous decision systems. AI agents can function as AI copilots, AI business assistants, virtual AI agents, and agentic AI systems.
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ Item 3 -->
+                <!-- FAQ 3 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">Can AI improve my SEO?</span>
+                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">What is reinforcement learning?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                         <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Absolutely. We use AI for deep semantic research, programmatic SEO, and intent mapping. AI tools can analyze search engine results pages (SERPs) at scale to identify content gaps and optimization opportunities that humans might miss.
+                            Reinforcement Learning is an Artificial Intelligence approach where AI systems learn operational behavior through continuous optimization and adaptive decision-making processes. Reinforcement Learning systems are commonly used in intelligent automation and AI workflow optimization.
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ Item 4 -->
+                <!-- FAQ 4 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">Will AI replace my employees?</span>
+                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">What are neural networks?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                         <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            We view AI as an augmentation tool, not a replacement. AI handles repetitive, low-level tasks, freeing up your human workforce to focus on high-level strategy, complex problem-solving, and building genuine customer relationships.
+                            Neural Networks are AI models designed to process data patterns and support intelligent decision systems. Neural Network Solutions are commonly used in Machine Learning Solutions, Deep Learning Solutions, Predictive Analytics, and AI model development.
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ Item 5 -->
+                <!-- FAQ 5 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">How secure is the data processed by your AI?</span>
+                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">What is conversational AI?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                         <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Data security is our top priority. We use enterprise-grade APIs where data is NOT used to train public models. We can also deploy open-source models entirely on your private infrastructure for total data sovereignty.
+                            Conversational AI refers to AI systems capable of handling intelligent communication through Natural Language Processing, Large Language Models, and Generative AI technologies. Examples include AI chatbots, AI virtual assistants, customer support AI systems, and AI business assistants.
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ Item 6 -->
+                <!-- FAQ 6 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">What is RAG (Retrieval-Augmented Generation)?</span>
+                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">What is enterprise AI?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                         <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            RAG is a technique where we connect an AI model to your private company data (like PDFs, databases, or wikis). Instead of guessing, the AI "reads" your specific documents before answering, drastically reducing hallucinations and providing accurate, company-specific answers.
+                            Enterprise AI refers to the deployment of Artificial Intelligence systems across enterprise operations to improve workflow automation, operational analytics, process optimization, and intelligent decision systems. Enterprise AI Solutions often include AI integration services, AI infrastructure management, workflow orchestration, and intelligent process automation.
                         </div>
                     </div>
                 </div>
@@ -507,14 +763,26 @@
         </div>
     </section>
 
-    <!-- 10. Final CTA -->
-    <section class="py-32 px-8 bg-secondary/5">
-        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <h2 class="text-4xl md:text-7xl font-black mb-8">Automate or Be <span class="text-secondary">Automated</span>.</h2>
-            <p class="text-xl text-on-surface-variant opacity-80 leading-relaxed mb-12">The future of business is synthetic. Join the intelligence revolution today.</p>
-            <a href="{% url 'contact' %}" class="inline-flex items-center gap-3 bg-secondary text-on-secondary px-12 py-6 rounded-full font-black text-lg hover:scale-105 transition-all shadow-2xl">
-                Start AI Journey
-                <span class="material-symbols-outlined">psychology</span>
+    <!-- Final CTA -->
+    <section class="py-32 px-6 md:px-8 bg-gradient-to-br from-surface-container-lowest to-secondary/10 text-center border-t border-outline-variant/10">
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
+            <h2 class="text-4xl md:text-6xl font-black mb-8">Build Intelligent Workflows with <span class="text-secondary">AI Automation Services</span></h2>
+            
+            <div class="space-y-6 mb-12 text-on-surface-variant opacity-90 text-left md:text-center">
+                <p class="text-xl leading-relaxed font-bold">
+                    Accelerate operational efficiency with AI Automation Services designed for enterprise workflow automation, intelligent process automation, AI integration, and scalable AI powered business solutions.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    From AI Workflow Automation and Predictive Analytics Solutions to AI Agent Development and Enterprise AI Solutions, we help businesses create intelligent workflows powered by Artificial Intelligence, Machine Learning, Deep Learning, Neural Networks, Reinforcement Learning, Large Language Models, and Generative AI.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Start building scalable AI systems with intelligent automation solutions focused on workflow optimization, AI operational efficiency, and enterprise growth.
+                </p>
+            </div>
+
+            <a href="{% url 'contact' %}" class="inline-flex items-center gap-3 bg-secondary text-on-secondary px-12 py-6 rounded-full font-black text-lg hover:scale-105 transition-transform shadow-[0_20px_40px_rgba(162,231,255,0.2)]">
+                Start Building Now
+                <span class="material-symbols-outlined">rocket_launch</span>
             </a>
         </div>
     </section>
