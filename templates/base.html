@@ -1,7 +1,6 @@
-{% load static seo_tags i18n %}
-{% get_current_language as LANGUAGE_CODE %}
+{% load static seo_tags %}
 <!DOCTYPE html>
-<html class="dark" lang="{{ LANGUAGE_CODE }}">
+<html class="dark" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -13,16 +12,7 @@
     <meta name="description" content="DifusionSEO provides high performance SEO, AI automation, and web development to businesses worldwide. Best in class digital growth agency.">
     {% endblock %}
 
-    <!-- Hreflang for Multi-lingual SEO -->
     {% block hreflang %}
-    <link rel="alternate" hreflang="en" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path|translate_url:'en' }}">
-    <link rel="alternate" hreflang="es" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path|translate_url:'es' }}">
-    <link rel="alternate" hreflang="fr" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path|translate_url:'fr' }}">
-    <link rel="alternate" hreflang="de" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path|translate_url:'de' }}">
-    <link rel="alternate" hreflang="it" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path|translate_url:'it' }}">
-    <link rel="alternate" hreflang="nl" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path|translate_url:'nl' }}">
-    <link rel="alternate" hreflang="de-ch" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path|translate_url:'de-ch' }}">
-    <link rel="alternate" hreflang="x-default" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path|translate_url:'en' }}">
     {% endblock %}
     
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,typography"></script>
