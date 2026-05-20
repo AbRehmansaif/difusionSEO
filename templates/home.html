@@ -409,48 +409,95 @@
 </div>
 </div>
 </section>
-<!-- What We Do (Bento Grid) -->
+<!-- What We Do (Grid) -->
 <section class="py-32 px-8 relative bg-surface-container-lowest overflow-hidden">
     <div class="parallax absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none" data-speed="0.1"></div>
     <div class="parallax absolute -bottom-20 -left-20 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] pointer-events-none" data-speed="-0.1"></div>
     <div class="max-w-7xl mx-auto relative z-10">
-<div class="mb-20">
-<span class="label-md uppercase tracking-[0.2em] text-secondary font-bold mb-4 block">Our Expertise</span>
+        <div class="mb-20">
+            <span class="label-md uppercase tracking-[0.2em] text-secondary font-bold mb-4 block">Our Expertise</span>
 <h2 class="text-4xl md:text-6xl font-black tracking-tighter text-on-surface">SEO, AI Automation & Web Development Services</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-6 md:grid-rows-2 gap-4">
-<!-- SEO -->
-<div class="md:col-span-3 glass-card p-10 rounded-[1.5rem] hover:border-primary/50 group transition-all hover-lift" data-aos="fade-up" data-aos-delay="100">
-<span class="material-symbols-outlined text-5xl text-primary mb-6 group-hover:scale-110 transition-transform block">query_stats</span>
-<h3 class="text-2xl font-bold mb-3">Advanced SEO Services</h3>
-<p class="text-on-surface-variant">We provide advanced, AI powered SEO services that improve search rankings, increase organic traffic, and deliver data driven strategies for long term business growth.</p>
-</div>
-<!-- Local SEO -->
-<div class="md:col-span-3 glass-card p-10 rounded-[1.5rem] hover:border-secondary/50 group transition-all hover-lift" data-aos="fade-up" data-aos-delay="200">
-<span class="material-symbols-outlined text-5xl text-secondary mb-6 group-hover:scale-110 transition-transform block">location_on</span>
-<h3 class="text-2xl font-bold mb-3">Local SEO Services</h3>
-<p class="text-on-surface-variant">We help businesses increase visibility and get more customers through targeted local SEO, Google Maps optimization, and “near me” search rankings.</p>
-</div>
-<!-- Full Stack -->
-<div class="md:col-span-2 glass-card p-10 rounded-[1.5rem] hover:border-tertiary/50 group transition-all hover-lift" data-aos="fade-up" data-aos-delay="300">
-<span class="material-symbols-outlined text-5xl text-tertiary mb-6 group-hover:scale-110 transition-transform block">terminal</span>
-<h3 class="text-xl font-bold mb-3">Custom Web Development</h3>
-<p class="text-on-surface-variant text-sm">We build fast, scalable, and secure custom websites tailored to your business needs, focused on performance, user experience, and long term growth.</p>
-</div>
-<!-- AI & Automation -->
-<div class="md:col-span-2 glass-card p-10 rounded-[1.5rem] hover:border-primary/50 group transition-all hover-lift" data-aos="fade-up" data-aos-delay="400">
-<span class="material-symbols-outlined text-5xl text-primary mb-6 group-hover:scale-110 transition-transform block">neurology</span>
-<h3 class="text-xl font-bold mb-3">AI Automation Services</h3>
-<p class="text-on-surface-variant text-sm">We provide AI automation services that streamline business workflows, automate repetitive tasks, and improve efficiency through intelligent, data driven systems.</p>
-</div>
-<!-- App Security -->
-<div class="md:col-span-2 glass-card p-10 rounded-[1.5rem] hover:border-secondary/50 group transition-all hover-lift" data-aos="fade-up" data-aos-delay="500">
-<span class="material-symbols-outlined text-5xl text-secondary mb-6 group-hover:scale-110 transition-transform block">shield_lock</span>
-<h3 class="text-xl font-bold mb-3">Web Application Security</h3>
-<p class="text-on-surface-variant text-sm">Web Application Security is the practice of protecting websites and web applications from cyber threats by identifying, preventing, and fixing vulnerabilities like SQL injection, XSS, and misconfigurations to ensure safe and secure user interactions.</p>
-</div>
-</div>
-</div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 1. SEO Strategy -->
+            <a href="{% url 'seo_strategy' %}" class="glass-card p-10 rounded-[1.5rem] hover:border-primary/50 group transition-all hover-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <span class="material-symbols-outlined text-5xl text-primary mb-6 group-hover:scale-110 transition-transform block">query_stats</span>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced SEO Services</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">We provide advanced, AI powered SEO services that improve search rankings, increase organic traffic, and deliver data driven strategies for long term business growth.</p>
+                </div>
+                <div class="mt-8 flex items-center gap-2 text-sm font-bold text-primary transition-colors">
+                    Learn More
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </a>
+            
+            <!-- 2. Backlink Building -->
+            <a href="{% url 'backlink_service' %}" class="glass-card p-10 rounded-[1.5rem] hover:border-secondary/50 group transition-all hover-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <span class="material-symbols-outlined text-5xl text-secondary mb-6 group-hover:scale-110 transition-transform block">link</span>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Backlink Building</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">We acquire authoritative, high-DR backlinks and editorial links to dynamically boost your domain authority and organic search visibility.</p>
+                </div>
+                <div class="mt-8 flex items-center gap-2 text-sm font-bold text-secondary transition-colors">
+                    Learn More
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </a>
+            
+            <!-- 3. Local SEO -->
+            <a href="{% url 'local_seo' %}" class="glass-card p-10 rounded-[1.5rem] hover:border-tertiary/50 group transition-all hover-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                <div>
+                    <span class="material-symbols-outlined text-5xl text-tertiary mb-6 group-hover:scale-110 transition-transform block">location_on</span>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Local SEO Services</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">We help businesses increase visibility and get more customers through targeted local SEO, Google Maps optimization, and “near me” search rankings.</p>
+                </div>
+                <div class="mt-8 flex items-center gap-2 text-sm font-bold text-tertiary transition-colors">
+                    Learn More
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </a>
+            
+            <!-- 4. Custom Web Development -->
+            <a href="{% url 'web_development' %}" class="glass-card p-10 rounded-[1.5rem] hover:border-primary/50 group transition-all hover-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
+                <div>
+                    <span class="material-symbols-outlined text-5xl text-primary mb-6 group-hover:scale-110 transition-transform block">terminal</span>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Custom Web Development</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">We build fast, scalable, and secure custom websites tailored to your business needs, focused on performance, user experience, and long term growth.</p>
+                </div>
+                <div class="mt-8 flex items-center gap-2 text-sm font-bold text-primary transition-colors">
+                    Learn More
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </a>
+            
+            <!-- 5. AI Automation -->
+            <a href="{% url 'ai_automation' %}" class="glass-card p-10 rounded-[1.5rem] hover:border-secondary/50 group transition-all hover-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="500">
+                <div>
+                    <span class="material-symbols-outlined text-5xl text-secondary mb-6 group-hover:scale-110 transition-transform block">psychology</span>
+                    <h3 class="text-2xl font-bold mb-3 text-white">AI Automation Services</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">We provide AI automation services that streamline business workflows, automate repetitive tasks, and improve efficiency through intelligent, data driven systems.</p>
+                </div>
+                <div class="mt-8 flex items-center gap-2 text-sm font-bold text-secondary transition-colors">
+                    Learn More
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </a>
+            
+            <!-- 6. Web Application Security -->
+            <a href="{% url 'cyber_security' %}" class="glass-card p-10 rounded-[1.5rem] hover:border-tertiary/50 group transition-all hover-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="600">
+                <div>
+                    <span class="material-symbols-outlined text-5xl text-tertiary mb-6 group-hover:scale-110 transition-transform block">shield_lock</span>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Web Application Security</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">We protect websites and web applications from cyber threats by identifying, preventing, and fixing vulnerabilities to ensure safe and secure user interactions.</p>
+                </div>
+                <div class="mt-8 flex items-center gap-2 text-sm font-bold text-tertiary transition-colors">
+                    Learn More
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </a>
+        </div>
+    </div>
 </section>
 <!-- Why Choose Us (Pinned Scroll Section) -->
 <section class="relative min-h-[300vh] bg-surface" id="why-choose-us">
