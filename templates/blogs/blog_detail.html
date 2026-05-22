@@ -192,6 +192,14 @@
 
         <!-- Sidebar -->
         <aside class="lg:col-span-4 hidden lg:block sticky top-32 h-fit space-y-12">
+            <!-- Table of Contents -->
+            <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/20" id="toc-container" style="display: none;">
+                <h4 class="text-xs uppercase tracking-[0.3em] font-black text-white mb-6">Table of Contents</h4>
+                <ul id="toc-list" class="space-y-3 text-sm text-on-surface-variant font-medium">
+                    <!-- TOC items will be injected here via JS -->
+                </ul>
+            </div>
+
             <!-- Share Section -->
             <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/20 text-center">
                 <h4 class="text-xs uppercase tracking-[0.3em] font-black text-white mb-6">Distribute Intel</h4>
@@ -205,6 +213,62 @@
             </div>
         </aside>
     </div>
+
+    <!-- Comments Section -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mt-16">
+        <div class="glass-card rounded-[2rem] p-8 lg:p-12 border border-outline-variant/20">
+            <div class="flex items-end justify-between mb-8">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.4em] text-primary font-black block mb-4">Community</span>
+                    <h3 class="text-3xl font-black tracking-tighter text-white">Discussion ({{ comments.count }})</h3>
+                </div>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="mb-12">
+                <h4 class="text-xl font-bold mb-6 text-white">Leave a Comment</h4>
+                <form method="post" action="." class="space-y-6">
+                    {% csrf_token %}
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            {{ form.name }}
+                        </div>
+                        <div>
+                            {{ form.email }}
+                        </div>
+                    </div>
+                    <div>
+                        {{ form.body }}
+                    </div>
+                    <button type="submit" class="px-8 py-4 rounded-xl bg-primary text-on-primary font-black uppercase tracking-widest hover:scale-[1.02] transition-transform text-white">
+                        Post Comment
+                    </button>
+                </form>
+            </div>
+
+            <!-- Comments List -->
+            <div class="space-y-8">
+                {% for comment in comments %}
+                <div class="p-6 bg-surface/30 rounded-xl border border-outline-variant/10">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-secondary p-[1px]">
+                            <div class="w-full h-full rounded-full bg-surface flex items-center justify-center font-bold text-white">
+                                {{ comment.name|make_list|first|upper }}
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-white">{{ comment.name }}</h5>
+                            <span class="text-xs text-on-surface-variant">{{ comment.created_at|date:"F d, Y" }}</span>
+                        </div>
+                    </div>
+                    <p class="text-on-surface-variant leading-relaxed">{{ comment.body|linebreaks }}</p>
+                </div>
+                {% empty %}
+                <p class="text-on-surface-variant italic">No comments yet. Be the first to start the discussion!</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 
     <!-- Related Posts -->
     {% if related_posts %}
@@ -240,4 +304,57 @@
     </section>
     {% endif %}
 </article>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const contentDiv = document.querySelector('.prose');
+        if (!contentDiv) return;
+
+        const headings = contentDiv.querySelectorAll('h2');
+        const tocContainer = document.getElementById('toc-container');
+        const tocList = document.getElementById('toc-list');
+
+        if (headings.length > 0 && tocContainer && tocList) {
+            tocContainer.style.display = 'block';
+            
+            headings.forEach((heading, index) => {
+                // Create an ID for the heading if it doesn't have one
+                const id = heading.id || `heading-${index}`;
+                heading.id = id;
+
+                // Create list item
+                const li = document.createElement('li');
+                li.className = 'hover:text-primary transition-colors hover:translate-x-1 transform duration-200';
+                
+                // Create anchor
+                const a = document.createElement('a');
+                a.href = `#${id}`;
+                a.textContent = heading.textContent;
+                a.className = 'block line-clamp-2';
+                
+                li.appendChild(a);
+                tocList.appendChild(li);
+            });
+        }
+        
+        // Smooth scrolling for TOC links
+        document.querySelectorAll('#toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerOffset = 120; // Account for sticky navbar
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    });
+</script>
 {% endblock %}

@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.text import slugify
 from django.urls import reverse
 from django.contrib.auth.models import User
+from ckeditor_uploader.fields import RichTextUploadingField
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -34,7 +35,7 @@ class BlogPost(models.Model):
     alt_text = models.CharField(max_length=200, blank=True, help_text="Crucial for SEO. Describe the image for search engines.")
     image_caption = models.CharField(max_length=250, blank=True, help_text="Caption displayed below the image.")
     reading_time = models.PositiveIntegerField(default=5, help_text="Reading time in minutes.")
-    content = models.TextField(help_text="Use HTML tags for styling: <h2> for subheadings, <ul><li> for points, <strong> for bold.")
+    content = RichTextUploadingField(help_text="Rich text content.")
     excerpt = models.TextField(max_length=500, help_text="Brief summary for the blog list page.")
     
     # SEO Fields
@@ -50,8 +51,16 @@ class BlogPost(models.Model):
         ordering = ['-created_at']
 
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)
+        # Force generate slug from title to ensure it contains the complete H1
+        original_slug = slugify(self.title, allow_unicode=True)
+        unique_slug = original_slug
+        num = 1
+        # Handle duplicate slugs by appending a number
+        while BlogPost.objects.filter(slug=unique_slug).exclude(id=self.id).exists():
+            unique_slug = f'{original_slug}-{num}'
+            num += 1
+        
+        self.slug = unique_slug
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
@@ -59,3 +68,18 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return self.title
+
+class Comment(models.Model):
+    post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='comments')
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    body = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ['created_at']
+
+    def __str__(self):
+        return f'Comment by {self.name} on {self.post}'
+

@@ -52,6 +52,8 @@ INSTALLED_APPS = [
 
     'core',
     'blogs',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -149,3 +151,19 @@ if not DEBUG:
 # Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+# CKEditor
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'extraPlugins': ','.join([
+            'uploadimage', # Enables drag-and-drop and pasting images
+            'uploadwidget',
+            'filetools',
+            'notificationaggregator',
+            'notification',
+        ]),
+    },
+}
