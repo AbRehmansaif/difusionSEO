@@ -195,9 +195,12 @@
             <!-- Table of Contents -->
             <div class="glass-card p-8 rounded-[2rem] border border-outline-variant/20" id="toc-container" style="display: none;">
                 <h4 class="text-xs uppercase tracking-[0.3em] font-black text-white mb-6">Table of Contents</h4>
-                <ul id="toc-list" class="space-y-3 text-sm text-on-surface-variant font-medium">
-                    <!-- TOC items will be injected here via JS -->
-                </ul>
+                <div class="relative border-l border-outline-variant/20 pl-4">
+                    <div id="toc-slider" class="absolute left-[-1px] top-0 w-[2px] h-0 bg-primary transition-all duration-300 rounded-full"></div>
+                    <ul id="toc-list" class="space-y-4 text-sm text-on-surface-variant font-medium">
+                        <!-- TOC items will be injected here via JS -->
+                    </ul>
+                </div>
             </div>
 
             <!-- Share Section -->
@@ -227,22 +230,32 @@
             <!-- Comment Form -->
             <div class="mb-12">
                 <h4 class="text-xl font-bold mb-6 text-white">Leave a Comment</h4>
-                <form method="post" action="." class="space-y-6">
+                <form method="post" action="." class="space-y-8" id="comment-form" novalidate>
                     {% csrf_token %}
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="relative">
                             {{ form.name }}
+                            <span class="text-red-400 text-xs font-bold absolute -bottom-6 left-2 hidden" id="error-name">Name is required</span>
                         </div>
-                        <div>
+                        <div class="relative">
                             {{ form.email }}
+                            <span class="text-red-400 text-xs font-bold absolute -bottom-6 left-2 hidden" id="error-email">Please enter a valid email address</span>
                         </div>
                     </div>
-                    <div>
+                    <div class="relative">
                         {{ form.body }}
+                        <div class="absolute -bottom-6 left-2 right-2 flex justify-between items-center">
+                            <span class="text-red-400 text-xs font-bold hidden" id="error-body">Comment cannot be empty</span>
+                            <div class="text-xs font-bold text-on-surface-variant/60 ml-auto">
+                                Words: <span id="word-count" class="text-white">0</span>
+                            </div>
+                        </div>
                     </div>
-                    <button type="submit" class="px-8 py-4 rounded-xl bg-primary text-on-primary font-black uppercase tracking-widest hover:scale-[1.02] transition-transform text-white">
-                        Post Comment
-                    </button>
+                    <div class="pt-2">
+                        <button type="submit" class="px-8 py-4 rounded-xl bg-primary text-on-primary font-black uppercase tracking-widest hover:scale-[1.02] transition-transform text-white">
+                            Post Comment
+                        </button>
+                    </div>
                 </form>
             </div>
 
@@ -313,6 +326,50 @@
         const headings = contentDiv.querySelectorAll('h2');
         const tocContainer = document.getElementById('toc-container');
         const tocList = document.getElementById('toc-list');
+        const slider = document.getElementById('toc-slider');
+
+        let activeIndex = 0;
+
+        // Intersection Observer to track active heading
+        const observerOptions = {
+            root: null,
+            rootMargin: '-100px 0px -60% 0px',
+            threshold: 0
+        };
+
+        const updateSlider = () => {
+            const listItems = tocList.querySelectorAll('li');
+            if(listItems.length === 0) return;
+            
+            listItems.forEach((li, index) => {
+                const a = li.querySelector('a');
+                if (index === activeIndex) {
+                    a.classList.add('text-primary', 'font-black');
+                    a.classList.remove('text-on-surface-variant');
+                    
+                    // Move slider to match active item height and position
+                    if (slider) {
+                        slider.style.top = `${li.offsetTop}px`;
+                        slider.style.height = `${li.offsetHeight}px`;
+                    }
+                } else {
+                    a.classList.remove('text-primary', 'font-black');
+                    a.classList.add('text-on-surface-variant');
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const index = Array.from(headings).indexOf(entry.target);
+                    if (index !== -1) {
+                        activeIndex = index;
+                        updateSlider();
+                    }
+                }
+            });
+        }, observerOptions);
 
         if (headings.length > 0 && tocContainer && tocList) {
             tocContainer.style.display = 'block';
@@ -324,26 +381,35 @@
 
                 // Create list item
                 const li = document.createElement('li');
-                li.className = 'hover:text-primary transition-colors hover:translate-x-1 transform duration-200';
+                li.className = 'hover:text-primary transition-colors hover:translate-x-1 transform duration-200 relative';
                 
                 // Create anchor
                 const a = document.createElement('a');
                 a.href = `#${id}`;
                 a.textContent = heading.textContent;
-                a.className = 'block line-clamp-2';
+                a.className = 'block line-clamp-2 transition-colors duration-300';
                 
                 li.appendChild(a);
                 tocList.appendChild(li);
+                
+                // Observe heading
+                observer.observe(heading);
             });
+            
+            // Initialize slider position
+            setTimeout(updateSlider, 100);
         }
         
         // Smooth scrolling for TOC links
-        document.querySelectorAll('#toc-list a').forEach(anchor => {
+        document.querySelectorAll('#toc-list a').forEach((anchor, index) => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
                 if (targetElement) {
+                    activeIndex = index;
+                    updateSlider();
+                    
                     const headerOffset = 120; // Account for sticky navbar
                     const elementPosition = targetElement.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -355,6 +421,90 @@
                 }
             });
         });
+
+        // Comment Form Validation & Word Count
+        const commentForm = document.getElementById('comment-form');
+        if (commentForm) {
+            const bodyInput = commentForm.querySelector('textarea[name="body"]');
+            const nameInput = commentForm.querySelector('input[name="name"]');
+            const emailInput = commentForm.querySelector('input[name="email"]');
+            const wordCountDisplay = document.getElementById('word-count');
+
+            if (bodyInput && wordCountDisplay) {
+                bodyInput.addEventListener('input', function() {
+                    const text = this.value.trim();
+                    const words = text ? text.split(/\s+/).length : 0;
+                    wordCountDisplay.textContent = words;
+                    
+                    if (words > 0) {
+                        document.getElementById('error-body').classList.add('hidden');
+                        bodyInput.classList.remove('border-red-400');
+                    }
+                });
+            }
+
+            const validateEmail = (email) => {
+                const isValidFormat = String(email)
+                    .toLowerCase()
+                    .match(
+                        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                    );
+                    
+                // Catch common typos for popular domains
+                if (isValidFormat) {
+                    const lowerEmail = email.toLowerCase();
+                    if (lowerEmail.endsWith('@gmail.om') || 
+                        lowerEmail.endsWith('@yahoo.om') || 
+                        lowerEmail.endsWith('.con') || 
+                        lowerEmail.endsWith('.cpm')) {
+                        return false;
+                    }
+                }
+                return isValidFormat;
+            };
+
+            const showError = (inputId, show) => {
+                const errSpan = document.getElementById(`error-${inputId}`);
+                const inputEl = commentForm.querySelector(`[name="${inputId}"]`);
+                if (!errSpan || !inputEl) return;
+                
+                if (show) {
+                    errSpan.classList.remove('hidden');
+                    inputEl.classList.add('border-red-400');
+                    inputEl.classList.remove('border-outline-variant/20');
+                } else {
+                    errSpan.classList.add('hidden');
+                    inputEl.classList.remove('border-red-400');
+                    inputEl.classList.add('border-outline-variant/20');
+                }
+            };
+
+            if (nameInput) nameInput.addEventListener('input', () => { if(nameInput.value.trim()) showError('name', false); });
+            if (emailInput) emailInput.addEventListener('input', () => { if(validateEmail(emailInput.value.trim())) showError('email', false); });
+
+            commentForm.addEventListener('submit', function(e) {
+                let isValid = true;
+                
+                if (!nameInput.value.trim()) {
+                    showError('name', true);
+                    isValid = false;
+                }
+                
+                if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
+                    showError('email', true);
+                    isValid = false;
+                }
+                
+                if (!bodyInput.value.trim()) {
+                    showError('body', true);
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    e.preventDefault();
+                }
+            });
+        }
     });
 </script>
 {% endblock %}
