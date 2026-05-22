@@ -140,6 +140,12 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Custom authentication: allow login via email address
+AUTHENTICATION_BACKENDS = [
+    'difusionseo.backends.EmailAuthBackend',
+    'django.contrib.auth.backends.ModelBackend',  # fallback
+]
+
 # Security settings (active in production when DEBUG=False)
 if not DEBUG:
     SECURE_BROWSER_XSS_FILTER = True

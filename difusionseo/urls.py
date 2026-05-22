@@ -19,6 +19,11 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 from core import views as core_views
 
+# Admin branding
+admin.site.site_header = "DifusionSEO Administration"
+admin.site.site_title = "DifusionSEO Admin"
+admin.site.index_title = "Welcome to DifusionSEO Dashboard"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),

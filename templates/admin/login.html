@@ -1,0 +1,347 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | DifusionSEO Administration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #a78bfa;
+      --secondary: #7c3aed;
+      --dark: #0a0a0f;
+      --border: rgba(167,139,250,0.15);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Animated background orbs */
+    .orb-1 {
+      position: fixed;
+      top: -25%;
+      left: -15%;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,58,237,0.25) 0%, transparent 70%);
+      animation: float 8s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-2 {
+      position: fixed;
+      bottom: -20%;
+      right: -10%;
+      width: 580px;
+      height: 580px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(167,139,250,0.18) 0%, transparent 70%);
+      animation: float 11s ease-in-out infinite reverse;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-dots {
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(rgba(167,139,250,0.07) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(-28px) scale(1.04); }
+    }
+
+    /* Wrapper */
+    .login-wrapper {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 440px;
+      padding: 20px;
+    }
+
+    /* Branding */
+    .login-branding {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .logo-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      margin-bottom: 18px;
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+    .logo-icon svg { width: 30px; height: 30px; }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 30px rgba(124,58,237,0.4); }
+      50% { box-shadow: 0 0 60px rgba(124,58,237,0.8), 0 0 100px rgba(167,139,250,0.25); }
+    }
+    .login-branding h1 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: white;
+      letter-spacing: -0.05em;
+      margin-bottom: 6px;
+      line-height: 1;
+    }
+    .login-branding h1 span {
+      background: linear-gradient(135deg, var(--primary), #c4b5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .login-branding p {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.35);
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* Card */
+    .login-card {
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(40px);
+      -webkit-backdrop-filter: blur(40px);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 40px 36px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 28px;
+      letter-spacing: -0.02em;
+    }
+    .card-title span { color: rgba(255,255,255,0.3); font-weight: 400; }
+
+    /* Errors */
+    .errornote {
+      background: rgba(239,68,68,0.08);
+      border: 1px solid rgba(239,68,68,0.25);
+      border-radius: 10px;
+      color: #fca5a5;
+      padding: 12px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    /* Form */
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 8px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(167,139,250,0.15);
+      border-radius: 12px;
+      padding: 14px 16px;
+      color: white;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      caret-color: var(--primary);
+      transition: all 0.25s ease;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    /* Suppress browser autofill/password manager icons */
+    .form-group input::-webkit-credentials-auto-fill-button,
+    .form-group input::-webkit-contacts-auto-fill-button,
+    .form-group input::-ms-reveal,
+    .form-group input::-ms-clear { display: none !important; }
+    .form-group input[type="text"]:focus,
+    .form-group input[type="email"]:focus,
+    .form-group input[type="password"]:focus {
+      border-color: var(--primary);
+      background: rgba(167,139,250,0.07);
+      box-shadow: 0 0 0 4px rgba(167,139,250,0.1);
+    }
+    .form-group input::placeholder { color: rgba(255,255,255,0.18); }
+
+    /* Password wrapper with eye toggle */
+    .pw-wrapper {
+      position: relative;
+    }
+    .pw-wrapper input {
+      padding-right: 48px !important;
+    }
+    .pw-toggle {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      color: rgba(255,255,255,0.3);
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pw-toggle:hover { color: var(--primary); }
+    .pw-toggle svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Submit button */
+    .login-btn {
+      width: 100%;
+      padding: 15px;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+      position: relative;
+      overflow: hidden;
+    }
+    .login-btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .login-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 35px rgba(124,58,237,0.6);
+    }
+    .login-btn:hover::after { opacity: 1; }
+    .login-btn span { position: relative; z-index: 1; }
+    .login-btn:active { transform: translateY(0); }
+
+    /* Footer */
+    .login-footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.18);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    .login-footer strong { color: rgba(167,139,250,0.4); }
+  </style>
+</head>
+<body>
+  <div class="orb-1"></div>
+  <div class="orb-2"></div>
+  <div class="grid-dots"></div>
+
+  <div class="login-wrapper">
+    <!-- Branding -->
+    <div class="login-branding">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2.5"/>
+          <circle cx="11" cy="11" r="2.5" fill="white" opacity="0.7"/>
+          <path d="M16.5 16.5L21 21" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h1>Difusion<span>SEO</span></h1>
+      <p>Administration Portal</p>
+    </div>
+
+    <!-- Login Card -->
+    <div class="login-card">
+      <p class="card-title">Sign In <span>to continue</span></p>
+
+      {% if form.errors %}
+        <div class="errornote">
+          ⚠️ Incorrect username or password. Please try again.
+        </div>
+      {% endif %}
+
+      <form method="post" action="{{ app_path }}">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+
+        <div class="form-group">
+          <label for="id_username">Email Address</label>
+          <input type="email" name="username" id="id_username" placeholder="admin@difusionseo.com" autocomplete="email" autofocus>
+        </div>
+
+        <div class="form-group">
+          <label for="id_password">Password</label>
+          <div class="pw-wrapper">
+            <input type="password" name="password" id="id_password" placeholder="Enter your password" autocomplete="current-password">
+            <button type="button" class="pw-toggle" id="pw-toggle" aria-label="Show password">
+              <!-- Eye icon -->
+              <svg id="eye-icon" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <!-- Eye-off icon (hidden by default) -->
+              <svg id="eye-off-icon" viewBox="0 0 24 24" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="login-btn"><span>Access Dashboard</span></button>
+      </form>
+    </div>
+
+    <div class="login-footer">
+      Protected by <strong>DifusionSEO</strong> Security &mdash; &copy; {% now "Y" %} All rights reserved.
+    </div>
+  </div>
+
+  <script>
+    // Show/hide password toggle
+    const pwToggle = document.getElementById('pw-toggle');
+    const pwInput = document.getElementById('id_password');
+    const eyeIcon = document.getElementById('eye-icon');
+    const eyeOffIcon = document.getElementById('eye-off-icon');
+
+    if (pwToggle && pwInput) {
+      pwToggle.addEventListener('click', function() {
+        const isHidden = pwInput.type === 'password';
+        pwInput.type = isHidden ? 'text' : 'password';
+        eyeIcon.style.display = isHidden ? 'none' : 'block';
+        eyeOffIcon.style.display = isHidden ? 'block' : 'none';
+        pwToggle.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+      });
+    }
+  </script>
+</body>
+</html>
