@@ -1,0 +1,18 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{{ title }} | DifusionSEO Admin{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+  <a href="{% url 'admin:index' %}" style="color:white; text-decoration:none; font-weight:800; letter-spacing:-0.03em;">
+    Difusion<span style="opacity:0.7;">SEO Administration</span>
+  </a>
+</h1>
+{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+<link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+{% endblock %}
