@@ -47,6 +47,12 @@ class BlogDetailView(FormMixin, DetailView):
 
     def post(self, request, *args, **kwargs):
         self.object = self.get_object()
+        
+        # Security: Anti-Bot Honeypot Trap
+        # Bots automatically fill hidden fields. If this is filled, we drop it silently.
+        if request.POST.get('website_url_honeypot'):
+            return redirect(self.get_success_url())
+
         form = self.get_form()
         if form.is_valid():
             return self.form_valid(form)
