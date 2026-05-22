@@ -80,35 +80,16 @@
       text-align: center;
       margin-bottom: 36px;
     }
-    .logo-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 64px;
-      height: 64px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, var(--secondary), var(--primary));
-      margin-bottom: 18px;
+    .brand-logo {
+      width: 180px;
+      height: auto;
+      margin-bottom: 8px;
+      filter: drop-shadow(0 0 30px rgba(124,58,237,0.5));
       animation: pulse-glow 3s ease-in-out infinite;
     }
-    .logo-icon svg { width: 30px; height: 30px; }
     @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 30px rgba(124,58,237,0.4); }
-      50% { box-shadow: 0 0 60px rgba(124,58,237,0.8), 0 0 100px rgba(167,139,250,0.25); }
-    }
-    .login-branding h1 {
-      font-size: 1.8rem;
-      font-weight: 900;
-      color: white;
-      letter-spacing: -0.05em;
-      margin-bottom: 6px;
-      line-height: 1;
-    }
-    .login-branding h1 span {
-      background: linear-gradient(135deg, var(--primary), #c4b5fd);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      0%, 100% { filter: drop-shadow(0 0 20px rgba(124,58,237,0.4)); }
+      50% { filter: drop-shadow(0 0 45px rgba(124,58,237,0.8)); }
     }
     .login-branding p {
       font-size: 0.72rem;
@@ -116,6 +97,7 @@
       font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
+      margin-top: 4px;
     }
 
     /* Card */
@@ -274,14 +256,7 @@
   <div class="login-wrapper">
     <!-- Branding -->
     <div class="login-branding">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2.5"/>
-          <circle cx="11" cy="11" r="2.5" fill="white" opacity="0.7"/>
-          <path d="M16.5 16.5L21 21" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <h1>Difusion<span>SEO</span></h1>
+      <img src="/static/images/difusionseo_logo.png" alt="DifusionSEO" class="brand-logo">
       <p>Administration Portal</p>
     </div>
 
