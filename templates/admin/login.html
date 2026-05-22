@@ -276,6 +276,7 @@
       <form method="post" action="{{ app_path }}">
         {% csrf_token %}
         <input type="hidden" name="next" value="{{ next }}">
+        <input type="text" name="website_url_honeypot" tabindex="-1" autocomplete="off" style="display:none !important; position:absolute; left:-9999px; opacity:0;">
 
         <div class="form-group">
           <label for="id_username">Email Address</label>
