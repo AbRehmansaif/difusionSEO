@@ -89,28 +89,112 @@
 </nav>
 
 <!-- Mobile Menu Overlay -->
-<div id="mobile-menu" class="fixed inset-0 bg-surface/98 backdrop-blur-3xl z-[50] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-all duration-500 pt-20 pb-10">
-    <div class="flex flex-col items-center gap-8 text-center w-full px-8 overflow-y-auto">
-        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'services' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'services' %}">Services</a>
-        <div class="flex flex-col gap-4 text-center">
-            <a href="{% url 'seo_strategy' %}" class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors">Advanced SEO</a>
-            <a href="{% url 'backlink_service' %}" class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors">Backlink Building</a>
-            <a href="{% url 'local_seo' %}" class="text-sm font-bold text-on-surface-variant hover:text-secondary transition-colors">Local SEO</a>
-            <a href="{% url 'web_development' %}" class="text-sm font-bold text-on-surface-variant hover:text-tertiary transition-colors">Web Development</a>
-            <a href="{% url 'ai_automation' %}" class="text-sm font-bold text-on-surface-variant hover:text-secondary transition-colors">AI Automation</a>
-            <a href="{% url 'cyber_security' %}" class="text-sm font-bold text-on-surface-variant hover:text-error transition-colors">Cyber Security</a>
+<div id="mobile-menu" class="fixed inset-0 bg-surface/98 backdrop-blur-3xl z-[50] flex flex-col justify-start items-start opacity-0 pointer-events-none transition-all duration-500 pt-24 pb-10 px-6 sm:px-10">
+    <div class="flex flex-col gap-6 w-full overflow-y-auto pb-20 custom-scrollbar relative z-10">
+        <!-- Main Links -->
+        <button id="mobile-services-toggle" class="text-2xl font-bold tracking-tight transition-all duration-300 flex items-center justify-between w-full text-on-surface hover:text-secondary">
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[24px] opacity-70">grid_view</span>
+                Services
+            </div>
+            <span id="mobile-services-chevron" class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+        </button>
+        
+        <!-- Services Sub-menu (Glassmorphism Cards) -->
+        <div id="mobile-services-menu" class="hidden grid-cols-1 gap-2 pl-10 border-l-2 border-outline-variant/10 mb-2 w-full">
+            <a href="{% url 'services' %}" class="flex items-center gap-4 p-3 rounded-2xl hover:bg-surface-container-high transition-all group border border-transparent hover:border-outline-variant/10">
+                <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface group-hover:scale-110 transition-transform shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-sm font-bold text-on-surface">All Services</span>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant opacity-80">Overview</span>
+                </div>
+            </a>
+            <a href="{% url 'seo_strategy' %}" class="flex items-center gap-4 p-3 rounded-2xl hover:bg-surface-container-high transition-all group border border-transparent hover:border-outline-variant/10">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">query_stats</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-sm font-bold text-on-surface">Advanced SEO</span>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-primary opacity-80">Organic Growth</span>
+                </div>
+            </a>
+            <a href="{% url 'backlink_service' %}" class="flex items-center gap-4 p-3 rounded-2xl hover:bg-surface-container-high transition-all group border border-transparent hover:border-outline-variant/10">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">link</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-sm font-bold text-on-surface">Backlink Building</span>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-primary opacity-80">Authority</span>
+                </div>
+            </a>
+            <a href="{% url 'local_seo' %}" class="flex items-center gap-4 p-3 rounded-2xl hover:bg-surface-container-high transition-all group border border-transparent hover:border-outline-variant/10">
+                <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">location_on</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-sm font-bold text-on-surface">Local SEO</span>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-secondary opacity-80">Regional</span>
+                </div>
+            </a>
+            <a href="{% url 'web_development' %}" class="flex items-center gap-4 p-3 rounded-2xl hover:bg-surface-container-high transition-all group border border-transparent hover:border-outline-variant/10">
+                <div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">code</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-sm font-bold text-on-surface">Web Development</span>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-tertiary opacity-80">Engineering</span>
+                </div>
+            </a>
+            <a href="{% url 'ai_automation' %}" class="flex items-center gap-4 p-3 rounded-2xl hover:bg-surface-container-high transition-all group border border-transparent hover:border-outline-variant/10">
+                <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">psychology</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-sm font-bold text-on-surface">AI Automation</span>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-secondary opacity-80">Neural Solutions</span>
+                </div>
+            </a>
+            <a href="{% url 'cyber_security' %}" class="flex items-center gap-4 p-3 rounded-2xl hover:bg-surface-container-high transition-all group border border-transparent hover:border-outline-variant/10">
+                <div class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center text-error group-hover:scale-110 transition-transform shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">shield_lock</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-sm font-bold text-on-surface">Cyber Security</span>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-error opacity-80">App Hardening</span>
+                </div>
+            </a>
         </div>
-        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'about' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'about' %}">About</a>
-        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'contact' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'contact' %}">Contact</a>
-        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if 'blogs' in request.path %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'blogs:blog_list' %}">Blog</a>
-        <a class="text-3xl font-black tracking-tight transition-colors duration-300 {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary{% else %}text-on-surface hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">LeadNexus</a>
+
+        <a class="text-2xl font-bold tracking-tight transition-all duration-300 flex items-center gap-4 w-full {% if request.resolver_match.url_name == 'about' %}text-secondary translate-x-2{% else %}text-on-surface hover:text-secondary hover:translate-x-2{% endif %}" href="{% url 'about' %}">
+            <span class="material-symbols-outlined text-[24px] opacity-70">info</span>
+            About
+        </a>
+        <a class="text-2xl font-bold tracking-tight transition-all duration-300 flex items-center gap-4 w-full {% if request.resolver_match.url_name == 'contact' %}text-secondary translate-x-2{% else %}text-on-surface hover:text-secondary hover:translate-x-2{% endif %}" href="{% url 'contact' %}">
+            <span class="material-symbols-outlined text-[24px] opacity-70">mail</span>
+            Contact
+        </a>
+        <a class="text-2xl font-bold tracking-tight transition-all duration-300 flex items-center gap-4 w-full {% if 'blogs' in request.path %}text-secondary translate-x-2{% else %}text-on-surface hover:text-secondary hover:translate-x-2{% endif %}" href="{% url 'blogs:blog_list' %}">
+            <span class="material-symbols-outlined text-[24px] opacity-70">article</span>
+            Blog
+        </a>
+        <a class="text-2xl font-bold tracking-tight transition-all duration-300 flex items-center gap-4 w-full {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary translate-x-2{% else %}text-on-surface hover:text-secondary hover:translate-x-2{% endif %}" href="{% url 'leadnexus' %}">
+            <span class="material-symbols-outlined text-[24px] opacity-70">rocket_launch</span>
+            LeadNexus
+        </a>
         
-        <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full my-4"></div>
+        <div class="w-full h-[1px] bg-gradient-to-r from-primary/30 via-secondary/30 to-transparent my-4"></div>
         
-        <button onclick="window.location.href='{% url 'contact' %}'" class="w-full max-w-[280px] bg-primary text-on-primary font-bold text-lg py-5 rounded-full shadow-[0_0_30px_rgba(204,190,255,0.2)] hover:scale-105 transition-all">
-            Get a Quote
+        <button onclick="window.location.href='{% url 'contact' %}'" class="w-full bg-gradient-to-r from-primary to-secondary text-on-primary font-black text-xl py-5 rounded-2xl shadow-[0_10px_40px_rgba(204,190,255,0.2)] hover:shadow-[0_10px_50px_rgba(204,190,255,0.4)] hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3 relative overflow-hidden group">
+            <span class="relative z-10 flex items-center gap-3">Get a Quote <span class="material-symbols-outlined">arrow_forward</span></span>
+            <div class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:animate-[shimmer_1.5s_infinite]"></div>
         </button>
     </div>
+    
+    <!-- Decorative background blobs for the menu -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px] pointer-events-none -z-10"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-[80px] pointer-events-none -z-10"></div>
 </div>
 
 <script>
@@ -160,5 +244,24 @@
                 }
             }
         });
+
+        // Services Sub-menu Toggle
+        const servicesToggle = document.getElementById('mobile-services-toggle');
+        const servicesMenu = document.getElementById('mobile-services-menu');
+        const servicesChevron = document.getElementById('mobile-services-chevron');
+        
+        if (servicesToggle && servicesMenu && servicesChevron) {
+            servicesToggle.addEventListener('click', () => {
+                if (servicesMenu.classList.contains('hidden')) {
+                    servicesMenu.classList.remove('hidden');
+                    servicesMenu.classList.add('grid');
+                    servicesChevron.classList.add('rotate-180');
+                } else {
+                    servicesMenu.classList.add('hidden');
+                    servicesMenu.classList.remove('grid');
+                    servicesChevron.classList.remove('rotate-180');
+                }
+            });
+        }
     });
 </script>
