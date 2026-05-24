@@ -70,10 +70,10 @@
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">LeadNexus</a>
         </div>
         
-        <!-- Desktop Actions -->
-        <div class="hidden lg:flex items-center gap-4">
+        <!-- Actions & Mobile Toggle -->
+        <div class="flex items-center gap-4">
             <!-- Desktop CTA -->
-            <button onclick="window.location.href='{% url 'contact' %}'" class="bg-primary text-on-primary font-['Inter'] font-bold text-sm tracking-wide px-6 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(204,190,255,0.3)] transition-all active:scale-95">
+            <button onclick="window.location.href='{% url 'contact' %}'" class="hidden lg:block bg-primary text-on-primary font-['Inter'] font-bold text-sm tracking-wide px-6 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(204,190,255,0.3)] transition-all active:scale-95">
                 Get a Quote
             </button>
 
