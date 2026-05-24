@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Application Hardening & Cyber Security Audits | DifusionSEO{% endblock %}
+{% block title %}Web Application Security & Hardening | DifusionSEO{% endblock %}
 
 {% block meta %}
-<meta name="description" content="Secure your digital assets with our comprehensive Cyber Security audits. We specialize in Zero-Trust architecture, API hardening, and penetration testing.">
+<meta name="description" content="Secure your applications, APIs, and online systems with advanced web application security solutions focused on web app security, secure development, API security, authentication and authorization, encryption, and web application security testing.">
 <!-- Open Graph / Social -->
-<meta property="og:title" content="Application Hardening & Cyber Security Audits | DifusionSEO">
-<meta property="og:description" content="Secure your digital assets with our comprehensive Cyber Security audits. Zero-Trust architecture, API hardening, and penetration testing.">
+<meta property="og:title" content="Web Application Security & Hardening | DifusionSEO">
+<meta property="og:description" content="Secure your applications, APIs, and online systems with advanced web application security solutions.">
 <meta property="og:type" content="website">
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
@@ -22,30 +22,30 @@
   "@graph": [
     {
       "@type": "Service",
-      "name": "Cyber Security & App Hardening",
+      "name": "Web Application Security",
       "serviceType": "Cybersecurity Services",
       "provider": {
         "@type": "Organization",
         "name": "DifusionSEO"
       },
-      "description": "Comprehensive vulnerability scanning, API hardening, and Zero-Trust architecture implementation to protect enterprise digital assets.",
+      "description": "Secure your applications, APIs, and online systems with advanced web application security solutions focused on web app security, secure development, API security, authentication and authorization, encryption, and web application security testing.",
       "areaServed": "Worldwide",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Security Services",
+        "name": "Web Application Security Services",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Application Security Audits"
+              "name": "Web Application Security Testing"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Penetration Testing"
+              "name": "API Security Hardening"
             }
           }
         ]
@@ -69,7 +69,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Cyber Security"
+          "name": "Web Application Security"
         }
       ]
     }
@@ -80,28 +80,46 @@
 
 {% block content %}
 <main class="pt-24 overflow-hidden">
-    <!-- 1. Hero (Hook + CTA) -->
-    <section class="relative min-h-[70vh] py-16 md:py-32 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
-        <div class="absolute top-1/4 right-0 w-[600px] h-[600px] bg-error/10 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center relative z-10">
+    <!-- 1. Hero Section -->
+    <section class="relative min-h-[80vh] py-16 md:py-32 px-6 md:px-8 max-w-7xl mx-auto flex items-center">
+        <!-- Glowing Red background effects -->
+        <div class="absolute top-1/4 right-0 w-[600px] h-[600px] bg-error/10 rounded-full blur-[120px] animate-pulse pointer-events-none z-0"></div>
+        <div class="absolute bottom-10 left-10 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center relative z-10 w-full">
             <div data-aos="fade-right">
-                <span class="label-md uppercase tracking-[0.3em] text-error font-black mb-6 md:mb-8 block italic">Mission Critical Security</span>
+                <span class="label-md uppercase tracking-[0.3em] text-error font-black mb-6 md:mb-8 block italic">Mission Critical Protection</span>
                 <h1 class="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[1.1] mb-8">
-                    Cyber & <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-error via-white to-primary">App Security</span>
+                    Web Application <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-error via-white to-primary">Security</span>
                 </h1>
-                <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed font-light max-w-xl opacity-80">
-                    The average cost of an enterprise data breach in 2024 reached $4.88 million — and 83% of organizations have experienced more than one. Your application is being probed for vulnerabilities right now. We deploy offensive security intelligence: penetration testing, Zero-Trust architecture, and real-time threat monitoring that transforms your most vulnerable digital asset into your most fortified strategic advantage.
+                <h2 class="text-xl md:text-2xl font-bold text-white mb-6">
+                    Protect Secure Web Applications from Modern Web Vulnerabilities
+                </h2>
+                <p class="text-base md:text-lg text-on-surface-variant leading-relaxed font-light max-w-xl opacity-90 mb-6">
+                    Secure your applications, APIs, and online systems with advanced web application security solutions focused on web app security, secure development, API security, authentication and authorization, encryption, and web application security testing.
                 </p>
-                <div class="mt-10 flex flex-wrap gap-6">
-                    <a href="{% url 'contact' %}" class="bg-error text-white px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-[0_20px_40px_rgba(255,180,171,0.2)]">Harden My App</a>
-                    <div class="flex items-center gap-2 font-mono text-xs text-error/60 uppercase tracking-widest">
-                        <span class="material-symbols-outlined text-sm animate-spin">encrypted</span>
-                        Zero_Trust_Active
-                    </div>
+                <p class="text-sm md:text-base text-on-surface-variant leading-relaxed font-light max-w-xl opacity-80 mb-8">
+                    Improve protection against cross-site scripting, CSRF, insecure APIs, weak authentication systems, and SQL injection Protection while maintaining secure web applications and secure deployment security.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+                    <a href="{% url 'contact' %}" class="bg-error text-black hover:text-white px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-[0_20px_40px_rgba(255,180,171,0.2)] text-center">
+                        Get Web Application Security Testing
+                    </a>
+                    <a href="{% url 'contact' %}" class="glass-card hover:bg-white/10 px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all text-center border border-error/30 text-white">
+                        Secure Your Web Applications
+                    </a>
+                </div>
+                
+                <div class="mt-8 flex items-center gap-2 font-mono text-xs text-error/60 uppercase tracking-widest">
+                    <span class="material-symbols-outlined text-sm animate-spin">encrypted</span>
+                    Shield_Status_Active
                 </div>
             </div>
+            
             <div class="relative hidden lg:block" data-aos="zoom-in">
+                <!-- Interactive Glass Card Shield Visualization -->
                 <div class="glass-card rounded-[3rem] p-8 border border-error/20 aspect-square flex flex-col items-center justify-center relative overflow-hidden group bg-black/40">
                     <div class="absolute inset-0 opacity-[0.05] grid-pattern"></div>
                     
@@ -111,14 +129,14 @@
                         <div class="flex items-center gap-4 mb-6">
                             <span class="material-symbols-outlined text-6xl text-error drop-shadow-[0_0_10px_rgba(255,180,171,0.5)]">warning</span>
                             <div>
-                                <div class="text-3xl font-black text-error">14</div>
-                                <div class="text-sm text-error/80">Open Exploits</div>
+                                <div class="text-3xl font-black text-error">Exploits Detected</div>
+                                <div class="text-sm text-error/80">Input Validation Failures</div>
                             </div>
                         </div>
                         <div class="w-full max-w-[200px] h-2 bg-surface-container rounded-full overflow-hidden">
                             <div class="h-full bg-error w-[90%] animate-pulse"></div>
                         </div>
-                        <p class="mt-4 text-xs font-mono text-error/70 animate-pulse">! DATA_BREACH_IMMINENT</p>
+                        <p class="mt-4 text-xs font-mono text-error/70 animate-pulse">! DATA_EXPOSURE_RISK</p>
                     </div>
 
                     <!-- After State -->
@@ -128,12 +146,12 @@
                             <span class="material-symbols-outlined text-6xl text-primary drop-shadow-[0_0_15px_rgba(162,231,255,0.5)]">shield_lock</span>
                             <div>
                                 <div class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">0</div>
-                                <div class="text-sm text-primary">Active Threats</div>
+                                <div class="text-sm text-primary">Active Threat Risks</div>
                             </div>
                         </div>
                         <!-- Decorative scanning line -->
                         <div class="absolute inset-x-0 h-px bg-primary/40 top-0 animate-[scan_4s_linear_infinite] z-10"></div>
-                        <p class="mt-4 text-xs font-mono text-primary/70 animate-pulse">> ASSETS_FORTIFIED</p>
+                        <p class="mt-4 text-xs font-mono text-primary/70 animate-pulse">> APPLICATIONS_FORTIFIED</p>
                     </div>
 
                     <!-- Interactive Hint -->
@@ -145,230 +163,690 @@
         </div>
     </section>
 
-    <!-- 2. Problem (Pain) -->
-    <section class="py-32 px-8 bg-surface-container-low">
-        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <span class="text-error font-black uppercase tracking-widest text-sm mb-4 block">The Problem</span>
-            <h2 class="text-4xl md:text-5xl font-black mb-8">One Vulnerability Can <span class="text-error">Destroy</span> Everything.</h2>
-            <p class="text-xl text-on-surface-variant opacity-80 leading-relaxed">
-                You've spent years building your brand, acquiring customers, and developing your application. But a single unpatched API endpoint or compromised admin credential can lead to a catastrophic data breach. The cost of a breach isn't just financial—it's the permanent loss of customer trust and devastating legal liabilities.
-            </p>
-        </div>
-    </section>
-
-    <!-- 3. Solution -->
-    <section class="py-32 px-8">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div data-aos="fade-right">
-                <span class="text-error font-black uppercase tracking-widest text-sm mb-4 block">The Solution</span>
-                <h2 class="text-4xl font-black mb-6">Military-Grade <br><span class="text-error">Zero-Trust Architecture</span></h2>
-                <p class="text-lg text-on-surface-variant opacity-80 leading-relaxed mb-6">
-                    Hope is not a security strategy. We deploy offensive security techniques to find the holes in your application before criminals do. By implementing a Zero-Trust architecture, we ensure that even if a perimeter is breached, your core data remains inaccessible.
-                </p>
-                <p class="text-lg text-on-surface-variant opacity-80 leading-relaxed">
-                    Sleep soundly knowing your digital infrastructure is hardened against modern zero-day threats.
-                </p>
-            </div>
-            <div class="glass-card p-8 rounded-3xl border border-error/20 bg-error/5" data-aos="fade-left">
-                <div class="flex items-center justify-between border-b border-error/10 pb-4 mb-4">
-                    <span class="font-bold text-error">Average Cost of a Breach</span>
-                    <span class="font-mono text-sm">$4.45 Million</span>
+    <!-- 2. AI Overview Section -->
+    <section class="py-24 px-6 md:px-8 bg-surface-container-low border-y border-outline-variant/10 relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                <div class="lg:col-span-2" data-aos="fade-right">
+                    <span class="text-error font-black uppercase tracking-widest text-sm mb-4 block">AI Overview</span>
+                    <h2 class="text-4xl font-black mb-6 text-white">Advanced Intelligence Overview</h2>
+                    <p class="text-lg text-on-surface-variant opacity-90 leading-relaxed mb-6">
+                        Web application security helps protect applications, APIs, and online platforms from web vulnerabilities, unauthorized access, and insecure authentication. Strong web app security combines secure coding practices, API security, encryption, HTTPS security, secure session management, and web application security testing.
+                    </p>
+                    <p class="text-base text-on-surface-variant opacity-80 leading-relaxed mb-8">
+                        Organizations such as Fortinet, PortSwigger, and OffSec continue to influence modern application security standards and vulnerability awareness.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="{% url 'contact' %}" class="bg-primary text-black hover:text-white px-6 py-3 rounded-full font-bold text-sm transition-all hover:scale-105">
+                            Improve Application Security
+                        </a>
+                        <a href="{% url 'contact' %}" class="border border-primary/30 text-primary hover:bg-primary/10 px-6 py-3 rounded-full font-bold text-sm transition-all hover:scale-105">
+                            Protect Secure APIs
+                        </a>
+                    </div>
                 </div>
-                <div class="flex items-center justify-between border-b border-error/10 pb-4 mb-4">
-                    <span class="font-bold text-white">Cost of an Audit</span>
-                    <span class="font-mono text-sm text-white">A fraction of a %</span>
-                </div>
-                <div class="flex items-center justify-between pt-2">
-                    <span class="font-bold text-on-surface">Peace of Mind</span>
-                    <span class="font-mono text-sm text-primary">Priceless</span>
+                <div class="lg:col-span-1" data-aos="fade-left">
+                    <div class="glass-card p-8 rounded-3xl border border-error/20 bg-error/5 relative overflow-hidden flex flex-col justify-center">
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-error/10 rounded-full blur-2xl pointer-events-none"></div>
+                        <span class="material-symbols-outlined text-5xl text-error mb-4">security_update_good</span>
+                        <h4 class="font-bold text-white mb-2">Modern Standards</h4>
+                        <p class="text-xs text-on-surface-variant opacity-80 leading-relaxed">
+                            Following standards defined by OWASP, PortSwigger, and top offensive security frameworks to keep cloud workloads protected.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Security Pillars (Services) -->
-    <section class="py-32 px-8 bg-surface-container-lowest">
+    <!-- 3. Services Overview Section -->
+    <section class="py-32 px-6 md:px-8">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="p-10 glass-card rounded-[2.5rem] border-l-4 border-error hover-lift group" data-aos="fade-up" data-aos-delay="100">
-                    <span class="material-symbols-outlined text-4xl text-error mb-6">lock_person</span>
-                    <h3 class="text-2xl font-black mb-4">Auth & IAM</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">Zero-trust architecture and secure authentication flows to protect user identities and prevent unauthorized access.</p>
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-error font-black uppercase tracking-widest text-sm mb-4 block">Comprehensive Portfolio</span>
+                <h2 class="text-4xl md:text-6xl font-black mb-6">Services Overview</h2>
+                <p class="text-lg text-on-surface-variant opacity-80 max-w-2xl mx-auto">
+                    A deep dive into our core security competencies, offering end-to-end web application safety.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Card 1: Web Application Security Testing -->
+                <div class="glass-card p-8 md:p-10 rounded-[2.5rem] border-t-4 border-error hover-lift flex flex-col h-full group" data-aos="fade-up">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-error/10 flex items-center justify-center border border-error/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-error">bug_report</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">Web Application Security Testing</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-6">
+                        Web application security testing helps identify vulnerabilities and security weaknesses before they can impact applications or users. Testing improves application security by analyzing authentication systems, APIs, deployment configurations, and input validation controls.
+                    </p>
+                    <div class="mb-6 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 flex-grow">
+                        <p class="text-sm font-bold text-white mb-4">Our testing process focuses on:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-xs text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> Cross-site scripting detection</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> CSRF testing</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> SQL injection Protection analysis</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> Authentication security</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> Secure session management</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> API security review</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> SSL/TLS verification</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> HTTPS review</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> Content Security Policy</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> Deployment security</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-xs text-on-surface-variant/70 italic border-l-2 border-error/50 pl-3">
+                            Security testing helps organizations maintain secure web applications while reducing exposure to web vulnerabilities.
+                        </p>
+                    </div>
                 </div>
-                <div class="p-10 glass-card rounded-[2.5rem] border-l-4 border-secondary hover-lift group" data-aos="fade-up" data-aos-delay="200">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-6">api</span>
-                    <h3 class="text-2xl font-black mb-4">API Hardening</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">Rate limiting, SQL injection prevention, and robust JWT validation to secure your backend communication channels.</p>
+
+                <!-- Card 2: Application Security -->
+                <div class="glass-card p-8 md:p-10 rounded-[2.5rem] border-t-4 border-primary hover-lift flex flex-col h-full group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-primary">admin_panel_settings</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">Application Security</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-6">
+                        Application security protects applications during development, deployment, and operational stages. A strong application security strategy helps improve web app security and reduce security risks.
+                    </p>
+                    <div class="mb-6 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 flex-grow">
+                        <p class="text-sm font-bold text-white mb-4">Application security services include:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-xs text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> Secure development</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> Secure coding practices</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> Encryption implementation</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> Authentication & auth security</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> Security hardening</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> Secure APIs</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> Bot protection</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> Code review</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> Input validation</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-xs text-on-surface-variant/70 italic border-l-2 border-primary/50 pl-3">
+                            A layered security approach improves secure web applications and strengthens web application protection.
+                        </p>
+                    </div>
                 </div>
-                <div class="p-10 glass-card rounded-[2.5rem] border-l-4 border-primary hover-lift group" data-aos="fade-up" data-aos-delay="300">
-                    <span class="material-symbols-outlined text-4xl text-primary mb-6">security</span>
-                    <h3 class="text-2xl font-black mb-4">AppSec Audits</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">Comprehensive vulnerability scanning and penetration testing to identify and patch security holes in your applications.</p>
+
+                <!-- Card 3: Secure Development -->
+                <div class="glass-card p-8 md:p-10 rounded-[2.5rem] border-t-4 border-secondary hover-lift flex flex-col h-full group" data-aos="fade-up">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center border border-secondary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-secondary">developer_mode</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">Secure Development</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-6">
+                        Secure development integrates security into application development workflows. By using secure coding practices and input validation, businesses can reduce vulnerabilities during the development process.
+                    </p>
+                    <div class="mb-6 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 flex-grow">
+                        <p class="text-sm font-bold text-white mb-4">Secure development focuses on:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-xs text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> Secure coding practices</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> Input validation</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> Secure auth systems</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> Secure session management</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> Encryption standards</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> HTTPS implementation</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> Code review</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> API security integration</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-xs text-on-surface-variant/70 italic border-l-2 border-secondary/50 pl-3">
+                            Secure development helps organizations maintain secure web applications while improving deployment security.
+                        </p>
+                    </div>
                 </div>
-                <div class="p-10 glass-card rounded-[2.5rem] border-l-4 border-tertiary hover-lift group" data-aos="fade-up" data-aos-delay="400">
-                    <span class="material-symbols-outlined text-4xl text-tertiary mb-6">speed</span>
-                    <h3 class="text-2xl font-black mb-4">Secure Performance</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed opacity-70 mb-6">Maintaining high-speed performance while implementing end-to-end encryption and secure data handling.</p>
+
+                <!-- Card 4: API Security -->
+                <div class="glass-card p-8 md:p-10 rounded-[2.5rem] border-t-4 border-tertiary hover-lift flex flex-col h-full group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-tertiary/10 flex items-center justify-center border border-tertiary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-tertiary">api</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">API Security</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-6">
+                        Modern applications rely heavily on APIs for communication between systems and services. API security helps protect sensitive data, application functionality, and authentication systems from unauthorized access and misuse.
+                    </p>
+                    <div class="mb-6 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 flex-grow">
+                        <p class="text-sm font-bold text-white mb-4">API security services include:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-xs text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> Secure APIs implementation</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> Authentication controls</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> HTTPS and SSL/TLS security</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> Encryption support</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> Input validation</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> Access control review</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> Secure session management</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> Bot protection</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-xs text-on-surface-variant/70 italic border-l-2 border-tertiary/50 pl-3">
+                            Strong API security helps organizations improve application security and secure web applications.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 5: Authentication & Authorization Security -->
+                <div class="glass-card p-8 md:p-10 rounded-[2.5rem] border-t-4 border-error hover-lift flex flex-col h-full group" data-aos="fade-up">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-error/10 flex items-center justify-center border border-error/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-error">fingerprint</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">Authentication & Authorization Security</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-6">
+                        Authentication and authorization security helps protect applications from unauthorized access and weak identity management systems.
+                    </p>
+                    <div class="mb-6 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 flex-grow">
+                        <p class="text-sm font-bold text-white mb-4">Security measures include:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-xs text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> Secure authentication workflows</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> Access control validation</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> Session management security</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> User permission management</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> HTTPS protection</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-error text-[16px] mt-0.5">radio_button_checked</span> Encryption support</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-xs text-on-surface-variant/70 italic border-l-2 border-error/50 pl-3">
+                            Strong authentication systems help improve secure web applications and overall web security.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 6: Encryption & HTTPS Security -->
+                <div class="glass-card p-8 md:p-10 rounded-[2.5rem] border-t-4 border-primary hover-lift flex flex-col h-full group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-primary">vpn_key</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">Encryption & HTTPS Security</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-6">
+                        Encryption helps secure sensitive information transmitted between applications and users. HTTPS and SSL/TLS improve communication security and reduce risks related to data interception.
+                    </p>
+                    <div class="mb-6 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 flex-grow">
+                        <p class="text-sm font-bold text-white mb-4">Encryption and HTTPS security services include:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-xs text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> SSL/TLS configuration review</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> HTTPS implementation</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> Secure encryption practices</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> Secure communication protocols</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[16px] mt-0.5">radio_button_checked</span> Certificate validation</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-xs text-on-surface-variant/70 italic border-l-2 border-primary/50 pl-3">
+                            Encryption supports secure web applications and strengthens web application deployment security.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 7: Web Application Protection -->
+                <div class="glass-card p-8 md:p-10 rounded-[2.5rem] border-t-4 border-secondary hover-lift flex flex-col h-full group" data-aos="fade-up">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center border border-secondary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-secondary">policy</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">Web Application Protection</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-6">
+                        Web application protection focuses on reducing risks associated with web vulnerabilities, malicious traffic, and insecure configurations.
+                    </p>
+                    <div class="mb-6 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 flex-grow">
+                        <p class="text-sm font-bold text-white mb-4">Protection strategies include:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-xs text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> Bot protection</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> Content Security Policy</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> Secure session management</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> Input validation</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> Security hardening</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> HTTPS enforcement</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> API security</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">radio_button_checked</span> Authentication controls</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-xs text-on-surface-variant/70 italic border-l-2 border-secondary/50 pl-3">
+                            These protections help organizations improve web app security and application security performance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 8: Security Hardening -->
+                <div class="glass-card p-8 md:p-10 rounded-[2.5rem] border-t-4 border-tertiary hover-lift flex flex-col h-full group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-5 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-tertiary/10 flex items-center justify-center border border-tertiary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl text-tertiary">tune</span>
+                        </div>
+                        <h3 class="text-2xl font-black leading-tight text-white">Security Hardening</h3>
+                    </div>
+                    <p class="text-base text-on-surface-variant opacity-90 mb-6">
+                        Security hardening strengthens application environments by reducing attack surfaces and improving security configurations.
+                    </p>
+                    <div class="mb-6 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 flex-grow">
+                        <p class="text-sm font-bold text-white mb-4">Security hardening includes:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-xs text-on-surface-variant opacity-90">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> Secure configuration review</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> HTTPS enforcement</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> Authentication strengthening</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> Session management protection</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> Encryption improvements</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> Content Security Policy</li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-[16px] mt-0.5">radio_button_checked</span> Deployment security assessment</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="text-xs text-on-surface-variant/70 italic border-l-2 border-tertiary/50 pl-3">
+                            Hardening improves secure web applications and helps reduce exposure to web vulnerabilities.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Terminal Visualization -->
-    <section class="py-32 px-8 bg-[#0a0a0b]">
+    <!-- Terminal Visualization (Thematic Midsection) -->
+    <section class="py-24 px-8 bg-[#0a0a0b] relative">
+        <div class="absolute inset-0 opacity-[0.03] grid-pattern"></div>
         <div class="max-w-4xl mx-auto">
             <div class="glass-card rounded-[2rem] border border-error/20 bg-black/60 p-10 font-mono text-sm overflow-hidden" data-aos="flip-up">
                 <div class="flex items-center gap-3 mb-6 border-b border-error/10 pb-4">
                     <div class="w-3 h-3 rounded-full bg-error animate-pulse"></div>
-                    <span class="text-error/60 text-xs">CYBER_CORE_INIT_SEQUENCE</span>
+                    <span class="text-error/60 text-xs">WEB_SEC_CORE_INITIALIZED</span>
                 </div>
                 <div class="space-y-2 text-error/80">
-                    <p>> [SCANNING] ALL_ENDPOINTS_LOCKED</p>
-                    <p>> [AUDIT] NO_CRITICAL_VULNERABILITIES_FOUND</p>
-                    <p>> [SHIELD] FIREWALL_ACTIVE_LOAD_1.4%</p>
-                    <p>> [ENCRYPT] AES-256_ACTIVE_PROTOCOL</p>
-                    <p class="animate-pulse mt-4 text-white">PROTECTION_LEVEL: MAXIMUM</p>
+                    <p>> [SCANNING] ALL_WEB_ASSETS_FORTIFIED</p>
+                    <p>> [MONITORING] XSS_AND_CSRF_SHIELDS_ARMED</p>
+                    <p>> [API_GUARD] SECURE_COMMUNICATION_CHANNELS_ROUTED</p>
+                    <p>> [COMPLIANCE] OWASP_TOP_10_CONTROLS_VERIFIED</p>
+                    <p class="animate-pulse mt-4 text-white">SYSTEM_INTEGRITY: OPTIMAL</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. How It Works -->
-    <section class="py-32 px-8 bg-surface-container-lowest">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <h2 class="text-4xl font-black mb-4">Our <span class="text-error">Hardening</span> Process</h2>
-                <p class="text-on-surface-variant opacity-80 max-w-2xl mx-auto">From vulnerable code to impenetrable fortress in 4 structured phases.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Step 1 -->
-                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-error" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-6xl font-black text-error/20 absolute -top-6 right-4">01</div>
-                    <h3 class="text-xl font-bold mb-4 mt-4">Reconnaissance</h3>
-                    <p class="text-sm text-on-surface-variant opacity-80">We map your entire attack surface, including public APIs, shadow IT, and exposed databases.</p>
-                </div>
-                <!-- Step 2 -->
-                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-secondary" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-6xl font-black text-secondary/20 absolute -top-6 right-4">02</div>
-                    <h3 class="text-xl font-bold mb-4 mt-4">Penetration Test</h3>
-                    <p class="text-sm text-on-surface-variant opacity-80">Our ethical hackers simulate real-world attacks to exploit vulnerabilities in your application logic.</p>
-                </div>
-                <!-- Step 3 -->
-                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-primary" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-6xl font-black text-primary/20 absolute -top-6 right-4">03</div>
-                    <h3 class="text-xl font-bold mb-4 mt-4">Patch & Harden</h3>
-                    <p class="text-sm text-on-surface-variant opacity-80">We provide code-level remediation steps and work with your team to patch the critical exploits.</p>
-                </div>
-                <!-- Step 4 -->
-                <div class="relative glass-card p-8 rounded-3xl border-t-4 border-tertiary" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-6xl font-black text-tertiary/20 absolute -top-6 right-4">04</div>
-                    <h3 class="text-xl font-bold mb-4 mt-4">Continuous Monitor</h3>
-                    <p class="text-sm text-on-surface-variant opacity-80">We implement automated WAFs and SIEM logging to detect and block future intrusion attempts in real-time.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Benefits (ROI Focus) -->
+    <!-- 4. Results / Proof Section -->
     <section class="py-32 px-8">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1 relative" data-aos="zoom-in">
+            <div class="relative order-2 md:order-1" data-aos="zoom-in">
                 <div class="glass-card rounded-[3rem] p-12 border border-error/20 bg-black/40 flex flex-col items-center justify-center aspect-square text-center">
                     <span class="material-symbols-outlined text-[80px] text-error mb-6 animate-pulse">verified_user</span>
                     <div class="text-5xl font-black text-white mb-2">100%</div>
-                    <p class="text-error font-mono text-sm uppercase tracking-widest">Compliance Ready</p>
+                    <p class="text-error font-mono text-sm uppercase tracking-widest">Hardened Deployments</p>
+                    <p class="mt-4 text-xs text-on-surface-variant opacity-60">Aligned with state-of-the-art secure development lifecycles.</p>
                 </div>
             </div>
+            
             <div class="order-1 md:order-2" data-aos="fade-left">
-                <span class="text-error font-black uppercase tracking-widest text-sm mb-4 block">The ROI</span>
-                <h2 class="text-4xl font-black mb-8">Protect Your <span class="text-error">Valuation.</span></h2>
-                <ul class="space-y-6">
-                    <li class="flex items-start gap-4">
-                        <span class="material-symbols-outlined text-error mt-1">check_circle</span>
-                        <div>
-                            <h4 class="font-bold text-lg">Prevent Catastrophic Loss</h4>
-                            <p class="text-on-surface-variant opacity-80">The average enterprise breach causes a 7.5% drop in stock value and massive customer churn. Avoid the disaster.</p>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="material-symbols-outlined text-error mt-1">check_circle</span>
-                        <div>
-                            <h4 class="font-bold text-lg">Accelerate Enterprise Sales</h4>
-                            <p class="text-on-surface-variant opacity-80">Pass vendor security assessments (SOC 2, ISO 27001) effortlessly, unblocking million-dollar enterprise deals.</p>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="material-symbols-outlined text-error mt-1">check_circle</span>
-                        <div>
-                            <h4 class="font-bold text-lg">Regulatory Compliance</h4>
-                            <p class="text-on-surface-variant opacity-80">Avoid massive fines by ensuring your app architecture complies with GDPR, CCPA, and HIPAA regulations.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. Use Cases -->
-    <section class="py-32 px-8 bg-surface-container-lowest border-y border-outline-variant/10">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-black mb-4">Security <span class="text-error">Use Cases</span></h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-error/50 transition-colors">
-                    <h3 class="font-bold text-xl mb-3 text-error">FinTech Platforms</h3>
-                    <p class="text-sm opacity-80">Securing payment gateways and user ledgers against SQL injections and logic flaws that could allow fund manipulation.</p>
-                </div>
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-error/50 transition-colors">
-                    <h3 class="font-bold text-xl mb-3 text-error">Healthcare Apps</h3>
-                    <p class="text-sm opacity-80">Hardening database architectures and implementing strict Role-Based Access Control (RBAC) to protect sensitive ePHI.</p>
-                </div>
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-error/50 transition-colors">
-                    <h3 class="font-bold text-xl mb-3 text-error">SaaS Applications</h3>
-                    <p class="text-sm opacity-80">Preventing tenant data leakage in multi-tenant environments and securing public-facing APIs from brute force attacks.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. Proof (Testimonials) -->
-    <section class="py-32 px-8">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-black mb-4">Trusted by <span class="text-error">Industry Leaders</span></h2>
-            </div>
-            <div class="glass-card p-12 rounded-[3rem] border border-error/20 relative" data-aos="fade-up">
-                <span class="material-symbols-outlined text-6xl text-error/20 absolute top-8 left-8">format_quote</span>
-                <p class="text-xl md:text-2xl font-light italic leading-relaxed text-center relative z-10">
-                    "DifusionSEO's penetration test uncovered a critical authentication bypass vulnerability in our staging environment just days before launch. They didn't just report it; they helped our engineers write the patch. Absolute lifesavers."
+                <span class="text-error font-black uppercase tracking-widest text-sm mb-4 block">Proven Results / Proof</span>
+                <h2 class="text-4xl font-black mb-8 leading-tight">Fortify Your Technical <span class="text-error">Valuation.</span></h2>
+                <p class="text-base text-on-surface-variant opacity-90 leading-relaxed mb-6">
+                    Strong web application security practices help organizations improve application security and reduce exposure to web vulnerabilities. Businesses using secure coding practices, API security, encryption, authentication controls, and web application security testing can strengthen secure web applications and improve protection against modern threats.
                 </p>
-                <div class="mt-8 text-center">
-                    <p class="font-bold text-error">Sarah J.</p>
-                    <p class="text-sm opacity-60 uppercase tracking-widest font-mono">CTO, SecurePay Solutions</p>
+                <div class="space-y-4 mb-8">
+                    <p class="font-bold text-sm uppercase tracking-widest text-error/80">Security improvements help organizations:</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-error mt-0.5 text-lg">check_circle</span>
+                            <span class="text-on-surface-variant opacity-80 text-sm">Reduce risks related to cross-site scripting</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-error mt-0.5 text-lg">check_circle</span>
+                            <span class="text-on-surface-variant opacity-80 text-sm">Improve SQL injection Protection</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-error mt-0.5 text-lg">check_circle</span>
+                            <span class="text-on-surface-variant opacity-80 text-sm">Strengthen secure session management</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-error mt-0.5 text-lg">check_circle</span>
+                            <span class="text-on-surface-variant opacity-80 text-sm">Improve secure APIs</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-error mt-0.5 text-lg">check_circle</span>
+                            <span class="text-on-surface-variant opacity-80 text-sm">Support HTTPS and SSL/TLS security</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-error mt-0.5 text-lg">check_circle</span>
+                            <span class="text-on-surface-variant opacity-80 text-sm">Reduce CSRF risks</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-error mt-0.5 text-lg">check_circle</span>
+                            <span class="text-on-surface-variant opacity-80 text-sm">Improve authentication and authorization security</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-error mt-0.5 text-lg">check_circle</span>
+                            <span class="text-on-surface-variant opacity-80 text-sm">Strengthen web application deployment security</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <a href="{% url 'contact' %}" class="bg-error text-black hover:text-white px-6 py-3 rounded-full font-bold text-sm transition-all hover:scale-105">
+                        Strengthen Web Security
+                    </a>
+                    <a href="{% url 'contact' %}" class="border border-error/30 text-error hover:bg-error/10 px-6 py-3 rounded-full font-bold text-sm transition-all hover:scale-105">
+                        Improve Application Protection
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 9. FAQ Section -->
-    <section class="py-32 px-8 bg-surface-container-low">
+    <!-- 5. Process Section (How We Work) -->
+    <section class="py-32 px-8 bg-surface-container-low border-y border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">Process <span class="text-error">(How We Work)</span></h2>
+                <p class="text-on-surface-variant opacity-80 max-w-2xl mx-auto">
+                    A rigorous 5-step methodology that moves systems from vulnerability to absolute deployment security.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Step 1 -->
+                <div class="relative glass-card p-6 md:p-8 rounded-3xl border-t-4 border-error flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-black text-error/20 absolute -top-4 right-4 font-mono">01</div>
+                    <h3 class="text-lg font-bold mb-4 mt-2 text-white">1. Security Review</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80 mb-4">
+                        The process starts with a review of the application environment, APIs, authentication systems, deployment configurations, and session management controls.
+                    </p>
+                    <div class="mt-auto border-t border-outline-variant/10 pt-4">
+                        <span class="text-[10px] font-mono text-error/85 uppercase tracking-wider block mb-2">Identifies:</span>
+                        <ul class="text-[10px] text-on-surface-variant/80 space-y-1">
+                            <li>• Web vulnerabilities</li>
+                            <li>• Input validation flaws</li>
+                            <li>• HTTPS config issues</li>
+                            <li>• Encryption gaps</li>
+                            <li>• API security risks</li>
+                            <li>• Auth problems</li>
+                            <li>• CSP weaknesses</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative glass-card p-6 md:p-8 rounded-3xl border-t-4 border-primary flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-black text-primary/20 absolute -top-4 right-4 font-mono">02</div>
+                    <h3 class="text-lg font-bold mb-4 mt-2 text-white">2. Security Testing</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80 mb-4">
+                        Web application security testing helps evaluate the overall security posture of the application.
+                    </p>
+                    <div class="mt-auto border-t border-outline-variant/10 pt-4">
+                        <span class="text-[10px] font-mono text-primary/85 uppercase tracking-wider block mb-2">Testing Focuses on:</span>
+                        <ul class="text-[10px] text-on-surface-variant/80 space-y-1">
+                            <li>• XSS vulnerabilities</li>
+                            <li>• CSRF testing</li>
+                            <li>• SQLi validation</li>
+                            <li>• Authentication security</li>
+                            <li>• Session management</li>
+                            <li>• API security</li>
+                            <li>• HTTPS & SSL/TLS</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative glass-card p-6 md:p-8 rounded-3xl border-t-4 border-secondary flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl font-black text-secondary/20 absolute -top-4 right-4 font-mono">03</div>
+                    <h3 class="text-lg font-bold mb-4 mt-2 text-white">3. Dev & Code Review</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80 mb-4">
+                        Secure development and code review help improve application security during development workflows.
+                    </p>
+                    <div class="mt-auto border-t border-outline-variant/10 pt-4">
+                        <span class="text-[10px] font-mono text-secondary/85 uppercase tracking-wider block mb-2">Review Includes:</span>
+                        <ul class="text-[10px] text-on-surface-variant/80 space-y-1">
+                            <li>• Secure coding review</li>
+                            <li>• Input validation</li>
+                            <li>• Auth logic analysis</li>
+                            <li>• Encryption verification</li>
+                            <li>• Secure APIs validation</li>
+                            <li>• Session management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative glass-card p-6 md:p-8 rounded-3xl border-t-4 border-tertiary flex flex-col h-full" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl font-black text-tertiary/20 absolute -top-4 right-4 font-mono">04</div>
+                    <h3 class="text-lg font-bold mb-4 mt-2 text-white">4. Hardening</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80 mb-4">
+                        Security hardening improves security configurations and strengthens deployment environments.
+                    </p>
+                    <div class="mt-auto border-t border-outline-variant/10 pt-4">
+                        <span class="text-[10px] font-mono text-tertiary/85 uppercase tracking-wider block mb-2">Hardening Includes:</span>
+                        <ul class="text-[10px] text-on-surface-variant/80 space-y-1">
+                            <li>• HTTPS enforcement</li>
+                            <li>• SSL/TLS improvements</li>
+                            <li>• Auth strengthening</li>
+                            <li>• CSP implementation</li>
+                            <li>• Secure deployment</li>
+                            <li>• Bot protection</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="relative glass-card p-6 md:p-8 rounded-3xl border-t-4 border-error flex flex-col h-full" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-4xl font-black text-error/20 absolute -top-4 right-4 font-mono">05</div>
+                    <h3 class="text-lg font-bold mb-4 mt-2 text-white">5. Ongoing Security</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80 mb-4">
+                        Application security requires continuous monitoring, testing, and secure development improvements.
+                    </p>
+                    <div class="mt-auto border-t border-outline-variant/10 pt-4">
+                        <span class="text-[10px] font-mono text-error/85 uppercase tracking-wider block mb-2">Supports Ongoing:</span>
+                        <ul class="text-[10px] text-on-surface-variant/80 space-y-1">
+                            <li>• Secure web apps</li>
+                            <li>• API security</li>
+                            <li>• Deployment security</li>
+                            <li>• Encryption standards</li>
+                            <li>• Web protection</li>
+                            <li>• Authentication security</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. EEAT Section -->
+    <section class="py-32 px-8 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-error font-black uppercase tracking-widest text-sm mb-4 block font-mono">Standards of Excellence</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-4 text-white">Experience, Expertise, Authoritativeness & Trust</h2>
+                <p class="text-base text-on-surface-variant opacity-75 max-w-2xl mx-auto">
+                    We maintain top-tier industry validation to safeguard business credibility.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1: Experience -->
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/20 hover:border-error/50 transition-all duration-300">
+                    <span class="material-symbols-outlined text-4xl text-error mb-4">workspace_premium</span>
+                    <h3 class="font-bold text-lg mb-3 text-white">Experience</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80 leading-relaxed">
+                        Extensive experience with web application security, API security, secure development, authentication systems, secure coding practices, and web application security testing supports modern application security requirements.
+                    </p>
+                </div>
+                
+                <!-- Column 2: Expertise -->
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/20 hover:border-error/50 transition-all duration-300">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">psychology</span>
+                    <h3 class="font-bold text-lg mb-3 text-white">Expertise</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80 leading-relaxed">
+                        Strong expertise in secure coding practices, encryption, input validation, secure APIs, secure session management, HTTPS security, and Content Security Policy implementation helps improve secure web applications.
+                    </p>
+                </div>
+                
+                <!-- Column 3: Authoritativeness -->
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/20 hover:border-error/50 transition-all duration-300">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-4">gavel</span>
+                    <h3 class="font-bold text-lg mb-3 text-white">Authoritativeness</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80 leading-relaxed">
+                        Modern web security practices continue to be shaped by organizations such as Fortinet, PortSwigger, and OffSec through application security awareness and vulnerability research.
+                    </p>
+                </div>
+                
+                <!-- Column 4: Trust -->
+                <div class="glass-card p-8 rounded-2xl border border-outline-variant/20 hover:border-error/50 transition-all duration-300">
+                    <span class="material-symbols-outlined text-4xl text-tertiary mb-4">verified_user</span>
+                    <h3 class="font-bold text-lg mb-3 text-white">Trust</h3>
+                    <p class="text-xs text-on-surface-variant opacity-80 leading-relaxed">
+                        Secure development, encryption, authentication controls, HTTPS implementation, API security, and continuous web application security testing help organizations improve application security and reduce risks associated with web vulnerabilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Locations Section -->
+    <section class="py-24 px-8 bg-surface-container-low border-y border-outline-variant/10">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <span class="text-error font-black uppercase tracking-widest text-sm mb-4 block">Areas We Serve</span>
+            <h2 class="text-3xl md:text-5xl font-black mb-8">Locations & Services Served</h2>
+            <p class="text-base text-on-surface-variant opacity-90 leading-relaxed mb-8">
+                Our web application security services support organizations requiring:
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="px-4 py-2 bg-black/40 border border-error/20 text-error rounded-full text-xs font-mono">Web application security testing</span>
+                <span class="px-4 py-2 bg-black/40 border border-error/20 text-error rounded-full text-xs font-mono">Secure web applications</span>
+                <span class="px-4 py-2 bg-black/40 border border-error/20 text-error rounded-full text-xs font-mono">Application security improvements</span>
+                <span class="px-4 py-2 bg-black/40 border border-error/20 text-error rounded-full text-xs font-mono">API security</span>
+                <span class="px-4 py-2 bg-black/40 border border-error/20 text-error rounded-full text-xs font-mono">Secure development</span>
+                <span class="px-4 py-2 bg-black/40 border border-error/20 text-error rounded-full text-xs font-mono">Security hardening</span>
+                <span class="px-4 py-2 bg-black/40 border border-error/20 text-error rounded-full text-xs font-mono">Authentication and authorization security</span>
+                <span class="px-4 py-2 bg-black/40 border border-error/20 text-error rounded-full text-xs font-mono">Encryption and HTTPS security</span>
+                <span class="px-4 py-2 bg-black/40 border border-error/20 text-error rounded-full text-xs font-mono">Secure deployment security</span>
+                <span class="px-4 py-2 bg-black/40 border border-error/20 text-error rounded-full text-xs font-mono">Web application protection</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Why Choose Us Section -->
+    <section class="py-32 px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">Why Choose Us</h2>
+                <p class="text-base text-on-surface-variant opacity-85 max-w-2xl mx-auto">
+                    Businesses require web app security solutions that support secure applications, secure APIs, secure development, and strong authentication systems.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-6 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-error/30 transition-all flex items-start gap-4">
+                        <span class="material-symbols-outlined text-error">check_circle</span>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Web Application Security Testing</h4>
+                            <p class="text-xs text-on-surface-variant opacity-85">Proactive vulnerability scans, pen tests, and architecture analysis.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-error/30 transition-all flex items-start gap-4">
+                        <span class="material-symbols-outlined text-error">check_circle</span>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Secure Coding Practices</h4>
+                            <p class="text-xs text-on-surface-variant opacity-85">Helping teams establish robust paradigms at the build level.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-error/30 transition-all flex items-start gap-4">
+                        <span class="material-symbols-outlined text-error">check_circle</span>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">API Security</h4>
+                            <p class="text-xs text-on-surface-variant opacity-85">Ensuring endpoints are secure against leakage and injection attacks.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-error/30 transition-all flex items-start gap-4">
+                        <span class="material-symbols-outlined text-error">check_circle</span>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Authentication & Auth</h4>
+                            <p class="text-xs text-on-surface-variant opacity-85">Hardening sign-in workflows and access privileges.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-error/30 transition-all flex items-start gap-4">
+                        <span class="material-symbols-outlined text-error">check_circle</span>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Encryption & HTTPS</h4>
+                            <p class="text-xs text-on-surface-variant opacity-85">Ensuring strict SSL/TLS, key rotations, and cipher validation.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-surface-container rounded-2xl border border-outline-variant/10 hover:border-error/30 transition-all flex items-start gap-4">
+                        <span class="material-symbols-outlined text-error">check_circle</span>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Security Hardening</h4>
+                            <p class="text-xs text-on-surface-variant opacity-85">Strengthening infrastructure to minimize modern attack surfaces.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-1 glass-card p-8 rounded-3xl border border-error/20 bg-error/5 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Integrated Protection</h3>
+                        <p class="text-sm text-on-surface-variant opacity-90 leading-relaxed mb-6">
+                            Our web application security approach focuses on comprehensive input validation, secure session management, Content Security Policy implementation, and overall web application protection.
+                        </p>
+                    </div>
+                    <div class="border-t border-error/20 pt-6 mt-6">
+                        <p class="text-xs font-mono text-error">
+                            By combining secure development, application security testing, and security hardening, organizations can strengthen secure web applications and reduce exposure to web vulnerabilities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. About Section -->
+    <section class="py-32 px-8 bg-surface-container-low border-y border-outline-variant/10">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                <div class="lg:col-span-1" data-aos="fade-right">
+                    <span class="text-error font-black uppercase tracking-widest text-sm mb-4 block">About Us</span>
+                    <h2 class="text-4xl font-black text-white">About Web Application Security</h2>
+                </div>
+                <div class="lg:col-span-2 text-base text-on-surface-variant opacity-90 leading-relaxed space-y-4" data-aos="fade-left">
+                    <p>
+                        Web application security is essential for businesses operating applications, APIs, online platforms, and digital services. Strong application security requires secure coding practices, secure development, encryption, HTTPS implementation, API security, secure session management, and web application security testing.
+                    </p>
+                    <p>
+                        Modern web app security strategies help organizations reduce risks associated with cross-site scripting, CSRF, insecure APIs, weak authentication systems, and SQL injection vulnerabilities while supporting secure web applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ Section -->
+    <section class="py-32 px-8 bg-surface-container-lowest">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl font-black mb-4">Cyber Security <span class="text-error">FAQs</span></h2>
-                <p class="text-on-surface-variant opacity-70">Important questions about protecting your digital assets.</p>
+                <p class="text-on-surface-variant opacity-75">Important questions about protecting your web applications and digital assets.</p>
             </div>
             
             <div class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
                 <!-- FAQ Item 1 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-error/10 transition-all duration-300 hover:border-error/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">Why is app hardening necessary?</span>
+                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">What is web application security?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-error">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            App hardening protects your application against reverse engineering, tampering, and automated bot attacks. It is a critical layer of defense that prevents malicious actors from finding vulnerabilities in your codebase or exploiting your business logic.
+                        <div class="text-on-surface-variant leading-relaxed opacity-85 text-sm" itemprop="text">
+                            Web application security protects applications, APIs, and online systems from web vulnerabilities, unauthorized access, insecure authentication, and data exposure through security testing, secure development, encryption, and authentication controls.
                         </div>
                     </div>
                 </div>
@@ -376,12 +854,12 @@
                 <!-- FAQ Item 2 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-error/10 transition-all duration-300 hover:border-error/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">What is Zero-Trust architecture?</span>
+                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">Why is web application security important?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-error">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Zero-Trust is a security model that requires strict identity verification for every person and device trying to access resources on a private network, regardless of whether they are sitting within or outside of the network perimeter. "Never trust, always verify."
+                        <div class="text-on-surface-variant leading-relaxed opacity-85 text-sm" itemprop="text">
+                            Web application security is important because applications often handle sensitive data, APIs, and user authentication systems. Strong web app security helps reduce vulnerabilities and improve secure web applications.
                         </div>
                     </div>
                 </div>
@@ -389,12 +867,12 @@
                 <!-- FAQ Item 3 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-error/10 transition-all duration-300 hover:border-error/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">Do you perform penetration testing?</span>
+                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">What are common web application vulnerabilities?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-error">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Yes. We conduct thorough penetration testing (ethical hacking) to simulate real-world cyber attacks on your applications, APIs, and network infrastructure to uncover and patch vulnerabilities before criminals can exploit them.
+                        <div class="text-on-surface-variant leading-relaxed opacity-85 text-sm" itemprop="text">
+                            Common web application vulnerabilities include cross-site scripting, CSRF, weak authentication systems, insecure session management, insecure APIs, poor input validation, and SQL injection risks.
                         </div>
                     </div>
                 </div>
@@ -402,12 +880,12 @@
                 <!-- FAQ Item 4 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-error/10 transition-all duration-300 hover:border-error/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">How often should we conduct security audits?</span>
+                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">What is cross-site scripting (XSS)?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-error">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            We recommend a comprehensive security audit at least annually, and always before launching a major feature, changing cloud infrastructure, or after a significant update to your tech stack.
+                        <div class="text-on-surface-variant leading-relaxed opacity-85 text-sm" itemprop="text">
+                            Cross-site scripting is a web vulnerability where malicious scripts are injected into web applications, potentially affecting users, sessions, and application security.
                         </div>
                     </div>
                 </div>
@@ -415,12 +893,12 @@
                 <!-- FAQ Item 5 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-error/10 transition-all duration-300 hover:border-error/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">Do you help with compliance standards?</span>
+                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">What is CSRF?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-error">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Yes. We configure and harden your systems to ensure they meet the rigorous technical requirements of major compliance frameworks like GDPR, HIPAA, PCI-DSS, and SOC 2.
+                        <div class="text-on-surface-variant leading-relaxed opacity-85 text-sm" itemprop="text">
+                            CSRF, or Cross-Site Request Forgery, is a vulnerability where unauthorized commands are executed through authenticated user sessions without proper validation.
                         </div>
                     </div>
                 </div>
@@ -428,12 +906,38 @@
                 <!-- FAQ Item 6 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-error/10 transition-all duration-300 hover:border-error/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
                     <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">What happens if a vulnerability is found?</span>
+                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">Why is API security important?</span>
                         <span class="material-symbols-outlined arrow transition-transform duration-300 text-error">expand_more</span>
                     </button>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            If our audit uncovers a vulnerability, we provide a detailed severity report (CVSS score) alongside actionable, code-level remediation steps. For critical issues, our engineering team can directly assist in patching the exploit immediately.
+                        <div class="text-on-surface-variant leading-relaxed opacity-85 text-sm" itemprop="text">
+                            API security is important because APIs handle communication between applications and systems. Secure APIs help protect data, authentication systems, and application functionality from unauthorized access.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-error/10 transition-all duration-300 hover:border-error/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">How can secure coding practices improve security?</span>
+                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-error">expand_more</span>
+                    </button>
+                    <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <div class="text-on-surface-variant leading-relaxed opacity-85 text-sm" itemprop="text">
+                            Secure coding practices improve security by reducing vulnerabilities during development. They strengthen input validation, authentication systems, encryption, and secure APIs.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-error/10 transition-all duration-300 hover:border-error/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                        <span class="font-bold text-lg group-hover:text-error transition-colors" itemprop="name">What are web security best practices?</span>
+                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-error">expand_more</span>
+                    </button>
+                    <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <div class="text-on-surface-variant leading-relaxed opacity-85 text-sm" itemprop="text">
+                            Web security best practices include web application security testing, secure coding practices, API security, encryption, HTTPS implementation, secure session management, Content Security Policy implementation, authentication controls, and security hardening.
                         </div>
                     </div>
                 </div>
@@ -441,19 +945,29 @@
         </div>
     </section>
 
-    <!-- 10. Final CTA -->
+    <!-- 11. Final CTA -->
     <section class="py-32 px-8">
         <div class="max-w-5xl mx-auto glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden bg-error/5" data-aos="zoom-in">
             <div class="absolute top-0 left-0 w-64 h-64 bg-error/10 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2"></div>
-            <span class="text-error font-black uppercase tracking-widest text-sm mb-6 block">Your Systems Are Being Probed Right Now</span>
-            <h2 class="text-4xl md:text-6xl font-black mb-6">Don't Discover Your <span class="text-error">Vulnerabilities</span> the Hard Way.</h2>
-            <p class="text-xl text-on-surface-variant mb-10 opacity-80 max-w-2xl mx-auto">A reactive breach response costs 10x more than proactive hardening. Every day without a professional security audit is a day your competitors, customers, and data are at risk. We offer a no-obligation security assessment — let's find the gaps before the attackers do.</p>
+            <span class="text-error font-black uppercase tracking-widest text-sm mb-6 block font-mono">Harden Your Codebase Today</span>
+            <h2 class="text-4xl md:text-6xl font-black mb-6 text-white">Strengthen Your Web Application Security Today</h2>
+            <p class="text-lg text-on-surface-variant mb-6 opacity-80 max-w-2xl mx-auto">
+                Protect your applications, APIs, and online systems with advanced web application security focused on secure development, API security, authentication and authorization security, encryption, HTTPS protection, web application security testing, and security hardening.
+            </p>
+            <p class="text-sm text-on-surface-variant mb-10 opacity-70 max-w-2xl mx-auto">
+                Reduce exposure to cross-site scripting, CSRF, insecure APIs, weak authentication systems, and SQL injection vulnerabilities while improving secure web applications and deployment security.
+            </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <a href="{% url 'contact' %}" class="inline-flex items-center gap-3 bg-error text-white px-10 py-5 rounded-full font-black hover:scale-105 transition-all shadow-xl">
-                    Request Free Security Assessment
+                <a href="{% url 'contact' %}" class="inline-flex items-center gap-3 bg-error text-black hover:text-white px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-xl">
+                    Get Web Application Security Services
                     <span class="material-symbols-outlined">shield_lock</span>
                 </a>
-                <p class="text-sm font-mono text-error/60 uppercase tracking-widest">Confidential. No Commitment.</p>
+                <a href="{% url 'contact' %}" class="inline-flex items-center gap-3 border border-error/30 text-error hover:bg-error/10 px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-xl">
+                    Request Security Testing
+                </a>
+                <a href="{% url 'contact' %}" class="text-xs text-on-surface-variant hover:text-error underline transition-all" font-mono>
+                    Protect Secure Web Applications
+                </a>
             </div>
         </div>
     </section>
