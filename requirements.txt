@@ -1,5 +1,7 @@
 asgiref==3.11.1
 Django==5.2.13
+django-ckeditor==6.7.3
+django-js-asset==3.1.2
 dotenv==0.9.9
 python-dotenv==1.2.2
 sqlparse==0.5.5
