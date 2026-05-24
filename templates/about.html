@@ -1,147 +1,1129 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}About Us | DifusionSEO{% endblock %}
 
 {% block content %}
 <main class="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
-<!-- Background Orbs -->
-<div class="seo-pulse-orb top-[-100px] left-[-100px]"></div>
-<div class="seo-pulse-orb bottom-[20%] right-[-100px] bg-secondary-container opacity-10"></div>
-<!-- Hero Section -->
-<section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32 mt-8 md:mt-0">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
-<div class="space-y-6 md:space-y-8" data-aos="fade-right" data-aos-duration="1000">
-<span class="label-md uppercase tracking-[0.2em] text-primary font-bold animate__animated animate__fadeInDown block">The Digital Aurora</span>
-<h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tighter leading-tight lg:leading-none text-on-surface animate__animated animate__fadeInLeft">
-                        We Build <span class="text-transparent bg-clip-text neon-gradient">Scalable</span> <br class="hidden lg:block"/>Digital Systems
-                    </h1>
-<p class="text-base md:text-lg lg:text-xl text-on-surface-variant max-w-xl leading-relaxed animate__animated animate__fadeInLeft animate__delay-1s">
-                        At DifusionSEO, we don't just optimize; we architect. We treat the search landscape as a living atmosphere, designing systems that capture light and convert velocity into growth.
+    <!-- Background Pulse Orbs for Atmosphere -->
+    <div class="seo-pulse-orb top-[-100px] left-[-100px] w-96 h-96 bg-primary-container opacity-20"></div>
+    <div class="seo-pulse-orb top-[40%] right-[-150px] w-80 h-80 bg-secondary-container opacity-10"></div>
+    <div class="seo-pulse-orb bottom-[10%] left-[-150px] w-96 h-96 bg-tertiary-container opacity-15"></div>
+
+    <!-- 1. Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32 mt-8 md:mt-0">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div class="space-y-6 md:space-y-8" data-aos="fade-right" data-aos-duration="1000">
+                <span class="label-md uppercase tracking-[0.2em] text-primary font-bold animate__animated animate__fadeInDown block">About Difusion SEO</span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tighter leading-tight lg:leading-none text-on-surface animate__animated animate__fadeInLeft">
+                    We Build <span class="text-transparent bg-clip-text neon-gradient">Secure & Intelligent</span> Digital Systems
+                </h1>
+                <p class="text-base md:text-lg lg:text-xl text-on-surface-variant max-w-xl leading-relaxed animate__animated animate__fadeInLeft animate__delay-1s">
+                    Building secure digital systems, intelligent automation environments, scalable web solutions, and advanced SEO strategies focused on operational growth, workflow optimization, secure development, and enterprise performance.
+                </p>
+                <div class="space-y-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <h3 class="text-sm font-bold text-secondary uppercase tracking-widest">Our services combine:</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 rounded-full text-xs font-semibold bg-surface-container-high border border-outline-variant/30 text-on-surface hover:border-primary/50 transition-colors">Full Stack Web Development</span>
+                        <span class="px-4 py-2 rounded-full text-xs font-semibold bg-surface-container-high border border-outline-variant/30 text-on-surface hover:border-primary/50 transition-colors">Local SEO Services</span>
+                        <span class="px-4 py-2 rounded-full text-xs font-semibold bg-surface-container-high border border-outline-variant/30 text-on-surface hover:border-primary/50 transition-colors">Backlink Building Services</span>
+                        <span class="px-4 py-2 rounded-full text-xs font-semibold bg-surface-container-high border border-outline-variant/30 text-on-surface hover:border-primary/50 transition-colors">Advanced SEO Strategy</span>
+                        <span class="px-4 py-2 rounded-full text-xs font-semibold bg-surface-container-high border border-outline-variant/30 text-on-surface hover:border-primary/50 transition-colors">Web Application Security</span>
+                        <span class="px-4 py-2 rounded-full text-xs font-semibold bg-surface-container-high border border-outline-variant/30 text-on-surface hover:border-primary/50 transition-colors">AI Automation Services</span>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-4 pt-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <a href="#services-expertise" class="neon-gradient text-on-primary px-6 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform flex items-center justify-center shadow-lg">
+                        Learn About Our Services
+                    </a>
+                    <a href="{% url 'contact' %}" class="px-6 py-3 rounded-full font-bold text-sm border-2 border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center">
+                        Start Your Project
+                    </a>
+                    <a href="{% url 'contact' %}" class="px-6 py-3 rounded-full font-bold text-sm text-primary hover:text-white transition-colors flex items-center justify-center gap-2">
+                        Contact Our Team <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+            <div class="relative w-full max-w-md mx-auto lg:max-w-none" data-aos="zoom-in" data-aos-duration="1200">
+                <div class="aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden glass-panel p-3 md:p-4 hover-lift relative bg-black/30 border border-outline-variant/10">
+                    <div class="absolute inset-0 grid-pattern opacity-10"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-10">
+                        <span class="material-symbols-outlined text-[100px] text-primary/80 mb-6 animate-pulse">hub</span>
+                        <div class="text-xs font-mono text-secondary mb-2">> SECURE_ORCHESTRATION_INITIATED</div>
+                        <div class="text-2xl font-black text-white">Difusion SEO Platform</div>
+                        <p class="text-xs text-on-surface-variant max-w-xs mt-2 opacity-80">Integrating artificial intelligence, threat-hardened codebases, and rank velocity pipelines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Company Intro -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
+        <div class="glass-panel rounded-[2rem] p-8 md:p-12 border border-outline-variant/10 relative overflow-hidden bg-surface-container-low/50">
+            <div class="absolute top-0 right-0 w-1/3 h-full opacity-5 bg-gradient-to-l from-primary to-transparent pointer-events-none"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
+                <div class="space-y-6" data-aos="fade-right">
+                    <span class="text-primary font-black uppercase tracking-widest text-xs block">Company Intro</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface">Digital Solutions Built for Operational Scaling</h2>
+                    <p class="text-on-surface-variant leading-relaxed text-sm md:text-base">
+                        Difusion SEO provides digital solutions focused on secure web applications, intelligent automation systems, enterprise workflow optimization, AI powered business solutions, and scalable SEO focused growth strategies.
                     </p>
-</div>
-<div class="relative w-full max-w-md mx-auto lg:max-w-none" data-aos="zoom-in" data-aos-duration="1200">
-<div class="aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden glass-panel p-3 md:p-4 hover-lift">
-<img alt="Digital Innovation" class="w-full h-full object-cover rounded-[1.5rem] md:rounded-[2.5rem]" data-alt="Modern tech office with futuristic purple lighting and neon blue accents, reflecting on glass surfaces and digital displays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxHRaFz_g1b0QBDqP5OFQz7pH23MZ4T5W43gi7SwW7ILKmc34qun2VVOpN8yu4wpXALNg7L_Z5ODkoQEYRgWJlOQ_A1tVT08OQh_k0cu4YH3KoeUQU9A6RK7SGLzPhtTDKjHCBCJe3Nqq0ROYnvLFIXso083Vr6qLk4EMyektSGpyLstvm_8WJw_W6-k_Q08kXwAatLBHo0UMuShdu-lQaXj-VfMMBdF9SbnVofzdgyL8K66uxfC6UOADpu8nslcGe39RUyouwyRY"/>
-</div>
-</div>
-</div>
-</section>
-<section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32" data-aos="fade-up">
-<div class="bg-surface-container-low rounded-[2rem] p-8 sm:p-12 md:p-24 relative overflow-hidden shimmer border border-outline-variant/10 shadow-[0_20px_40px_rgba(0,0,0,0.2)]">
-<div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-<div class="col-span-1" data-aos="fade-right" data-aos-delay="200">
-<h2 class="text-2xl md:text-3xl font-bold text-on-surface border-l-4 border-primary pl-4 md:border-none md:pl-0">Our Core Mission</h2>
-</div>
-<div class="col-span-1 md:col-span-2" data-aos="fade-left" data-aos-delay="400">
-<p class="text-lg sm:text-xl md:text-3xl text-on-surface-variant font-light leading-relaxed">
-                            To dissolve the boundaries between complex data and human intuition, creating SEO frameworks that grow autonomously while maintaining absolute technical precision.
-                        </p>
-</div>
-</div>
-<div class="absolute top-0 right-0 w-full md:w-1/2 h-full opacity-10 bg-gradient-to-l from-primary-container to-transparent pointer-events-none"></div>
-</div>
-</section>
-<!-- Values Section - Bento Grid -->
-<section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
-<div class="mb-8 md:mb-12">
-<h2 class="text-3xl md:text-4xl font-bold tracking-tight text-center md:text-left">Pillars of Velocity</h2>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Innovation -->
-<div class="glass-panel rounded-3xl p-6 md:p-8 hover:bg-surface-container-high transition-all duration-500 group hover-lift border border-outline-variant/10 shadow-lg" data-aos="fade-up" data-aos-delay="100">
-<div class="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-4 md:mb-6 text-primary group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
-</div>
-<h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4">Innovation</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Constant iteration of proprietary algorithms to stay ahead of neural search shifts.</p>
-</div>
-<!-- Security -->
-<div class="glass-panel rounded-3xl p-6 md:p-8 hover:bg-surface-container-high transition-all duration-500 group hover-lift border border-outline-variant/10 shadow-lg" data-aos="fade-up" data-aos-delay="200">
-<div class="w-12 h-12 bg-secondary-container/20 rounded-xl flex items-center justify-center mb-4 md:mb-6 text-secondary group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined" data-icon="shield_lock">shield_lock</span>
-</div>
-<h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4">Security</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Data integrity is our bedrock. We protect your digital footprint with enterprise protocols.</p>
-</div>
-<!-- Transparency -->
-<div class="glass-panel rounded-3xl p-6 md:p-8 hover:bg-surface-container-high transition-all duration-500 group hover-lift border border-outline-variant/10 shadow-lg" data-aos="fade-up" data-aos-delay="300">
-<div class="w-12 h-12 bg-tertiary-container/20 rounded-xl flex items-center justify-center mb-4 md:mb-6 text-tertiary group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
-</div>
-<h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4">Transparency</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Real-time dashboards and clear logic. We explain the 'why' behind every pivot.</p>
-</div>
-<!-- Scalability -->
-<div class="glass-panel rounded-3xl p-6 md:p-8 hover:bg-surface-container-high transition-all duration-500 group hover-lift border border-outline-variant/10 shadow-lg" data-aos="fade-up" data-aos-delay="400">
-<div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 md:mb-6 text-primary group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined" data-icon="dynamic_feed">dynamic_feed</span>
-</div>
-<h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4">Scalability</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Systems designed for growth. From local authority to global dominance.</p>
-</div>
-</div>
-</section>
-<!-- Team Section -->
-<section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
-<div class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8">
-<div class="text-center md:text-left">
-<h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-2 md:mb-4">Architects of Growth</h2>
-<p class="text-on-surface-variant max-w-md mx-auto md:mx-0">The specialists behind the systems.</p>
-</div>
-<div class="hidden md:block h-px flex-1 mx-12 bg-outline-variant/20"></div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-<!-- Team Member 1 -->
-<div class="space-y-4 md:space-y-6 group" data-aos="fade-up" data-aos-delay="100">
-<div class="aspect-[4/5] rounded-3xl overflow-hidden glass-panel relative border border-outline-variant/10">
-<img alt="Team Lead" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="Professional portrait of a tech visionary in a minimalist dark studio, dramatic lighting highlights textures and confidence" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuTJDR620xokrwWYT77ywX2284fKbShjld1arFU-dZzeVYXKCmmnQKDVntoBIdR85M5DlKvBC130g8rfx0JDT3jLfZsg_55N5SL2UjcQvzmkMP1dim-DnzOSS05ZUvtn4zJr7-BEQli_QXzCWpAMG1PHeqmGRJW35ujOUDKAVv2gIFS1E_Pc9S-Jkg2yO4FTRBCkyByFqTTgCmGZ2NRiIHl7KRcdb_Ch5dK1G-2HHELNYbpxO27Yr0KkmBfTQvXnFoxHFgNqmoX5Y"/>
-</div>
-<div class="text-center md:text-left">
-<h4 class="text-lg md:text-xl font-bold">Marcus Thorne</h4>
-<p class="text-primary text-xs md:text-sm font-medium">Head of Search Systems</p>
-</div>
-</div>
-<!-- Team Member 2 -->
-<div class="space-y-4 md:space-y-6 group" data-aos="fade-up" data-aos-delay="200">
-<div class="aspect-[4/5] rounded-3xl overflow-hidden glass-panel relative border border-outline-variant/10">
-<img alt="SEO Strategist" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="Professional woman in a tech-focused environment, soft atmospheric purple background, confident expression, editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4cFiJdbkHpQK-eAyZaVl8P0oSRyQp4y6-pABK_O4Dx3ZSKzF85HCxeBkvJwdR_W3eOZ1IWB7TZl1_xwcU9IHLEnLmJtxFliVplOOXkcPo2_eHqwXVDtRiVxe-YIax9mV_EZwWLzkAnmVoi3k2epsYqZXRtaP6rAZLlfK-oPi0tQXCBFeqKB8DYtA6W1vZ2_ajC5pRMSuiLil2nT4NJ2GJJ0MB4wWyvq9EuMYEUyc_Pud0qJwCnUZanuGYMOUCxs6DyxFOeZ40UQg"/>
-</div>
-<div class="text-center md:text-left">
-<h4 class="text-lg md:text-xl font-bold">Elena Vance</h4>
-<p class="text-primary text-xs md:text-sm font-medium">Principal Content Architect</p>
-</div>
-</div>
-<!-- Team Member 3 -->
-<div class="space-y-4 md:space-y-6 group" data-aos="fade-up" data-aos-delay="300">
-<div class="aspect-[4/5] rounded-3xl overflow-hidden glass-panel relative border border-outline-variant/10">
-<img alt="Technical SEO" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="Man in high-tech studio with dynamic lighting, professional and focused, modern editorial portrait aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTBSDjqzNc0jebosw8sLtymNtWJF27Y5IzCwfnvWmnDnyehBs_XHluzowF-BqycbdZb2FDsvQJnKXTsSaiArtBaQL9Qp8KEBFaInO1UUbSeC3bsHLBe5BnE_OpDrk9YQx36W5yik-BvgaekAwl3Pcy8jetIropXQQ80sD0ktU0xmqW0LR4F2Epdo6sBucHqRMI8L6rZSpgmeWTJxRQBxzcDGs34boP66aFrbW-xCnwaeRL7BKQwWa3IbgWgojQifGSz32CMwme8rw"/>
-</div>
-<div class="text-center md:text-left">
-<h4 class="text-lg md:text-xl font-bold">Julian Krest</h4>
-<p class="text-primary text-xs md:text-sm font-medium">Core Infrastructure Lead</p>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Banner -->
-<section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-24">
-<div class="relative glass-panel rounded-[2rem] md:rounded-[3rem] p-8 sm:p-12 md:p-20 overflow-hidden text-center border-none shadow-[0_40px_80px_rgba(103,61,230,0.1)]">
-<div class="relative z-10 max-w-2xl mx-auto w-full">
-<h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight">Ready to synchronize your growth?</h2>
-<p class="text-base sm:text-lg text-on-surface-variant mb-10 md:mb-12 px-2">Let's discuss how our scalable systems can elevate your digital presence to the next atmosphere.</p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center w-full max-w-sm sm:max-w-none mx-auto">
-<button onclick="window.location.href='{% url 'contact' %}'" class="neon-gradient text-on-primary px-6 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base md:text-lg hover:scale-105 transition-transform flex items-center justify-center shadow-lg w-full sm:w-auto">
-                            Start a Discussion
-                        </button>
-<button class="px-6 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base md:text-lg border-2 border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center gap-3 w-full sm:w-auto">
-                            Our Portfolio <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-</button>
-</div>
-</div>
-<!-- Abstract Glow for CTA -->
-<div class="absolute -top-24 -left-24 w-64 h-64 bg-primary rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
-<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
-</div>
-</section>
+                    <p class="text-xs md:text-sm text-on-surface-variant leading-relaxed opacity-85">
+                        We combine Artificial Intelligence, Machine Learning, secure development practices, enterprise workflow automation, web application security testing, and SEO optimization strategies to help businesses improve digital operations and long term scalability.
+                    </p>
+                </div>
+                <div class="space-y-6" data-aos="fade-left">
+                    <h3 class="text-base md:text-lg font-bold text-white border-l-4 border-secondary pl-3">Our work supports businesses requiring:</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-secondary text-[20px]">security</span>
+                            <span class="text-xs md:text-sm font-medium text-on-surface">Secure development</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-secondary text-[20px]">dynamic_settings</span>
+                            <span class="text-xs md:text-sm font-medium text-on-surface">Workflow optimization</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-secondary text-[20px]">integration_instructions</span>
+                            <span class="text-xs md:text-sm font-medium text-on-surface">AI integration services</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-secondary text-[20px]">cognition</span>
+                            <span class="text-xs md:text-sm font-medium text-on-surface">Enterprise AI solutions</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-secondary text-[20px]">trending_up</span>
+                            <span class="text-xs md:text-sm font-medium text-on-surface">SEO performance improvements</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-secondary text-[20px]">api</span>
+                            <span class="text-xs md:text-sm font-medium text-on-surface">API security</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-secondary text-[20px]">settings_suggest</span>
+                            <span class="text-xs md:text-sm font-medium text-on-surface">Intelligent process automation</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-secondary text-[20px]">cloud_done</span>
+                            <span class="text-xs md:text-sm font-medium text-on-surface">Secure deployment environments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Mission -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+            <!-- Left Card: Mission Objectives -->
+            <div class="glass-panel rounded-3xl p-8 border border-outline-variant/10 hover:border-primary/20 transition-all duration-300" data-aos="fade-up">
+                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+                    <span class="material-symbols-outlined">track_changes</span>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-extrabold mb-6">Our Mission</h2>
+                <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                    Our mission is to help businesses improve:
+                </p>
+                <div class="space-y-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            <span class="text-xs text-on-surface-variant">Website performance</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            <span class="text-xs text-on-surface-variant">Operational efficiency</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            <span class="text-xs text-on-surface-variant">Workflow automation</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            <span class="text-xs text-on-surface-variant">Secure web applications</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            <span class="text-xs text-on-surface-variant">Enterprise scalability</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            <span class="text-xs text-on-surface-variant">Search visibility</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            <span class="text-xs text-on-surface-variant">AI powered operational systems</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                            <span class="text-xs text-on-surface-variant">Intelligent workflows</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Card: Environment Stack -->
+            <div class="glass-panel rounded-3xl p-8 border border-outline-variant/10 hover:border-secondary/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6">
+                    <span class="material-symbols-outlined">deployed_code</span>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-extrabold mb-6">Scalable Digital Environments</h2>
+                <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                    We focus on building scalable digital environments using:
+                </p>
+                <div class="space-y-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                            <span class="text-xs text-on-surface-variant">AI Automation Services</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                            <span class="text-xs text-on-surface-variant">Secure development</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                            <span class="text-xs text-on-surface-variant">API security</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                            <span class="text-xs text-on-surface-variant">Workflow optimization</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                            <span class="text-xs text-on-surface-variant">Enterprise AI deployment</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                            <span class="text-xs text-on-surface-variant">SEO optimization</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                            <span class="text-xs text-on-surface-variant">Web application protection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Story / Journey -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
+        <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+            <span class="text-tertiary font-black uppercase tracking-widest text-xs block">Story / Journey</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold mt-2">The Evolution of Our Services</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 flex flex-col justify-between" data-aos="fade-right">
+                <div class="space-y-4">
+                    <span class="text-xs font-mono text-primary">01 / FOUNDATION</span>
+                    <h3 class="text-xl font-bold">Designing Infrastructure</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Difusion SEO focuses on digital services designed to support modern business operations through secure development, workflow intelligence, AI powered automation, SEO optimization, and scalable infrastructure solutions.
+                    </p>
+                </div>
+            </div>
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 flex flex-col justify-between relative overflow-hidden" data-aos="fade-up">
+                <div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+                <div class="space-y-4 z-10 relative">
+                    <span class="text-xs font-mono text-secondary">02 / CORE EVOLUTION</span>
+                    <h3 class="text-xl font-bold">Services Evolved Around</h3>
+                    <ul class="space-y-2 text-xs text-on-surface-variant">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Full Stack Web Development</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Local SEO Services</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Backlink Building Services</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Advanced SEO Strategy</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Web Application Security</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>AI Automation Services</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 flex flex-col justify-between" data-aos="fade-left">
+                <div class="space-y-4">
+                    <span class="text-xs font-mono text-tertiary">03 / CONVERGENCE</span>
+                    <h3 class="text-xl font-bold">Consistent Scalability</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        By combining secure development, AI integration, workflow automation, web application security testing, and SEO strategies, we help businesses improve operational consistency, intelligent workflows, and digital scalability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Services Expertise -->
+    <section id="services-expertise" class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32 scroll-mt-24">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+            <span class="text-primary font-black uppercase tracking-widest text-xs block">Expertise Areas</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold mt-2">Our Services Expertise</h2>
+            <p class="text-on-surface-variant mt-4 text-sm md:text-base">We possess core specialization across six primary service pillars to secure, optimize, and grow digital presence.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Web Dev -->
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 hover-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+                        <span class="material-symbols-outlined">code</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Full Stack Web Development</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Scalable web development solutions focused on responsive systems, secure development, operational performance, and modern architecture.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-outline-variant/10">
+                    <a href="{% url 'web_development' %}" class="text-xs text-primary font-bold hover:text-white flex items-center gap-1">Explore Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a>
+                </div>
+            </div>
+
+            <!-- Local SEO -->
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 hover-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Local SEO Services</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        SEO solutions focused on local visibility, search optimization, and location based business growth.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-outline-variant/10">
+                    <a href="{% url 'local_seo' %}" class="text-xs text-secondary font-bold hover:text-white flex items-center gap-1">Explore Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a>
+                </div>
+            </div>
+
+            <!-- Backlinks -->
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 hover-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                <div>
+                    <div class="w-12 h-12 bg-tertiary/10 rounded-xl flex items-center justify-center text-tertiary mb-6">
+                        <span class="material-symbols-outlined">link</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Backlink Building Services</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Backlink building strategies designed to support website authority, SEO performance, and search visibility improvements.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-outline-variant/10">
+                    <a href="{% url 'backlink_service' %}" class="text-xs text-tertiary font-bold hover:text-white flex items-center gap-1">Explore Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a>
+                </div>
+            </div>
+
+            <!-- Advanced SEO -->
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 hover-lift flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
+                <div>
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+                        <span class="material-symbols-outlined">insights</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Advanced SEO Strategy</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Advanced SEO solutions focused on technical SEO, search optimization, keyword targeting, content optimization, and organic growth.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-outline-variant/10">
+                    <a href="{% url 'seo_strategy' %}" class="text-xs text-primary font-bold hover:text-white flex items-center gap-1">Explore Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a>
+                </div>
+            </div>
+
+            <!-- Web App Security -->
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 hover-lift flex flex-col justify-between md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="500">
+                <div>
+                    <div class="w-12 h-12 bg-error/10 rounded-xl flex items-center justify-center text-error mb-6">
+                        <span class="material-symbols-outlined">shield_lock</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Web Application Security</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed mb-4">
+                        Web application security services focused on:
+                    </p>
+                    <div class="space-y-1.5 mt-2">
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-error"></span>
+                            <span class="text-[11px] text-on-surface-variant">Web application security testing</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-error"></span>
+                            <span class="text-[11px] text-on-surface-variant">Secure coding practices</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-error"></span>
+                            <span class="text-[11px] text-on-surface-variant">API security</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-error"></span>
+                            <span class="text-[11px] text-on-surface-variant">Authentication and authorization security</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-error"></span>
+                            <span class="text-[11px] text-on-surface-variant">Encryption and HTTPS implementation</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-error"></span>
+                            <span class="text-[11px] text-on-surface-variant">Security hardening</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-error"></span>
+                            <span class="text-[11px] text-on-surface-variant">Secure session management</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-error"></span>
+                            <span class="text-[11px] text-on-surface-variant">Content Security Policy implementation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-outline-variant/10">
+                    <a href="{% url 'cyber_security' %}" class="text-xs text-error font-bold hover:text-white flex items-center gap-1">Explore Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a>
+                </div>
+            </div>
+
+            <!-- AI Automation -->
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 hover-lift flex flex-col justify-between md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="600">
+                <div>
+                    <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6">
+                        <span class="material-symbols-outlined">smart_toy</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI Automation Services</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed mb-4">
+                        AI powered automation solutions focused on:
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mt-2">
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-secondary"></span>
+                            <span class="text-[10px] text-on-surface-variant leading-none">AI Workflow Automation</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-secondary"></span>
+                            <span class="text-[10px] text-on-surface-variant leading-none">Enterprise Workflow Automation</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-secondary"></span>
+                            <span class="text-[10px] text-on-surface-variant leading-none">AI Integration Services</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-secondary"></span>
+                            <span class="text-[10px] text-on-surface-variant leading-none">Intelligent Process Automation</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-secondary"></span>
+                            <span class="text-[10px] text-on-surface-variant leading-none">AI Operational Analytics</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-secondary"></span>
+                            <span class="text-[10px] text-on-surface-variant leading-none">AI Agent Development</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-secondary"></span>
+                            <span class="text-[10px] text-on-surface-variant leading-none">Predictive Analytics Solutions</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-secondary"></span>
+                            <span class="text-[10px] text-on-surface-variant leading-none">Conversational AI Solutions</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-secondary"></span>
+                            <span class="text-[10px] text-on-surface-variant leading-none">AI Process Automation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-outline-variant/10">
+                    <a href="{% url 'ai_automation' %}" class="text-xs text-secondary font-bold hover:text-white flex items-center gap-1">Explore Service <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Results / Achievements -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
+        <div class="bg-surface-container-low rounded-[2rem] p-8 md:p-16 border border-outline-variant/10 relative overflow-hidden">
+            <div class="absolute top-[-50px] left-[-50px] w-72 h-72 bg-secondary opacity-5 blur-3xl rounded-full"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+                <div class="space-y-6" data-aos="fade-right">
+                    <span class="text-secondary font-black uppercase tracking-widest text-xs block">Results / Achievements</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">Improving Operational Consistency & Scalability</h2>
+                    <p class="text-on-surface-variant leading-relaxed text-sm md:text-base">
+                        Organizations implementing secure development, AI powered automation, workflow intelligence, SEO optimization, and web application security testing can improve operational scalability, workflow coordination, and digital performance.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="{% url 'contact' %}" class="neon-gradient text-on-primary px-8 py-4 rounded-full font-bold text-sm hover:scale-105 transition-transform shadow-md">
+                            Improve Digital Operations
+                        </a>
+                        <a href="{% url 'contact' %}" class="px-8 py-4 rounded-full font-bold text-sm border border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors">
+                            Build Intelligent Systems
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-4" data-aos="fade-left">
+                    <h3 class="text-base font-bold text-white uppercase tracking-widest">Our services help businesses improve:</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex items-center gap-3 p-2 bg-surface-container-high/30 rounded-lg">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">trending_up</span>
+                            <span class="text-xs text-on-surface font-medium">Workflow optimization</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 bg-surface-container-high/30 rounded-lg">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">trending_up</span>
+                            <span class="text-xs text-on-surface font-medium">AI operational efficiency</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 bg-surface-container-high/30 rounded-lg">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">trending_up</span>
+                            <span class="text-xs text-on-surface font-medium">Operational automation</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 bg-surface-container-high/30 rounded-lg">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">trending_up</span>
+                            <span class="text-xs text-on-surface font-medium">Secure deployment environments</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 bg-surface-container-high/30 rounded-lg">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">trending_up</span>
+                            <span class="text-xs text-on-surface font-medium">Website visibility</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 bg-surface-container-high/30 rounded-lg">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">trending_up</span>
+                            <span class="text-xs text-on-surface font-medium">SEO performance</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 bg-surface-container-high/30 rounded-lg">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">trending_up</span>
+                            <span class="text-xs text-on-surface font-medium">Intelligent workflows</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 bg-surface-container-high/30 rounded-lg">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">trending_up</span>
+                            <span class="text-xs text-on-surface font-medium">Enterprise workflow automation</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 bg-surface-container-high/30 rounded-lg">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">trending_up</span>
+                            <span class="text-xs text-on-surface font-medium">API security</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 bg-surface-container-high/30 rounded-lg">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">trending_up</span>
+                            <span class="text-xs text-on-surface font-medium">Secure web applications</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 bg-surface-container-high/30 rounded-lg">
+                            <span class="material-symbols-outlined text-secondary text-[18px]">trending_up</span>
+                            <span class="text-xs text-on-surface font-medium">AI powered operational systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Process / Philosophy -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+            <span class="text-tertiary font-black uppercase tracking-widest text-xs block">Process / Philosophy</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold mt-2">How We Deliver Results</h2>
+            <p class="text-on-surface-variant mt-4 text-sm md:text-base">Our structured process translates strategy into secure, scalable operational frameworks.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Phase 1 -->
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-8xl font-black text-outline-variant/10 absolute top-0 right-4 pointer-events-none select-none">01</div>
+                <div class="relative z-10 space-y-6">
+                    <span class="text-xs font-mono text-primary bg-primary/10 px-3 py-1 rounded-full uppercase tracking-wider">Phase 1</span>
+                    <h3 class="text-xl font-bold">Strategy Focus</h3>
+                    <p class="text-xs text-on-surface-variant leading-relaxed">
+                        We focus on scalable digital systems designed around:
+                    </p>
+                    <ul class="space-y-2 text-xs text-on-surface-variant pl-2">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-primary"></span>Workflow optimization</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-primary"></span>Secure development</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-primary"></span>AI orchestration</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-primary"></span>Enterprise workflow automation</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-primary"></span>SEO growth</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-primary"></span>Application security</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-primary"></span>Operational scalability</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-8xl font-black text-outline-variant/10 absolute top-0 right-4 pointer-events-none select-none">02</div>
+                <div class="relative z-10 space-y-6">
+                    <span class="text-xs font-mono text-secondary bg-secondary/10 px-3 py-1 rounded-full uppercase tracking-wider">Phase 2</span>
+                    <h3 class="text-xl font-bold">Development & Implementation</h3>
+                    <p class="text-xs text-on-surface-variant leading-relaxed">
+                        Our process includes:
+                    </p>
+                    <ul class="space-y-2 text-xs text-on-surface-variant pl-2">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Secure coding practices</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>AI integration services</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Enterprise AI deployment</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Workflow automation</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>API security</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Intelligent process automation</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Web application security testing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-8xl font-black text-outline-variant/10 absolute top-0 right-4 pointer-events-none select-none">03</div>
+                <div class="relative z-10 space-y-6">
+                    <span class="text-xs font-mono text-tertiary bg-tertiary/10 px-3 py-1 rounded-full uppercase tracking-wider">Phase 3</span>
+                    <h3 class="text-xl font-bold">Optimization & Scalability</h3>
+                    <p class="text-xs text-on-surface-variant leading-relaxed">
+                        Continuous improvements support:
+                    </p>
+                    <ul class="space-y-2 text-xs text-on-surface-variant pl-2">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-tertiary"></span>AI operational analytics</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-tertiary"></span>Workflow intelligence</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-tertiary"></span>Secure deployment security</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-tertiary"></span>Enterprise automation systems</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-tertiary"></span>SEO performance optimization</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-tertiary"></span>AI scalability solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. EEAT / Trust Signals -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+            <span class="text-primary font-black uppercase tracking-widest text-xs block">EEAT Credentials</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold mt-2">Trust & Authority</h2>
+            <p class="text-on-surface-variant mt-4 text-sm md:text-base">We prioritize security, depth of experience, and verifiable expertise in all operations.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Experience -->
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 flex flex-col justify-between" data-aos="fade-up">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-[28px]">stars</span>
+                        <h3 class="text-xl font-bold">Experience</h3>
+                    </div>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Experience across Full Stack Web Development, Local SEO Services, Backlink Building Services, Advanced SEO Strategy, Web Application Security, and AI Automation Services supports modern digital business requirements.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Expertise -->
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-secondary text-[28px]">workspace_premium</span>
+                        <h3 class="text-xl font-bold">Expertise</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">Secure development</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">AI workflow automation</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">API security</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">AI integration services</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">Workflow optimization</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">Enterprise AI solutions</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">Authentication systems</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">SEO optimization</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">Intelligent process automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Authoritativeness -->
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-tertiary text-[28px]">verified_user</span>
+                        <h3 class="text-xl font-bold">Authoritativeness</h3>
+                    </div>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Modern application security, AI automation, and SEO strategies continue evolving through advancements in Artificial Intelligence, Machine Learning, secure development practices, workflow intelligence, and web application security standards.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Trust -->
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-error text-[28px]">security</span>
+                        <h3 class="text-xl font-bold">Trust</h3>
+                    </div>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Secure development, intelligent automation systems, workflow optimization, AI powered operational systems, API security, encryption, HTTPS implementation, and continuous optimization help support secure and scalable digital operations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Why Choose Us -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
+        <div class="glass-panel rounded-[2rem] p-8 md:p-12 border border-outline-variant/10 bg-surface-container-high/20" data-aos="fade-up">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-secondary font-black uppercase tracking-widest text-xs block">Benefits</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold mt-2">Why Choose Us</h2>
+                <p class="text-xs text-on-surface-variant mt-2">Our solutions focus on secure development, operational automation, enterprise scalability, workflow optimization, and intelligent digital systems.</p>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-sm font-bold text-white text-center">Businesses choose Difusion SEO for:</h4>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">Full Stack Web Development</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">Local SEO Services</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">Backlink Building Services</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">Advanced SEO Strategy</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">Web Application Security</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">AI Automation Services</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">Enterprise AI deployment</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">Secure web applications</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">Workflow automation</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">Intelligent process automation</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">API security</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">AI operational analytics</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">SEO performance optimization</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-3 bg-surface-container-low/80 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span class="text-xs text-on-surface font-medium leading-none">Workflow intelligence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Founder Section -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6" data-aos="fade-right">
+                <span class="text-primary font-black uppercase tracking-widest text-xs block">Leadership</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">Leadership Focused on Digital Growth and Intelligent Systems</h2>
+                <p class="text-on-surface-variant leading-relaxed text-sm md:text-base">
+                    Difusion SEO focuses on secure development, AI powered automation, workflow optimization, web application security, SEO performance, and scalable digital infrastructure solutions designed for modern business operations.
+                </p>
+                <div class="space-y-3 pt-2">
+                    <h4 class="text-xs font-bold text-white uppercase tracking-widest">Our approach combines:</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            <span class="text-xs text-on-surface-variant">Secure web applications</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            <span class="text-xs text-on-surface-variant">Enterprise workflow automation</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            <span class="text-xs text-on-surface-variant">AI integration services</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            <span class="text-xs text-on-surface-variant">SEO optimization</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            <span class="text-xs text-on-surface-variant">Intelligent automation systems</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            <span class="text-xs text-on-surface-variant">API security</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            <span class="text-xs text-on-surface-variant">AI operational analytics</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            <span class="text-xs text-on-surface-variant">Scalable digital environments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 text-center space-y-6 bg-black/40">
+                    <div class="w-24 h-24 rounded-full mx-auto bg-primary-container/20 border-2 border-primary/30 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[48px] text-primary">person</span>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white">Difusion SEO Founder</h4>
+                        <p class="text-xs text-primary font-mono mt-1">Lead Architect & Director</p>
+                    </div>
+                    <p class="text-xs text-on-surface-variant leading-relaxed max-w-md mx-auto">
+                        Steering enterprise workflows and digital protection parameters with scalable machine learning stacks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Industries Served -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
+        <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+            <span class="text-secondary font-black uppercase tracking-widest text-xs block">Industries</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Industries Served</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 lg:col-span-2 flex flex-col justify-between" data-aos="fade-right">
+                <div class="space-y-6">
+                    <h3 class="text-base md:text-lg font-bold text-white">We support businesses requiring:</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex items-center gap-2 p-2 bg-surface-container-low/50 rounded-lg">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">AI powered business solutions</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2 bg-surface-container-low/50 rounded-lg">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">Secure web applications</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2 bg-surface-container-low/50 rounded-lg">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">Enterprise workflow automation</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2 bg-surface-container-low/50 rounded-lg">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">SEO optimization</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2 bg-surface-container-low/50 rounded-lg">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">API security</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2 bg-surface-container-low/50 rounded-lg">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">Intelligent process automation</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2 bg-surface-container-low/50 rounded-lg">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">Workflow optimization</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2 bg-surface-container-low/50 rounded-lg">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">AI operational analytics</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2 bg-surface-container-low/50 rounded-lg">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">Secure deployment environments</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2 bg-surface-container-low/50 rounded-lg">
+                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            <span class="text-xs text-on-surface-variant leading-none">Digital scalability solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 space-y-6" data-aos="fade-left">
+                <h3 class="text-base md:text-lg font-bold text-white">Industry focused solutions include:</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[20px]">local_hospital</span>
+                        <span class="text-xs text-on-surface font-semibold">Healthcare AI Solutions</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[20px]">precision_manufacturing</span>
+                        <span class="text-xs text-on-surface font-semibold">Manufacturing AI Solutions</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[20px]">account_balance</span>
+                        <span class="text-xs text-on-surface font-semibold">Finance AI Solutions</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[20px]">directions_car</span>
+                        <span class="text-xs text-on-surface font-semibold">Automotive AI Solutions</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[20px]">store</span>
+                        <span class="text-xs text-on-surface font-semibold">Retail AI Solutions</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-surface-container-high/40 rounded-xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary text-[20px]">diversity_3</span>
+                        <span class="text-xs text-on-surface font-semibold">CRM AI Solutions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Locations Served -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
+        <div class="glass-panel rounded-[2rem] p-8 md:p-12 border border-outline-variant/10 bg-surface-container-high/10 text-center" data-aos="fade-up">
+            <div class="max-w-3xl mx-auto space-y-6">
+                <span class="text-primary font-black uppercase tracking-widest text-xs block">Global Reach</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-white">Locations Served</h2>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                    We provide services for organizations seeking:
+                </p>
+                <div class="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto pt-4">
+                    <span class="px-3 py-1.5 rounded-full text-xs bg-surface-container-low border border-outline-variant/10 text-on-surface-variant">Full Stack Web Development</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs bg-surface-container-low border border-outline-variant/10 text-on-surface-variant">Local SEO Services</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs bg-surface-container-low border border-outline-variant/10 text-on-surface-variant">Backlink Building Services</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs bg-surface-container-low border border-outline-variant/10 text-on-surface-variant">Advanced SEO Strategy</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs bg-surface-container-low border border-outline-variant/10 text-on-surface-variant">Web Application Security</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs bg-surface-container-low border border-outline-variant/10 text-on-surface-variant">AI Automation Services</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs bg-surface-container-low border border-outline-variant/10 text-on-surface-variant">AI workflow automation</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs bg-surface-container-low border border-outline-variant/10 text-on-surface-variant">Secure development</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs bg-surface-container-low border border-outline-variant/10 text-on-surface-variant">Enterprise AI solutions</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs bg-surface-container-low border border-outline-variant/10 text-on-surface-variant">Workflow optimization</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs bg-surface-container-low border border-outline-variant/10 text-on-surface-variant">Intelligent automation systems</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs bg-surface-container-low border border-outline-variant/10 text-on-surface-variant">SEO performance improvements</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Testimonials -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
+        <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+            <span class="text-secondary font-black uppercase tracking-widest text-xs block">Reviews</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Testimonials</h2>
+            <p class="text-xs text-on-surface-variant mt-2">See how our integrated approach benefits businesses across different domains.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 flex flex-col justify-between" data-aos="fade-up">
+                <span class="material-symbols-outlined text-[48px] text-secondary/30">format_quote</span>
+                <p class="text-sm italic text-on-surface-variant leading-relaxed mb-6">
+                    "We achieved complete alignment between our web application security requirements and our SEO infrastructure. The workflow integration has dramatically optimized our deployment cycle."
+                </p>
+                <div>
+                    <h4 class="text-xs font-bold text-white">Engineering Director</h4>
+                    <p class="text-[10px] text-secondary font-mono mt-0.5">Scale Integration Systems</p>
+                </div>
+            </div>
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 flex flex-col justify-between relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute inset-0 bg-secondary/5 pointer-events-none"></div>
+                <span class="material-symbols-outlined text-[48px] text-secondary/30">format_quote</span>
+                <p class="text-sm italic text-on-surface-variant leading-relaxed mb-6 z-10 relative">
+                    "The local SEO campaigns combined with automation scripts allowed our offices to manage customer pipelines with zero manual overhead. Truly intelligent workflows."
+                </p>
+                <div class="z-10 relative">
+                    <h4 class="text-xs font-bold text-white">Operations Lead</h4>
+                    <p class="text-[10px] text-secondary font-mono mt-0.5">Enterprise Logistics Corp</p>
+                </div>
+            </div>
+            <div class="glass-panel p-8 rounded-3xl border border-outline-variant/10 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <span class="material-symbols-outlined text-[48px] text-secondary/30">format_quote</span>
+                <p class="text-sm italic text-on-surface-variant leading-relaxed mb-6">
+                    "Difusion SEO resolved critical API vulnerabilities while simultaneously establishing a robust backlink architecture. Excellent technical depth and communication."
+                </p>
+                <div>
+                    <h4 class="text-xs font-bold text-white">Technology VP</h4>
+                    <p class="text-[10px] text-secondary font-mono mt-0.5">Digital Analytics Platform</p>
+                </div>
+            </div>
+        </div>
+        <div class="glass-panel rounded-2xl p-6 border border-outline-variant/10 mt-8 text-center max-w-4xl mx-auto" data-aos="fade-up">
+            <span class="text-xs text-on-surface-variant font-medium">Businesses working with Difusion SEO benefit from:</span>
+            <div class="flex flex-wrap justify-center gap-2 mt-3">
+                <span class="px-2.5 py-1 rounded bg-surface-container-high/40 text-[10px] text-on-surface-variant font-semibold border border-outline-variant/5 hover:border-secondary/20 transition-colors">Workflow optimization</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-high/40 text-[10px] text-on-surface-variant font-semibold border border-outline-variant/5 hover:border-secondary/20 transition-colors">Operational automation</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-high/40 text-[10px] text-on-surface-variant font-semibold border border-outline-variant/5 hover:border-secondary/20 transition-colors">SEO visibility improvements</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-high/40 text-[10px] text-on-surface-variant font-semibold border border-outline-variant/5 hover:border-secondary/20 transition-colors">AI powered workflows</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-high/40 text-[10px] text-on-surface-variant font-semibold border border-outline-variant/5 hover:border-secondary/20 transition-colors">Secure web applications</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-high/40 text-[10px] text-on-surface-variant font-semibold border border-outline-variant/5 hover:border-secondary/20 transition-colors">API security</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-high/40 text-[10px] text-on-surface-variant font-semibold border border-outline-variant/5 hover:border-secondary/20 transition-colors">Enterprise workflow automation</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-high/40 text-[10px] text-on-surface-variant font-semibold border border-outline-variant/5 hover:border-secondary/20 transition-colors">Intelligent process systems</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-high/40 text-[10px] text-on-surface-variant font-semibold border border-outline-variant/5 hover:border-secondary/20 transition-colors">AI operational efficiency</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-high/40 text-[10px] text-on-surface-variant font-semibold border border-outline-variant/5 hover:border-secondary/20 transition-colors">Secure deployment environments</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. FAQ Section -->
+    <section class="max-w-4xl mx-auto px-6 md:px-8 mb-16 md:mb-32">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <span class="text-tertiary font-black uppercase tracking-widest text-xs block">Help Center</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Frequently Asked Questions</h2>
+        </div>
+        
+        <div class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+            <!-- FAQ Item 1 -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-outline-variant/10 transition-all duration-300 hover:border-primary/20" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <button class="w-full p-6 text-left flex justify-between items-center group focus:outline-none" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                    <span class="font-bold text-sm md:text-base text-on-surface group-hover:text-primary transition-colors" itemprop="name">What services does Difusion SEO provide?</span>
+                    <span class="material-symbols-outlined arrow transition-transform duration-300 text-primary">expand_more</span>
+                </button>
+                <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                    <div class="text-xs md:text-sm text-on-surface-variant leading-relaxed" itemprop="text">
+                        Difusion SEO provides Full Stack Web Development, Local SEO Services, Backlink Building Services, Advanced SEO Strategy, Web Application Security, and AI Automation Services.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-outline-variant/10 transition-all duration-300 hover:border-primary/20" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <button class="w-full p-6 text-left flex justify-between items-center group focus:outline-none" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                    <span class="font-bold text-sm md:text-base text-on-surface group-hover:text-primary transition-colors" itemprop="name">What is AI automation?</span>
+                    <span class="material-symbols-outlined arrow transition-transform duration-300 text-primary">expand_more</span>
+                </button>
+                <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                    <div class="text-xs md:text-sm text-on-surface-variant leading-relaxed" itemprop="text">
+                        AI automation combines Artificial Intelligence with workflow systems to automate operational tasks, improve workflow optimization, and support intelligent business operations.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-outline-variant/10 transition-all duration-300 hover:border-primary/20" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <button class="w-full p-6 text-left flex justify-between items-center group focus:outline-none" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                    <span class="font-bold text-sm md:text-base text-on-surface group-hover:text-primary transition-colors" itemprop="name">What is web application security?</span>
+                    <span class="material-symbols-outlined arrow transition-transform duration-300 text-primary">expand_more</span>
+                </button>
+                <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                    <div class="text-xs md:text-sm text-on-surface-variant leading-relaxed" itemprop="text">
+                        Web application security protects applications, APIs, authentication systems, and online platforms from vulnerabilities, insecure configurations, and unauthorized access.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-outline-variant/10 transition-all duration-300 hover:border-primary/20" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <button class="w-full p-6 text-left flex justify-between items-center group focus:outline-none" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                    <span class="font-bold text-sm md:text-base text-on-surface group-hover:text-primary transition-colors" itemprop="name">Why is workflow automation important?</span>
+                    <span class="material-symbols-outlined arrow transition-transform duration-300 text-primary">expand_more</span>
+                </button>
+                <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                    <div class="text-xs md:text-sm text-on-surface-variant leading-relaxed" itemprop="text">
+                        Workflow automation helps businesses improve operational efficiency, automate repetitive tasks, support intelligent workflows, and improve enterprise workflow coordination.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-outline-variant/10 transition-all duration-300 hover:border-primary/20" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <button class="w-full p-6 text-left flex justify-between items-center group focus:outline-none" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                    <span class="font-bold text-sm md:text-base text-on-surface group-hover:text-primary transition-colors" itemprop="name">What are AI integration services?</span>
+                    <span class="material-symbols-outlined arrow transition-transform duration-300 text-primary">expand_more</span>
+                </button>
+                <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                    <div class="text-xs md:text-sm text-on-surface-variant leading-relaxed" itemprop="text">
+                        AI integration services connect Artificial Intelligence systems with enterprise operations, workflow environments, automation systems, and intelligent process infrastructure.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-outline-variant/10 transition-all duration-300 hover:border-primary/20" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <button class="w-full p-6 text-left flex justify-between items-center group focus:outline-none" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                    <span class="font-bold text-sm md:text-base text-on-surface group-hover:text-primary transition-colors" itemprop="name">Why is secure development important?</span>
+                    <span class="material-symbols-outlined arrow transition-transform duration-300 text-primary">expand_more</span>
+                </button>
+                <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                    <div class="text-xs md:text-sm text-on-surface-variant leading-relaxed" itemprop="text">
+                        Secure development helps reduce vulnerabilities, improve API security, strengthen authentication systems, and support secure deployment environments.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-outline-variant/10 transition-all duration-300 hover:border-primary/20" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <button class="w-full p-6 text-left flex justify-between items-center group focus:outline-none" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                    <span class="font-bold text-sm md:text-base text-on-surface group-hover:text-primary transition-colors" itemprop="name">What are intelligent automation systems?</span>
+                    <span class="material-symbols-outlined arrow transition-transform duration-300 text-primary">expand_more</span>
+                </button>
+                <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                    <div class="text-xs md:text-sm text-on-surface-variant leading-relaxed" itemprop="text">
+                        Intelligent automation systems combine Artificial Intelligence, Machine Learning, Deep Learning, workflow automation, and operational analytics to improve business processes.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-outline-variant/10 transition-all duration-300 hover:border-primary/20" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <button class="w-full p-6 text-left flex justify-between items-center group focus:outline-none" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                    <span class="font-bold text-sm md:text-base text-on-surface group-hover:text-primary transition-colors" itemprop="name">Why is SEO important?</span>
+                    <span class="material-symbols-outlined arrow transition-transform duration-300 text-primary">expand_more</span>
+                </button>
+                <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                    <div class="text-xs md:text-sm text-on-surface-variant leading-relaxed" itemprop="text">
+                        SEO helps businesses improve search visibility, website discovery, digital growth, and online performance through optimization strategies and search focused improvements.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. Final CTA -->
+    <section class="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-24">
+        <div class="relative glass-panel rounded-[2rem] md:rounded-[3rem] p-8 sm:p-12 md:p-20 overflow-hidden text-center border-none shadow-[0_40px_80px_rgba(103,61,230,0.1)]" data-aos="zoom-in">
+            <div class="relative z-10 max-w-4xl mx-auto w-full space-y-6">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 md:mb-8 leading-tight">
+                    Build Secure, Intelligent, and Scalable Digital Systems with Difusion SEO
+                </h2>
+                <p class="text-sm sm:text-base md:text-lg text-on-surface-variant leading-relaxed">
+                    From Full Stack Web Development and Advanced SEO Strategy to Web Application Security and AI Automation Services, we help businesses improve operational efficiency, workflow optimization, secure deployment environments, AI powered automation, and enterprise scalability.
+                </p>
+                <p class="text-sm sm:text-base md:text-lg text-on-surface-variant leading-relaxed">
+                    Build intelligent workflows, improve secure web applications, strengthen SEO performance, and optimize digital operations with scalable solutions focused on long term business growth.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center w-full max-w-md sm:max-w-none mx-auto pt-6">
+                    <a href="{% url 'contact' %}" class="neon-gradient text-on-primary px-8 py-4 rounded-full font-bold text-sm hover:scale-105 transition-transform flex items-center justify-center shadow-lg">
+                        Start Your Project
+                    </a>
+                    <a href="{% url 'contact' %}" class="px-8 py-4 rounded-full font-bold text-sm border-2 border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center">
+                        Contact Our Team
+                    </a>
+                    <a href="{% url 'contact' %}" class="px-8 py-4 rounded-full font-bold text-sm text-primary hover:text-white transition-colors flex items-center justify-center">
+                        Request a Consultation
+                    </a>
+                </div>
+            </div>
+            <!-- Abstract Glows for CTA -->
+            <div class="absolute -top-24 -left-24 w-64 h-64 bg-primary rounded-full blur-[100px] opacity-10 pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary rounded-full blur-[100px] opacity-10 pointer-events-none"></div>
+        </div>
+    </section>
 </main>
 {% endblock %}
