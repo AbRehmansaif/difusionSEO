@@ -26,6 +26,7 @@ admin.site.index_title = "Welcome to DifusionSEO Dashboard"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('googlebc81c2a12a2d31f1.html', TemplateView.as_view(template_name="googlebc81c2a12a2d31f1.html", content_type="text/html")),
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
     path('sitemap.xml', core_views.sitemap_view, name='sitemap'),
     path('blogs/', include('blogs.urls', namespace='blogs')),
