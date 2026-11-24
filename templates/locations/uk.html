@@ -1,274 +1,396 @@
 {% extends 'base.html' %}
-{% load static %}
 
-{% block title %}Best SEO Agency in the UK | Digital Marketing London | DifusionSEO{% endblock %}
+{% block html_lang %}en-GB{% endblock %}
+
+{% block title %}SEO Services UK | Professional SEO Agency | DifusionSEO{% endblock %}
 
 {% block meta %}
-<meta name="description" content="The premier SEO agency in the UK. We deliver advanced technical SEO, eCommerce growth, and high-DR backlinks to businesses in London, Manchester, and Birmingham.">
-<meta name="keywords" content="Best SEO agency UK, London SEO consultant, technical SEO services UK, eCommerce SEO London, web development agency UK">
-<meta property="og:title" content="Top UK SEO Agency | DifusionSEO">
-<meta property="og:description" content="Technical organic growth strategies designed to dominate competitive niches in the United Kingdom.">
+<meta name="description" content="SEO services for UK businesses: technical audits, SEO consultancy, content, local search and relevant link building. Request a free initial website audit.">
+<meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
-<link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+<meta property="og:title" content="UK SEO Services &amp; Consultancy | DifusionSEO">
+<meta property="og:description" content="Practical SEO for UK businesses, combining technical improvements, content strategy, local search and transparent reporting.">
+<meta property="og:url" content="https://www.difusionseo.com/seo-services/uk/">
+<meta property="og:site_name" content="DifusionSEO">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UK SEO Services &amp; Consultancy | DifusionSEO">
+<meta name="twitter:description" content="Practical SEO for UK businesses, combining technical improvements, content strategy, local search and transparent reporting.">
+{% endblock %}
+
+{% block canonical %}
+<link rel="canonical" href="https://www.difusionseo.com/seo-services/uk/">
 {% endblock %}
 
 {% block extra_head %}
-<!-- UK Geo-Targeted Schema Markup -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Best SEO Agency UK",
-  "description": "Enterprise-grade technical SEO and AI Automation specifically tailored for UK businesses in London and Manchester.",
-  "provider": {
-    "@type": "Organization",
-    "name": "DifusionSEO",
-    "url": "{{ request.scheme }}://{{ request.get_host }}"
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "United Kingdom"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.difusionseo.com/#organization",
+      "name": "DifusionSEO",
+      "url": "https://www.difusionseo.com/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.difusionseo.com/#website",
+      "url": "https://www.difusionseo.com/",
+      "name": "DifusionSEO",
+      "publisher": {
+        "@id": "https://www.difusionseo.com/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.difusionseo.com/seo-services/uk/#service",
+      "name": "SEO services for UK businesses",
+      "serviceType": "Search engine optimization",
+      "description": "SEO services for UK businesses: technical audits, SEO consultancy, content, local search and relevant link building.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "provider": {
+        "@id": "https://www.difusionseo.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.difusionseo.com/seo-services/uk/#webpage",
+      "url": "https://www.difusionseo.com/seo-services/uk/",
+      "name": "SEO Services UK | Professional SEO Agency | DifusionSEO",
+      "description": "SEO services for UK businesses: technical audits, SEO consultancy, content, local search and relevant link building. Request a free initial website audit.",
+      "isPartOf": {
+        "@id": "https://www.difusionseo.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://www.difusionseo.com/seo-services/uk/#service"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.difusionseo.com/seo-services/uk/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.difusionseo.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.difusionseo.com/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "UK SEO Services",
+          "item": "https://www.difusionseo.com/seo-services/uk/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.difusionseo.com/seo-services/uk/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What do SEO services for UK businesses include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO services usually combine technical website checks, keyword research, content improvements, internal linking and authority-related work. The right mix depends on your site, competition, customers and goals. Local businesses may also need Google Business Profile support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between an SEO consultant and an SEO agency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO consultants typically assess problems, advise on priorities and guide decisions. An agency may also coordinate technical changes, content and ongoing delivery. DifusionSEO provides consultancy and implementation support according to the scope agreed with your team."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with businesses across the United Kingdom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We work with UK businesses remotely, including businesses serving customers nationally and those focused on a local area. We do not claim a physical UK office simply because we provide services to the UK market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you improve an existing website without rebuilding it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often, yes. We first assess content, indexing, technical health and internal links. Many improvements can be made within the current website. If you also need design or development, we scope it separately and explain why a rebuild would—or would not—be useful."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide local SEO for UK businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Local SEO work can include accurate business information, eligible Google Business Profiles, relevant location pages, local keyword research and monitoring. Visibility can vary by the searcher's location, device and competition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does SEO take to show results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO results vary. A technical fix can be implemented quickly, but its effect on search performance may take longer to assess. Competitive keywords and new content often require sustained work. We cannot guarantee a particular ranking or completion date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do your SEO services cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pricing depends on the website, competition and work required. After an initial discussion and review, we can outline priorities and a proposed scope so you can evaluate the work before committing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in the free SEO audit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free initial audit is a high-level review of visible website and search issues, with suggested next steps. It is not a promise of a complete forensic crawl, competitor investigation or implementation before a project is agreed."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 {% endblock %}
 
 {% block content %}
-<main class="pt-24 overflow-hidden">
-    <!-- Hero Section: UK Focus -->
-    <section class="relative min-h-[80vh] py-20 px-6 md:px-8 max-w-7xl mx-auto flex flex-col justify-center">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-            <div class="lg:col-span-7" data-aos="fade-right">
-                <div class="inline-flex items-center gap-3 mb-8 bg-surface-container/80 px-5 py-2 rounded-full border border-outline-variant/20">
-                    <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag" class="w-5 rounded-sm">
-                    <span class="text-xs uppercase tracking-widest text-on-surface font-black">United Kingdom Search Agency</span>
-                </div>
-                
-                <h1 class="text-6xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.05] mb-8">
-                    Command the <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-br from-primary via-white to-secondary">UK SERPs.</span>
-                </h1>
-                <p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl font-light">
-                    The UK market is fiercely competitive. From <strong>London's</strong> financial district to <strong>Manchester's</strong> eCommerce hubs, standard SEO doesn't work anymore. You need enterprise technical engineering, deep semantic relevance, and highly authoritative British backlinks to capture market share.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="{% url 'contact' %}?location=UK" class="bg-primary text-black px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all text-center w-full sm:w-auto shadow-[0_0_20px_rgba(162,231,255,0.3)]">
-                        Get Your UK Growth Plan
-                    </a>
-                    <a href="{% url 'seo_strategy' %}" class="bg-surface-container border border-outline-variant/30 text-white px-8 py-4 rounded-full font-bold text-sm hover:bg-surface-container-high transition-all text-center w-full sm:w-auto">
-                        View Methodology
-                    </a>
-                </div>
-            </div>
-            
-            <div class="lg:col-span-5 relative hidden lg:block" data-aos="fade-left">
-                <div class="w-full aspect-[4/5] bg-gradient-to-b from-surface-container-low to-surface-container-lowest rounded-[3rem] border border-outline-variant/10 relative overflow-hidden flex flex-col justify-end p-10">
-                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')] opacity-20"></div>
-                    
-                    <div class="relative z-10 glass-card p-6 rounded-2xl border border-primary/20 backdrop-blur-xl">
-                        <div class="flex items-center justify-between mb-4">
-                            <h4 class="font-black text-lg">London Client ROI</h4>
-                            <span class="material-symbols-outlined text-primary">monitoring</span>
-                        </div>
-                        <div class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-2">£2.4M</div>
-                        <p class="text-xs text-on-surface-variant uppercase tracking-widest font-bold">Generated via Organic Search</p>
-                    </div>
+<div class="overflow-hidden">
+    <section class="relative px-6 pb-20 pt-32 md:px-8 md:pb-28 md:pt-40">
+        <div class="pointer-events-none absolute right-0 top-12 h-96 w-96 rounded-full bg-primary/10 blur-[120px]"></div>
+        <div class="pointer-events-none absolute bottom-0 left-0 h-80 w-80 rounded-full bg-secondary/10 blur-[100px]"></div>
+        <div class="relative mx-auto max-w-7xl">
+            <nav aria-label="Breadcrumb" class="mb-8 text-sm text-on-surface-variant">
+                <ol class="flex flex-wrap items-center gap-2">
+                    <li><a href="{% url 'home' %}" class="hover:text-secondary">Home</a></li>
+                    <li aria-hidden="true">/</li>
+                    <li><a href="{% url 'services' %}" class="hover:text-secondary">Services</a></li>
+                    <li aria-hidden="true">/</li>
+                    <li aria-current="page" class="text-on-surface">UK SEO Services</li>
+                </ol>
+            </nav>
+            <div class="max-w-4xl" data-aos="fade-up">
+                <p class="mb-5 text-sm font-bold uppercase tracking-[0.25em] text-secondary">SEO AGENCY &amp; CONSULTANCY | UNITED KINGDOM</p>
+                <h1 class="mb-7 text-4xl font-black leading-tight tracking-tight text-on-surface sm:text-5xl lg:text-6xl">SEO Services for UK Businesses</h1>
+                <p class="mb-8 max-w-3xl text-lg leading-relaxed text-on-surface-variant md:text-xl">Looking for a professional SEO agency to help your business become easier to find? DifusionSEO provides search engine optimisation and SEO consultancy for businesses across the United Kingdom. We bring technical website improvements, keyword research, useful content and relevant authority-building into a practical plan focused on qualified organic traffic.</p>
+                <ul class="mb-9 flex flex-wrap gap-3 text-sm font-semibold text-on-surface">
+                    <li class="rounded-full border border-primary/20 bg-primary/5 px-4 py-2">Technical SEO</li>
+                    <li class="rounded-full border border-primary/20 bg-primary/5 px-4 py-2">Content &amp; keywords</li>
+                    <li class="rounded-full border border-primary/20 bg-primary/5 px-4 py-2">Local search</li>
+                    <li class="rounded-full border border-primary/20 bg-primary/5 px-4 py-2">Clear reporting</li>
+                </ul>
+                <div class="flex flex-wrap gap-4">
+                    <a href="{% url 'contact' %}" class="inline-flex items-center justify-center rounded-full bg-primary px-7 py-4 font-bold text-on-primary transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(204,190,255,0.3)]">Request a Free SEO Audit</a>
+                    <a href="#uk-seo-services" class="inline-flex items-center justify-center rounded-full border border-outline-variant/40 px-7 py-4 font-bold text-on-surface transition hover:border-secondary hover:text-secondary">Explore SEO Services</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Comprehensive UK Services Grid -->
-    <section class="py-24 px-8 border-t border-outline-variant/10">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-black mb-16 text-center">Full-Stack Digital Dominance for <span class="text-white">Google.co.uk</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- SEO -->
-                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'seo_strategy' %}'">
-                    <span class="material-symbols-outlined text-4xl text-white mb-6">query_stats</span>
-                    <h3 class="text-2xl font-bold mb-4">Enterprise Technical SEO</h3>
-                    <p class="text-on-surface-variant text-sm mb-6">Dominate national search volume across Britain. We execute ruthless technical audits and semantic entity mapping to outrank massive UK competitors.</p>
-                    <span class="text-white font-bold text-sm">View UK SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-                </div>
-                <!-- Local SEO -->
-                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'local_seo' %}'">
-                    <span class="material-symbols-outlined text-4xl text-primary mb-6">location_on</span>
-                    <h3 class="text-2xl font-bold mb-4">Local Map Pack (UK)</h3>
-                    <p class="text-on-surface-variant text-sm mb-6">Capture hyper-local intent in competitive markets like London, Manchester, and Birmingham with aggressive Google Business Profile (GBP) optimization.</p>
-                    <span class="text-primary font-bold text-sm">View Local SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-                </div>
-                <!-- Backlinks -->
-                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'backlink_service' %}'">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-6">link</span>
-                    <h3 class="text-2xl font-bold mb-4">Tier-1 .CO.UK Link Building</h3>
-                    <p class="text-on-surface-variant text-sm mb-6">Authority is everything. We secure high-DR, DoFollow editorial backlinks exclusively from trusted British publications, news outlets, and `.co.uk` directories.</p>
-                    <span class="text-secondary font-bold text-sm">View UK Link Building <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-                </div>
-                <!-- Web Dev -->
-                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'web_development' %}'">
-                    <span class="material-symbols-outlined text-4xl text-[#ff0055] mb-6">code</span>
-                    <h3 class="text-2xl font-bold mb-4">High-Performance Web Dev</h3>
-                    <p class="text-on-surface-variant text-sm mb-6">We replace bloated WordPress with custom Next.js & Python architectures, guaranteeing sub-second load times across UK networks to pass Core Web Vitals.</p>
-                    <span class="text-[#ff0055] font-bold text-sm">View Web Engineering <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-                </div>
-                <!-- AI Automation -->
-                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'ai_automation' %}'">
-                    <span class="material-symbols-outlined text-4xl text-[#00E5FF] mb-6">smart_toy</span>
-                    <h3 class="text-2xl font-bold mb-4">AI Business Automation</h3>
-                    <p class="text-on-surface-variant text-sm mb-6">Scale your UK operations instantly. We deploy custom LLM agents, RAG chatbots, and automated workflows to handle customer service and lead qualification.</p>
-                    <span class="text-[#00E5FF] font-bold text-sm">View AI Solutions <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-                </div>
-                <!-- Cyber Security -->
-                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'cyber_security' %}'">
-                    <span class="material-symbols-outlined text-4xl text-yellow-400 mb-6">security</span>
-                    <h3 class="text-2xl font-bold mb-4">Cyber Security & Audits</h3>
-                    <p class="text-on-surface-variant text-sm mb-6">Protect your UK enterprise from ransomware and data breaches. We provide GDPR-compliant penetration testing, DDoS protection, and secure infrastructure auditing.</p>
-                    <span class="text-yellow-400 font-bold text-sm">View Cyber Security <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-                </div>
+    <section class="border-y border-outline-variant/10 bg-surface-container-low px-6 py-16 md:px-8 md:py-24">
+        <div class="mx-auto max-w-5xl">
+            <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">UK search strategy</p>
+            <h2 class="mb-6 text-3xl font-black tracking-tight text-on-surface md:text-5xl">A Search Strategy Built Around Your UK Customers</h2>
+            <p class="mb-5 text-lg leading-relaxed text-on-surface-variant">We begin with what your website already attracts, what customers in the UK actually search for and where useful pages are missing. That means reviewing search queries and competitor pages before prioritising new content. Depending on your business, the focus may be nationwide enquiries, product discovery or searches in the towns and cities you genuinely serve.</p>
+            <p class="text-lg leading-relaxed text-on-surface-variant">We use British search terminology where it fits naturally and check Google Search Console before changing pages that already receive impressions. As an SEO and digital marketing agency, we connect search recommendations to your wider website and customer journey. Priorities depend on relevance, feasibility and business value; rankings, timescales and lead volumes cannot be guaranteed.</p>
+        </div>
+    </section>
+
+    <section class="px-6 py-20 md:px-8 md:py-28" id="uk-seo-services">
+        <div class="mx-auto max-w-7xl">
+            <div class="mb-12 max-w-3xl">
+                <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">Services</p>
+                <h2 class="mb-5 text-3xl font-black tracking-tight text-on-surface md:text-5xl">Our SEO Services in the UK</h2>
+            </div>
+            <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                <article class="glass-card rounded-3xl p-7">
+                    <span class="material-symbols-outlined mb-5 text-4xl text-primary" aria-hidden="true">troubleshoot</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Technical SEO &amp; Website Health</h3>
+                    <p class="mb-6 leading-relaxed text-on-surface-variant">Identify and prioritise crawl errors, indexing issues, duplicate URLs, weak internal links, mobile usability problems and performance barriers. We explain which fixes deserve attention first and how they affect important service and product pages. For broader projects, explore our <a href="{% url 'seo_strategy' %}" class="font-semibold text-primary underline underline-offset-4">advanced SEO strategy</a>.</p>
+                </article>
+                <article class="glass-card rounded-3xl p-7">
+                    <span class="material-symbols-outlined mb-5 text-4xl text-secondary" aria-hidden="true">manage_search</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Keyword Research &amp; Content Optimisation</h3>
+                    <p class="leading-relaxed text-on-surface-variant">Match service, category and product pages to relevant UK search intent. We review existing pages, identify missing topics, improve headings and copy, and recommend useful answers to the questions customers ask before enquiring.</p>
+                </article>
+                <article class="glass-card rounded-3xl p-7">
+                    <span class="material-symbols-outlined mb-5 text-4xl text-tertiary" aria-hidden="true">strategy</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">SEO Consultancy &amp; Strategy</h3>
+                    <p class="leading-relaxed text-on-surface-variant">Our SEO consultants provide a prioritised plan rather than an unexplained checklist. We can review existing work, guide an in-house team, or support ongoing implementation with recommendations tailored to your website and resources.</p>
+                </article>
+                <article class="glass-card rounded-3xl p-7">
+                    <span class="material-symbols-outlined mb-5 text-4xl text-primary" aria-hidden="true">location_on</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Local SEO &amp; Google Business Profile</h3>
+                    <p class="mb-6 leading-relaxed text-on-surface-variant">For eligible businesses serving local customers, we support Google Business Profile information, relevant location pages, accurate listings, reviews and local search monitoring. The goal is useful, reliable information for nearby customers. See our <a href="{% url 'local_seo' %}" class="font-semibold text-primary underline underline-offset-4">Local SEO services</a> for more detail.</p>
+                </article>
+                <article class="glass-card rounded-3xl p-7">
+                    <span class="material-symbols-outlined mb-5 text-4xl text-secondary" aria-hidden="true">link</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Link Building &amp; Website Authority</h3>
+                    <p class="mb-6 leading-relaxed text-on-surface-variant">Review existing backlinks and pursue suitable industry or editorial mentions when they support your goals. We assess relevance and quality rather than chasing a specific domain extension, inflated score or guaranteed ranking. Read more about our <a href="{% url 'backlink_service' %}" class="font-semibold text-secondary underline underline-offset-4">link building services</a>.</p>
+                </article>
+                <article class="glass-card rounded-3xl p-7">
+                    <span class="material-symbols-outlined mb-5 text-4xl text-tertiary" aria-hidden="true">storefront</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Ecommerce &amp; Website SEO</h3>
+                    <p class="leading-relaxed text-on-surface-variant">If you are looking for a website SEO agency, we can improve the structure and search relevance of an existing site or online store. Work may cover category pages, product copy, internal links and technical recommendations. When web design and SEO services are both needed, we scope development separately instead of assuming a full rebuild.</p>
+                </article>
+            </div>
+            <div class="mt-10 text-center">
+                <a href="{% url 'contact' %}" class="inline-flex items-center justify-center rounded-full border border-outline-variant/40 px-7 py-3 font-bold text-on-surface transition hover:border-secondary hover:text-secondary">Discuss Your SEO Priorities</a>
             </div>
         </div>
     </section>
 
-    <!-- UK Cities Dominance Strategy -->
-    <section class="py-32 px-8 bg-surface-container-low border-y border-outline-variant/10">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <span class="text-xs uppercase tracking-[0.4em] text-white font-black block mb-4">Regional Authority</span>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">Dominating the <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white">United Kingdom</span></h2>
-                <p class="text-lg text-on-surface-variant max-w-3xl mx-auto">Ranking across the UK requires hyper-localized targeting. We segment your campaigns to dominate the most competitive British search hubs.</p>
+    <section class="border-y border-outline-variant/10 bg-surface-container-low px-6 py-20 md:px-8 md:py-28">
+        <div class="mx-auto max-w-7xl">
+            <div class="mb-12 max-w-3xl">
+                <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">Who we help</p>
+                <h2 class="mb-5 text-3xl font-black tracking-tight text-on-surface md:text-5xl">Practical SEO for Different Business Needs</h2>
             </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-white bg-black/40" data-aos="fade-right">
-                    <h3 class="text-3xl font-black mb-4">Financial & Corporate SEO in <span class="text-white">London</span></h3>
-                    <p class="text-on-surface-variant leading-relaxed mb-6">London is the financial capital of Europe. To rank here, you need impeccable technical SEO and extremely high Domain Authority. We acquire editorial backlinks from top-tier British media and engineer programmatic content hubs for London's B2B, legal, and financial sectors to outrank established corporate giants.</p>
-                </div>
-                
-                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-primary bg-black/40" data-aos="fade-left">
-                    <h3 class="text-3xl font-black mb-4">eCommerce Scaling in <span class="text-primary">Manchester</span></h3>
-                    <p class="text-on-surface-variant leading-relaxed mb-6">Manchester is a powerhouse for eCommerce and retail. We deploy advanced technical architectures specifically designed for massive product catalogs. By optimizing faceted navigation, fixing crawl budgets, and targeting long-tail commercial intent, we turn your Manchester-based eCommerce store into a national leader.</p>
-                </div>
-                
-                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-secondary bg-black/40" data-aos="fade-right">
-                    <h3 class="text-3xl font-black mb-4">B2B Lead Gen in <span class="text-secondary">Birmingham</span></h3>
-                    <p class="text-on-surface-variant leading-relaxed mb-6">For B2B companies in Birmingham and the Midlands, lead generation is the primary objective. We execute aggressive local SEO and semantic entity mapping strategies, ensuring your Google Business Profile and local landing pages capture every high-intent commercial query in the region.</p>
-                </div>
-
-                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-[#0065BD] bg-black/40" data-aos="fade-left">
-                    <h3 class="text-3xl font-black mb-4">Tech & SaaS Growth in <span class="text-[#0065BD]">Edinburgh</span></h3>
-                    <p class="text-on-surface-variant leading-relaxed mb-6">Scotland's tech scene requires a different approach. We build technical SaaS marketing funnels for Edinburgh startups, utilizing high-velocity content marketing and AI-driven workflows to capture international and national search traffic.</p>
-                </div>
+            <div class="grid gap-5 md:grid-cols-3">
+                <article class="glass-card rounded-3xl p-7">
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Small and Service-Based Businesses</h3>
+                    <p class="leading-relaxed text-on-surface-variant">Improve the clarity of your service pages and help potential customers understand what you offer, where you operate and how to contact you.</p>
+                </article>
+                <article class="glass-card rounded-3xl p-7">
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Ecommerce Brands</h3>
+                    <p class="leading-relaxed text-on-surface-variant">Make key categories and products easier to discover through relevant content, site structure and technical improvements.</p>
+                </article>
+                <article class="glass-card rounded-3xl p-7">
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">In-House Teams &amp; Growing Websites</h3>
+                    <p class="leading-relaxed text-on-surface-variant">Get an external SEO review, a second opinion or implementation support when priorities and resources need to be coordinated.</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- 20-Year Veteran SEO Methodology (UK) -->
-    <section class="py-32 px-8 bg-black border-t border-outline-variant/10">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-20" data-aos="fade-right">
-                <span class="text-xs uppercase tracking-[0.4em] text-white font-black block mb-4">The Technical Blueprint</span>
-                <h2 class="text-4xl md:text-6xl font-black mb-8">Decoding the <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Google.co.uk</span> Algorithm</h2>
-                <p class="text-xl text-on-surface-variant max-w-4xl leading-relaxed font-light">
-                    Ranking in the United Kingdom requires a fundamentally different approach than the US. With two decades of elite SEO engineering experience, we know that the UK algorithm heavily penalizes thin content and aggressively filters localized duplicate pages. To achieve dominance across Britain, you cannot rely on generic digital marketing. You require a mathematically precise, engineering-led strategy designed specifically for the strict nuances of Google.co.uk.
-                </p>
+    <section class="px-6 py-20 md:px-8 md:py-28" id="uk-experience">
+        <div class="mx-auto max-w-7xl">
+            <div class="mb-12 max-w-4xl">
+                <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">UK experience</p>
+                <h2 class="mb-5 text-3xl font-black tracking-tight text-on-surface md:text-5xl">Local Search Experience in Manchester and Sheffield</h2>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group" data-aos="fade-up">
-                    <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <h3 class="text-3xl font-black mb-6 text-white border-l-4 border-white pl-6">Crawl Budget Optimization</h3>
-                        <p class="text-lg text-on-surface-variant leading-relaxed">
-                            For UK-based eCommerce and enterprise sites, Googlebot wastes massive amounts of resources crawling faceted navigation, parameterized URLs, and duplicate canonicals. We execute ruthless technical audits using Python to identify crawl traps. By restructuring your robots.txt, optimizing XML sitemaps, and engineering flawless internal link graphs, we force Google to index and rank your highest-converting commercial pages instantly.
-                        </p>
+            <div class="grid gap-6 lg:grid-cols-2">
+                <article class="glass-card rounded-3xl p-8">
+                    <p class="leading-relaxed text-on-surface-variant">Our UK local-search work includes independent optician locations in Manchester and Sheffield. We have reviewed Google Business Profile details, prepared relevant service updates, responded to customer reviews and monitored local visibility. These are examples of work performed, not verified promises of extra sales or fixed rankings.</p>
+                </article>
+                <article class="glass-card rounded-3xl p-8">
+                    <p class="leading-relaxed text-on-surface-variant">Our founder, Usama Zafar, works with Abdul Rehman, Co-founder &amp; CEO (software engineer), and Nouman Nasir, marketing manager. The team combines SEO planning with the development skills needed to implement technical improvements.</p>
+                    <div class="mt-5 flex flex-wrap gap-x-5 gap-y-3 text-sm font-semibold">
+                        <a href="https://www.linkedin.com/in/usama-zafar-jms/" class="text-primary underline underline-offset-4 hover:text-secondary">Usama on LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/abdul-rehman-ssuetian/" class="text-primary underline underline-offset-4 hover:text-secondary">Abdul Rehman on LinkedIn</a>
                     </div>
-                </div>
-
-                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <h3 class="text-3xl font-black mb-6 text-primary border-l-4 border-primary pl-6">Tier-1 British Link Acquisition</h3>
-                        <p class="text-lg text-on-surface-variant leading-relaxed">
-                            Domain Authority in the UK is largely dictated by IP location and TLD relevance. A backlink from a US blog provides minimal ranking power on Google.co.uk. We utilize sophisticated Digital PR to secure editorial placements exclusively on high-DR `.co.uk` and `.org.uk` domains. From national broadsheets (The Times, The Guardian) to hyper-niche industry magazines in London, we build a backlink profile your competitors cannot replicate.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group md:col-span-2" data-aos="fade-up" data-aos-delay="200">
-                    <div class="absolute inset-0 bg-gradient-to-r from-secondary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <h3 class="text-3xl font-black mb-6 text-secondary border-l-4 border-secondary pl-6">Bypassing the "Doorway Page" Penalty</h3>
-                        <p class="text-lg text-on-surface-variant leading-relaxed mb-6">
-                            Many UK agencies attempt to scale local SEO by generating hundreds of automated "Service + City" pages. Following Google's Helpful Content Update (HCU) and spam algorithm rollouts, this strategy results in catastrophic algorithmic penalties. 
-                        </p>
-                        <p class="text-lg text-on-surface-variant leading-relaxed">
-                            Instead of relying on variable substitution, our proprietary methodology involves <strong>Semantic Entity Isolation</strong>. We build deeply researched, physically unique landing pages for major UK hubs (London, Manchester, Birmingham, Edinburgh). Each page features completely distinct LSI (Latent Semantic Indexing) keyword clusters, localized schema markup containing precise geo-coordinates, and unique rich media. This mathematically proves to Google that your page provides unique value, allowing you to dominate local intent across the entire nation simultaneously without triggering spam filters.
-                        </p>
-                    </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- UK FAQ -->
-    <section class="py-32 px-8 bg-surface-container-lowest border-t border-outline-variant/10">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="text-xs uppercase tracking-[0.4em] text-white font-black block mb-4">Frequently Asked Questions</span>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">British SEO & Digital <span class="text-white">FAQ</span></h2>
+    <section class="border-y border-outline-variant/10 bg-surface-container-low px-6 py-20 md:px-8 md:py-28">
+        <div class="mx-auto max-w-7xl">
+            <div class="mb-12 text-center">
+                <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">Working process</p>
+                <h2 class="text-3xl font-black tracking-tight text-on-surface md:text-5xl">How Our SEO Work Is Delivered</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- FAQ 1 -->
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-white/50 transition-colors group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-symbols-outlined text-8xl text-white">link</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 text-white group-hover:text-gray-300 transition-colors relative z-10">Why is .co.uk link building essential for ranking in Britain?</h4>
-                    <p class="text-on-surface-variant leading-relaxed relative z-10 text-sm">Google.co.uk severely weights geographical IP trust. As a top <strong>UK link building agency</strong>, we deploy <strong>digital PR London</strong> strategies to secure <strong>.co.uk backlinks</strong> from prestigious British universities, The Guardian, and high-authority Tier-1 business directories.</p>
-                </div>
-                <!-- FAQ 2 -->
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-white/50 transition-colors group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-symbols-outlined text-8xl text-white">account_balance</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 text-white group-hover:text-gray-300 transition-colors relative z-10">How do you outrank established competitors in London's financial sector?</h4>
-                    <p class="text-on-surface-variant leading-relaxed relative z-10 text-sm">The London B2B landscape is brutal. As a premium <strong>SEO agency London</strong>, we execute E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) methodologies to dominate <strong>financial SEO services UK</strong>, deploying exact-match intent targeting for high-ticket clients.</p>
-                </div>
-                <!-- FAQ 3 -->
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-white/50 transition-colors group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-symbols-outlined text-8xl text-white">shopping_cart</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 text-white group-hover:text-gray-300 transition-colors relative z-10">Do you provide localized eCommerce SEO for Manchester and Birmingham?</h4>
-                    <p class="text-on-surface-variant leading-relaxed relative z-10 text-sm">Yes. We scale <strong>eCommerce SEO UK</strong> by fixing massive crawl budget leaks and faceted navigation errors. If you need a <strong>Manchester SEO consultant</strong> to handle massive Magento or Shopify inventories, our technical architecture is peerless.</p>
-                </div>
-                <!-- FAQ 4 -->
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-white/50 transition-colors group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-symbols-outlined text-8xl text-white">psychology</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 text-white group-hover:text-gray-300 transition-colors relative z-10">What is Semantic Entity Isolation for Google.co.uk?</h4>
-                    <p class="text-on-surface-variant leading-relaxed relative z-10 text-sm">It's advanced <strong>Technical SEO UK</strong>. Instead of spamming duplicate city pages, we map unique NLP relationships to different British hubs. This <strong>semantic search optimization</strong> proves unique value to Google and entirely bypasses the Helpful Content Update penalties.</p>
-                </div>
-                <!-- FAQ 5 -->
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-white/50 transition-colors group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-symbols-outlined text-8xl text-white">code</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 text-white group-hover:text-gray-300 transition-colors relative z-10">How does your Next.js web development pass UK Core Web Vitals?</h4>
-                    <p class="text-on-surface-variant leading-relaxed relative z-10 text-sm">As an elite <strong>Web development agency UK</strong>, our <strong>Next.js developers London</strong> utilize Server-Side Rendering (SSR) and Edge CDNs located directly in Britain to guarantee sub-second load times, immediately satisfying Google's LCP and INP metrics.</p>
-                </div>
-                <!-- FAQ 6 -->
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-white/50 transition-colors group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-symbols-outlined text-8xl text-white">smart_toy</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 text-white group-hover:text-gray-300 transition-colors relative z-10">Can your AI agents handle UK-based B2B customer support?</h4>
-                    <p class="text-on-surface-variant leading-relaxed relative z-10 text-sm">Absolutely. We are an <strong>enterprise automation agency</strong> offering cutting-edge <strong>AI automation UK</strong>. We deploy intelligent RAG chatbots trained on your internal data to resolve British client inquiries and qualify leads natively 24/7.</p>
-                </div>
+            <ol class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                <li class="glass-card rounded-3xl p-7">
+                    <span class="mb-4 block text-sm font-black tracking-widest text-primary">01</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Review the Starting Point</h3>
+                    <p class="leading-relaxed text-on-surface-variant">We assess your site, relevant search queries, search competitors and current technical or content issues. The free initial audit identifies broad opportunities; any deeper analysis is agreed separately.</p>
+                </li>
+                <li class="glass-card rounded-3xl p-7">
+                    <span class="mb-4 block text-sm font-black tracking-widest text-secondary">02</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Set Priorities</h3>
+                    <p class="leading-relaxed text-on-surface-variant">We distinguish high-impact tasks from lower-priority changes and agree what should be tackled first, with the reasoning explained.</p>
+                </li>
+                <li class="glass-card rounded-3xl p-7">
+                    <span class="mb-4 block text-sm font-black tracking-widest text-tertiary">03</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Improve the Right Pages</h3>
+                    <p class="leading-relaxed text-on-surface-variant">Work may include metadata, page content, internal linking, technical fixes, local search information or supporting authority activity, depending on the agreed scope.</p>
+                </li>
+                <li class="glass-card rounded-3xl p-7">
+                    <span class="mb-4 block text-sm font-black tracking-widest text-primary">04</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Measure and Refine</h3>
+                    <p class="leading-relaxed text-on-surface-variant">We track available search visibility, organic traffic and enquiry or conversion data, explain what has changed, and adapt the plan as new evidence becomes available.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="px-6 py-20 md:px-8 md:py-28">
+        <div class="mx-auto max-w-5xl rounded-[2rem] border border-secondary/20 bg-surface-container-low p-8 md:p-12">
+            <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">Clear measurement</p>
+            <h2 class="mb-5 text-3xl font-black tracking-tight text-on-surface md:text-4xl">Reporting That Separates Work from Outcomes</h2>
+            <p class="leading-relaxed text-on-surface-variant">Our reporting distinguishes completed work from measured changes. Depending on access and scope, we review Google Search Console queries and pages, priority technical fixes, organic landing-page performance and tracked enquiries. Impressions and ranking changes are reported as search indicators—not presented as confirmed sales.</p>
+        </div>
+    </section>
+
+    <section class="border-y border-outline-variant/10 bg-surface-container-low px-6 py-20 md:px-8 md:py-28" id="uk-faqs">
+        <div class="mx-auto max-w-5xl">
+            <div class="mb-12 text-center">
+                <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">Answers for UK businesses</p>
+                <h2 class="text-3xl font-black tracking-tight text-on-surface md:text-5xl">Frequently Asked Questions About UK SEO Services</h2>
+            </div>
+            <div class="space-y-4">
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">What do SEO services for UK businesses include?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">SEO services usually combine technical website checks, keyword research, content improvements, internal linking and authority-related work. The right mix depends on your site, competition, customers and goals. Local businesses may also need Google Business Profile support.</p>
+                </details>
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">What is the difference between an SEO consultant and an SEO agency?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">SEO consultants typically assess problems, advise on priorities and guide decisions. An agency may also coordinate technical changes, content and ongoing delivery. DifusionSEO provides consultancy and implementation support according to the scope agreed with your team.</p>
+                </details>
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">Do you work with businesses across the United Kingdom?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">Yes. We work with UK businesses remotely, including businesses serving customers nationally and those focused on a local area. We do not claim a physical UK office simply because we provide services to the UK market.</p>
+                </details>
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">Can you improve an existing website without rebuilding it?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">Often, yes. We first assess content, indexing, technical health and internal links. Many improvements can be made within the current website. If you also need design or development, we scope it separately and explain why a rebuild would—or would not—be useful.</p>
+                </details>
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">Do you provide local SEO for UK businesses?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">Yes. Local SEO work can include accurate business information, eligible Google Business Profiles, relevant location pages, local keyword research and monitoring. Visibility can vary by the searcher's location, device and competition.</p>
+                </details>
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">How long does SEO take to show results?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">SEO results vary. A technical fix can be implemented quickly, but its effect on search performance may take longer to assess. Competitive keywords and new content often require sustained work. We cannot guarantee a particular ranking or completion date.</p>
+                </details>
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">How much do your SEO services cost?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">Pricing depends on the website, competition and work required. After an initial discussion and review, we can outline priorities and a proposed scope so you can evaluate the work before committing.</p>
+                </details>
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">What is included in the free SEO audit?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">The free initial audit is a high-level review of visible website and search issues, with suggested next steps. It is not a promise of a complete forensic crawl, competitor investigation or implementation before a project is agreed.</p>
+                </details>
             </div>
         </div>
     </section>
-</main>
+
+    <section class="px-6 pb-24 pt-20 md:px-8 md:pb-32">
+        <div class="mx-auto flex max-w-6xl flex-col gap-8 rounded-[2rem] border border-primary/20 bg-gradient-to-br from-primary/10 via-surface-container-low to-secondary/10 p-8 md:p-12 lg:flex-row lg:items-center lg:justify-between">
+            <div class="max-w-3xl">
+                <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">Get started</p>
+                <h2 class="mb-5 text-3xl font-black tracking-tight text-on-surface md:text-4xl">Discuss Your UK SEO Goals</h2>
+                <p class="leading-relaxed text-on-surface-variant">Whether you need SEO consultant services, better website visibility or an experienced team to support your marketing, start with a practical review of the pages and opportunities that matter most.</p>
+                <p class="mt-5 text-sm text-on-surface-variant">info@difusionseo.com</p>
+            </div>
+            <a href="{% url 'contact' %}" class="inline-flex shrink-0 items-center justify-center rounded-full bg-primary px-7 py-4 font-bold text-on-primary transition hover:-translate-y-1">Request Your Free SEO Audit</a>
+        </div>
+    </section>
+</div>
 {% endblock %}
