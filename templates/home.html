@@ -6,7 +6,6 @@
 {% block meta %}
 <!-- PRIMARY SEO META TAGS -->
 <meta name="description" content="Grow your online visibility, improve your website and reduce repetitive work with practical SEO, web development and custom automation across the Netherlands.">
-<link rel="canonical" href="https://www.difusionseo.com/" />
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="keywords" content="SEO services, AI automation services, web development services, backlink building services, local SEO services, web application security, data driven SEO, machine learning automation, full stack development, React Django Node.js">
 <meta name="author" content="DifusionSEO">
@@ -35,8 +34,9 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
-        "email": "hello@difusionseo.com",
-        "availableLanguage": "English"
+        "email": "info@difusionseo.com",
+        "telephone": "+31 6 38879199",
+        "availableLanguage": ["English", "Dutch"]
       },
       "sameAs": [
         "https://www.linkedin.com/company/difusionseo",
@@ -165,6 +165,15 @@
   ]
 }
 </script>
+{% endblock %}
+
+{% block canonical %}
+<link rel="canonical" href="https://www.difusionseo.com/">
+{% endblock %}
+
+{% block hreflang %}
+<link rel="alternate" hreflang="en" href="https://www.difusionseo.com/">
+<link rel="alternate" hreflang="nl-NL" href="https://www.difusionseo.com/nl/">
 {% endblock %}
 
 {% block content %}

@@ -2,7 +2,7 @@
 <footer class="bg-surface-container-lowest pt-20 pb-10 px-8 border-t border-outline-variant/10">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
         <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
-            <a href="{% url 'home' %}" class="text-3xl font-black tracking-tighter text-primary">DifusionSEO</a>
+            <a href="{% if request.path == '/nl/' %}{% url 'home_nl' %}{% else %}{% url 'home' %}{% endif %}" class="text-3xl font-black tracking-tighter text-primary">DifusionSEO</a>
             <p class="text-on-surface-variant leading-relaxed">
                 Engineering digital dominance through technical precision and strategic marketing.
             </p>
@@ -75,6 +75,11 @@
             <ul class="space-y-4">
                 <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'about' %}">About Us</a></li>
                 <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'contact' %}">Contact</a></li>
+                {% if request.path == '/nl/' %}
+                <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'home' %}" lang="en">English</a></li>
+                {% elif request.path == '/' %}
+                <li><a class="text-on-surface-variant hover:text-white transition-all" href="{% url 'home_nl' %}" lang="nl-NL">Nederlands</a></li>
+                {% endif %}
             </ul>
 
             <h5 class="text-sm font-black uppercase tracking-widest text-on-surface mb-6 mt-10">Global</h5>

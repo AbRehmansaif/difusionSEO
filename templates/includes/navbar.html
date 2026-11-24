@@ -2,7 +2,7 @@
 <nav class="fixed top-0 w-full z-[60] bg-transparent backdrop-blur-xl transition-all duration-500 px-6 lg:px-8 py-4 lg:py-6 border-b border-transparent" id="main-nav">
     <div class="max-w-7xl mx-auto flex justify-between items-center relative z-20">
         <!-- Logo -->
-        <a href="{% url 'home' %}" class="relative flex items-center hover:scale-105 transition-transform duration-300">
+        <a href="{% if request.path == '/nl/' %}{% url 'home_nl' %}{% else %}{% url 'home' %}{% endif %}" class="relative flex items-center hover:scale-105 transition-transform duration-300">
             <img src="{% static 'images/difusionseo_logo.png' %}" alt="DifusionSEO Logo" class="h-10 lg:h-12 w-auto object-contain" width="180" height="48">
         </a>
         
@@ -68,6 +68,11 @@
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'contact' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'contact' %}">Contact</a>
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if 'blogs' in request.path %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'blogs:blog_list' %}">Blog</a>
             <a class="font-['Inter'] font-medium text-sm tracking-wide transition-colors duration-300 {% if request.resolver_match.url_name == 'leadnexus' %}text-secondary border-b-2 border-secondary pb-1{% else %}text-on-surface-variant hover:text-secondary{% endif %}" href="{% url 'leadnexus' %}">LeadNexus</a>
+            {% if request.path == '/nl/' %}
+            <a href="{% url 'home' %}" lang="en" class="font-['Inter'] font-medium text-sm tracking-wide text-on-surface-variant hover:text-secondary transition-colors" aria-label="Switch to English">English</a>
+            {% elif request.path == '/' %}
+            <a href="{% url 'home_nl' %}" lang="nl-NL" class="font-['Inter'] font-medium text-sm tracking-wide text-on-surface-variant hover:text-secondary transition-colors" aria-label="Switch to Dutch">Nederlands</a>
+            {% endif %}
         </div>
         
         <!-- Actions & Mobile Toggle -->
@@ -183,6 +188,17 @@
             <span class="material-symbols-outlined text-[24px] opacity-70">rocket_launch</span>
             LeadNexus
         </a>
+        {% if request.path == '/nl/' %}
+        <a href="{% url 'home' %}" lang="en" class="text-2xl font-bold tracking-tight transition-all duration-300 flex items-center gap-4 w-full text-on-surface hover:text-secondary hover:translate-x-2" aria-label="Switch to English">
+            <span class="material-symbols-outlined text-[24px] opacity-70">language</span>
+            English
+        </a>
+        {% elif request.path == '/' %}
+        <a href="{% url 'home_nl' %}" lang="nl-NL" class="text-2xl font-bold tracking-tight transition-all duration-300 flex items-center gap-4 w-full text-on-surface hover:text-secondary hover:translate-x-2" aria-label="Switch to Dutch">
+            <span class="material-symbols-outlined text-[24px] opacity-70">language</span>
+            Nederlands
+        </a>
+        {% endif %}
         
         <div class="w-full h-[1px] bg-gradient-to-r from-primary/30 via-secondary/30 to-transparent my-4"></div>
         

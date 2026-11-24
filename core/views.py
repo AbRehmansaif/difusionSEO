@@ -6,6 +6,9 @@ from .models import ContactSubmission
 def home(request):
     return render(request, 'home.html')
 
+def home_nl(request):
+    return render(request, 'home_nl.html')
+
 def about(request):
     return render(request, 'about.html')
 
