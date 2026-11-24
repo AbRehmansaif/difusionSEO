@@ -1,256 +1,358 @@
 {% extends 'base.html' %}
-{% load static %}
 
-{% block title %}SEO Bureau Amsterdam | Digital Marketing Netherlands | DifusionSEO{% endblock %}
+{% block title %}SEO Agency Netherlands | Amsterdam SEO Services | DifusionSEO{% endblock %}
 
 {% block meta %}
-<meta name="description" content="Het beste SEO bureau in the Netherlands. We deliver technical SEO, eCommerce growth, and Dutch backlink strategies to businesses in Amsterdam and Rotterdam.">
-<meta name="keywords" content="SEO bureau Amsterdam, Dutch SEO experts, digital marketing Netherlands, eCommerce SEO Rotterdam, AI automation NL">
-<meta property="og:title" content="Top SEO Bureau in the Netherlands | DifusionSEO">
-<meta property="og:description" content="Technical organic growth strategies designed to dominate competitive niches in the Dutch market.">
+<meta name="description" content="SEO services for businesses targeting the Netherlands, including Amsterdam. Technical SEO, content, local search and reporting. Request a free SEO review.">
+<meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
-<link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+<meta property="og:title" content="SEO Agency Netherlands | Amsterdam SEO Services | DifusionSEO">
+<meta property="og:description" content="SEO services for businesses targeting the Netherlands, including Amsterdam. Technical SEO, content, local search and reporting. Request a free SEO review.">
+<meta property="og:url" content="https://www.difusionseo.com/seo-services/netherlands/">
+<meta property="og:site_name" content="DifusionSEO">
+<meta property="og:locale" content="en_NL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SEO Agency Netherlands | Amsterdam SEO Services | DifusionSEO">
+<meta name="twitter:description" content="SEO services for businesses targeting the Netherlands, including Amsterdam. Technical SEO, content, local search and reporting. Request a free SEO review.">
+{% endblock %}
+
+{% block canonical %}
+<link rel="canonical" href="https://www.difusionseo.com/seo-services/netherlands/">
 {% endblock %}
 
 {% block extra_head %}
-<!-- Netherlands Geo-Targeted Schema Markup -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "SEO Bureau Netherlands",
-  "description": "Enterprise-grade technical SEO specifically tailored for Dutch businesses in Amsterdam and Rotterdam.",
-  "provider": {
-    "@type": "Organization",
-    "name": "DifusionSEO",
-    "url": "{{ request.scheme }}://{{ request.get_host }}"
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "Netherlands"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.difusionseo.com/#organization",
+      "name": "DifusionSEO",
+      "url": "https://www.difusionseo.com/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.difusionseo.com/#website",
+      "url": "https://www.difusionseo.com/",
+      "name": "DifusionSEO",
+      "publisher": {
+        "@id": "https://www.difusionseo.com/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.difusionseo.com/seo-services/netherlands/#service",
+      "name": "SEO services in the Netherlands",
+      "serviceType": "Search engine optimization",
+      "description": "SEO services for businesses targeting the Netherlands, including Amsterdam. Technical SEO, content, local search and reporting.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Netherlands"
+      },
+      "provider": {
+        "@id": "https://www.difusionseo.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.difusionseo.com/seo-services/netherlands/#webpage",
+      "url": "https://www.difusionseo.com/seo-services/netherlands/",
+      "name": "SEO Agency Netherlands | Amsterdam SEO Services | DifusionSEO",
+      "description": "SEO services for businesses targeting the Netherlands, including Amsterdam. Technical SEO, content, local search and reporting. Request a free SEO review.",
+      "isPartOf": {
+        "@id": "https://www.difusionseo.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://www.difusionseo.com/seo-services/netherlands/#service"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.difusionseo.com/seo-services/netherlands/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.difusionseo.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.difusionseo.com/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SEO Services Netherlands",
+          "item": "https://www.difusionseo.com/seo-services/netherlands/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.difusionseo.com/seo-services/netherlands/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does an SEO agency in the Netherlands do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An SEO agency helps a website become more relevant and accessible for organic searches. Services may include audits, SEO consultancy, keyword research, technical improvements, helpful content, local optimization, link building and reporting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help businesses targeting customers in Amsterdam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We research location-specific opportunities for your target customers and real service area. Our work can be delivered remotely; we do not represent ourselves as having an office in that city."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you optimize for both Dutch and English searches?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We research search behavior in each language separately. A literal translation does not always reflect the phrases or intent people use in the Netherlands."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is local SEO different from national SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "National SEO can target broader searches across a country. Local SEO concentrates on searches related to a city or area and may include local pages, business information and Google Business Profile when the business is eligible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer an initial SEO audit for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We offer a free first review for a website. It highlights visible priorities and possible next steps; it is not a promise of rankings or a complete paid SEO engagement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What affects the cost and timing of SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Website condition, competition, business goals and the work required affect cost and timing. After reviewing your situation, we can explain a recommended scope and quote. Search improvements do not have a guaranteed timetable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How will you measure SEO progress?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We review suitable measures such as Google Search Console impressions, queries and clicks, organic visits, indexing, completed technical fixes and enquiries where tracking is available. We distinguish observed changes from assumptions about their cause."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 {% endblock %}
 
 {% block content %}
-<main class="pt-24 overflow-hidden">
-    <!-- Hero Section: Netherlands Focus -->
-    <section class="relative min-h-[75vh] py-20 px-6 md:px-8 max-w-7xl mx-auto flex items-center justify-center text-center">
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF9B00]/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
-        
-        <div class="relative z-10 max-w-3xl mx-auto" data-aos="fade-up">
-            <div class="inline-flex items-center gap-2 mb-8 border border-[#FF9B00]/30 bg-[#FF9B00]/10 px-5 py-2 rounded-full">
-                <img src="https://flagcdn.com/w40/nl.png" alt="Netherlands Flag" class="w-6 rounded-sm">
-                <span class="text-xs uppercase tracking-widest text-[#FF9B00] font-black">Dutch Market SEO</span>
-            </div>
-            
-            <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] mb-8">
-                Dominate Search in <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF9B00] to-[#FF5E00]">The Netherlands.</span>
-            </h1>
-            
-            <p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl mx-auto font-light">
-                From high-tech startups in <strong>Amsterdam</strong> to maritime logistics in <strong>Rotterdam</strong>, we are the premium <em>SEO Bureau</em> engineering organic dominance on Google.nl. We deploy semantic entity models and powerful Dutch backlinks to scale your traffic.
-            </p>
-            
-            <a href="{% url 'contact' %}?location=Netherlands" class="inline-flex bg-[#FF9B00] text-black px-10 py-5 rounded-xl font-black text-sm hover:-translate-y-2 transition-transform shadow-[0_15px_30px_rgba(255,155,0,0.2)]">
-                Claim Your Dutch Strategy
-            </a>
-        </div>
-    </section>
-    
-    <!-- Core Services Section -->
-    <section class="py-24 px-8 border-t border-outline-variant/10">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black mb-16 text-center">Comprehensive Services for <span class="text-[#FF9B00]">Google.nl</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- SEO -->
-                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'seo_strategy' %}'">
-                    <span class="material-symbols-outlined text-4xl text-[#FF9B00] mb-6">query_stats</span>
-                    <h3 class="text-xl font-bold mb-4">Technical SEO</h3>
-                    <p class="text-on-surface-variant text-sm mb-6">Deep crawling and indexing optimization tailored for the Dutch algorithm. We fix faceted navigation crawl traps and implement strict semantic mappings.</p>
-                    <span class="text-[#FF9B00] font-bold text-sm">View SEO Services <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-                </div>
-                <!-- Local SEO -->
-                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'local_seo' %}'">
-                    <span class="material-symbols-outlined text-4xl text-white mb-6">location_on</span>
-                    <h3 class="text-xl font-bold mb-4">Local Map Pack</h3>
-                    <p class="text-on-surface-variant text-sm mb-6">Dominate the Google Map Pack across Amsterdam, Rotterdam, and Utrecht with hyper-localized Dutch citations and GBP optimization.</p>
-                    <span class="text-white font-bold text-sm">View Local SEO <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-                </div>
-                <!-- Backlinks -->
-                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'backlink_service' %}'">
-                    <span class="material-symbols-outlined text-4xl text-blue-400 mb-6">link</span>
-                    <h3 class="text-xl font-bold mb-4">.NL Link Building</h3>
-                    <p class="text-on-surface-variant text-sm mb-6">Authority matters. We secure high DR backlinks exclusively from reputable .nl domains, Dutch media portals, and Randstad directories.</p>
-                    <span class="text-blue-400 font-bold text-sm">View Link Building <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-                </div>
-                <!-- Web Dev -->
-                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'web_development' %}'">
-                    <span class="material-symbols-outlined text-4xl text-[#ff0055] mb-6">code</span>
-                    <h3 class="text-xl font-bold mb-4">High-Performance Web Dev</h3>
-                    <p class="text-on-surface-variant text-sm mb-6">We deploy custom React/Next.js architectures hosted on European CDN nodes, guaranteeing lightning-fast load times compliant with GDPR.</p>
-                    <span class="text-[#ff0055] font-bold text-sm">View Web Engineering <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-                </div>
-                <!-- AI Automation -->
-                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'ai_automation' %}'">
-                    <span class="material-symbols-outlined text-4xl text-[#00E5FF] mb-6">smart_toy</span>
-                    <h3 class="text-xl font-bold mb-4">AI Business Automation</h3>
-                    <p class="text-on-surface-variant text-sm mb-6">Scale your Dutch operations instantly. We deploy custom LLM agents and native Dutch-speaking RAG chatbots to handle B2B qualification.</p>
-                    <span class="text-[#00E5FF] font-bold text-sm">View AI Solutions <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-                </div>
-                <!-- Cyber Security -->
-                <div class="glass-card p-8 rounded-3xl hover-lift cursor-pointer" onclick="window.location.href='{% url 'cyber_security' %}'">
-                    <span class="material-symbols-outlined text-4xl text-yellow-400 mb-6">security</span>
-                    <h3 class="text-xl font-bold mb-4">Cyber Security & Audits</h3>
-                    <p class="text-on-surface-variant text-sm mb-6">Protect your enterprise data. We provide fully GDPR/AVG-compliant penetration testing and secure infrastructure auditing.</p>
-                    <span class="text-yellow-400 font-bold text-sm">View Cyber Security <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+<div class="overflow-hidden">
+    <section class="relative px-6 pb-20 pt-32 md:px-8 md:pb-28 md:pt-40">
+        <div class="pointer-events-none absolute right-0 top-12 h-96 w-96 rounded-full bg-primary/10 blur-[120px]"></div>
+        <div class="pointer-events-none absolute bottom-0 left-0 h-80 w-80 rounded-full bg-secondary/10 blur-[100px]"></div>
+        <div class="relative mx-auto max-w-7xl">
+            <nav aria-label="Breadcrumb" class="mb-8 text-sm text-on-surface-variant">
+                <ol class="flex flex-wrap items-center gap-2">
+                    <li><a href="{% url 'home' %}" class="hover:text-secondary">Home</a></li>
+                    <li aria-hidden="true">/</li>
+                    <li><a href="{% url 'services' %}" class="hover:text-secondary">Services</a></li>
+                    <li aria-hidden="true">/</li>
+                    <li aria-current="page" class="text-on-surface">SEO Services Netherlands</li>
+                </ol>
+            </nav>
+            <div class="max-w-4xl" data-aos="fade-up">
+                <p class="mb-5 text-sm font-bold uppercase tracking-[0.25em] text-secondary">SEO Services for the Dutch Market</p>
+                <h1 class="mb-7 text-4xl font-black leading-tight tracking-tight text-on-surface sm:text-5xl lg:text-6xl">SEO Agency for Businesses in the Netherlands</h1>
+                <p class="mb-9 max-w-3xl text-lg leading-relaxed text-on-surface-variant md:text-xl">Reach customers searching in the Netherlands with SEO built around real demand, useful pages and a technically accessible website. DifusionSEO works on keyword research, technical SEO, content, local visibility and relevant links—starting with a clear review of your current site rather than a promise of instant rankings.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="{% url 'contact' %}" class="inline-flex items-center justify-center rounded-full bg-primary px-7 py-4 font-bold text-on-primary transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(204,190,255,0.3)]">Request a Free SEO Audit</a>
+                    <a href="{% url 'seo_strategy' %}" class="inline-flex items-center justify-center rounded-full border border-outline-variant/40 px-7 py-4 font-bold text-on-surface transition hover:border-secondary hover:text-secondary">See Our SEO Services</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Dutch Cities Dominance Strategy -->
-    <section class="py-32 px-8 bg-black/40 border-y border-outline-variant/10">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <span class="text-xs uppercase tracking-[0.4em] text-[#FF9B00] font-black block mb-4">Regionale SEO Strategie</span>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">Targeting <span class="text-[#FF9B00]">Randstad Hubs</span></h2>
-                <p class="text-lg text-on-surface-variant max-w-3xl mx-auto">The Dutch economy is highly centralized within the Randstad, but each city demands a unique semantic approach. We deploy hyper-localized architectures for maximum commercial capture.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-[#FF9B00] bg-surface/50" data-aos="fade-right">
-                    <h3 class="text-3xl font-black mb-4">Startups & FinTech in <span class="text-[#FF9B00]">Amsterdam</span></h3>
-                    <p class="text-on-surface-variant leading-relaxed mb-6">Amsterdam is highly competitive for tech, finance, and international B2B. We execute elite programmatic SEO, multi-lingual keyword mapping, and acquire premium backlinks from high-DR Dutch publications. Outrank your competitors on Google.nl with pure technical superiority.</p>
-                </div>
-                
-                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-primary bg-surface/50" data-aos="fade-left">
-                    <h3 class="text-3xl font-black mb-4">Logistics & Maritime in <span class="text-primary">Rotterdam</span></h3>
-                    <p class="text-on-surface-variant leading-relaxed mb-6">As Europe's largest port, Rotterdam thrives on B2B logistics and industrial queries. We optimize complex enterprise websites, building semantic entity relationships that align perfectly with the specific search intent of international supply chain buyers.</p>
-                </div>
-                
-                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-secondary bg-surface/50" data-aos="fade-right">
-                    <h3 class="text-3xl font-black mb-4">Corporate & Legal in <span class="text-secondary">The Hague (Den Haag)</span></h3>
-                    <p class="text-on-surface-variant leading-relaxed mb-6">The Hague requires a sophisticated, highly authoritative approach. We specialize in YMYL (Your Money or Your Life) SEO for legal and corporate entities, ensuring flawless E-E-A-T signals, strict data compliance, and authoritative citations.</p>
-                </div>
+    <section class="border-y border-outline-variant/10 bg-surface-container-low px-6 py-16 md:px-8 md:py-24">
+        <div class="mx-auto max-w-5xl">
+            <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">Local search intent</p>
+            <h2 class="mb-6 text-3xl font-black tracking-tight text-on-surface md:text-5xl">SEO for Amsterdam and Across the Netherlands</h2>
+            <p class="mb-5 text-lg leading-relaxed text-on-surface-variant">Search habits differ by language, location and customer intent. For example, people comparing an SEO agency in Amsterdam may search differently from those looking for a Dutch-language SEO bureau Amsterdam. We assess relevant English and Dutch queries, review competing pages and map opportunities to the right site sections—without generating repetitive city pages.</p>
+            <p class="text-lg leading-relaxed text-on-surface-variant">Whether your audience is in Amsterdam, Eindhoven, Rotterdam or elsewhere in the Netherlands, the strategy should reflect where your business genuinely serves customers. We support Dutch-market SEO remotely; this page does not claim an Amsterdam office.</p>
+        </div>
+    </section>
 
-                <div class="glass-card p-10 rounded-[2rem] border-t-4 border-white bg-surface/50" data-aos="fade-left">
-                    <h3 class="text-3xl font-black mb-4">eCommerce Growth in <span class="text-white">Utrecht</span></h3>
-                    <p class="text-on-surface-variant leading-relaxed mb-6">Centrally located Utrecht is a massive hub for domestic eCommerce and retail. We fix crawl budgets, optimize faceted navigation, and accelerate Core Web Vitals to ensure your online store dominates Dutch shopping queries and captures maximum revenue.</p>
-                </div>
+    <section class="px-6 py-20 md:px-8 md:py-28" id="seo-services">
+        <div class="mx-auto max-w-7xl">
+            <div class="mb-12 max-w-3xl">
+                <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">Focused SEO work</p>
+                <h2 class="mb-5 text-3xl font-black tracking-tight text-on-surface md:text-5xl">What Our SEO Services Include</h2>
+            </div>
+            <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                <article class="glass-card rounded-3xl p-7">
+                    <span class="material-symbols-outlined mb-5 text-4xl text-primary" aria-hidden="true">troubleshoot</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Technical Audits &amp; Website SEO</h3>
+                    <p class="mb-6 leading-relaxed text-on-surface-variant">Find crawlability, indexing, canonical, internal-link and performance issues. We prioritize fixes that make important pages easier to access, understand and use.</p>
+                    <a href="{% url 'seo_strategy' %}" class="inline-flex items-center gap-2 font-bold text-primary hover:underline">Explore Advanced SEO <span aria-hidden="true">&rarr;</span></a>
+                </article>
+                <article class="glass-card rounded-3xl p-7">
+                    <span class="material-symbols-outlined mb-5 text-4xl text-secondary" aria-hidden="true">manage_search</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Keyword Research &amp; SEO Consultancy</h3>
+                    <p class="leading-relaxed text-on-surface-variant">Compare Dutch and English search demand, competitor pages and user intent. We turn that research into a focused keyword-to-page plan, not an inflated list of phrases.</p>
+                </article>
+                <article class="glass-card rounded-3xl p-7">
+                    <span class="material-symbols-outlined mb-5 text-4xl text-tertiary" aria-hidden="true">edit_document</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">On-Page SEO &amp; Helpful Content</h3>
+                    <p class="leading-relaxed text-on-surface-variant">Improve titles, headings, page descriptions and content so each important page answers the right customer questions. We also structure useful information clearly for search engines and AI-assisted discovery.</p>
+                </article>
+                <article class="glass-card rounded-3xl p-7">
+                    <span class="material-symbols-outlined mb-5 text-4xl text-primary" aria-hidden="true">location_on</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Local SEO &amp; Google Business Profiles</h3>
+                    <p class="mb-6 leading-relaxed text-on-surface-variant">For eligible businesses serving defined areas, we help with local search relevance, accurate business information and appropriate Google Business Profile improvements.</p>
+                    <a href="{% url 'local_seo' %}" class="inline-flex items-center gap-2 font-bold text-primary hover:underline">Explore Local SEO <span aria-hidden="true">&rarr;</span></a>
+                </article>
+                <article class="glass-card rounded-3xl p-7">
+                    <span class="material-symbols-outlined mb-5 text-4xl text-secondary" aria-hidden="true">link</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Relevant Link Building</h3>
+                    <p class="mb-6 leading-relaxed text-on-surface-variant">Review the backlink profile and pursue suitable editorial mentions through relevant outreach. We assess context and quality; a .nl extension alone does not make a link valuable.</p>
+                    <a href="{% url 'backlink_service' %}" class="inline-flex items-center gap-2 font-bold text-secondary hover:underline">Explore Link Building <span aria-hidden="true">&rarr;</span></a>
+                </article>
+                <article class="glass-card rounded-3xl p-7">
+                    <span class="material-symbols-outlined mb-5 text-4xl text-tertiary" aria-hidden="true">monitoring</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">SEO Tracking &amp; Reporting</h3>
+                    <p class="leading-relaxed text-on-surface-variant">Use available Google Search Console and analytics data to understand queries, clicks, indexing, technical progress and qualified enquiries. Reports should explain what changed and what still needs attention.</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- 20-Year Veteran SEO Methodology (Netherlands) -->
-    <section class="py-32 px-8 bg-surface-container-low border-t border-outline-variant/10">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-20" data-aos="fade-up">
-                <span class="text-xs uppercase tracking-[0.4em] text-[#FF9B00] font-black block mb-4">De Technische Blauwdruk (Technical Blueprint)</span>
-                <h2 class="text-4xl md:text-6xl font-black mb-8">Decoding the <span class="text-[#FF9B00]">Google.nl</span> Algorithm</h2>
-                <p class="text-xl text-on-surface-variant max-w-4xl leading-relaxed font-light">
-                    The Dutch search landscape is highly concentrated, technologically advanced, and heavily contested by global enterprise brands. With 20 years of elite SEO engineering experience, we understand that standard marketing tactics fail on Google.nl. To capture high-intent commercial traffic in the Randstad, you must deploy an absolute, mathematically precise technical architecture and secure unshakeable Dutch digital authority.
-                </p>
+    <section class="border-y border-outline-variant/10 bg-surface-container-low px-6 py-20 md:px-8 md:py-28" id="experience">
+        <div class="mx-auto max-w-7xl">
+            <div class="mb-12 max-w-4xl">
+                <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">Relevant experience</p>
+                <h2 class="mb-5 text-3xl font-black tracking-tight text-on-surface md:text-5xl">Practical Experience, Not Ranking Guarantees</h2>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group" data-aos="fade-up">
-                    <div class="absolute inset-0 bg-gradient-to-br from-[#FF9B00]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <h3 class="text-3xl font-black mb-6 text-[#FF9B00] border-l-4 border-[#FF9B00] pl-6">Dutch Semantic Entity Mapping (NLP)</h3>
-                        <p class="text-lg text-on-surface-variant leading-relaxed">
-                            Google utilizes Natural Language Processing (MUM/BERT) to interpret the semantic intent behind Dutch queries. We do not translate; we engineer native Dutch topic clusters. By mapping strict "Entities" and targeting highly specific B2B semantic variations (e.g., combining English tech terms with Dutch commercial intent), we capture high-converting enterprise traffic that standard agencies fundamentally misunderstand.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <h3 class="text-3xl font-black mb-6 text-white border-l-4 border-white pl-6">Technical Crawl Budgeting</h3>
-                        <p class="text-lg text-on-surface-variant leading-relaxed">
-                            For complex Dutch eCommerce and corporate platforms, poor architecture causes Googlebot to waste its crawl budget on faceted navigation and low-value parameterized URLs. We execute surgical technical SEO audits using Python. We rebuild your internal link graph, eliminate JavaScript rendering bottlenecks, and guarantee your most lucrative commercial pages are instantly crawled, indexed, and prioritized.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group md:col-span-2" data-aos="fade-up" data-aos-delay="200">
-                    <div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <h3 class="text-3xl font-black mb-6 text-primary border-l-4 border-primary pl-6">Tier-1 .NL Link Acquisition (E-E-A-T)</h3>
-                        <p class="text-lg text-on-surface-variant leading-relaxed mb-6">
-                            The Google.nl algorithm demands powerful local trust signals to satisfy E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) criteria. Generic backlinks from US or UK domains provide negligible ranking power in the Netherlands.
-                        </p>
-                        <p class="text-lg text-on-surface-variant leading-relaxed">
-                            Our Digital PR division engineers sophisticated outreach campaigns to acquire high-DR, DoFollow editorial backlinks exclusively from Tier-1 Dutch media, premium `.nl` industry portals, and recognized regional hubs in Amsterdam and Rotterdam. This mathematical injection of pure regional authority permanently locks your website into the top ranking positions across the Netherlands.
-                        </p>
-                    </div>
-                </div>
+            <div class="grid gap-6 lg:grid-cols-2">
+                <article class="glass-card rounded-3xl p-8">
+                    <h3 class="mb-4 text-2xl font-bold text-on-surface">City Specs — UK Local SEO Project</h3>
+                    <p class="leading-relaxed text-on-surface-variant">Our team manages Google Business Profile and local SEO work for City Specs, an independent optician with locations in Manchester and Sheffield, UK. This experience informs our approach to local search, business listings and location-specific pages. It is a UK project example, not a claimed Dutch client result or proof that a ranking will repeat elsewhere.</p>
+                </article>
+                <article class="glass-card rounded-3xl p-8">
+                    <h3 class="mb-4 text-2xl font-bold text-on-surface">The People Behind the Work</h3>
+                    <p class="mb-6 leading-relaxed text-on-surface-variant">Our founder, Usama Zafar, Abdul Rehman Co-founder & CEO (software engineer), and Nouman Nasir, marketing manager. The team combines SEO planning with the development skills needed to implement technical improvements.</p>
+                    <a href="{% url 'about' %}" class="inline-flex items-center gap-2 font-bold text-primary hover:underline">Meet DifusionSEO <span aria-hidden="true">&rarr;</span></a>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Dutch FAQ -->
-    <section class="py-32 px-8 bg-surface-container-lowest border-t border-outline-variant/10">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="text-xs uppercase tracking-[0.4em] text-[#FF9B00] font-black block mb-4">Veelgestelde Vragen</span>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">Dutch SEO & Digital <span class="text-[#FF9B00]">FAQ</span></h2>
+    <section class="px-6 py-20 md:px-8 md:py-28">
+        <div class="mx-auto max-w-7xl">
+            <div class="mb-12 text-center">
+                <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">A straightforward approach</p>
+                <h2 class="text-3xl font-black tracking-tight text-on-surface md:text-5xl">A Four-Step SEO Process</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- FAQ 1 -->
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-[#FF9B00]/50 transition-colors group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-symbols-outlined text-8xl text-[#FF9B00]">link</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 text-white group-hover:text-[#FF9B00] transition-colors relative z-10">Do you build backlinks from .nl domains?</h4>
-                    <p class="text-on-surface-variant leading-relaxed relative z-10 text-sm">Yes, it's an absolute priority. As the premier <strong>SEO agency Netherlands</strong>, we execute massive <strong>Dutch link building</strong> campaigns. We secure contextual, DoFollow <strong>.nl backlinks</strong> from top-tier Dutch news portals and highly trusted regional B2B directories.</p>
-                </div>
-                <!-- FAQ 2 -->
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-[#FF9B00]/50 transition-colors group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-symbols-outlined text-8xl text-[#FF9B00]">translate</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 text-white group-hover:text-[#FF9B00] transition-colors relative z-10">Do you optimize for English or Dutch search terms?</h4>
-                    <p class="text-on-surface-variant leading-relaxed relative z-10 text-sm">Both. We provide elite <strong>SEO services Amsterdam</strong> where English queries dominate, while deploying <strong>bilingual SEO Netherlands</strong> architectures. We use perfect <code>hreflang</code> tagging to ensure your <strong>Dutch digital marketing</strong> captures native intent flawlessly.</p>
-                </div>
-                <!-- FAQ 3 -->
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-[#FF9B00]/50 transition-colors group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-symbols-outlined text-8xl text-[#FF9B00]">directions_boat</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 text-white group-hover:text-[#FF9B00] transition-colors relative z-10">How do you rank B2B and logistics companies in Rotterdam?</h4>
-                    <p class="text-on-surface-variant leading-relaxed relative z-10 text-sm">Rotterdam requires highly specialized technical strategies. We deploy advanced <strong>B2B SEO Netherlands</strong> frameworks, optimizing massive industrial catalogs. Your dedicated <strong>Rotterdam SEO consultant</strong> will map strict NLP entities to outrank entrenched competitors.</p>
-                </div>
-                <!-- FAQ 4 -->
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-[#FF9B00]/50 transition-colors group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-symbols-outlined text-8xl text-[#FF9B00]">location_on</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 text-white group-hover:text-[#FF9B00] transition-colors relative z-10">Do you provide local SEO for tech startups?</h4>
-                    <p class="text-on-surface-variant leading-relaxed relative z-10 text-sm">Yes. We dominate regional SERPs with precision <strong>Local SEO Netherlands</strong> tactics. From Google Business Profile optimization to hyper-local schema mapping, we rapidly scale <strong>digital marketing Eindhoven</strong> for emerging SaaS and tech firms.</p>
-                </div>
-                <!-- FAQ 5 -->
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-[#FF9B00]/50 transition-colors group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-symbols-outlined text-8xl text-[#FF9B00]">code</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 text-white group-hover:text-[#FF9B00] transition-colors relative z-10">Can custom Next.js development fix Core Web Vitals?</h4>
-                    <p class="text-on-surface-variant leading-relaxed relative z-10 text-sm">Absolutely. As a top <strong>Web development agency Netherlands</strong>, we strip away slow, bloated WordPress platforms. We deploy Next.js architectures that guarantee instant loads, dramatically boosting your <strong>eCommerce SEO Amsterdam</strong> rankings.</p>
-                </div>
-                <!-- FAQ 6 -->
-                <div class="glass-card p-8 rounded-3xl border border-outline-variant/20 hover:border-[#FF9B00]/50 transition-colors group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <span class="material-symbols-outlined text-8xl text-[#FF9B00]">smart_toy</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 text-white group-hover:text-[#FF9B00] transition-colors relative z-10">Do you offer AI Automation tailored for the Dutch market?</h4>
-                    <p class="text-on-surface-variant leading-relaxed relative z-10 text-sm">Yes. We provide cutting-edge <strong>AI automation Netherlands</strong>. We build and deploy intelligent, Dutch-speaking <strong>enterprise AI solutions</strong> and RAG chatbots capable of handling 24/7 B2B lead qualification and complex customer support operations.</p>
-                </div>
+            <ol class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                <li class="glass-card rounded-3xl p-7">
+                    <span class="mb-4 block text-sm font-black tracking-widest text-primary">01</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Review</h3>
+                    <p class="leading-relaxed text-on-surface-variant">We assess your existing pages, search visibility, business priorities and technical issues.</p>
+                </li>
+                <li class="glass-card rounded-3xl p-7">
+                    <span class="mb-4 block text-sm font-black tracking-widest text-secondary">02</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Plan</h3>
+                    <p class="leading-relaxed text-on-surface-variant">We match the main keyword opportunities to real customer intent and agree on the work that matters most.</p>
+                </li>
+                <li class="glass-card rounded-3xl p-7">
+                    <span class="mb-4 block text-sm font-black tracking-widest text-tertiary">03</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Implement</h3>
+                    <p class="leading-relaxed text-on-surface-variant">We make the agreed on-page, technical, local or link-related improvements, with clear notes about changes.</p>
+                </li>
+                <li class="glass-card rounded-3xl p-7">
+                    <span class="mb-4 block text-sm font-black tracking-widest text-primary">04</span>
+                    <h3 class="mb-3 text-xl font-bold text-on-surface">Measure</h3>
+                    <p class="leading-relaxed text-on-surface-variant">We monitor available search and website data, report the findings and refine priorities when needed.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="border-y border-outline-variant/10 bg-surface-container-low px-6 py-20 md:px-8 md:py-24" id="free-review">
+        <div class="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1fr_auto]">
+            <div class="max-w-4xl">
+                <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">Start with a clear first step</p>
+                <h2 class="mb-5 text-3xl font-black tracking-tight text-on-surface md:text-4xl">What Is Included in the Free SEO Review?</h2>
+                <p class="text-lg leading-relaxed text-on-surface-variant">Share your website URL and the customers you want to reach. Our free initial review considers visible SEO and site-structure issues, important content gaps, technical accessibility and relevant local-search opportunities. We explain the main findings and suggested next steps; a full technical investigation or implementation is a separately scoped project.</p>
+            </div>
+            <a href="{% url 'contact' %}" class="inline-flex items-center justify-center rounded-full bg-primary px-7 py-4 font-bold text-on-primary transition hover:-translate-y-1">Request My Free SEO Review</a>
+        </div>
+    </section>
+
+    <section class="px-6 py-20 md:px-8 md:py-28" id="faqs">
+        <div class="mx-auto max-w-5xl">
+            <div class="mb-12 text-center">
+                <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-secondary">Answers for Dutch-market search</p>
+                <h2 class="text-3xl font-black tracking-tight text-on-surface md:text-5xl">Frequently Asked Questions</h2>
+            </div>
+            <div class="space-y-4">
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">What does an SEO agency in the Netherlands do?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">An SEO agency helps a website become more relevant and accessible for organic searches. Services may include audits, SEO consultancy, keyword research, technical improvements, helpful content, local optimization, link building and reporting.</p>
+                </details>
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">Can you help businesses targeting customers in Amsterdam?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">Yes. We research location-specific opportunities for your target customers and real service area. Our work can be delivered remotely; we do not represent ourselves as having an office in that city.</p>
+                </details>
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">Can you optimize for both Dutch and English searches?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">Yes. We research search behavior in each language separately. A literal translation does not always reflect the phrases or intent people use in the Netherlands.</p>
+                </details>
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">Is local SEO different from national SEO?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">National SEO can target broader searches across a country. Local SEO concentrates on searches related to a city or area and may include local pages, business information and Google Business Profile when the business is eligible.</p>
+                </details>
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">Do you offer an initial SEO audit for free?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">Yes. We offer a free first review for a website. It highlights visible priorities and possible next steps; it is not a promise of rankings or a complete paid SEO engagement.</p>
+                </details>
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">What affects the cost and timing of SEO?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">Website condition, competition, business goals and the work required affect cost and timing. After reviewing your situation, we can explain a recommended scope and quote. Search improvements do not have a guaranteed timetable.</p>
+                </details>
+                <details class="glass-card rounded-2xl p-6">
+                    <summary class="cursor-pointer text-lg font-bold text-on-surface">How will you measure SEO progress?</summary>
+                    <p class="mt-4 leading-relaxed text-on-surface-variant">We review suitable measures such as Google Search Console impressions, queries and clicks, organic visits, indexing, completed technical fixes and enquiries where tracking is available. We distinguish observed changes from assumptions about their cause.</p>
+                </details>
             </div>
         </div>
     </section>
-</main>
+
+    <section class="px-6 pb-24 md:px-8 md:pb-32">
+        <div class="mx-auto flex max-w-6xl flex-col gap-8 rounded-[2rem] border border-primary/20 bg-gradient-to-br from-primary/10 via-surface-container-low to-secondary/10 p-8 md:p-12 lg:flex-row lg:items-center lg:justify-between">
+            <div class="max-w-3xl">
+                <h2 class="mb-4 text-3xl font-black tracking-tight text-on-surface md:text-4xl">Start With a Free SEO Review</h2>
+                <p class="leading-relaxed text-on-surface-variant">Want to improve search visibility for customers in the Netherlands? Share your website and goals. We'll identify initial priorities and explain how a focused SEO plan could help.</p>
+                <div class="mt-5 flex flex-col gap-2 text-sm text-on-surface-variant sm:flex-row sm:flex-wrap sm:gap-x-6">
+                    <a href="mailto:info@difusionseo.com" class="hover:text-secondary">info@difusionseo.com</a>
+                    <a href="tel:+31638879199" class="hover:text-secondary">Call: +31 6 38879199</a>
+                    <a href="https://wa.me/31638879199" class="hover:text-secondary">WhatsApp: +31 6 38879199</a>
+                </div>
+            </div>
+            <a href="{% url 'contact' %}" class="inline-flex shrink-0 items-center justify-center rounded-full bg-primary px-7 py-4 font-bold text-on-primary transition hover:-translate-y-1">Request a Free SEO Audit</a>
+        </div>
+    </section>
+</div>
 {% endblock %}
