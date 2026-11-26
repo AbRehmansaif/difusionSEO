@@ -1,16 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Local SEO Services & Google Business Profile Optimization | DifusionSEO{% endblock %}
+{% block title %}Local SEO Services | Google Maps & GBP SEO | DifusionSEO{% endblock %}
+
+{% block html_lang %}en{% endblock %}
 
 {% block meta %}
-<meta name="description" content="Dominate your local market and the Google Map Pack. Expert Local SEO services, citation building, and Google Business Profile optimization to drive foot traffic.">
+<meta name="description" content="Local SEO services for small businesses and multi-location brands. Improve Google Maps visibility, website relevance and local enquiries. Get a free audit.">
 <!-- Open Graph / Social -->
-<meta property="og:title" content="Local SEO Services & Google Business Profile Optimization | DifusionSEO">
-<meta property="og:description" content="Dominate your local market and the Google Map Pack. Expert Local SEO services and Google Business Profile optimization.">
+<meta property="og:title" content="Local SEO Services | Google Maps & GBP SEO | DifusionSEO">
+<meta property="og:description" content="Local SEO services for small businesses and multi-location brands. Improve Google Maps visibility, website relevance and local enquiries. Get a free audit.">
 <meta property="og:type" content="website">
-<!-- Canonical URL -->
-<link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+{% endblock %}
+
+{% block canonical %}
+<link rel="canonical" href="https://www.difusionseo.com/services/local-seo-services/">
 {% endblock %}
 
 {% block extra_head %}
@@ -85,22 +89,19 @@
         <div class="absolute top-1/4 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center relative z-10">
             <div data-aos="fade-right">
-                <span class="label-md uppercase tracking-[0.3em] text-secondary font-black mb-6 md:mb-8 block italic">Hyper-Local Growth</span>
                 <h1 class="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[1.1] mb-8">
-                    Affordable Local SEO  <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary"> Services</span>
+                    Local SEO Services That Help <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Nearby Customers Find Your Business</span>
                 </h1>
                 <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed font-light max-w-xl opacity-80">
-                    Looking for professional local SEO services that actually drive results? Our expert local SEO agency helps businesses improve Google rankings, increase Google Maps visibility, and attract nearby customers who are actively searching for your services.
-From Google Business Profile optimization and local keyword targeting to citation building, reputation management, and local content optimization, we create data-driven local SEO strategies designed to increase traffic, leads, and revenue.
-Whether you are a small business, multi location company, franchise, or service provider, our local SEO services help you dominate local search results and stay ahead of competitors. View our <a href="{% url 'seo_strategy' %}" class="text-secondary underline hover:text-primary transition-colors">National SEO solutions</a>.
+                    People searching for a business like yours need clear, accurate answers&mdash;and an easy way to get in touch. DifusionSEO provides local SEO services that connect your website, Google Business Profile (where eligible) and location-specific search strategy. We work with small businesses, service providers and multi-location teams, including clients in the UK, to improve the foundations of local visibility and turn relevant searches into opportunities.
                 </p>
-                <div class="mt-10 flex items-center gap-6">
-                    <a href="{% url 'contact' %}" class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-lg" aria-label="Get Local SEO Leads">Get Your Free Local SEO Audit Today</a>
-                    <div class="flex flex-col">
-                        <span class="text-2xl font-black text-secondary">#1</span>
-                        <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Map Pack Rankings</span>
+                <div class="mt-10">
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="{% url 'contact' %}" class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-black text-sm hover:scale-105 transition-all shadow-lg">Get a Free Local SEO Audit</a>
+                        <a href="#local-seo-services" class="border border-outline-variant px-8 py-4 rounded-full font-bold text-sm text-on-surface hover:border-secondary transition-colors">Explore Our Services</a>
                     </div>
+                    <p class="mt-5 text-xs md:text-sm text-on-surface-variant">Google Search &amp; Maps · Real service-area targeting · Clear progress reporting</p>
                 </div>
             </div>
             <div class="relative hidden lg:block" data-aos="zoom-in">
@@ -109,12 +110,12 @@ Whether you are a small business, multi location company, franchise, or service 
                     
                     <!-- Before State -->
                     <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-100 group-hover:opacity-0 group-hover:scale-95">
-                        <div class="text-error mb-4 font-mono text-sm uppercase tracking-widest bg-error/10 px-4 py-1 rounded-full">Before Optimization</div>
+                        <div class="text-error mb-4 font-mono text-sm uppercase tracking-widest bg-error/10 px-4 py-1 rounded-full">Inconsistent Business Details</div>
                         <div class="flex items-center gap-4 mb-6">
                             <span class="material-symbols-outlined text-6xl text-on-surface-variant opacity-50">wrong_location</span>
                             <div>
-                                <div class="text-3xl font-black opacity-50">0</div>
-                                <div class="text-sm opacity-50">Map Pack Clicks</div>
+                                <div class="text-3xl font-black opacity-50">Details</div>
+                                <div class="text-sm opacity-50">Across listings</div>
                             </div>
                         </div>
                         <div class="w-full max-w-[200px] opacity-20 filter grayscale blur-[2px]">
@@ -127,12 +128,12 @@ Whether you are a small business, multi location company, franchise, or service 
 
                     <!-- After State -->
                     <div class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-100">
-                        <div class="text-secondary mb-4 font-mono text-sm uppercase tracking-widest bg-secondary/10 px-4 py-1 rounded-full shadow-[0_0_15px_rgba(157,255,203,0.3)]">Local Monopoly</div>
+                        <div class="text-secondary mb-4 font-mono text-sm uppercase tracking-widest bg-secondary/10 px-4 py-1 rounded-full shadow-[0_0_15px_rgba(157,255,203,0.3)]">Clear Local Presence</div>
                         <div class="flex items-center gap-4 mb-6">
                             <span class="material-symbols-outlined text-6xl text-secondary drop-shadow-[0_0_15px_rgba(157,255,203,0.5)] animate-bounce">location_on</span>
                             <div>
-                                <div class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">+450%</div>
-                                <div class="text-sm text-secondary">Inbound Calls</div>
+                                <div class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Accurate</div>
+                                <div class="text-sm text-secondary">Business information</div>
                             </div>
                         </div>
                         <div class="w-full max-w-[200px]">
@@ -147,12 +148,12 @@ Whether you are a small business, multi location company, franchise, or service 
                                 </div>
                             </div>
                         </div>
-                        <p class="mt-4 text-xs font-mono text-secondary/70 animate-pulse">> TOP_3_PLACEMENT</p>
+                        <p class="mt-4 text-xs font-mono text-secondary/70 animate-pulse">> RELEVANT_LOCAL_INFO</p>
                     </div>
 
                     <!-- Interactive Hint -->
                     <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-widest opacity-40 group-hover:opacity-0 transition-opacity flex items-center gap-2">
-                        <span class="material-symbols-outlined text-[14px]">ads_click</span> Hover to Rank
+                        <span class="material-symbols-outlined text-[14px]">ads_click</span> Explore Details
                     </div>
                 </div>
             </div>
@@ -162,14 +163,10 @@ Whether you are a small business, multi location company, franchise, or service 
     <!-- 2. Problem (Pain) -->
     <section class="py-32 px-8 bg-surface-container-low">
         <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
-            <h3 class="text-secondary font-black uppercase tracking-widest text-sm mb-4 block">The LocalSEO Visibility Problem</h3>
-            <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">Trusted Local SEO Services for <br><span class="text-secondary">Sustainable Growth</span></h2>
+            <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">Be Relevant When Customers Search Locally</h2>
             <div class="space-y-6 text-lg md:text-xl text-on-surface-variant opacity-80 leading-relaxed">
                 <p>
-                    Our local SEO services are designed to help businesses improve online visibility, rank higher in local search results, and attract nearby customers through ethical, Google compliant SEO strategies. As a results driven local SEO agency, we specialize in Google Business Profile optimization, local SEO optimization services, citation management, local keyword research, on page local SEO, technical SEO, local link building, and reputation management.
-                </p>
-                <p>
-                    We help businesses across the UK and other competitive markets increase local traffic, improve conversion rates, and generate consistent leads through strategic local search optimization. Whether you need affordable local SEO services for small businesses or a complete multi-location SEO campaign, our team creates customized strategies tailored to your industry, audience, and business goals.
+                    Local SEO is about appearing for the products and services you actually offer in the places you genuinely serve. That includes searches such as &ldquo;opticians near me&rdquo; or &ldquo;eye test Manchester&rdquo;. A useful strategy considers location intent, accurate business details, a mobile-friendly website and the information people need before booking or calling. Our local SEO agency starts with your real customers and competitors not promises of a particular ranking.
                 </p>
             </div>
         </div>
@@ -210,7 +207,7 @@ Whether you are a small business, multi location company, franchise, or service 
     </section>
 
     <!-- 4. Scope of Work (Comprehensive Services) -->
-    <section class="py-32 px-8 bg-surface-container-lowest overflow-hidden">
+    <section id="local-seo-services" class="py-32 px-8 bg-surface-container-lowest overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <!-- Section Header -->
             <div class="text-center mb-24" data-aos="fade-up">
@@ -403,7 +400,29 @@ Whether you are a small business, multi location company, franchise, or service 
         </div>
     </section>
 
-    <!-- 5. How It Works -->
+    <!-- 5. Small Business & Multi-Location SEO -->
+    <section class="py-24 px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">Local SEO for Small Businesses and Multiple Locations</h2>
+                <p class="text-lg text-on-surface-variant opacity-80 leading-relaxed">
+                    A single location practice needs a different plan from a business serving several towns. We tailor local SEO optimisation services to independent shops, professional practices, service area businesses and multi location organisations. For each location, the information, customer intent and tracking should be accurate and distinct.
+                </p>
+            </div>
+            <div class="glass-card max-w-4xl mx-auto p-8 md:p-12 rounded-3xl border border-secondary/20" data-aos="fade-up">
+                <h3 class="text-2xl md:text-3xl font-black mb-6 text-white">Local SEO for Opticians, City Specs in Manchester &amp; Sheffield</h3>
+                <p class="text-on-surface-variant opacity-80 leading-relaxed mb-8">
+                    Our Local SEO work for City Specs has included Google Business Profile optimisation, location-specific content and customer review responses for its optician locations in Manchester and Sheffield. This hands-on experience informs how we approach multi-location local search. Search rankings vary by device, search location and time, so we report observations with context rather than promising permanent positions.
+                </p>
+                <a href="{% url 'seo_strategy' %}" class="inline-flex items-center gap-2 font-bold text-secondary hover:text-primary transition-colors">
+                    See Our Approach to SEO Strategy
+                    <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. How It Works -->
     <section class="py-32 px-8 bg-surface-container-low border-y border-outline-variant/10">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20" data-aos="fade-up">
@@ -451,7 +470,17 @@ Whether you are a small business, multi location company, franchise, or service 
         </div>
     </section>
 
-    <!-- 6. Expertise & Trust (Ethical Approach) -->
+    <!-- 7. Measurement & Progress -->
+    <section class="py-24 px-8">
+        <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">Measure Visibility, Enquiries and Useful Progress</h2>
+            <p class="text-lg text-on-surface-variant opacity-80 leading-relaxed">
+                Rankings are only one indicator. Where tracking is available, we review relevant search queries, organic visits, profile interactions, calls, form enquiries and the quality of your location pages. We distinguish completed work from measured outcomes, and we do not promise fixed timelines or number-one Map Pack rankings. Clear service information also makes your website easier for people and search systems to understand.
+            </p>
+        </div>
+    </section>
+
+    <!-- 8. Expertise & Trust (Ethical Approach) -->
     <section class="py-32 px-8">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div class="order-2 md:order-1 relative" data-aos="zoom-in">
@@ -499,7 +528,7 @@ Whether you are a small business, multi location company, franchise, or service 
         </div>
     </section>
 
-    <!-- 7. Why Choose Us -->
+    <!-- 9. Why Choose Us -->
     <section class="py-32 px-8 bg-surface-container-lowest border-y border-outline-variant/10">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20" data-aos="fade-up">
@@ -568,7 +597,7 @@ Whether you are a small business, multi location company, franchise, or service 
         </div>
     </section>
 
-    <!-- 8. Proof (Testimonials) -->
+    <!-- 10. Proof (Testimonials) -->
     <section class="py-32 px-8">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
@@ -581,13 +610,12 @@ Whether you are a small business, multi location company, franchise, or service 
                 </p>
                 <div class="mt-8 text-center">
                     <p class="font-bold text-secondary">Robert M.</p>
-                    <p class="text-sm opacity-60 uppercase tracking-widest font-mono">Owner, Elite HVAC Services</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 9. FAQ Section -->
+    <!-- 11. FAQ Section -->
     <section class="py-32 px-8 bg-surface-container-low">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
@@ -598,78 +626,120 @@ Whether you are a small business, multi location company, franchise, or service 
             <div class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
                 <!-- FAQ Item 1 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">What are local SEO services?</span>
-                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
-                    </button>
+                    <h3 class="m-0">
+                        <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.parentElement.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                            <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">What are local SEO services?</span>
+                            <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                        </button>
+                    </h3>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                         <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Local SEO services help businesses improve visibility in local search results, Google Maps, and location based searches to attract nearby customers.
+                            Local SEO services improve how a business is represented in location-based searches. They can include local keyword research, website improvements, accurate business listings, review support and Google Business Profile work for eligible businesses.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">How long does local SEO take to show results?</span>
-                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
-                    </button>
+                    <h3 class="m-0">
+                        <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.parentElement.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                            <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">What do local SEO optimization services include?</span>
+                            <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                        </button>
+                    </h3>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                         <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Most businesses begin seeing measurable improvements within 3 to 6 months depending on competition, website authority, and optimization level.
+                            They typically combine local search research, on-page improvements, relevant location pages, business-data checks, technical fixes and reporting. The scope depends on your business model, service areas and starting point.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">Do local SEO services work for small businesses?</span>
-                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
-                    </button>
+                    <h3 class="m-0">
+                        <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.parentElement.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                            <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">How long does local SEO take to work?</span>
+                            <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                        </button>
+                    </h3>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                         <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Yes. Local SEO is highly effective for small businesses because it targets nearby customers actively searching for local services.
+                            Some technical and listing corrections can be completed quickly, but meaningful search visibility changes often take months. Timing depends on competition, location, current website quality and the work required. No particular ranking is guaranteed.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">What is Google Business Profile optimization?</span>
-                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
-                    </button>
+                    <h3 class="m-0">
+                        <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.parentElement.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                            <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">Do you offer local SEO services for small businesses?</span>
+                            <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                        </button>
+                    </h3>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                         <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Google Business Profile optimization improves your business listing on Google Maps and local search results through better categories, content, reviews, and engagement signals.
+                            Yes. We tailor the plan to a business&#39;s locations, services and budget. Smaller businesses may benefit from accurate listings, a focused set of service pages and a practical way to measure enquiries.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 5 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">Are your SEO strategies safe?</span>
-                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
-                    </button>
+                    <h3 class="m-0">
+                        <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.parentElement.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                            <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">Can you manage Local SEO for more than one branch?</span>
+                            <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                        </button>
+                    </h3>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                         <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Yes. We strictly follow Google Search Essentials and use ethical white hat SEO strategies designed for long term growth.
+                            Yes. Multi-location work can involve distinct service details, location pages, profile reviews, local competitor research and separate performance tracking for genuine branches or service areas.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 6 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                    <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
-                        <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">Can you help multi location businesses?</span>
-                        <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
-                    </button>
+                    <h3 class="m-0">
+                        <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.parentElement.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                            <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">Do I need a Google Business Profile for local SEO?</span>
+                            <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                        </button>
+                    </h3>
                     <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                         <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
-                            Yes. We create scalable local SEO campaigns for businesses with multiple branches or service areas.
+                            Not always. A website can still improve relevance for location-related searches. A Google Business Profile is useful only where the business meets Google&#39;s eligibility rules; it should not be created using a false office or service location.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <h3 class="m-0">
+                        <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.parentElement.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                            <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">Do you provide local SEO services in the UK?</span>
+                            <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                        </button>
+                    </h3>
+                    <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
+                            Yes. We support UK businesses remotely and have relevant project experience with opticians in Manchester and Sheffield. We also support businesses in other markets without claiming a local office where one does not exist.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-secondary/10 transition-all duration-300 hover:border-secondary/30" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <h3 class="m-0">
+                        <button class="w-full p-6 text-left flex justify-between items-center group" onclick="const content = this.parentElement.nextElementSibling; content.classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')">
+                            <span class="font-bold text-lg group-hover:text-secondary transition-colors" itemprop="name">What does a free Local SEO audit cover?</span>
+                            <span class="material-symbols-outlined arrow transition-transform duration-300 text-secondary">expand_more</span>
+                        </button>
+                    </h3>
+                    <div class="px-6 pb-6 hidden animate__animated animate__fadeIn" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <div class="text-on-surface-variant leading-relaxed opacity-80" itemprop="text">
+                            You can request a free initial review of visible issues involving your website, local search relevance, eligible business listings and opportunities for improvement. We&#39;ll explain the most useful next steps; a full technical implementation or ongoing campaign requires a separate agreed scope.
                         </div>
                     </div>
                 </div>
@@ -677,7 +747,7 @@ Whether you are a small business, multi location company, franchise, or service 
         </div>
     </section>
 
-    <!-- 10. Final CTA -->
+    <!-- 12. Final CTA -->
     <section class="py-32 px-8">
         <div class="max-w-5xl mx-auto glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden" data-aos="zoom-in">
             <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
